@@ -1,0 +1,55 @@
+﻿@*@model IEnumerable<Hrinnova_FormsProject.DatabaseModel.employee_details>*@
+@model Hrinnova_FormsProject.Models.EditIndexModel
+@{
+    ViewBag.Title = "EditIndex2";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<h2 align="center">Edit Employee Details Index</h2>
+
+<div class="container-fluid">
+    <div class="middel-content">
+        <div class="clearfix">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table class="table table-responsive table-condensed table-bordered ">
+                        <tr>
+                            <th>
+                                @Html.DisplayName("Employee ID")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Firstname")
+                            </th>
+                            <th>
+                                @Html.DisplayName("Surname")
+                            </th>
+                            <th></th>
+                        </tr>
+
+                        @foreach (var item in Model.employeedetails)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.employee_id)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.firstname)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.surname)
+                                </td>
+
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.employee_id }) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.employee_id }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.employee_id })
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,222 @@
+
+/**************************************************************************************
+Fonts 
+**************************************************************************************/
+@import "https://fonts.googleapis.com/css?family=Roboto";
+
+/**************************************************************************************
+Variables 
+**************************************************************************************/
+
+@font-family-Roboto: Roboto,sans-serif,Arial,sans-serif;
+@text-color:#fff;
+@text-size: 30px;
+
+
+/**************************************************************************************
+Login page
+**************************************************************************************/
+.login-page{background:rgba(0, 0, 0, 0) url("/Images/HRIMS/login-bg.jpg") repeat scroll 0 0; position:fixed;height:100%;width:100%;top:0;right:0;
+background-size:cover;}
+.login-wrapper {
+display:block;
+float:left;
+width:100%;
+font-family:@font-family-Roboto;
+}
+
+.logo {
+padding-top:73px
+}
+
+.quote {
+
+color:@text-color;
+padding-top:40%;
+font-size: 2.1em;
+font-style:italic;
+padding-left:20px;
+float:left;
+width:100%;
+
+article{
+
+.quote-icon.icon-start {
+    padding-right: 5px;
+}
+.quote-icon {
+    bottom: 5px;
+    position: relative;
+   display: inline;
+}
+
+.quote-icon.icon-end {
+    padding-left: 5px;
+}
+
+}
+
+span {
+float:left;
+width:89%
+}
+
+blockquote {
+border-left:none;
+float:right;
+color:#33b5e4;
+font-size:@text-size
+}
+
+}
+
+.login-links {
+background:rgba(0,0,0,0.5);
+float:right;
+padding: 5%;
+
+}
+
+.login-box {
+  background:rgba(79, 79, 80, 0.2);
+    border: 1px solid #4f4f50;
+    margin: 50% auto 0;
+    padding:10% 10% 35% 10%;
+    width: 100%;
+
+input {
+border-color:-moz-use-text-color -moz-use-text-color #8d8d8d;
+border-style:none none solid;
+border-width:medium medium 1px;
+color:#000;
+font-size:16px;
+padding:17px 26px;
+width:100%;
+margin-bottom:28px;
+-moz-box-shadow:0 2px 2px #000 inset;
+-webkit-box-shadow:0 2px 2px #000 inset;
+box-shadow:0 2px 2px #000 inset;
+background:#e3e3e3;
+
+&:focus{
+border-color: -moz-use-text-color -moz-use-text-color #33B5E4;
+border-color:#33B5E4;
+border-style: none none solid;
+border-width: medium medium 2px;
+padding-bottom:16px;
+outline: medium none;
+}
+
+}
+
+.login-text {
+    border-bottom: medium none;
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+button {
+border-style:none;
+margin-top:17px;
+}
+
+.login-btn {
+transition:all .3s linear 0;
+-webkit-border-radius:0;
+-moz-border-radius:0;
+border-radius:0;
+color:#fff;
+font-size:20px;
+background:#0b6a8d;
+padding:12px 0;
+text-decoration:none;
+width:48%;
+
+&:hover { background: #33b5e4;
+text-decoration:none;
+}
+
+}
+
+.cancel-btn {margin-left:8px;}
+
+.forgot-password {
+color:#929292;
+float:left;
+font-size:19px;
+margin-top:16px;
+a {color:#929292}
+}
+
+}
+
+.copy-right {
+    bottom: 0;
+    padding: 20px 0;
+    position: absolute;
+    right: 100%;
+    font-size: 19px;
+    color: #fff;
+    white-space: nowrap;
+}
+
+@media screen and (min-width:1400px){
+   .login-wrapper .container{width:1560px;}
+}
+
+@media (max-width:1024px){
+
+	.login-box {
+
+		input { font-size:13px; }
+
+	}
+
+}
+
+@media screen and (min-width:1280px) and (max-width:1399px){
+.quote{  padding-top: 20%; }
+.login-links{min-height:auto;
+
+	.login-box{padding-bottom :25%;}
+
+}
+
+}
+
+@media screen and (min-width:768px) and (max-width:1279px){
+.quote{   padding-top: 20%; }
+.login-links{
+	.login-box{margin:50% auto 0 ; padding-bottom :60%;
+		
+		.login-btn{width:48%;}
+
+	}
+}
+
+}
+
+@media (max-width:767px) {
+
+.logo{  text-align: center; padding-top:20px; }
+.quote{display: none; }
+
+.login-links{  margin:10% auto; 
+
+	.login-box{margin:0%;  width:100%; 	 background:none;  border:none;	
+			
+			.login-text{margin-bottom:20px; text-align:center; }
+			button{margin-top:0;}
+			.login-btn{ width: 49%;}
+			.cancel-btn{margin-left:0;}
+		
+
+	}
+
+}
+
+.copy-right{ bottom: -18px; color: #cccccc; position: absolute;  right: 0;  text-align: center;    width: 100%; }
+
+}

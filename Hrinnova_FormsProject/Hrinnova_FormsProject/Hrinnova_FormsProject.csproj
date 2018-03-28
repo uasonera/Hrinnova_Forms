@@ -1,0 +1,884 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7D9F63E-F065-41A9-8B1A-B4A50460C94E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hrinnova_FormsProject</RootNamespace>
+    <AssemblyName>Hrinnova_FormsProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="CSS\animate.css" />
+    <Content Include="CSS\base.css" />
+    <Content Include="CSS\chosenIcon.css" />
+    <Content Include="CSS\CimsStyle.css" />
+    <Content Include="CSS\circle.css" />
+    <Content Include="CSS\colorpicker.css" />
+    <Content Include="CSS\cs-select.css" />
+    <Content Include="CSS\cs-skin-elastic.css" />
+    <Content Include="CSS\datepicker-jquery-ui.css" />
+    <Content Include="CSS\default.css" />
+    <Content Include="CSS\developer-edits.css" />
+    <Content Include="CSS\Div.css" />
+    <Content Include="CSS\DropZone.css" />
+    <Content Include="CSS\ej.widgets.core.office-365.min.css" />
+    <Content Include="CSS\Exist.css" />
+    <Content Include="CSS\FinalCSS.css" />
+    <Content Include="CSS\font-awesome.css" />
+    <Content Include="CSS\font-awesome.min.css" />
+    <Content Include="CSS\getorgchart.css" />
+    <Content Include="CSS\layout-mobile.css" />
+    <Content Include="CSS\layout-tablet.css" />
+    <Content Include="CSS\layout-tabletxl.css" />
+    <Content Include="CSS\layout.css" />
+    <Content Include="CSS\left-nav.css" />
+    <Content Include="CSS\login.css" />
+    <Content Include="CSS\media.css" />
+    <Content Include="CSS\menu.css" />
+    <Content Include="CSS\mixins.css" />
+    <Content Include="CSS\new-icon-font.css" />
+    <Content Include="CSS\nv.d3.min.css" />
+    <Content Include="CSS\orgchart.css" />
+    <Content Include="CSS\print.css" />
+    <Content Include="CSS\responsive-embed.css" />
+    <Content Include="CSS\select2.min.css" />
+    <Content Include="CSS\style.css" />
+    <Content Include="CSS\styles-new.css" />
+    <Content Include="CSS\styles.css" />
+    <Content Include="CSS\Task.css" />
+    <Content Include="CSS\theme.css" />
+    <Content Include="CSS\typography.css" />
+    <Content Include="CSS\vallenato.css" />
+    <Content Include="DatabaseModel\EmployeeDetails1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EmployeeDetails1.edmx</DependentUpon>
+      <LastGenOutput>EmployeeDetails1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DatabaseModel\EmployeeDetails1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EmployeeDetails1.edmx</DependentUpon>
+      <LastGenOutput>EmployeeDetails1.cs</LastGenOutput>
+    </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\10years.png" />
+    <Content Include="Images\1_Photo.png" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\4.jpg" />
+    <Content Include="Images\5.jpg" />
+    <Content Include="Images\5year.png" />
+    <Content Include="Images\6.jpg" />
+    <Content Include="Images\7.jpg" />
+    <Content Include="Images\8.jpg" />
+    <Content Include="Images\Action.png" />
+    <Content Include="Images\ActionDisable.png" />
+    <Content Include="Images\Action_Disable.png" />
+    <Content Include="Images\active-header.gif" />
+    <Content Include="Images\Active.gif" />
+    <Content Include="Images\ActiveDisable.gif" />
+    <Content Include="Images\Active_Disable.gif" />
+    <Content Include="Images\add-link-icon.png" />
+    <Content Include="Images\add.gif" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\ajax-loader.gif" />
+    <Content Include="Images\ajax-loader1.gif" />
+    <Content Include="Images\alertRej.png" />
+    <Content Include="Images\altr-bg.png" />
+    <Content Include="Images\altr_bg.png" />
+    <Content Include="Images\announcement-banner.jpg" />
+    <Content Include="Images\approvalsBtn.gif" />
+    <Content Include="Images\approve.png" />
+    <Content Include="Images\Approve_disable.png" />
+    <Content Include="Images\arrow-down.png" />
+    <Content Include="Images\arrow-right.png" />
+    <Content Include="Images\arrow-sprite.png" />
+    <Content Include="Images\ars.png" />
+    <Content Include="Images\AssignCard-disable.gif" />
+    <Content Include="Images\AssignCard.gif" />
+    <Content Include="Images\attachment.png" />
+    <Content Include="Images\Attachment_Excel.png" />
+    <Content Include="Images\backward-arrow.png" />
+    <Content Include="Images\band.png" />
+    <Content Include="Images\banner-1.jpg" />
+    <Content Include="Images\banner.jpg" />
+    <Content Include="Images\bg-map.png" />
+    <Content Include="Images\birthday-bg-old.jpg" />
+    <Content Include="Images\birthday-bg.jpg" />
+    <Content Include="Images\birthdays.png" />
+    <Content Include="Images\BlackDot.png" />
+    <Content Include="Images\black_down_triangle.png" />
+    <Content Include="Images\blank.gif" />
+    <Content Include="Images\blue-bg.png" />
+    <Content Include="Images\blue-button.png" />
+    <Content Include="Images\blue-title-bg.png" />
+    <Content Include="Images\body-runner.gif" />
+    <Content Include="Images\brithday-bg.png" />
+    <Content Include="Images\brown-pattern.png" />
+    <Content Include="Images\btn-black-hover.png" />
+    <Content Include="Images\btn-black.png" />
+    <Content Include="Images\btn-orange.png" />
+    <Content Include="Images\bubble.png" />
+    <Content Include="Images\buttonBg.gif" />
+    <Content Include="Images\check-box-tick.png" />
+    <Content Include="Images\cims-logo-orange.png" />
+    <Content Include="Images\cims-logo-whit-hrims.png" />
+    <Content Include="Images\CIMS-logo.png" />
+    <Content Include="Images\clone.JPG" />
+    <Content Include="Images\close-button.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\CloseButton_Dialogue.png" />
+    <Content Include="Images\Close_Icon.png" />
+    <Content Include="Images\col.gif" />
+    <Content Include="Images\collapase-expand-icon.png" />
+    <Content Include="Images\collapse.png" />
+    <Content Include="Images\comment-button-final.gif" />
+    <Content Include="Images\Contact.jpg" />
+    <Content Include="Images\contentBottom-inner.gif" />
+    <Content Include="Images\contentBottom.gif" />
+    <Content Include="Images\contentRunner.gif" />
+    <Content Include="Images\Copy of grey-arrow.gif" />
+    <Content Include="Images\cygnet-logo.png" />
+    <Content Include="Images\datepicker-black.png" />
+    <Content Include="Images\DatePicker.gif" />
+    <Content Include="Images\DefaultCompanyLogo.png" />
+    <Content Include="Images\default_file.png" />
+    <Content Include="Images\Delete.gif" />
+    <Content Include="Images\Delete.png" />
+    <Content Include="Images\DeleteDisable.gif" />
+    <Content Include="Images\DeleteDisable.png" />
+    <Content Include="Images\doc-file.png" />
+    <Content Include="Images\down-arrow.png" />
+    <Content Include="Images\downarrow.png" />
+    <Content Include="Images\DownArrowicon.png" />
+    <Content Include="Images\download.png" />
+    <Content Include="Images\dropdown-bg.png" />
+    <Content Include="Images\dsdfsf.com_636283076659181160.jpg" />
+    <Content Include="Images\due-date.png" />
+    <Content Include="Images\Edit.gif" />
+    <Content Include="Images\Edit.png" />
+    <Content Include="Images\EditDisable.png" />
+    <Content Include="Images\emp-profile-tile-bg.png" />
+    <Content Include="Images\employee-pic.png" />
+    <Content Include="Images\EmpQualification.jpg" />
+    <Content Include="Images\enter.gif" />
+    <Content Include="Images\error-bg.png" />
+    <Content Include="Images\ErrorCicrle.jpeg" />
+    <Content Include="Images\Errors.gif" />
+    <Content Include="Images\estimated-hour.png" />
+    <Content Include="Images\excel.png" />
+    <Content Include="Images\excel2.jpg" />
+    <Content Include="Images\expand.png" />
+    <Content Include="Images\Experiences.png" />
+    <Content Include="Images\extention.png" />
+    <Content Include="Images\fabric_plaid.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\favicon_cims.ico" />
+    <Content Include="Images\FileIcon_Excel.png" />
+    <Content Include="Images\FileIcon_pdf.png" />
+    <Content Include="Images\FileIcon_txt.png" />
+    <Content Include="Images\FileIcon_Word.PNG" />
+    <Content Include="Images\first.png" />
+    <Content Include="Images\footer-logo.png" />
+    <Content Include="Images\Footer.jpg" />
+    <Content Include="Images\forward-arrow.png" />
+    <Content Include="Images\gallery-loading.gif" />
+    <Content Include="Images\GenerateQueue.png" />
+    <Content Include="Images\glyphicons-halflings-white.png" />
+    <Content Include="Images\glyphicons-halflings.png" />
+    <Content Include="Images\grdHeaderBg.gif" />
+    <Content Include="Images\GreenDot.png" />
+    <Content Include="Images\grey-arrow.gif" />
+    <Content Include="Images\grey-pattern.png" />
+    <Content Include="Images\header-bg.png" />
+    <Content Include="Images\holidaysBtn.gif" />
+    <Content Include="Images\hr-policy.png" />
+    <Content Include="Images\HRIMS-Logo.PNG" />
+    <Content Include="Images\html-file.png" />
+    <Content Include="Images\icon-error-close.png" />
+    <Content Include="Images\icon-error-yellow.png" />
+    <Content Include="Images\icon-green-msg.png" />
+    <Content Include="Images\icon-sprite.png" />
+    <Content Include="Images\icon-sprite2.png" />
+    <Content Include="Images\IconUpArrow.png" />
+    <Content Include="Images\icon_backlog.png" />
+    <Content Include="Images\icon_backlog_red.png" />
+    <Content Include="Images\icon_view.png" />
+    <Content Include="Images\img-acc.jpg" />
+    <Content Include="Images\img-accolades.png" />
+    <Content Include="Images\img-ann.jpg" />
+    <Content Include="Images\img-container-bg.png" />
+    <Content Include="Images\img-file.png" />
+    <Content Include="Images\imp-link-sprite.png" />
+    <Content Include="Images\importBtn.gif" />
+    <Content Include="Images\inactive-header.gif" />
+    <Content Include="Images\Inactive.gif" />
+    <Content Include="Images\InActiveDisable.gif" />
+    <Content Include="Images\InActive_Disable.gif" />
+    <Content Include="Images\integrity.jpg" />
+    <Content Include="Images\invoice.gif" />
+    <Content Include="Images\iterative.png" />
+    <Content Include="Images\joinee_bg.png" />
+    <Content Include="Images\kanban.png" />
+    <Content Include="Images\last.png" />
+    <Content Include="Images\lead-node-bg.jpg" />
+    <Content Include="Images\left-arrow.png" />
+    <Content Include="Images\light-orange-title.png" />
+    <Content Include="Images\link.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\lock.png" />
+    <Content Include="Images\login-bg.jpg" />
+    <Content Include="Images\loginback.jpg" />
+    <Content Include="Images\LoginFooter.jpg" />
+    <Content Include="Images\logo-1.jpg" />
+    <Content Include="Images\logo-1.png" />
+    <Content Include="Images\logo-blue -old.png" />
+    <Content Include="Images\logo-blue-Extra.png" />
+    <Content Include="Images\logo-blue.png" />
+    <Content Include="Images\logo-cims.png" />
+    <Content Include="Images\logo-HRIMS.png" />
+    <Content Include="Images\logo-old.png" />
+    <Content Include="Images\logo-white.png" />
+    <Content Include="Images\logo.gif" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logo.svg" />
+    <Content Include="Images\logo1.gif" />
+    <Content Include="Images\logoutBtn.gif" />
+    <Content Include="Images\logoutBtn.png" />
+    <Content Include="Images\mainBG-1.jpg" />
+    <Content Include="Images\mainBG.jpg" />
+    <Content Include="Images\mainNavRunner.gif" />
+    <Content Include="Images\mainNavTop.gif" />
+    <Content Include="Images\manageBtn.gif" />
+    <Content Include="Images\mantis.gif" />
+    <Content Include="Images\mCSB_buttons.png" />
+    <Content Include="Images\menu-bg-old.png" />
+    <Content Include="Images\menu-bg.png" />
+    <Content Include="Images\menu-icons-sprite-1.png" />
+    <Content Include="Images\menu-icons-sprite.png" />
+    <Content Include="Images\min.png" />
+    <Content Include="Images\min1.png" />
+    <Content Include="Images\minus.png" />
+    <Content Include="Images\mission.jpg" />
+    <Content Include="Images\msg-icon.png" />
+    <Content Include="Images\msg-iconh.png" />
+    <Content Include="Images\Multiuser.png" />
+    <Content Include="Images\my-profile-bg.jpg" />
+    <Content Include="Images\myprofileBtn.gif" />
+    <Content Include="Images\navigation-bg.png" />
+    <Content Include="Images\navRunner.gif" />
+    <Content Include="Images\new-footer-logo.png" />
+    <Content Include="Images\new-joinee-bg.jpg" />
+    <Content Include="Images\news-block.png" />
+    <Content Include="Images\news-img1.png" />
+    <Content Include="Images\next.png" />
+    <Content Include="Images\node-ring-ring.png" />
+    <Content Include="Images\Notification.png" />
+    <Content Include="Images\NotJoin.png" />
+    <Content Include="Images\objective-kra-kpi.png" />
+    <Content Include="Images\orange-title-bg.png" />
+    <Content Include="Images\Outlook-icon.png" />
+    <Content Include="Images\pdf-file.png" />
+    <Content Include="Images\plus-icon.png" />
+    <Content Include="Images\plus.png" />
+    <Content Include="Images\plus1.png" />
+    <Content Include="Images\prev.png" />
+    <Content Include="Images\Preview.png" />
+    <Content Include="Images\print.png" />
+    <Content Include="Images\privilegedBtn.gif" />
+    <Content Include="Images\processing.gif" />
+    <Content Include="Images\profile-banner.jpg" />
+    <Content Include="Images\profile-pic.jpg" />
+    <Content Include="Images\qisms.png" />
+    <Content Include="Images\quote-end.png" />
+    <Content Include="Images\quote-start.png" />
+    <Content Include="Images\radio-box-tick.png" />
+    <Content Include="Images\re-joinee.png" />
+    <Content Include="Images\RedDot.png" />
+    <Content Include="Images\RemoveImg.png" />
+    <Content Include="Images\Reply.png" />
+    <Content Include="Images\reportsBtn.gif" />
+    <Content Include="Images\Request.png" />
+    <Content Include="Images\respect.jpg" />
+    <Content Include="Images\resume-dis.png" />
+    <Content Include="Images\resume.png" />
+    <Content Include="Images\Resume1.png" />
+    <Content Include="Images\role_add.png" />
+    <Content Include="Images\role_del.png" />
+    <Content Include="Images\rupee1-disable.gif" />
+    <Content Include="Images\rupee1-new.jpg" />
+    <Content Include="Images\rupee1-new1.jpg" />
+    <Content Include="Images\scrum.png" />
+    <Content Include="Images\SetPro.png" />
+    <Content Include="Images\single-backward-arrow.png" />
+    <Content Include="Images\single-forward-arrow.png" />
+    <Content Include="Images\speed.jpg" />
+    <Content Include="Images\spine.png" />
+    <Content Include="Images\spinner3-bluey.gif" />
+    <Content Include="Images\spirit.jpg" />
+    <Content Include="Images\spritemap%402x.png" />
+    <Content Include="Images\spritemap.png" />
+    <Content Include="Images\srch-btn.png" />
+    <Content Include="Images\star-icon.png" />
+    <Content Include="Images\Status_add.png" />
+    <Content Include="Images\stewardship.jpg" />
+    <Content Include="Images\Suspend.gif" />
+    <Content Include="Images\Suspnd_disable.gif" />
+    <Content Include="Images\tab-active-bg.jpg" />
+    <Content Include="Images\tab-off-bg.jpg" />
+    <Content Include="Images\tableBottom.gif" />
+    <Content Include="Images\tableLeft.gif" />
+    <Content Include="Images\tableLeftBottom.gif" />
+    <Content Include="Images\tableLeftTop.gif" />
+    <Content Include="Images\tableLeftTop1.gif" />
+    <Content Include="Images\tableRight.gif" />
+    <Content Include="Images\tableRightBottom.gif" />
+    <Content Include="Images\tableRightTop.gif" />
+    <Content Include="Images\tableRightTop1.gif" />
+    <Content Include="Images\tableRunner.gif" />
+    <Content Include="Images\tableTop.gif" />
+    <Content Include="Images\teamwork.jpg" />
+    <Content Include="Images\ticketing.png" />
+    <Content Include="Images\time-icon.png" />
+    <Content Include="Images\timesheet-grey.png" />
+    <Content Include="Images\timesheetBtn.gif" />
+    <Content Include="Images\timesheetBtn1.gif" />
+    <Content Include="Images\timesheet_sample.png" />
+    <Content Include="Images\top-bg.png" />
+    <Content Include="Images\top-icon-sprite.png" />
+    <Content Include="Images\ttest_636179340565822996.png" />
+    <Content Include="Images\txt-file.png" />
+    <Content Include="Images\u154.png" />
+    <Content Include="Images\u158-hover.png" />
+    <Content Include="Images\u158.png" />
+    <Content Include="Images\u47_line.png" />
+    <Content Include="Images\u48_line.png" />
+    <Content Include="Images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Images\ui-icons_222222_256x240.png" />
+    <Content Include="Images\ui-icons_454545_256x240.png" />
+    <Content Include="Images\unlock.png" />
+    <Content Include="Images\Untitled-1.png" />
+    <Content Include="Images\up-arrow.png" />
+    <Content Include="Images\uparrow.png" />
+    <Content Include="Images\user-1.png" />
+    <Content Include="Images\user-image.jpg" />
+    <Content Include="Images\user-smal.png" />
+    <Content Include="Images\video_file.png" />
+    <Content Include="Images\view-task-story.png" />
+    <Content Include="Images\view-tree-list.gif" />
+    <Content Include="Images\ViewTaskStory.png" />
+    <Content Include="Images\View_Details.png" />
+    <Content Include="Images\View_Details_NewTheme.gif" />
+    <Content Include="Images\vision.jpg" />
+    <Content Include="Images\white-arrow.gif" />
+    <Content Include="Images\white_zip.png" />
+    <Content Include="Images\wishes-bg.png" />
+    <Content Include="Images\word-of-wisdom.jpg" />
+    <Content Include="Images\wordOfWisdom.JPG" />
+    <Content Include="Images\wow-img1.jpg" />
+    <Content Include="Images\XML.png" />
+    <Content Include="Images\yellow-error-bg.png" />
+    <Content Include="Images\YellowDot.png" />
+    <Content Include="JsScript\AddKPIGuidelines.js" />
+    <Content Include="JsScript\AddKRAScript.js" />
+    <Content Include="JsScript\AngularJS.js" />
+    <Content Include="JsScript\bootstrap-datepicker.js" />
+    <Content Include="JsScript\bootstrap-datetimepicker.min.js" />
+    <Content Include="JsScript\bootstrap-tabcollapse.js" />
+    <Content Include="JsScript\chosen.jquery.min.js" />
+    <Content Include="JsScript\Common.js" />
+    <Content Include="JsScript\CommonFunctionsForKRA.js" />
+    <Content Include="JsScript\CommonValidationForTeamSelection.js" />
+    <Content Include="JsScript\d3.tip.v0.6.3.js" />
+    <Content Include="JsScript\d3.v3.min.js" />
+    <Content Include="JsScript\d3pie.min.js" />
+    <Content Include="JsScript\dataTables.jqueryui.js" />
+    <Content Include="JsScript\DatevalidationForJQueryPicker.js" />
+    <Content Include="JsScript\drag-drop.js" />
+    <Content Include="JsScript\dropzone.js" />
+    <Content Include="JsScript\EmployeeEvaluation.js" />
+    <Content Include="JsScript\EvaluationNotes.js" />
+    <Content Include="JsScript\FileuploadProgress.js" />
+    <Content Include="JsScript\FunctionListing.js" />
+    <Content Include="JsScript\general.js" />
+    <Content Include="JsScript\getorgchart.js" />
+    <Content Include="JsScript\inettuts.js" />
+    <Content Include="JsScript\inettuts2.js" />
+    <Content Include="JsScript\jquery-1.11.0.min.js" />
+    <Content Include="JsScript\jquery-1.11.2.min.js" />
+    <Content Include="JsScript\jquery-1.11.3.js" />
+    <EntityDeploy Include="DatabaseModel\EmployeeDetails1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EmployeeDetails1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DatabaseModel\EmployeeDetails1.edmx.diagram">
+      <DependentUpon>EmployeeDetails1.edmx</DependentUpon>
+    </Content>
+    <None Include="JsScript\jquery-1.7.1-vsdoc.js" />
+    <Content Include="JsScript\jquery-1.7.1.min.js" />
+    <Content Include="JsScript\jquery-1.9.1.js" />
+    <Content Include="JsScript\jquery-ui-1.10.3.js" />
+    <Content Include="JsScript\jquery-ui.js" />
+    <Content Include="JsScript\jquery-ui.min.js" />
+    <Content Include="JsScript\jquery-ui.min1.9.1.js" />
+    <Content Include="JsScript\jQuery.ajaxQueue.js" />
+    <Content Include="JsScript\jquery.bxslider.min.js" />
+    <Content Include="JsScript\jquery.dataTables.min.js" />
+    <Content Include="JsScript\jquery.fileDownload.js" />
+    <Content Include="JsScript\jquery.fileupload.js" />
+    <Content Include="JsScript\jquery.mCustomScrollbar.js" />
+    <Content Include="JsScript\jquery.mousewheel.min.js" />
+    <Content Include="JsScript\jquery.tablesorter.js" />
+    <Content Include="JsScript\jquery.tablesorter.min.js" />
+    <Content Include="JsScript\jquery.tablesorter.pager-2.js" />
+    <Content Include="JsScript\jquery.tablesorter.pager.js" />
+    <Content Include="JsScript\jquery.tmpl.js" />
+    <Content Include="JsScript\jquery.treegrid.min.js" />
+    <Content Include="JsScript\jquery.treetable.js" />
+    <Content Include="JsScript\jquery.ui.timepicker.js" />
+    <Content Include="JsScript\jquery.unobtrusive-ajax.js" />
+    <Content Include="JsScript\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="JsScript\jquery.validate.js" />
+    <Content Include="JsScript\jquery.validate.min.js" />
+    <Content Include="JsScript\jquery.validate.unobtrusive.js" />
+    <Content Include="JsScript\jquery.validate.unobtrusive.min.js" />
+    <Content Include="JsScript\jQuery1.8.3.js" />
+    <Content Include="JsScript\json2.js" />
+    <Content Include="JsScript\knockout-3.1.0.js" />
+    <Content Include="JsScript\knockout.mapping-latest.js" />
+    <Content Include="JsScript\KPIListing.js" />
+    <Content Include="JsScript\KPIPreviewScript.js" />
+    <Content Include="JsScript\KPIScript.js" />
+    <Content Include="JsScript\KRAApproval.js" />
+    <Content Include="JsScript\lodash.js" />
+    <Content Include="JsScript\MeetingNotes.js" />
+    <Content Include="JsScript\MisspunchApproval.js" />
+    <Content Include="JsScript\moment.min.js" />
+    <Content Include="JsScript\new-icon-font.js" />
+    <Content Include="JsScript\ObjectivesAndKRAsScript.js" />
+    <Content Include="JsScript\ProjectKRA.js" />
+    <Content Include="JsScript\ProjectList_New.js" />
+    <Content Include="JsScript\ProjTeamDefinition2.js" />
+    <Content Include="JsScript\RequestCard.js" />
+    <Content Include="JsScript\scrollfunction.js" />
+    <Content Include="JsScript\scw.js" />
+    <Content Include="JsScript\tabbuttons.js" />
+    <Content Include="JsScript\Task.js" />
+    <Content Include="JsScript\TimeoffRequest.js" />
+    <Content Include="JsScript\TimeoffRequest_Attendance.js" />
+    <Content Include="JsScript\TimesheetConfiguration.js" />
+    <Content Include="JsScript\vallenato.js" />
+    <Content Include="JsScript\ViewApplicabilityToFunctions.js" />
+    <Content Include="JsScript\ViewKRAApplicable.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EditController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DatabaseModel\additional_information.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\certifications.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\educational_qualifications.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\EmployeeDetails1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeDetails1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\EmployeeDetails1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\EmployeeDetails1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeDetails1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\employee_details.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\employee_refcheck.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\epfo_details.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\esic_details.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\family_details.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\feedback.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\other_details.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\previous_company_details.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\prev_employ_1.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\prev_employ_2.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\prev_employ_3.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\prev_employ_4.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\prev_employ_5.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\references.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EditIndexModel.cs" />
+    <Compile Include="Models\Model1.cs" />
+    <Compile Include="Models\Model2.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Shared\_LayoutPage.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="CSS\alerts.less" />
+    <Content Include="CSS\animated.less" />
+    <Content Include="CSS\badges.less" />
+    <Content Include="CSS\bootstrap-checkbox.less" />
+    <Content Include="CSS\bootstrap-chosen-variables.less" />
+    <Content Include="CSS\bootstrap-chosen.less" />
+    <Content Include="CSS\bootstrap-multiselect.less" />
+    <Content Include="CSS\bootstrap-switch.less" />
+    <Content Include="CSS\bordered-pulled.less" />
+    <Content Include="CSS\breadcrumbs.less" />
+    <Content Include="CSS\button-groups.less" />
+    <Content Include="CSS\buttons.less" />
+    <Content Include="CSS\carousel.less" />
+    <Content Include="CSS\chosenIcon.css.map" />
+    <Content Include="CSS\chosenIcon.less" />
+    <Content Include="CSS\circle.less" />
+    <Content Include="CSS\close.less" />
+    <Content Include="CSS\code.less" />
+    <Content Include="CSS\colorpicker.less" />
+    <Content Include="CSS\component-animations.less" />
+    <Content Include="CSS\core.less" />
+    <Content Include="CSS\custom-responsive-utilities.less" />
+    <Content Include="CSS\custom-variables.less" />
+    <Content Include="CSS\custom.less" />
+    <Content Include="CSS\custom_old.less" />
+    <Content Include="CSS\dropdowns.less" />
+    <Content Include="CSS\fixed-width.less" />
+    <Content Include="CSS\font-awesome.less" />
+    <Content Include="CSS\forms.less" />
+    <Content Include="CSS\Gantt_20170824.zip" />
+    <Content Include="CSS\glyphicons.less" />
+    <Content Include="CSS\grid.less" />
+    <Content Include="CSS\icons.less" />
+    <Content Include="CSS\input-groups.less" />
+    <Content Include="CSS\jquery.treegrid.less" />
+    <Content Include="CSS\jumbotron.less" />
+    <Content Include="CSS\labels.less" />
+    <Content Include="CSS\larger.less" />
+    <Content Include="CSS\list-group.less" />
+    <Content Include="CSS\list.less" />
+    <Content Include="CSS\media.less" />
+    <Content Include="CSS\menu.less" />
+    <Content Include="CSS\mixins.less" />
+    <Content Include="CSS\modals.less" />
+    <Content Include="CSS\navbar.less" />
+    <Content Include="CSS\navs.less" />
+    <Content Include="CSS\normalize.less" />
+    <Content Include="CSS\pager.less" />
+    <Content Include="CSS\pagination.less" />
+    <Content Include="CSS\panels.less" />
+    <Content Include="CSS\path.less" />
+    <Content Include="CSS\popovers.less" />
+    <Content Include="CSS\print.less" />
+    <Content Include="CSS\progress-bars.less" />
+    <Content Include="CSS\responsive-embed.less" />
+    <Content Include="CSS\responsive-utilities.less" />
+    <Content Include="CSS\rotated-flipped.less" />
+    <Content Include="CSS\scaffolding.less" />
+    <Content Include="CSS\screen-reader.less" />
+    <Content Include="CSS\stacked.less" />
+    <Content Include="CSS\styles.css.map" />
+    <Content Include="CSS\styles.less" />
+    <Content Include="CSS\Syncfusion.theme.less" />
+    <Content Include="CSS\tables.less" />
+    <Content Include="CSS\theme.css.map" />
+    <Content Include="CSS\theme.less" />
+    <Content Include="CSS\thumbnails.less" />
+    <Content Include="CSS\tooltip.less" />
+    <Content Include="CSS\type.less" />
+    <Content Include="CSS\utilities.less" />
+    <Content Include="CSS\variables.less" />
+    <Content Include="CSS\wells.less" />
+    <Content Include="Images\Thumbs.db" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="JsScript\Gantt_20170824.zip" />
+    <Content Include="JsScript\jquery.filestyle.js.exclude" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\_Form1.cshtml" />
+    <Content Include="Views\Home\_Form2.cshtml" />
+    <Content Include="Views\Home\_Form3.cshtml" />
+    <Content Include="Views\Home\_Form4.cshtml" />
+    <Content Include="Views\Edit\Edit.cshtml" />
+    <Content Include="Views\Edit\_EditForm1.cshtml" />
+    <Content Include="Views\Edit\_Editform2.cshtml" />
+    <Content Include="Views\Edit\_EditForm3.cshtml" />
+    <Content Include="Views\Edit\EditIndex2.cshtml" />
+    <Content Include="Views\Home\_Form5.cshtml" />
+    <Content Include="Views\Edit\_EditForm4.cshtml" />
+    <Content Include="Views\Edit\_EditForm5.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="CSS\Banner-css\" />
+    <Folder Include="CSS\Basic\" />
+    <Folder Include="CSS\bootstrap\" />
+    <Folder Include="CSS\common-images\" />
+    <Folder Include="CSS\datatable\" />
+    <Folder Include="CSS\DropZone\" />
+    <Folder Include="CSS\fonts\" />
+    <Folder Include="CSS\Gantt\" />
+    <Folder Include="CSS\HRIMS\" />
+    <Folder Include="CSS\HRIMS_Secure\" />
+    <Folder Include="CSS\images\" />
+    <Folder Include="CSS\jquery\" />
+    <Folder Include="CSS\mixins\" />
+    <Folder Include="CSS\Scheduler\" />
+    <Folder Include="CSS\SlimScroll\" />
+    <Folder Include="CSS\TaskImport\" />
+    <Folder Include="Images\BackGroundImages\" />
+    <Folder Include="Images\Banner-image\" />
+    <Folder Include="Images\bootstrap-chosen\" />
+    <Folder Include="Images\bootstrap-colorpicker\" />
+    <Folder Include="Images\branding\" />
+    <Folder Include="Images\Help-Gantt\" />
+    <Folder Include="Images\HRIMS\" />
+    <Folder Include="Images\ico\" />
+    <Folder Include="Images\QR\" />
+    <Folder Include="Images\TaskImport\" />
+    <Folder Include="JsScript\angular\" />
+    <Folder Include="JsScript\BannerJs\" />
+    <Folder Include="JsScript\ckeditor_4.4.7_basic\" />
+    <Folder Include="JsScript\Constant\" />
+    <Folder Include="JsScript\css\" />
+    <Folder Include="JsScript\fckeditor\" />
+    <Folder Include="JsScript\Gantt\" />
+    <Folder Include="JsScript\images\" />
+    <Folder Include="JsScript\JQAlert\" />
+    <Folder Include="JsScript\PageScripts\" />
+    <Folder Include="JsScript\pick-a-color-master\" />
+    <Folder Include="JsScript\PMS\" />
+    <Folder Include="JsScript\Scheduler\" />
+    <Folder Include="JsScript\Task\" />
+    <Folder Include="JsScript\ThirdPartyPlugins\" />
+    <Folder Include="JsScript\TinyMCE\" />
+    <Folder Include="Views\EmployeeDetails\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64172</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64172/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

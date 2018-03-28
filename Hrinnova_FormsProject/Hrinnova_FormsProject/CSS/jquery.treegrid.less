@@ -1,0 +1,77 @@
+.treegrid-indent {
+    display: inline-block;
+    height: 16px;
+    position: relative;
+    width: 16px;
+}
+
+.treegrid-expander {
+    cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    position: relative;
+    width: 40px;
+}
+
+.treegrid-expander-expanded {
+    position: relative;
+    .fa-icon::before {
+        content: "\f146";
+        color: #777;
+        font-size: 20px;
+    }
+}
+.treegrid-row {
+    .disable {
+        cursor: default;
+        ;
+    }
+}
+.treegrid-expander-collapsed {
+    position: relative;
+    .fa-icon::before {
+        color: #777777;
+        content: "\f0fe";
+        font-size: 20px;
+    }
+}
+
+.tree-row .treegrid-expander {
+    display: none;
+}
+
+.tree-row .treegrid-expander.treegrid-expander-collapsed,
+.tree-row .treegrid-expander.treegrid-expander-expanded {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tree-row-content {
+    padding-left: 10px;
+    p {
+        line-height: 22px;
+        margin: 0;
+        
+    }
+}
+
+.tree-grid table tbody tr td {
+    vertical-align: middle;
+}
+
+.tree-row-icon {
+    color: #777777;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+}
+
+// .treegrid-expander-expanded {
+//     background-image: url(../images/bootstrap-tree-table/collapse.png);
+// }
+// .treegrid-expander-collapsed {
+//     background-image: url(../images/bootstrap-tree-table/expand.png);
+// }

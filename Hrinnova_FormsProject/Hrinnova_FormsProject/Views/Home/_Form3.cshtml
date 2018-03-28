@@ -1,0 +1,454 @@
+﻿@*@model IEnumerable<Hrinnova_FormsProject.Models.Model2>*@
+<div class="container-fluid">
+            <div class="middel-content">
+                <div class="clearfix">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h1 align="center">Tabular Forms</h1>
+                            <div class="table-responsive">
+                                <h3>Family Details :</h3>
+                                <table class="table table-responsive table-condensed table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Family Member</th>
+                                            <th>Name</th>
+                                            <th>DOB</th>
+                                            <th>Aadhar Card</th>
+                                            <th>Contact No</th>
+                                            <th>Occupation</th>
+                                            <th>Whether residing with him/her</th>
+                                            <th>Town</th>
+                                            <th>State</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td name="fathername">Father</td>
+                                            <td><input type="text" name="fathername" class="form-control"></td>
+                                            <td><input type="date" name="fatherdob" class="form-control"></td>
+                                            <td><input type="text" name="fatheraadhar" class="form-control"></td>
+                                            <td><input type="text" name="fathercontact" class="form-control"></td>
+                                            <td><input type="text" name="fatheroccupation" class="form-control"></td>
+                                            <td><input type="text" name="fatherresides" class="form-control"></td>
+                                            <td><input type="text" name="fathertown" class="form-control"></td>
+                                            <td><input type="text" name="fatherstate" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mother</td>
+                                            <td><input type="text" name="mothername" class="form-control"></td>
+                                            <td><input type="date" name="motherdob" class="form-control"></td>
+                                            <td><input type="text" name="motheraadhar" class="form-control"></td>
+                                            <td><input type="text" name="mothercontact" class="form-control"></td>
+                                            <td><input type="text" name="motheroccupation" class="form-control"></td>
+                                            <td><input type="text" name="motherresides" class="form-control"></td>
+                                            <td><input type="text" name="mothertown" class="form-control"></td>
+                                            <td><input type="text" name="motherstate" class="form-control"></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Brother</td>
+
+                                            <td><input type="text" name="brothername" class="form-control"></td>
+                                            <td><input type="date" name="brotherdob" class="form-control"></td>
+                                            <td><input type="text" name="brotheraadhar" class="form-control"></td>
+                                            <td><input type="text" name="brothercontact" class="form-control"></td>
+                                            <td><input type="text" name="brotheroccupation" class="form-control"></td>
+                                            <td><input type="text" name="brotherresides" class="form-control"></td>
+                                            <td><input type="text" name="brothertown" class="form-control"></td>
+                                            <td><input type="text" name="brotherstate" class="form-control"></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Sister</td>
+                                            <td><input type="text" name="sistername" class="form-control"></td>
+                                            <td><input type="date" name="sisterdob" class="form-control"></td>
+                                            <td><input type="text" name="sisteraadhar" class="form-control"></td>
+                                            <td><input type="text" name="sistercontact" class="form-control"></td>
+                                            <td><input type="text" name="sisteroccupation" class="form-control"></td>
+                                            <td><input type="text" name="sisterresides" class="form-control"></td>
+                                            <td><input type="text" name="sistertown" class="form-control"></td>
+                                            <td><input type="text" name="sisterstate" class="form-control"></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Spouse (if married)</td>
+                                            <td><input type="text" name="spousename" class="form-control"></td>
+                                            <td><input type="date" name="spousedob" class="form-control"></td>
+                                            <td><input type="text" name="spouseaadhar" class="form-control"></td>
+                                            <td><input type="text" name="spousecontact" class="form-control"></td>
+                                            <td><input type="text" name="spouseoccupation" class="form-control"></td>
+                                            <td><input type="text" name="spouseresides" class="form-control"></td>
+                                            <td><input type="text" name="spousetown" class="form-control"></td>
+                                            <td><input type="text" name="spousestate" class="form-control"></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Children (Specify gender)</td>
+                                            <td><input type="text" name="childrenname" class="form-control"></td>
+                                            <td><input type="date" name="childrendob" class="form-control"></td>
+                                            <td><input type="text" name="childrenaadhar" class="form-control"></td>
+                                            <td><input type="text" name="childrencontact" class="form-control"></td>
+                                            <td><input type="text" name="childrenoccupation" class="form-control"></td>
+                                            <td><input type="text" name="childrenresides" class="form-control"></td>
+                                            <td><input type="text" name="childrentown" class="form-control"></td>
+                                            <td><input type="text" name="childrenstate" class="form-control"></td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="middel-content">
+                <div class="clearfix">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <h3>Other Details :</h3>
+                                <table class="table table-responsive table-condensed table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>References</th>
+                                            <th>Name</th>
+                                            <th>Contact Number</th>
+                                            <th>Current Address</th>
+                                            <th>Occupation</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Property Owner</td>
+                                            <td><input type="text" name="ownername" class="form-control"></td>
+                                            <td><input type="text" name="ownercontact" class="form-control"></td>
+                                            <td><input type="text" name="owneraddress" class="form-control"></td>
+                                            <td><input type="text" name="owneroccupation" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Neighbour 1</td>
+                                            <td><input type="text" name="neighbour1name" class="form-control"></td>
+                                            <td><input type="text" name="neighbour1contact" class="form-control"></td>
+                                            <td><input type="text" name="neighbour1address" class="form-control"></td>
+                                            <td><input type="text" name="neighbour1occupation" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Neighbour 2</td>
+                                            <td><input type="text" name="neighbour2name" class="form-control"></td>
+                                            <td><input type="text" name="neighbour2contact" class="form-control"></td>
+                                            <td><input type="text" name="neighbour2address" class="form-control"></td>
+                                            <td><input type="text" name="neighbour2occupation" class="form-control"></td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="middel-content">
+                <div class="clearfix">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <h3>Educational Qualifications :</h3>
+                                <table class="table table-responsive table-condensed table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Examination/Degree</th>
+                                            <th>School/College</th>
+                                            <th>University/Board</th>
+                                            <th>Year of Passing</th>
+                                            <th>Grade</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>10th Std</td>
+                                            <td><input type="text" name="tenthschool"        class="form-control"></td>
+                                            <td><input type="text" name="tenthboard"         class="form-control"></td>
+                                            <td><input type="text" name="tenthyearofpassing" class="form-control"></td>
+                                            <td><input type="text" name="tenthgrade"         class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12th Std</td>
+                                            <td><input type="text" name="twelfthschool"         class="form-control"></td>
+                                            <td><input type="text" name="twelfthboard"          class="form-control"></td>
+                                            <td><input type="text" name="twelfthyearofpassing"  class="form-control"></td>
+                                            <td><input type="text" name="twelfthgrade"          class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bachelors</td>
+                                            <td><input type="text" name="bachelorscollege" class="form-control"></td>
+                                            <td><input type="text" name="bachelorsuniversity" class="form-control"></td>
+                                            <td><input type="text" name="bachelorsyearofpassing" class="form-control"></td>
+                                            <td><input type="text" name="bachelorsgrade" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Masters</td>
+                                            <td><input type="text" name="masterscollege" class="form-control"></td>
+                                            <td><input type="text" name="mastersuniversity" class="form-control"></td>
+                                            <td><input type="text" name="mastersyearofpassing" class="form-control"></td>
+                                            <td><input type="text" name="mastersgrade" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Others</td>
+                                            <td><input type="text" name="otherschool" class="form-control"></td>
+                                            <td><input type="text" name="otherboard" class="form-control"></td>
+                                            <td><input type="text" name="otheryearofpassing" class="form-control"></td>
+                                            <td><input type="text" name="othergrade" class="form-control"></td>
+                                        </tr>
+
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="container-fluid">
+    <div class="middel-content">
+        <div class="clearfix">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <h3>Certifications :</h3>
+                        <table class="table table-responsive table-condensed table-bordered">
+                            
+                            <tbody>
+                                <tr>
+                                    <td class="col-sm-1">1 :</td>
+                                    <td><input type="text" name="cert_1" class="form-control"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-1">2 :</td>
+                                    <td><input type="text" name="cert_2" class="form-control"></td>
+                                </tr>                                
+                                <tr>                                 
+                                    <td class="col-sm-1">3 :</td>    
+                                    <td><input type="text" name="cert_3" class="form-control"></td>
+                                </tr>                                
+                                <tr>                                 
+                                    <td class="col-sm-1">4 :</td>    
+                                    <td><input type="text" name="cert_4" class="form-control"></td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="container-fluid">
+            <div class="middel-content">
+                <div class="clearfix">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <h3>Previous Company Details :</h3>
+                                <table class="table table-responsive table-condensed table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Provident Fund (if any)</th>
+                                            <th>Family Pension Scheme (if any)</th>
+                                            <th>Employee Status Insurance (if any)</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>PF A/c No.:<input type="text" name="pfaccnumber" class="form-control"></td>
+                                            <td>Account No.:<input type="text" name="accountnumber" class="form-control"></td>
+                                            <td>Insurance No.:<input type="text" name="insurance" class="form-control"></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Employer's Code No.:<input type="text" name="employerscodenum" class="form-control"></td>
+                                            <td>Life Insurance :<input type="text" name="lifeinsurance" class="form-control"></td>
+                                            <td>Employer's Code No.:<input type="text" name="employerscodeno"class="form-control"></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Mediclaim :<input type="text" name="mediclaim" class="form-control"></td>
+                                            <td></td>
+
+                                        </tr>
+
+
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="middel-content">
+                <div class="clearfix">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <h3>Previous Employment :</h3>
+                                <table class="table table-responsive table-condensed table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Employer's Name and Address</th>
+                                            <th>Designation</th>
+                                            <th>Worked From</th>
+                                            <th>Worked Till</th>
+                                            <th>Reason of Leaving</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="text" name="emp1nameandadd"   class="form-control"></td>
+                                            <td><input type="text" name="emp1designation"       class="form-control"></td>
+                                            <td><input type="date" name="emp1workedfrom"        class="form-control"></td>
+                                            <td><input type="date" name="emp1workedtill"        class="form-control"></td>
+                                            <td><input type="text" name="emp1reasonofleaving"   class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" name="emp2nameandadd"   class="form-control"></td>
+                                            <td><input type="text" name="emp2designation"       class="form-control"></td>
+                                            <td><input type="date" name="emp2workedfrom"        class="form-control"></td>
+                                            <td><input type="date" name="emp2workedtill"        class="form-control"></td>
+                                            <td><input type="text" name="emp2reasonofleaving"   class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" name="emp3nameandadd"   class="form-control"></td>
+                                            <td><input type="text" name="emp3designation"       class="form-control"></td>
+                                            <td><input type="date" name="emp3workedfrom"        class="form-control"></td>
+                                            <td><input type="date" name="emp3workedtill"        class="form-control"></td>
+                                            <td><input type="text" name="emp3reasonofleaving"   class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" name="emp4nameandadd"   class="form-control"></td>
+                                            <td><input type="text" name="emp4designation"       class="form-control"></td>
+                                            <td><input type="date" name="emp4workedfrom"        class="form-control"></td>
+                                            <td><input type="date" name="emp4workedtill"        class="form-control"></td>
+                                            <td><input type="text" name="emp4reasonofleaving"   class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" name="emp5nameandadd"   class="form-control"></td>
+                                            <td><input type="text" name="emp5designation"       class="form-control"></td>
+                                            <td><input type="date" name="emp5workedfrom"        class="form-control"></td>
+                                            <td><input type="date" name="emp5workedtill"        class="form-control"></td>
+                                            <td><input type="text" name="emp5reasonofleaving"   class="form-control"></td>
+                                        </tr>
+
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="middel-content">
+                <div class="clearfix">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <h3>Additional Information :</h3>
+                                <table class="table table-responsive table-condensed table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="4">
+                                                Are you related/known to any of the present employees of our company &nbsp;&nbsp;
+
+                                                <input type="radio" name="knowntopresentemp" value="yes" checked> Yes
+                                                <input type="radio" name="knowntopresentemp" value="no"> No
+
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>If yes, specify name :</td>
+                                            <td><input type="text" name="presentempname" class="form-control"></td>
+                                            <td>Relationship :</td>
+                                            <td><input type="text" name="presentemprelation" class="form-control"></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" align="center">Have you ever worked with us before ? If yes, give details.</td>
+
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="middel-content">
+                <div class="clearfix">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <h3>References :</h3>
+                                <table class="table table-responsive table-condensed table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3">Provide contact details and current designation of two professional references, who had supervised you in the past.</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Name</td>
+                                            <td>Address (including Phone number)</td>
+                                            <td>Designation</td>
+
+                                        </tr>
+                                        <tr>
+                                            
+                                            <td><input type="text" name="reference1name"        class="form-control"></td>
+                                            <td><input type="text" name="reference1address"     class="form-control"></td>
+                                            <td><input type="text" name="reference1designation" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td><input type="text" name="reference2name"        class="form-control"></td>
+                                            <td><input type="text" name="reference2address"     class="form-control"></td>
+                                            <td><input type="text" name="reference2designation" class="form-control"></td>
+                                        </tr>
+
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+

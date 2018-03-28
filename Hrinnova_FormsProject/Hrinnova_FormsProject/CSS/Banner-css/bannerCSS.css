@@ -1,0 +1,103 @@
+
+
+#myContainer {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    overflow:hidden;
+    transition:all 1s ease 0.5s;
+    
+    
+    
+}
+.main-container {
+     /* overflow: hidden;*/
+    top: 100vh;
+    position: relative;
+    transition: all 1s ease;
+    width: 100%;   
+}
+    .main-container.visible {
+        top: 0;
+        transition:all 1s ease;
+    }
+.button-dashboard {
+    border-radius: 50%;
+    bottom: -25px;
+    display: inline-block;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+    position: fixed;
+    text-align: center;
+    width: 50px;
+    z-index: 9999;
+    transition:0.5s all;
+}
+    .button-dashboard:hover {
+        opacity:1;
+        transition:0.5s all;
+    }
+    .button-dashboard span {
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-top:4px;
+    }
+.button-dashboard span i{
+    display: inline-block;
+    font-size:18px;
+    line-height:24px;
+    color:#314B70;
+}
+
+#multiscroll-nav {
+z-index:9999;
+}
+
+    #multiscroll-nav span {
+        height:12px;
+        width:12px;
+        border:1px solid #fff;
+    }
+    #multiscroll-nav li .active span {
+        background-color:#fff;
+    }
+
+#myContainer.translate {
+    transform:translateY(-100%);
+    transition:all 1s ease;
+}
+.ms-section.ms-table{display:block;}
+.ms-tableCell{display:block;}
+.slider-image{background-size:cover; height:100%; background-repeat:no-repeat;  background-position:center top;}
+.slider-content{padding:20px; position:absolute; bottom:0; min-height:200px; width:100%; height:auto;}
+.slider-content p{font-size:16px; line-height:1.2; text-align:left; margin-bottom:0px; color:#fff;}
+.slider-content h3{font-size:24px; text-align:left; text-transform:uppercase; font-weight:bold; color:#fff; margin-bottom:20px;}
+.vision-slider-content p{font-size:24px; line-height:1.4}
+.slider-vision{background-image:url(../../Images/Banner-image/8.jpg)}
+.slider-mission{background-image:url(../../Images/Banner-image/1.jpg);}		
+.slider-respect{background-image:url(../../Images/Banner-image/7.jpg);}
+.slider-spirit{background-image:url(../../Images/Banner-image/6.jpg);}	
+.slider-teamwork{background-image:url(../../Images/Banner-image/5.jpg);}
+.slider-integrity{background-image:url(../../Images/Banner-image/3.jpg);}	
+.slider-stewardship{background-image:url(../../Images/Banner-image/4.jpg);}
+.slider-speed{background-image:url(../../Images/Banner-image/2.jpg);}
+
+.vision-slider-content{background-color:rgba(0,89,122,0.9); color:#fff;}
+.mission-slider-content{background-color:rgba(71,163,197,0.9); color:#fff;}
+
+.respect-slider-content{background-color:rgba(140,82,78,0.8); color:#fff;}
+.respect-slider-content h3{color:#fff;}
+
+.spirit-slider-content{background-color:rgba(115,89,115,0.8); color:#fff;}
+.teamwork-slider-content{background-color:rgba(86,107,142,0.8);}
+.stewardship-slider-content{background-color:rgba(206,138,71,0.8);}
+.integrity-slider-content{background-color:rgba(134,112,84,0.8);}
+.speed-slider-content{background-color:rgba(161,117,66,0.8);}
+

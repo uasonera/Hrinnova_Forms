@@ -1,0 +1,244 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?qqmds1');
+	src:url('../fonts/icomoon.eot?#iefixqqmds1') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?qqmds1') format('truetype'),
+		url('../fonts/icomoon.woff?qqmds1') format('woff'),
+		url('../fonts/icomoon.svg?qqmds1#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add99:before {
+	content: "\e609";
+}
+.icon-adobe21:before {
+	content: "\e60a";
+}
+.icon-avatars:before {
+	content: "\e60b";
+}
+.icon-bell34:before {
+	content: "\e60c";
+}
+.icon-cake2:before {
+	content: "\e60d";
+}
+.icon-calendar69:before {
+	content: "\e60e";
+}
+.icon-celebration2:before {
+	content: "\e60f";
+}
+.icon-clock97:before {
+	content: "\e610";
+}
+.icon-cogwheel22:before {
+	content: "\e611";
+}
+.icon-coverage1:before {
+	content: "\e612";
+}
+.icon-cross26:before {
+	content: "\e613";
+}
+.icon-curvearrow31:before {
+	content: "\e614";
+}
+.icon-danger14:before {
+	content: "\e615";
+}
+.icon-delete8:before {
+	content: "\e616";
+}
+.icon-download149:before {
+	content: "\e617";
+}
+.icon-edit46:before {
+	content: "\e618";
+}
+.icon-finances2:before {
+	content: "\e619";
+}
+.icon-fingerprint32:before {
+	content: "\e61a";
+}
+.icon-graphic29:before {
+	content: "\e61b";
+}
+.icon-heart260:before {
+	content: "\e61c";
+}
+.icon-hearts48:before {
+	content: "\e61d";
+}
+.icon-hearts49:before {
+	content: "\e61e";
+}
+.icon-high13:before {
+	content: "\e61f";
+}
+.icon-home60:before {
+	content: "\e620";
+}
+.icon-increasing11:before {
+	content: "\e621";
+}
+.icon-kitchenpack18:before {
+	content: "\e622";
+}
+.icon-lightning49:before {
+	content: "\e623";
+}
+.icon-link74:before {
+	content: "\e624";
+}
+.icon-lock68:before {
+	content: "\e625";
+}
+.icon-login13:before {
+	content: "\e626";
+}
+.icon-magnifier32:before {
+	content: "\e627";
+}
+.icon-male52:before {
+	content: "\e628";
+}
+.icon-mappointer5:before {
+	content: "\e629";
+}
+.icon-megaphones9:before {
+	content: "\e62a";
+}
+.icon-mic14:before {
+	content: "\e62b";
+}
+.icon-microsoft-excel:before {
+	content: "\e62c";
+}
+.icon-new56:before {
+	content: "\e62d";
+}
+.icon-origami24:before {
+	content: "\e62e";
+}
+.icon-plus79:before {
+	content: "\e62f";
+}
+.icon-power:before {
+	content: "\e630";
+}
+.icon-print52:before {
+	content: "\e631";
+}
+.icon-raindrop:before {
+	content: "\e632";
+}
+.icon-refresh4:before {
+	content: "\e633";
+}
+.icon-reloading:before {
+	content: "\e634";
+}
+.icon-reward1:before {
+	content: "\e635";
+}
+.icon-right106:before {
+	content: "\e636";
+}
+.icon-rubbish12:before {
+	content: "\e637";
+}
+.icon-services1:before {
+	content: "\e638";
+}
+.icon-settings20:before {
+	content: "\e639";
+}
+.icon-share11:before {
+	content: "\e63a";
+}
+.icon-star145:before {
+	content: "\e63b";
+}
+.icon-stats46:before {
+	content: "\e63c";
+}
+.icon-stopwatch6:before {
+	content: "\e63d";
+}
+.icon-text150:before {
+	content: "\e63e";
+}
+.icon-thin35:before {
+	content: "\e63f";
+}
+.icon-thin36:before {
+	content: "\e640";
+}
+.icon-thumbup3:before {
+	content: "\e641";
+}
+.icon-thumb23:before {
+	content: "\e642";
+}
+.icon-time26:before {
+	content: "\e643";
+}
+.icon-translation:before {
+	content: "\e644";
+}
+.icon-trash:before {
+	content: "\e645";
+}
+.icon-up77:before {
+	content: "\e646";
+}
+.icon-volume46:before {
+	content: "\e647";
+}
+.icon-wifi84:before {
+	content: "\e648";
+}
+.icon-avatar6:before {
+	content: "\e600";
+}
+.icon-blogger15:before {
+	content: "\e601";
+}
+.icon-businessmen9:before {
+	content: "\e602";
+}
+.icon-conference6:before {
+	content: "\e603";
+}
+.icon-note16:before {
+	content: "\e604";
+}
+.icon-note18:before {
+	content: "\e605";
+}
+.icon-pencil113:before {
+	content: "\e606";
+}
+.icon-presentation2:before {
+	content: "\e607";
+}
+.icon-screwdriver26:before {
+	content: "\e608";
+}

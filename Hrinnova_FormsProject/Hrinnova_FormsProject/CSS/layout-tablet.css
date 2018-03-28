@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*  768px > tablet styles < 991px ======================================= */
+@media screen and (min-width:768px) and (max-width:991px) {
+	.task-progress { border:none;}
+	.top-heading-right{padding:0px 0 20px; text-align:right;}
+	.top-heading{padding:15px 0 10px;}
+	.task-detail{border-bottom:1px solid #c7c7c7;}
+	.task-detail p label, .task-progress p label{ text-align:right;}
+	.last-update-detail{margin-bottom:20px;}
+	.task-progress, .progress-box{margin-top:20px;}
+	}

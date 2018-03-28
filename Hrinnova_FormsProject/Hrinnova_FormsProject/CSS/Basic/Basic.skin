@@ -1,0 +1,50 @@
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+
+<asp:Textbox runat="Server" CssClass="form-control"></asp:Textbox>
+<%--<asp:DropDownList runat="Server" CssClass="dropText"></asp:DropDownList>--%>
+<asp:ListBox runat="server" CssClass="height-xlg form-control"></asp:ListBox>
+
+<%--<asp:Button runat="server" CssClass="ButtonStyles"></asp:Button>
+<asp:Button runat="server" CssClass="ButtonStyles primary-btn" skinid="submit_btn" ></asp:Button>--%>
+
+<asp:Button runat="server" skinid="srch_btn" CssClass="btn btn-primary"></asp:Button>
+<asp:Button runat="server" skinid="btn_AddRole" CssClass="btn btn-success"></asp:Button>
+<asp:Button runat="server" skinid="btn_RmRole" CssClass="btn btn-danger"></asp:Button >
+<asp:Button runat="server" skinid="btn_Favorite" CssClass="btn btn-warning"></asp:Button >
+<asp:ValidationSummary runat="server"  CssClass="alert alert-danger"></asp:ValidationSummary >
+<%--
+<asp:ImageButton runat="server" skinid="btn_AddRole" CssClass="btnAddRole"></asp:ImageButton>
+<asp:ImageButton runat="server" skinid="btn_RmRole" CssClass="btnRmRole"></asp:ImageButton >
+--%>
+
+
+<asp:GridView runat="Server" EmptyDataText="No records found" AutoGenerateColumns="false" AllowSorting="true" AllowPaging="true"
+               HorizontalAlign="Center"  GridLines="None" >
+              <%--<HeaderStyle />--%>
+              <%--<RowStyle  />--%>
+             <%-- <AlternatingRowStyle CssClass="altRowStyle" />
+              --%>               
+</asp:GridView>
+
+<asp:GridView SkinId="gvWithOutPagingSorting"  runat="Server" EmptyDataText="No records found" AutoGenerateColumns="false" AllowSorting="false" AllowPaging="false"
+               HorizontalAlign="Center"  GridLines="None">
+             <%-- <HeaderStyle  Font-Size="11px" Font-Bold="false" />--%>
+             <%--  <RowStyle  />--%>
+            <%--  <AlternatingRowStyle CssClass="altRowStyle"/> --%>
+              
+</asp:GridView>

@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="hrinnova_dbModelStoreContainer" CdmEntityContainer="hrinnova_dbEntities">
+    <EntitySetMapping Name="epfo_details">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.epfo_details">
+        <MappingFragment StoreEntitySet="epfo_details">
+          <ScalarProperty Name="country_of_origin" ColumnName="country_of_origin" />
+          <ScalarProperty Name="international_worker" ColumnName="international_worker" />
+          <ScalarProperty Name="ppo_number" ColumnName="ppo_number" />
+          <ScalarProperty Name="scheme_certificate_number" ColumnName="scheme_certificate_number" />
+          <ScalarProperty Name="prev_pf_acc_number" ColumnName="prev_pf_acc_number" />
+          <ScalarProperty Name="universal_account_number" ColumnName="universal_account_number" />
+          <ScalarProperty Name="member_of_epsscheme" ColumnName="member_of_epsscheme" />
+          <ScalarProperty Name="member_of_epfoscheme" ColumnName="member_of_epfoscheme" />
+          <ScalarProperty Name="presentcompany_pfnumber" ColumnName="presentcompany_pfnumber" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="epfo_id" ColumnName="epfo_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="previous_company_details">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.previous_company_details">
+        <MappingFragment StoreEntitySet="previous_company_details">
+          <ScalarProperty Name="esi_employers_code_number" ColumnName="esi_employers_code_number" />
+          <ScalarProperty Name="esi_insurance_number" ColumnName="esi_insurance_number" />
+          <ScalarProperty Name="mediclaim" ColumnName="mediclaim" />
+          <ScalarProperty Name="life_insurance" ColumnName="life_insurance" />
+          <ScalarProperty Name="fps_account_number" ColumnName="fps_account_number" />
+          <ScalarProperty Name="pf_employers_code_number" ColumnName="pf_employers_code_number" />
+          <ScalarProperty Name="pf_account_number" ColumnName="pf_account_number" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="prevcomp_id" ColumnName="prevcomp_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="additional_information">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.additional_information">
+        <MappingFragment StoreEntitySet="additional_information">
+          <ScalarProperty Name="relationship_with_knownemployee" ColumnName="relationship_with_knownemployee" />
+          <ScalarProperty Name="name_of_knownemployee" ColumnName="name_of_knownemployee" />
+          <ScalarProperty Name="known_to_presentemployee" ColumnName="known_to_presentemployee" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="additionalinformation_id" ColumnName="additionalinformation_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="feedback">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.feedback">
+        <MappingFragment StoreEntitySet="feedback">
+          <ScalarProperty Name="hrmanual_and_responsibilities" ColumnName="hrmanual_and_responsibilities" />
+          <ScalarProperty Name="systemadmin_anyother" ColumnName="systemadmin_anyother" />
+          <ScalarProperty Name="messengers_access" ColumnName="messengers_access" />
+          <ScalarProperty Name="domain_usernamepassword" ColumnName="domain_usernamepassword" />
+          <ScalarProperty Name="firewall_id" ColumnName="firewall_id" />
+          <ScalarProperty Name="network_ip" ColumnName="network_ip" />
+          <ScalarProperty Name="emailid_password" ColumnName="emailid_password" />
+          <ScalarProperty Name="headphones" ColumnName="headphones" />
+          <ScalarProperty Name="computer_system" ColumnName="computer_system" />
+          <ScalarProperty Name="admin_anyother" ColumnName="admin_anyother" />
+          <ScalarProperty Name="employee_card" ColumnName="employee_card" />
+          <ScalarProperty Name="pen" ColumnName="pen" />
+          <ScalarProperty Name="notepad" ColumnName="notepad" />
+          <ScalarProperty Name="bank_account" ColumnName="bank_account" />
+          <ScalarProperty Name="identitycard" ColumnName="identitycard" />
+          <ScalarProperty Name="hr_anyother" ColumnName="hr_anyother" />
+          <ScalarProperty Name="library_card" ColumnName="library_card" />
+          <ScalarProperty Name="books" ColumnName="books" />
+          <ScalarProperty Name="cims_idpassword" ColumnName="cims_idpassword" />
+          <ScalarProperty Name="hr_manual" ColumnName="hr_manual" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="feedback_id" ColumnName="feedback_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="references">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.references">
+        <MappingFragment StoreEntitySet="references">
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ref_type" ColumnName="ref_type" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="reference_id" ColumnName="reference_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="certifications">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.certifications">
+        <MappingFragment StoreEntitySet="certifications">
+          <ScalarProperty Name="certification_name" ColumnName="certification_name" />
+          <ScalarProperty Name="cert_type" ColumnName="cert_type" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="certifications_id" ColumnName="certifications_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="educational_qualifications">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.educational_qualifications">
+        <MappingFragment StoreEntitySet="educational_qualifications">
+          <ScalarProperty Name="other_grade" ColumnName="other_grade" />
+          <ScalarProperty Name="other_yearofpassing" ColumnName="other_yearofpassing" />
+          <ScalarProperty Name="other_board" ColumnName="other_board" />
+          <ScalarProperty Name="other_school" ColumnName="other_school" />
+          <ScalarProperty Name="masters_grade" ColumnName="masters_grade" />
+          <ScalarProperty Name="masters_yearofpassing" ColumnName="masters_yearofpassing" />
+          <ScalarProperty Name="masters_university" ColumnName="masters_university" />
+          <ScalarProperty Name="masters_college" ColumnName="masters_college" />
+          <ScalarProperty Name="bachelors_grade" ColumnName="bachelors_grade" />
+          <ScalarProperty Name="bachelors_yearofpassing" ColumnName="bachelors_yearofpassing" />
+          <ScalarProperty Name="bachelors_university" ColumnName="bachelors_university" />
+          <ScalarProperty Name="bachelors_college" ColumnName="bachelors_college" />
+          <ScalarProperty Name="twelfth_grade" ColumnName="twelfth_grade" />
+          <ScalarProperty Name="twelfth_yearofpassing" ColumnName="twelfth_yearofpassing" />
+          <ScalarProperty Name="twelfth_board" ColumnName="twelfth_board" />
+          <ScalarProperty Name="twelfth_school" ColumnName="twelfth_school" />
+          <ScalarProperty Name="tenth_grade" ColumnName="tenth_grade" />
+          <ScalarProperty Name="tenth_yearofpassing" ColumnName="tenth_yearofpassing" />
+          <ScalarProperty Name="tenth_board" ColumnName="tenth_board" />
+          <ScalarProperty Name="tenth_school" ColumnName="tenth_school" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="eduqualifications_id" ColumnName="eduqualifications_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employee_details">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.employee_details">
+        <MappingFragment StoreEntitySet="employee_details">
+          <ScalarProperty Name="known_ailments" ColumnName="known_ailments" />
+          <ScalarProperty Name="allergies" ColumnName="allergies" />
+          <ScalarProperty Name="ifs_code" ColumnName="ifs_code" />
+          <ScalarProperty Name="single_bank_account" ColumnName="single_bank_account" />
+          <ScalarProperty Name="vehicle_number" ColumnName="vehicle_number" />
+          <ScalarProperty Name="election_card" ColumnName="election_card" />
+          <ScalarProperty Name="passport_validity" ColumnName="passport_validity" />
+          <ScalarProperty Name="passport_number" ColumnName="passport_number" />
+          <ScalarProperty Name="pan_card" ColumnName="pan_card" />
+          <ScalarProperty Name="aadhar_card" ColumnName="aadhar_card" />
+          <ScalarProperty Name="temporary_address" ColumnName="temporary_address" />
+          <ScalarProperty Name="permanent_address" ColumnName="permanent_address" />
+          <ScalarProperty Name="email_id" ColumnName="email_id" />
+          <ScalarProperty Name="emergency_number" ColumnName="emergency_number" />
+          <ScalarProperty Name="alternate_number" ColumnName="alternate_number" />
+          <ScalarProperty Name="home_number" ColumnName="home_number" />
+          <ScalarProperty Name="mobile_number" ColumnName="mobile_number" />
+          <ScalarProperty Name="blood_group" ColumnName="blood_group" />
+          <ScalarProperty Name="marriage_anniversary" ColumnName="marriage_anniversary" />
+          <ScalarProperty Name="marital_status" ColumnName="marital_status" />
+          <ScalarProperty Name="date_of_joining" ColumnName="date_of_joining" />
+          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="middlename" ColumnName="middlename" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="employee_code" ColumnName="employee_code" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employee_refcheck">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.employee_refcheck">
+        <MappingFragment StoreEntitySet="employee_refcheck">
+          <ScalarProperty Name="verified_by_date" ColumnName="verified_by_date" />
+          <ScalarProperty Name="verified_by_name" ColumnName="verified_by_name" />
+          <ScalarProperty Name="re_hire_status" ColumnName="re_hire_status" />
+          <ScalarProperty Name="attendence" ColumnName="attendence" />
+          <ScalarProperty Name="reason_for_leaving" ColumnName="reason_for_leaving" />
+          <ScalarProperty Name="monthly_salary" ColumnName="monthly_salary" />
+          <ScalarProperty Name="reporting_designation" ColumnName="reporting_designation" />
+          <ScalarProperty Name="reporting_to" ColumnName="reporting_to" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="details_furnished_by" ColumnName="details_furnished_by" />
+          <ScalarProperty Name="previous_company_address" ColumnName="previous_company_address" />
+          <ScalarProperty Name="previous_company_name" ColumnName="previous_company_name" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="refcheck_id" ColumnName="refcheck_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="esic_details">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.esic_details">
+        <MappingFragment StoreEntitySet="esic_details">
+          <ScalarProperty Name="nominee_address" ColumnName="nominee_address" />
+          <ScalarProperty Name="nominee_relationship" ColumnName="nominee_relationship" />
+          <ScalarProperty Name="name_of_nominee" ColumnName="name_of_nominee" />
+          <ScalarProperty Name="previous_insurance_number" ColumnName="previous_insurance_number" />
+          <ScalarProperty Name="employers_nameandaddress" ColumnName="employers_nameandaddress" />
+          <ScalarProperty Name="date_of_appointment" ColumnName="date_of_appointment" />
+          <ScalarProperty Name="employers_code" ColumnName="employers_code" />
+          <ScalarProperty Name="dispensary" ColumnName="dispensary" />
+          <ScalarProperty Name="branch_office" ColumnName="branch_office" />
+          <ScalarProperty Name="insurance_number" ColumnName="insurance_number" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="esic_id" ColumnName="esic_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="family_details">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.family_details">
+        <MappingFragment StoreEntitySet="family_details">
+          <ScalarProperty Name="fstate" ColumnName="fstate" />
+          <ScalarProperty Name="ftown" ColumnName="ftown" />
+          <ScalarProperty Name="freside" ColumnName="freside" />
+          <ScalarProperty Name="foccupation" ColumnName="foccupation" />
+          <ScalarProperty Name="fcontact" ColumnName="fcontact" />
+          <ScalarProperty Name="faadhar" ColumnName="faadhar" />
+          <ScalarProperty Name="fdateofbirth" ColumnName="fdateofbirth" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="member" ColumnName="member" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="familydet_id" ColumnName="familydet_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="other_details">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.other_details">
+        <MappingFragment StoreEntitySet="other_details">
+          <ScalarProperty Name="neighbour2_occupation" ColumnName="neighbour2_occupation" />
+          <ScalarProperty Name="neighbour2_address" ColumnName="neighbour2_address" />
+          <ScalarProperty Name="neighbour2_contact" ColumnName="neighbour2_contact" />
+          <ScalarProperty Name="neighbour2_name" ColumnName="neighbour2_name" />
+          <ScalarProperty Name="neighbour1_occupation" ColumnName="neighbour1_occupation" />
+          <ScalarProperty Name="neighbour1_address" ColumnName="neighbour1_address" />
+          <ScalarProperty Name="neighbour1_contact" ColumnName="neighbour1_contact" />
+          <ScalarProperty Name="neighbour1_name" ColumnName="neighbour1_name" />
+          <ScalarProperty Name="propertyowner_occupation" ColumnName="propertyowner_occupation" />
+          <ScalarProperty Name="propertyowner_address" ColumnName="propertyowner_address" />
+          <ScalarProperty Name="propertyowner_contact" ColumnName="propertyowner_contact" />
+          <ScalarProperty Name="propertyowner_name" ColumnName="propertyowner_name" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="otherdet_id" ColumnName="otherdet_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prev_employ_1">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.prev_employ_1">
+        <MappingFragment StoreEntitySet="prev_employ_1">
+          <ScalarProperty Name="reason_of_leaving" ColumnName="reason_of_leaving" />
+          <ScalarProperty Name="periodworked_to" ColumnName="periodworked_to" />
+          <ScalarProperty Name="periodworked_from" ColumnName="periodworked_from" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="employers_name" ColumnName="employers_name" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="prevemploy_id" ColumnName="prevemploy_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prev_employ_2">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.prev_employ_2">
+        <MappingFragment StoreEntitySet="prev_employ_2">
+          <ScalarProperty Name="reason_of_leaving" ColumnName="reason_of_leaving" />
+          <ScalarProperty Name="periodworked_to" ColumnName="periodworked_to" />
+          <ScalarProperty Name="periodworked_from" ColumnName="periodworked_from" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="employers_name" ColumnName="employers_name" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="prevemploy_id" ColumnName="prevemploy_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prev_employ_3">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.prev_employ_3">
+        <MappingFragment StoreEntitySet="prev_employ_3">
+          <ScalarProperty Name="reason_of_leaving" ColumnName="reason_of_leaving" />
+          <ScalarProperty Name="periodworked_to" ColumnName="periodworked_to" />
+          <ScalarProperty Name="periodworked_from" ColumnName="periodworked_from" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="employers_name" ColumnName="employers_name" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="prevemploy_id" ColumnName="prevemploy_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prev_employ_4">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.prev_employ_4">
+        <MappingFragment StoreEntitySet="prev_employ_4">
+          <ScalarProperty Name="reason_of_leaving" ColumnName="reason_of_leaving" />
+          <ScalarProperty Name="periodworked_to" ColumnName="periodworked_to" />
+          <ScalarProperty Name="periodworked_from" ColumnName="periodworked_from" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="employers_name" ColumnName="employers_name" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="prevemploy_id" ColumnName="prevemploy_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prev_employ_5">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.prev_employ_5">
+        <MappingFragment StoreEntitySet="prev_employ_5">
+          <ScalarProperty Name="reason_of_leaving" ColumnName="reason_of_leaving" />
+          <ScalarProperty Name="periodworked_to" ColumnName="periodworked_to" />
+          <ScalarProperty Name="periodworked_from" ColumnName="periodworked_from" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="employers_name" ColumnName="employers_name" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="prevemploy_id" ColumnName="prevemploy_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

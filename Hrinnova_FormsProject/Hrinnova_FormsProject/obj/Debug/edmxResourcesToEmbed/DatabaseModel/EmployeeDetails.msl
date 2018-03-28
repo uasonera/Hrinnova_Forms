@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="hrinnova_dbModelStoreContainer" CdmEntityContainer="hrinnova_dbEntities">
+    <EntitySetMapping Name="employee_details">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.employee_details">
+        <MappingFragment StoreEntitySet="employee_details">
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="middlename" ColumnName="middlename" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+          <ScalarProperty Name="date_of_joining" ColumnName="date_of_joining" />
+          <ScalarProperty Name="marital_status" ColumnName="marital_status" />
+          <ScalarProperty Name="marriage_anniversary" ColumnName="marriage_anniversary" />
+          <ScalarProperty Name="mobile_number" ColumnName="mobile_number" />
+          <ScalarProperty Name="home_number" ColumnName="home_number" />
+          <ScalarProperty Name="alternate_number" ColumnName="alternate_number" />
+          <ScalarProperty Name="emergency_number" ColumnName="emergency_number" />
+          <ScalarProperty Name="email_id" ColumnName="email_id" />
+          <ScalarProperty Name="permanent_address" ColumnName="permanent_address" />
+          <ScalarProperty Name="temporary_address" ColumnName="temporary_address" />
+          <ScalarProperty Name="aadhar_card" ColumnName="aadhar_card" />
+          <ScalarProperty Name="pan_card" ColumnName="pan_card" />
+          <ScalarProperty Name="passport_number" ColumnName="passport_number" />
+          <ScalarProperty Name="passport_validity" ColumnName="passport_validity" />
+          <ScalarProperty Name="election_card" ColumnName="election_card" />
+          <ScalarProperty Name="vehicle_number" ColumnName="vehicle_number" />
+          <ScalarProperty Name="single_bank_account" ColumnName="single_bank_account" />
+          <ScalarProperty Name="ifs_code" ColumnName="ifs_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

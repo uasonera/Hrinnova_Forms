@@ -1,0 +1,69 @@
+.treegrid-indent {
+    display: inline-block;
+    height: 16px;
+    position: relative;
+    width: 16px;
+}
+
+.treegrid-expander {
+    cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    position: relative;
+    width: 26px;
+}
+
+.treegrid-expander-expanded {
+    position: relative;
+}
+
+.treegrid-expander-expanded:before {
+    content: "\f146";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #777777;
+    font-size: 18px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 0px;
+    left: 7px;
+}
+
+.treegrid-expander-collapsed {
+    position: relative;
+}
+
+.treegrid-expander-collapsed:before {
+    content: "\f0fe";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #777777;
+    font-size: 18px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 0px;
+    left: 7px;
+}
+
+.tree-grid .label {
+    margin: 0 5px;
+}
+
+.tree-row-content {
+    display: inline-block;
+}
+
+.tree-grid table tbody tr td {
+    vertical-align: middle;
+}
+
+// .treegrid-expander-expanded {
+//     background-image: url(../images/bootstrap-tree-table/collapse.png);
+// }
+// .treegrid-expander-collapsed {
+//     background-image: url(../images/bootstrap-tree-table/expand.png);
+// }

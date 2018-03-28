@@ -1,0 +1,67 @@
+﻿@*@model IEnumerable<Hrinnova_FormsProject.DatabaseModel.employee_details>*@
+    @model Hrinnova_FormsProject.Models.EditIndexModel
+
+@{
+    ViewBag.Title = "Edit Employee Data";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<h2 align="center">Edit Employee Details</h2>
+@using (Html.BeginForm())
+{
+    <p>
+        Search: @Html.TextBox("searchstring")
+
+       <input type="submit" value="Search" class="btn btn-primary"/>
+    </p>
+}
+
+<div class="container-fluid">
+    <div class="middel-content">
+        <div class="clearfix">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table id="Table" class="table table-responsive table-condensed table-bordered">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.employeedetails.FirstOrDefault().employee_id)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.employeedetails.FirstOrDefault().firstname)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.employeedetails.FirstOrDefault().surname)
+                            </th>
+
+                            <th></th>
+
+                        </tr>
+                        @foreach (var item in Model.employeedetails)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.employee_id)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.firstname)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.surname)
+                                </td>
+
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.employee_id }) |
+
+                                    @Html.ActionLink("Details", "Details", new { id = item.employee_id }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.employee_id })
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

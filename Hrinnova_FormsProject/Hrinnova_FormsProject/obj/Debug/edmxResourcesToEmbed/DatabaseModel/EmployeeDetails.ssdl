@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hrinnova_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'hrinnova_db.dbo.additional_information' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="additional_information">
+          <Property Name="employee_id" Type="int" />
+          <Property Name="known_to_presentemployee" Type="varchar" MaxLength="50" />
+          <Property Name="name_of_knownemployee" Type="varchar" MaxLength="50" />
+          <Property Name="relationship_with_knownemployee" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityType Name="employee_details">
+    <Key>
+      <PropertyRef Name="employee_id" />
+    </Key>
+    <Property Name="employee_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="designation" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="department" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="middlename" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="surname" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="gender" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="date_of_birth" Type="date" Nullable="false" />
+    <Property Name="date_of_joining" Type="date" Nullable="false" />
+    <Property Name="marital_status" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="marriage_anniversary" Type="date" Nullable="false" />
+    <Property Name="mobile_number" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="home_number" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="alternate_number" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="emergency_number" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="email_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="permanent_address" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="temporary_address" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="aadhar_card" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="pan_card" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="passport_number" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="passport_validity" Type="date" Nullable="false" />
+    <Property Name="election_card" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="vehicle_number" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="single_bank_account" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ifs_code" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'hrinnova_db.dbo.esic_details' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="esic_details">
+          <Property Name="employee_id" Type="int" />
+          <Property Name="insurance_number" Type="varchar" MaxLength="50" />
+          <Property Name="branch_office" Type="varchar" MaxLength="50" />
+          <Property Name="dispensary" Type="varchar" MaxLength="50" />
+          <Property Name="employers_code" Type="varchar" MaxLength="50" />
+          <Property Name="date_of_appointment" Type="date" />
+          <Property Name="employers_nameandaddress" Type="nvarchar" MaxLength="200" />
+          <Property Name="previous_insurance_number" Type="varchar" MaxLength="50" />
+          <Property Name="name_of_nominee" Type="varchar" MaxLength="50" />
+          <Property Name="nominee_relationship" Type="varchar" MaxLength="10" />
+          <Property Name="nominee_address" Type="varchar" MaxLength="200" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'hrinnova_db.dbo.feedback' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="feedback">
+          <Property Name="employee_id" Type="int" />
+          <Property Name="hr_manual" Type="varchar" MaxLength="3" />
+          <Property Name="cims_idpassword" Type="varchar" MaxLength="3" />
+          <Property Name="books" Type="varchar" MaxLength="3" />
+          <Property Name="library_card" Type="varchar" MaxLength="3" />
+          <Property Name="hr_anyother" Type="varchar" MaxLength="3" />
+          <Property Name="identitycard" Type="varchar" MaxLength="3" />
+          <Property Name="bank_account" Type="varchar" MaxLength="3" />
+          <Property Name="notepad" Type="varchar" MaxLength="3" />
+          <Property Name="pen" Type="varchar" MaxLength="3" />
+          <Property Name="employee_card" Type="varchar" MaxLength="3" />
+          <Property Name="admin_anyother" Type="varchar" MaxLength="3" />
+          <Property Name="computer_system" Type="varchar" MaxLength="3" />
+          <Property Name="headphones" Type="varchar" MaxLength="3" />
+          <Property Name="emailid_password" Type="varchar" MaxLength="3" />
+          <Property Name="network_ip" Type="varchar" MaxLength="3" />
+          <Property Name="firewall_id" Type="varchar" MaxLength="3" />
+          <Property Name="domain_usernamepassword" Type="varchar" MaxLength="3" />
+          <Property Name="messengers_access" Type="varchar" MaxLength="3" />
+          <Property Name="systemadmin_anyother" Type="varchar" MaxLength="3" />
+          <Property Name="hrmanual_and_responsibilities" Type="varchar" MaxLength="3" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'hrinnova_db.dbo.references' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="references">
+          <Property Name="employee_id" Type="int" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="address" Type="nvarchar" MaxLength="200" />
+          <Property Name="designation" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+error 6004: The table 'hrinnova_db.dbo.additional_information' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_additional_information_employee_details" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'hrinnova_db.dbo.esic_details' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_esic_details_employee_details" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'hrinnova_db.dbo.feedback' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_feedback_employee_details" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'hrinnova_db.dbo.references' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_references_employee_details" />-->
+  <EntityContainer Name="hrinnova_dbModelStoreContainer">
+    <EntitySet Name="employee_details" EntityType="Self.employee_details" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

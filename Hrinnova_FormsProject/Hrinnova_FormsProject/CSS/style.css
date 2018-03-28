@@ -1,0 +1,15 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*basic structure css imports*/
+/*@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300italic,300,400italic,600,600italic,700,700italic,900,900italic);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700|Open+Sans:400,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700|Roboto+Condensed:400,300,700);*/
+
+@import url(jquery/jquery.msg.css);
+@import url(jquery/jquery.mCustomScrollbar.css);
+@import url(animate.css);
+@import url(cs-select.css);
+@import url(cs-skin-elastic.css);
+@import url(layout.css);
+@import url(styles.css);

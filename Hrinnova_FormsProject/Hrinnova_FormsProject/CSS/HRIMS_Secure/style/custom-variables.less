@@ -1,0 +1,382 @@
+/**************************************************************************************
+Variables 
+**************************************************************************************/
+
+
+/***********************font family ************************/
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
+@font-family-opensans : Open Sans;
+@font-family-Roboto: Roboto,
+sans-serif,
+Arial,
+sans-serif;
+@font-family-base: @font-family-Roboto;
+@content-font-family: Roboto;
+@model-headings-font-family: Roboto;
+
+/***********************font size ************************/
+
+@font-size-base: 14px;
+@font-size-large: ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small: ceil((@font-size-base * 0.85)); // ~12px
+@font-size-h1: floor((@font-size-base * 1.7)); // ~24px
+@font-size-h2: floor((@font-size-base * 1.6)); // ~22px
+@font-size-h3: ceil((@font-size-base * 1.4)); // ~20px
+@font-size-h4: ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5: @font-size-base;
+@font-size-h6: ceil((@font-size-base * 0.85)); // ~12px
+
+/***********************heading ************************/
+
+//** By default, this inherits from the `<body>`.
+@headings-font-family: Oswald;
+@headings-font-weight: 500;
+@headings-line-height: 1.1;
+@headings-color: inherit;
+
+/*********************** colors **********************/
+
+@brand-primary: #314b70; //#2bb4e8;
+@brand-secondary: #31425a; // #0b6a8d;
+@brand-success: #5cb85c;
+@brand-info: #5bc0de;
+@brand-warning: #f0ad4e;
+@brand-danger: #a94442;
+@gray-base: #000;
+@gray-darker: lighten(@gray-base, 13.5%); // #222
+@gray-dark: lighten(@gray-base, 20%); // #333
+@gray: lighten(@gray-base, 33.5%); // #555
+@gray-light: lighten(@gray-base, 46.7%); // #777
+@gray-lighter: lighten(@gray-base, 93.5%); // #eee
+@body-bg-color: #e8ecef;
+@login-text-color: #fff;
+@text-size: 30px;
+@border-radius-base: 2px;
+@border-radius-large: 4px;
+@border-radius-small: 1px;
+
+/*******Extra colors *****/
+
+@lightskyBlue :#5d9cec;
+@aqua: #5fc2d2;
+@aqua-dark: darken(@aqua, 5%);
+@lightcoral: #ff6b6b;
+@lightcoral-dark: lighten(@lightcoral, 5%);
+@lightgreen: #81c868;
+@gold :#ffbc0b;
+@hotpink: #fb6d9d;
+@purple :#7266bd;
+@turquoise: #61c0b2;
+@defult: #7d7d7d;
+
+/************************ header bar **********************/
+
+@header-bg-color : #fff;
+
+/************************ count-squar **********************/
+@count-degit-size: 50px;
+@count-text-size: 16px;
+
+
+
+
+
+/************************ Training box **********************/
+
+@training-font-color: #fff;
+@training-font-size: 35px;
+@traning-box-opacity: 0.25;
+@training-border-radius: @border-radius-base;
+@traning-visual-height: 130px;
+@traning-visual-width: 50%;
+@traning-icon-size: (@training-font-size + 115px); // 150px
+@detail-font-size: (@training-font-size + 10px); // 45px
+@traing-desc-font-size: (@training-font-size - 15px); // 0.70
+@traning-desc-opacity: (@traning-box-opacity + 0.45); // 0.70
+@training-box-primary: @brand-primary;
+@training-box-1: #3598dc;
+@training-box-2: #e7505a;
+@training-box-3: #8e44ad;
+@visual-primary: lighten(@training-box-primary, 10%);
+@visual-1: lighten(@training-box-1, 10%);
+@visual-2: lighten(@training-box-2, 10%);
+@visual-3: lighten(@training-box-3, 10%);
+
+/************************ count box **********************/
+
+@count-font-color: #fff;
+@count-font-size: 35px;
+@count-box-opacity: 0.25;
+@count-border-radius: @border-radius-base;
+@count-visual-height: 112px;
+@count-visual-width: 45%;
+@count-detail-width: 55%;
+@count-icon-size: (@count-font-size + 50px); // 150px
+@count-detail-font-size: (@count-font-size); // 45px
+@count-desc-font-size: (@count-font-size - 21px); // 0.70
+@count-desc-opacity: (@count-box-opacity + 0.75); // 0.70
+@count-box-primary: @brand-primary;
+@count-box-success: @brand-success;
+@count-box-warning: @brand-warning;
+@count-box-danger: @brand-danger;
+@count-box-aqua: @aqua;
+@count-box-lightcoral: @lightcoral;
+@count-box-lightgreen: @lightgreen;
+@count-box-purple: @purple;
+@count-box-info: @brand-info;
+@count-box-secondary: @brand-secondary;
+
+/************************ rectangle-set  **********************/
+@rectangle-text-color : #fff;
+@rectangle-degit-size :20px;
+
+
+
+/************************ rectangle-set  **********************/
+
+/********************** header profile counting  ******************/
+
+@profile-info-font-size : 18px;
+@profile-info-size : 40px;
+
+/************************ floating button menu **********************/
+
+@floating-font-size: 15px;
+@floating-size: 40px;
+
+/************************ side bar **********************/
+
+@sidebar-active: rgba(0, 0, 0, 0.20);
+@sidebar-bg: @brand-primary;
+@sidebar-menu-bg: rgba(0, 0, 0, 0.10);
+@sidebar-sub-menu-bg: #181818;
+@sidebar-menu-hover-bg: rgba(0, 0, 0, 0.20);
+@sidebar-menu-font-color: #ffffff;
+@sidebar-sub-menu-font-color: #ffffff;
+
+/************************ Table **************************/
+
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+//** Padding for `<th>`s and `<td>`s.
+@table-cell-padding: 8px;
+//** Padding for cells in `.table-condensed`.
+@table-condensed-cell-padding: 5px;
+//** Default background color used for all tables.
+@table-bg: transparent;
+//** Background color used for `.table-striped`.
+@table-bg-accent: #f9f9f9;
+//** Background color used for `.table-hover`.
+@table-bg-hover: #f8f8f8;
+@table-bg-active: @table-bg-hover;
+//** Border color for table and cell borders.
+@table-border-color: #e2e2e2;
+
+/*********************** margin padding ***************************/
+
+@margin-top-15: 15px;
+@padding-top-15: 15px;
+@padding-bottom-15: 15px; 
+@margin-right-15: 15px;
+@margin-bottom-15: 15px;
+@padding-15: 15px;
+
+/*********************** basic class ***************************/
+
+
+/*********************** Forms ***************************/
+
+//
+//##
+//** `<input>` background color
+@input-bg: #fff;
+//** `<input disabled>` background color
+@input-bg-disabled: @gray-lighter;
+//** Text color for `<input>`s
+@input-color: #7a7979;
+//** `<input>` border color
+@input-border: #ccc;
+// DO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
+//** Default `.form-control` border radius
+// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
+@input-border-radius: @border-radius-base;
+//** Large `.form-control` border radius
+@input-border-radius-large: @border-radius-large;
+//** Small `.form-control` border radius
+@input-border-radius-small: @border-radius-small;
+//** Border color for inputs on focus
+@input-border-focus: #66afe9;
+//** Placeholder text color
+@input-color-placeholder: #999;
+//** Default `.form-control` height
+@input-height-base: (@line-height-computed + (@padding-base-vertical * 2) + 2);
+//** Large `.form-control` height
+@input-height-large: (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+//** Small `.form-control` height
+@input-height-small: (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+//** `.form-group` margin
+@form-group-margin-bottom: 15px;
+@legend-color: @gray-dark;
+@legend-border-color: #e5e5e5;
+//** Background color for textual input addons
+@input-group-addon-bg: @gray-lighter;
+//** Border color for textual input addons
+@input-group-addon-border-color: @input-border;
+//** Disabled cursor for form controls and buttons.
+@cursor-disabled: not-allowed;
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+//** Background for the dropdown menu.
+@dropdown-bg: #fff;
+//** Dropdown menu `border-color`.
+@dropdown-border: rgba(0, 0, 0, .15);
+//** Dropdown menu `border-color` **for IE8**.
+@dropdown-fallback-border: #ccc;
+//** Divider color for between dropdown items.
+@dropdown-divider-bg: #e5e5e5;
+//** Dropdown link text color.
+@dropdown-link-color: @gray-dark;
+//** Hover color for dropdown links.
+@dropdown-link-hover-color: darken(@gray-dark, 5%);
+//** Hover background for dropdown links.
+@dropdown-link-hover-bg: #f5f5f5;
+//** Active dropdown menu item text color.
+@dropdown-link-active-color: @component-active-color;
+//** Active dropdown menu item background color.
+@dropdown-link-active-bg: @component-active-bg;
+//** Disabled dropdown menu item background color.
+@dropdown-link-disabled-color: @gray-light;
+//** Text color for headers within dropdown menus.
+@dropdown-header-color: @gray-light;
+//** Deprecated `@dropdown-caret-color` as of v3.1.0
+@dropdown-caret-color: #000;
+// label 
+@form-label-color : #565656;
+
+/************************ bg color ***************************/
+@bg-aqua: @aqua;
+@bg-lightskyBlue: @lightskyBlue;
+@bg-aqua-dark: @aqua-dark;
+@bg-lightcoral: @lightcoral;
+@bg-lightcoral-dark: @lightcoral-dark;
+@bg-lightgreen: @lightgreen;
+@bg-gold: @gold;
+@bg-hotpink: @hotpink;
+@bg-purple: @purple;
+@bg-turquoise: @turquoise;
+@bg-defult: @defult;
+
+/************************ text color ***************************/
+@text-white: #fff;
+
+/************************ buttons ***************************/
+
+@btn-no-color: @brand-primary;
+@btn-no-bg: transparent;
+@btn-no-border: transparent;
+@btn-lightskyBlue-color: #fff;
+@btn-lightskyBlue-bg: @lightskyBlue;
+@btn-lightskyBlue-border: darken(@btn-lightskyBlue-bg, 5%);
+@btn-aqua-color: #fff;
+@btn-aqua-bg: @aqua;
+@btn-aqua-border: darken(@btn-aqua-bg, 5%);
+@btn-lightcoral-color: #fff;
+@btn-lightcoral-bg: @lightcoral;
+@btn-lightcoral-border: darken(@btn-lightcoral-bg, 5%);
+@btn-lightgreen-color: #fff;
+@btn-lightgreen-bg: @lightgreen;
+@btn-lightgreen-border: darken(@btn-lightgreen-bg, 5%);
+@btn-gold-color: #fff;
+@btn-gold-bg: @gold;
+@btn-gold-border: darken(@btn-gold-bg, 5%);
+@btn-hotpink-color: #fff;
+@btn-hotpink-bg: @hotpink;
+@btn-hotpink-border: darken(@btn-hotpink-bg, 5%);
+@btn-purple-color: #fff;
+@btn-purple-bg: @purple;
+@btn-purple-border: darken(@btn-purple-bg, 5%);
+@btn-turquoise-color: #fff;
+@btn-turquoise-bg: @turquoise;
+@btn-turquoise-border: darken(@btn-turquoise-bg, 5%);
+@btn-alpha-base-color: #fff;
+@btn-alpha-base-bg: #000;
+@btn-alpha-base-border: darken(@btn-alpha-base-bg, 5%);
+
+/************************* page header **********************/
+
+@page-header-border-color: transparent;
+@page-header-bg-color: transparent;
+
+/********************* model title color ********************/
+
+@modal-title-color : #fff;
+@modal-title-margin : 13px;
+@modal-lg: 70%;
+@modal-md: 80%;
+@modal-sm: 50%;
+@modal-xs: 40%;
+
+/************************* panels **********************/
+
+@panel-default-text: @gray-dark;
+@panel-default-border: #fff;
+@panel-default-heading-bg: #fff;
+@panel-default-footer-bg: #fff;
+@panel-style-1-text: #fff;
+@panel-style-1-border: #61c0b2;
+@panel-style-1-heading-bg: #61c0b2;
+@panel-border-radius : 3px;
+@panel-heading-color : #2f353f;
+@panel-aqua-text: #fff;
+@panel-aqua-bg: @aqua;
+@panel-aqua-dark-text: #fff;
+@panel-aqua-dark-bg: @aqua-dark;
+@panel-lightcoral-dark-text: #fff;
+@panel-lightcoral-dark-bg: @lightcoral-dark;
+@panel-collapse-text: #4e4e4e;
+@panel-collapse-bg: #ddd;
+@panel-collapse-border: #ddd;
+
+
+/************************* inner page variables *****************************/
+
+//== Breadcrumbs
+//
+//##
+@breadcrumb-padding-vertical: 8px;
+@breadcrumb-padding-horizontal: 0px;
+//** Breadcrumb background color
+@breadcrumb-bg: transparent;
+//** Breadcrumb text color
+@breadcrumb-color: @brand-primary;
+//** Text color of current page in the breadcrumb
+@breadcrumb-active-color: #2f353f;
+//** Textual separator for between breadcrumb elements
+@breadcrumb-separator: "/";
+
+/************************* dashboard *****************************/
+
+@hrs-font-size: 60px;
+@page-content: 50px 0;
+//** Default progress bar color
+@progress-aqua-bg: @aqua;
+@progress-bar-lightskyBlue-bg: @lightskyBlue;
+@progress-bar-aqua-dark-bg:@aqua-dark;
+@progress-bar-lightcoral-bg: @lightcoral;
+@progress-bar-lightcoral-dark-bg: @lightcoral-dark;
+@progress-bar-lightgreen-bg: @lightgreen;
+@progress-bar-gold-bg: @gold;
+@progress-bar-hotpink-bg: @hotpink;
+@progress-bar-purple-bg:@purple;
+@progress-bar-turquoise-bg:@turquoise;
+
+/************************* dashboard *****************************/
+
+// Color variables (appears count calculates by raw css)
+@comment-border-color: lighten(@gray-base, 80%); // #777 // Appears 5 times
+@comment-panel-color: lighten(@gray-base, 95%);// Appears 2 times
+

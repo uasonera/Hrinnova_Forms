@@ -1,0 +1,1241 @@
+﻿body {
+}
+
+.delete-center .aspNetDisabled.btnDelDisabled {
+    margin: 0 auto;
+}
+
+/*.add-task-form-label {
+    margin: 5px 10px;
+}*/
+
+.add-task-set .first-colum-label {
+    width: 230px;
+}
+
+.add-task-set .thired-colum-label {
+    min-width: 230px;
+}
+
+.add-project-checkbox {
+    text-align: left;
+    margin-left: 220px;
+}
+
+.add-task-set .hafwidth {
+    width: 30%;
+}
+
+/*.add-task-set .text.idlefield {
+    margin-top: 3px;
+}*/
+.add-task-set .formright-panel {
+    margin-top: 0px;
+}
+.employee-attachment-header {
+    width:1%;
+}
+
+.project-label-right {
+    margin-left: 80px;
+}
+
+.second-colum-field > .custom-combobox > input {
+    height: 25px !important;
+    font-size: 14px;
+     font-family: "Roboto-Regular" !important;
+}
+
+.weekly-date .text {
+    width: 265px !important;
+}
+
+.weekly-holiday-definition {
+    width: 8%;
+}
+
+.weekly-holiday-background {
+    background: #ECECEC;
+}
+
+.TabBtn_on {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #314B70 none repeat scroll 0 0;
+    background-color: #fff;
+    border-color: #314B70 -moz-use-text-color -moz-use-text-color;
+    border-radius: 5px 5px 0 0;
+    border-style: solid none none;
+    border-width: 3px medium medium;
+    box-shadow: none;
+    color: #314B70 !important;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    width: 150px;
+    border-left: 1px solid #ececec;
+}
+
+    .TabBtn_on a {
+        color: #314B70;
+        text-align: center;
+    }
+
+.weekly-holiday-background .TabBtn_off {
+    border-width: 0px;
+    background: none;
+    text-align: center;
+}
+
+    .weekly-holiday-background .TabBtn_off a {
+        text-align: center;
+        color;
+    }
+
+.weekly-border .tab-content {
+    border: 1px solid #ececec;
+}
+
+.general-space #accordion .ui-icon-min {
+    margin: -20px 10px -14px -8px;
+}
+
+.general-space #accordion .ui-icon-plus {
+    margin: -13px 10px -7px -8px;
+}
+
+.project-initiation-left .thired-colum-label {
+    /*margin-left: 5%;
+    width: 236px;*/
+}
+
+.general-space .ui-accordion .ui-accordion-header {
+    background: none;
+}
+
+.add-task-break .hafwidth {
+    float: none;
+    width: 915px;
+    margin: 0 0 20px;
+}
+
+.employee-team-list .fullwidth {
+    width: 730px;
+    margin-left: 11.6%;
+}
+
+.hover-action {
+    float: left;
+    margin-top: -5px;
+}
+
+.popUpContainer .action-menu a {
+    padding-left: 30px;
+    display: block;
+    text-align: left;
+    line-height: 1.3;
+}
+
+    .popUpContainer .action-menu a img {
+        position: absolute;
+        left: 10px;
+        top: 20%;
+        padding: 0 10px 0 0;
+        width: auto !important;
+        height: 15px !important;
+    }
+
+.popUpContainer li {
+    position: relative;
+    padding: 10px !important;
+}
+
+.request-approval-department {
+    width: 355px;
+}
+
+    .request-approval-department .listText {
+        height: 242px;
+    }
+
+.project-initiation-left .rd-margin label {
+    margin-top: 0;
+}
+
+.project-initiation-left .second-colum-field {
+    margin-top: 10px;
+}
+
+.view-timesheet {
+    width: 600px;
+}
+
+    .view-timesheet .left-field {
+        width: initial;
+    }
+
+.add-multiple-entry {
+    position: relative;
+}
+
+    .add-multiple-entry .ui-datepicker-trigger {
+        left: 22px;
+        position: absolute;
+        top: 30px;
+        cursor: pointer;
+    }
+
+.timesheet {
+    display: inline-block;
+    margin-top: 5px;
+    float: left;
+}
+
+/*input[type="reset"] {
+    background-color: #ccc;
+    border: medium none;
+    color: #fff;
+    font-family: 'Roboto-Regular';
+    font-size: 14px;
+    font-weight: 400;
+    height: 32px;
+    line-height: 30px;
+    margin: 0 0 0 5px;
+    padding: 0 20px 4px 19px !important;
+}*/
+
+#MainContent_ucDEFromDate_divCalenderPopup input[type="text"] {
+    width: 90px !important;
+}
+
+#MainContent_ucDEToDate_divCalenderPopup input[type="text"] {
+    width: 90px !important;
+}
+
+#MainContent_ucDEFromDate_divCalenderPopup input[type="text"] {
+    width: 90px !important;
+}
+
+#MainContent_ucDEToDate_divCalenderPopup input[type="text"] {
+    width: 90px !important;
+}
+
+.fa {
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    position: relative;
+    top: 1px;
+}
+
+.language-info-top {
+    margin-top: 20px;
+}
+
+.date-picker-icon {
+    float: right;
+    margin-top: -29px;
+    position: relative;
+    z-index:1;
+}
+
+.config-time .idlefield {
+    display: inline;
+    margin-right: 10px;
+}
+
+.appraisal-parameter {
+    line-height: 1.8em;
+}
+
+.upload-updates label {
+    font-size: 13px;
+}
+
+.update-fileupload {
+    font-size: 13px;
+}
+
+/*.ajax__calendar .ajax__calendar_container {
+    border: 1px solid #314B70 !important;
+}
+.ajax__calendar_container {
+    width: 210px !important;
+    padding: 10px 4px !important;
+}
+
+.ajax__calendar_body {
+    
+   height:180px !important;
+}
+
+   .ajax__calendar_days tr td {
+        padding: 5px !important;
+    }
+
+.ajax__calendar_day {
+height: 20px !important;
+text-align: center !important;
+}
+
+.ajax_calendar_hover{
+    border-color: #dc9781 !important;
+    background-color: #dc9781 !important;
+    color: #314B70 !important;
+}*/
+
+.personal-employee-information .thired-colum-label {
+    width: 250px;
+}
+
+.personal-employee-information .first-colum-label {
+    width: 225px;
+}
+/*.secondary-btn{background-color:#454545 !important;}*/
+.primary-btn {
+    background-color: #314B70 !important;
+}
+/*
+.user-profile-page .button-group {
+    margin-left: 125px;
+    margin-bottom: 20px;
+}*/
+
+    .user-profile-page .button-group input[type="button"] {
+        background-color: #cccccc;
+        border: medium none;
+        color: #ffffff;
+        font-family: 'Roboto-Regular';
+        font-size: 14px;
+        font-weight: 400;
+        height: 32px;
+        line-height: 30px;
+        margin: 0 0 0 5px;
+        padding: 0 20px 4px 19px !important;
+    }
+
+/**bootstrap tab css**/
+.user-profile-tabs .tabs-left {
+    margin-top:-15px;
+}
+
+.user-profile-tabs .nav-tabs {
+    float: left;
+    border-bottom: 0;
+}
+
+    .user-profile-tabs .nav-tabs li {
+        float: none;
+        margin: 0;
+    }
+
+        .user-profile-tabs .nav-tabs li a {
+            margin-right: 0;
+            border: 0;
+            background-color: #f9f6f1;
+        }
+
+    .user-profile-tabs .nav-tabs .glyphicon, .user-profile-tabs .nav-tabs .fa {
+        color: #999999;
+    }
+
+    .user-profile-tabs .nav-tabs .active .glyphicon, .user-profile-tabs .nav-tabs .active .fa {
+        color: #314B70;
+    }
+/*.user-profile-tabs .nav-tabs > li.active > a, .user-profile-tabs.nav-tabs > li.active > a:hover, .user-profile-tabs.nav-tabs > li.active > a:focus {
+  border: 0;
+}
+*/
+.user-profile-tabs .tab-content {
+    margin-left: 100px;
+    border: none;
+    padding: 0;
+}
+
+    .user-profile-tabs .tab-content .tab-pane {
+        display: none;
+        background-color: #fff;
+        padding: 0px 30px 0;
+        /* Remove Scroll from my profile 3rd tab*/
+        height: auto !important;
+        /*overflow:hidden;*/
+        min-height:566px;
+    }
+
+    .user-profile-tabs .tab-content .active {
+        display: block;
+    }
+
+.user-profile-tabs .list-group {
+    width: 100%;
+}
+
+    .user-profile-tabs .list-group .list-group-item {
+        height: 300px;
+    }
+
+        .user-profile-tabs .list-group .list-group-item h4, .user-profile-tabs .list-group .list-group-item span {
+            line-height: 11px;
+        }
+
+.user-profile-page .form-group img {
+    position: inherit;
+}
+
+.user-profile-banner .user-details span {
+    color: #fff;
+}
+
+.user-profile-banner .user-details p {
+    margin-top: 10px;
+}
+
+.custom-forms .genral-gried-field {
+    float: none;
+    width: initial;
+}
+
+.children-information .form-group {
+    margin-bottom: 0;
+}
+
+/*.marital-status  select.form-control {
+    width: 95%;
+}*/
+
+.spouse-birthdate input.date-picker-icon {
+    margin-left: 5px;
+    margin-top: 5px;
+    position: absolute;
+}
+
+.children-info input.date-picker-icon {
+    float: right;
+    margin-top: -30px;
+    position: relative;
+    z-index: 1;
+}
+
+.genral-gried-field .grid tr th {
+    font-weight: normal;
+}
+
+.user-profile-banner .user-details.user-name-bottom h1 {
+    border-bottom: 0;
+}
+.user-profile-banner .empid { font-weight:bold; }
+
+.user-name-bottom .profile-mailid {
+    display: block;
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.InnerCalender .date-picker-icon {
+    float: left;
+    margin-top: 0;
+}
+
+
+/*#MainContent_UcMyProfile1_dgVisaInfo #MainContent_UcMyProfile1_dgVisaInfo_ucVisaIssueDate_0_txtToEventDate_0,#MainContent_UcMyProfile1_dgVisaInfo_ucVisaExpiryDate_0_txtToEventDate_0 {
+    width: 100px !important;
+    float: left;
+    margin-right: 10px;
+}*/
+
+#MainContent_UcMyProfile1_dgVisaInfo input[type="image"] {
+    padding-top: 7px;
+}
+
+#PassportInfo .genral-small-label {
+    float: none;
+    display: block;
+    width: inherit;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.grid tr td.myprofile-delete {
+    padding-left: 20px !important;
+}
+
+.user-role {
+    padding-right: 10px;
+}
+
+    .user-role:before {
+        content: "(";
+        padding-right: 3px;
+    }
+
+.user-profile-designation {
+    padding-left: 5px;
+}
+
+    .user-profile-designation:after {
+        content: ")";
+        padding-left: 3px;
+    }
+
+
+
+.user-profile-page .user-profile-detail {
+    /*width: calc(100% - 280px);
+    float: right;*/
+}
+
+.user-profile-page .form-control[disabled], .user-profile-page .form-control[readonly], .user-profile-page fieldset[disabled] .form-control {
+    background-color: #fff;
+}
+
+
+
+
+/* Add MULTIPLE TIMESHEET ENTRY */
+
+
+
+/*#MainContent_UcAddDataEntry1_UpdatePanel1 span {
+    font-size: 13px;
+}
+
+#MainContent_UcAddDataEntry1_chkBillHours span {
+    font-size: 14px;
+}*/
+
+#MainContent_tLstWbsTask_HDR tr:hover {
+    background-color: inherit !important;
+}
+
+#MainContent_tLstWbsTask tr:hover {
+    background-color: inherit !important;
+}
+/* view-task-page starts*/
+.view-task-page .left-detail-section {
+    width: 100%;
+}
+
+
+.view-task-page .form-panel {
+    margin-bottom: 10px;
+}
+
+.view-task-page h1 {
+    color: #454545;
+}
+
+.view-task-page h2, .view-task-page h3 {
+    color: #314B70;
+}
+
+.view-task-page .task-desc {
+    margin-top: 15px !important;
+}
+
+.view-task-page .LeftAlignDetail {
+    width: 385px;
+}
+
+.view-task-page .activity-tbl {
+}
+
+.view-task-page .LabelNotesDescription {
+    width: 200px;
+    text-align: right;
+    padding-right: 10px;
+    margin: 0;
+}
+
+.view-task-page .LabelNoteTitle {
+    width: 200px;
+    text-align: right;
+    padding-right: 10px;
+    margin: 0;
+}
+
+.family-info-data {
+    min-height: 385px;
+}
+
+#rdoWorkEvent label {
+    font-size: 14px;
+}
+
+.view-task-page .AddNotesCheckBox {
+    margin: 0;
+}
+
+.view-task-page .TextAreaNotesDescription {
+    height: auto;
+}
+
+#tabsTask .ui-tabs-nav {
+    background-color: #ececec;
+    padding: 10px;
+}
+
+/*#MainContent_lnkSample {
+    color: #454545;
+}*/
+
+
+/*for header  */
+
+.main-content h1 {
+    padding: 10px 15px 15px;
+    background-color: #f6f6f6 !important;
+}
+
+
+/**My Favorite Work Event css**/
+
+.button-div-center .list-buttons input[type="submit"] {
+    background-color: inherit;
+    text-indent: -9999px;
+}
+
+.button-div-center .singleitem-forward-arrow input, .button-div-center .singleitem-backward-arrow input, .button-div-center .multipleitems-forward-arrow input, .button-div-center .multipleitems-backward-arrow input {
+    height: 22px;
+    width: 22px;
+}
+
+.button-div-center .singleitem-forward-arrow input {
+    background: url("/Images/single-forward-arrow.png") no-repeat center center;
+}
+
+.button-div-center .singleitem-backward-arrow input {
+    background: url("/Images/single-backward-arrow.png") no-repeat center center;
+}
+
+.button-div-center .multipleitems-forward-arrow input {
+    background: url("/Images/forward-arrow.png") no-repeat center center;
+}
+
+.button-div-center .multipleitems-backward-arrow input {
+    background: url("/Images/backward-arrow.png") no-repeat center center;
+}
+
+.textcenter-margin-left {
+    margin: 10px 0 0 190px !important;
+}
+
+.small-panel-pad-left {
+    padding-left: 110px;
+}
+
+.form-center-label-custom {
+    width: 125px;
+}
+
+/*input[type="button"] {
+    background-color: #cccccc;
+    border: medium none;
+    color: #ffffff;
+    font-family: 'Roboto-Regular';
+    font-size: 14px;
+    font-weight: 400;
+    height: 32px;
+    line-height: 30px;
+    margin: 0 0 0 5px;
+    padding: 0 20px 4px 19px !important;
+}*/
+
+.merge-red-text {
+    color: #314B70;
+    font-size: 16px;
+}
+
+    .merge-red-text:hover {
+        color: #0b6a8d;
+    }
+
+.text-editor-container .text-editor {
+    width: 70%;
+}
+
+    .text-editor-container .text-editor .mce-panel {
+        width: 100% !important;
+    }
+
+.text-editor-container .text-editor-dragitems {
+    width: 30%;
+}
+
+    .text-editor-container .text-editor-dragitems .dragitems {
+        width: 100%;
+        margin-top: 0;
+        height: 674px;
+        background: none;
+    }
+
+        .text-editor-container .text-editor-dragitems .dragitems .heading-fields {
+            font-size: 16px;
+            color: #314B70;
+            line-height: 18px;
+            padding: 15px 8px;
+            font-weight: 600;
+        }
+
+        .text-editor-container .text-editor-dragitems .dragitems .list-item .default-fields-list {
+            height: 234px;
+            overflow: auto;
+        }
+
+        .text-editor-container .text-editor-dragitems .dragitems .list-item .on-demand-fields-list {
+            height: 205px;
+            overflow: auto;
+        }
+
+        .text-editor-container .text-editor-dragitems .dragitems .list-item .on-demand-fields select {
+            margin-left: 7px !important;
+        }
+
+        .text-editor-container .text-editor-dragitems .dragitems .list-item .all-fields li {
+            border-bottom: 1px solid #e2e2e2;
+            padding: 10px 0;
+        }
+
+.preview-btn {
+    background: none repeat scroll 0 0 #dddddd;
+    border: medium none;
+    padding: 0 10px;
+}
+
+    .preview-btn i {
+        color: #ffffff;
+        font-size: 16px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+#tBodyDetail .im1 {
+    text-align: left !important;
+}
+
+    #tBodyDetail .im1 .DeleteQuestion {
+        padding-left: 15px !important;
+    }
+
+#tBodyDetail #trchild_341 .im1 {
+    text-align: left;
+}
+
+.trainingmeasurement .custom-combobox-toggle {
+    display: none;
+}
+
+.trainingmeasurement .custom-combobox-input {
+    border-radius: 0;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
+    color: #565656;
+}
+
+.trainingmeasurement .ui-datepicker-trigger {
+    margin-left: 5px;
+    vertical-align: middle;
+    cursor:pointer;
+}
+
+/*.trainingmeasurement .idlefield {
+    width: 72.4% !important;
+}*/
+
+
+/*trainingimparted-tabs*/
+.trainingimparted-tabs .ui-tabs, .trainingimparted-tabs .ui-tabs .ui-tabs-nav {
+    padding: 0;
+}
+
+.trainingimparted-tabs .ui-widget-content {
+    background: #ececec;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid #ececec;
+}
+
+.trainingimparted-tabs .ui-widget-header_Old {
+    border: none;
+}
+
+.trainingimparted-tabs #divTabs ul li.ui-state-default:hover, .trainingimparted-tabs #divTabs .ui-tabs-nav li.ui-tabs-active {
+    background: none;
+}
+
+.trainingimparted-tabs #divTabs .ui-state-default, .trainingimparted-tabs #divTabs .ui-widget-content .ui-state-default, .trainingimparted-tabs #divTabs .ui-widget-header .ui-state-default {
+    background: none;
+}
+
+.trainingimparted-tabs #divTabs ul li p, .trainingimparted-tabs #divTabs ul li p:hover {
+    background: none;
+    padding: 0;
+    border: none;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.trainingimparted-tabs #divTabs ul li.ui-tabs-active p {
+    background: none;
+}
+
+.trainingimparted-tabs .ui-tabs .ui-tabs-nav li a {
+    padding: 7px 40px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #454545;
+    text-transform: uppercase;
+    outline: medium none;
+}
+
+.trainingimparted-tabs .ui-tabs .ui-tabs-nav li {
+    margin-bottom: -1px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+
+    .trainingimparted-tabs .ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+        background: #ffffff;
+        border-radius: 8px 8px 0 0;
+        border-top: 3px solid #314B70;
+        color: #314B70;
+        margin-bottom: -2px;
+    }
+
+.trainingimparted-tabs .trainingimparted-tabs-content {
+    clear: both;
+    border: 1px solid #ececec;
+    padding: 35px;
+}
+
+/**training-objective**/
+.training-objective-grid {
+    clear: both;
+}
+
+    .training-objective-grid .grid table tr td {
+        background-color: inherit !important;
+    }
+
+    .training-objective-grid .grid table {
+        border: none !important;
+    }
+
+        .training-objective-grid .grid table tr:first-child {
+            border-top: 1px solid #c0c0c0;
+        }
+
+
+/*******************/
+.single-block {
+    display: block;
+}
+
+.detail-table table tr td {
+    text-align: center;
+}
+
+.leftPadding20 {
+    padding-left: 20px !important;
+}
+
+.grid tr td.deletePadding20 {
+    padding-left: 20px !important;
+}
+
+.grid tr td.editPadding15 {
+    padding-left: 15px !important;
+}
+
+.grid tr td.isactive30 {
+    padding-left: 30px !important;
+}
+
+.grid tr td.aligncenter {
+    text-align: center !important;
+}
+
+.datepiker-custom-input input[type="text"] {
+    width: 100% !important;
+}
+
+
+/****/
+#AddEditQuestionDialog .second-colum-field label.checkbox-custom-label {
+    margin-top: 10px;
+}
+
+.grid tr td {
+    vertical-align: middle;
+}
+
+.checkbox-alignment .checkbox-custom-label {
+    margin-top: 9px;
+}
+
+.weekly-border .tab-content {
+    border-top: 0;
+}
+
+26 .weekly-holiday-background {
+    border-radius: 8px 8px 0 0;
+}
+
+.margin-bottom20 {
+    margin-bottom: 20px !important;
+}
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-family: 'Roboto-Regular';
+    font-size: 13px !important;
+}
+
+.small-text-block {
+    display: block;
+    font-size: 12px;
+    margin: 5px 0 -5px;
+}
+
+.ui-dialog .ui-dialog-content .files .ui-state-error .name {
+    margin: 10px 0 !important;
+}
+
+.custom-combobox .ui-autocomplete-input {
+    border-right: none !important;
+}
+
+.user-profile-container {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    float: left;
+    margin: 30px 30px 0;
+}
+
+.upload-img-btn {
+    background-color: #fff;
+    border: 2px solid #314B70;
+    border-radius: 50%;
+    bottom: 10px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    width: 40px;
+    line-height: 35px;
+    text-align: center;
+}
+
+    .upload-img-btn .fileUpload {
+        position: relative;
+        overflow: hidden;
+        /*margin: 10px;*/
+        padding: 5px 9px;
+    }
+
+        .upload-img-btn .fileUpload input.upload {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+
+        .upload-img-btn .fileUpload span {
+            font-size: 17px;
+            color: #314B70;
+        }
+
+a.profile-edit-btn {
+    padding: 8px 10px;
+}
+
+    a.profile-edit-btn i {
+        color: #fff;
+    }
+
+#MainContent_UcMyProfile1_ucFatherBirthDate_txtToEventDate, #MainContent_UcMyProfile1_ucMotherBirthDate_txtToEventDate,#MainContent_UcMyProfile1_ucMrgDate_txtToEventDate {
+    width: 100% !important;
+}
+
+.updated-profile-pic {
+    height: 50px;
+    width: 50px;
+}
+
+    /*.updated-profile-pic:hover {
+        height: 250px;
+        width: 250px;
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+    }*/
+
+#MainContent_grdProfilePic tr td {
+    height: 70px !important;
+}
+
+a.profile-edit-btn i {
+    color: #fff;
+}
+
+/*css for date formate note in my profile*/
+#MyProfile_FatherBirthDate_Format, #MyProfile_MotherBirthDate_Format {
+    font-size: 12px;
+}
+
+.check-box-data {
+    position: relative;
+}
+
+.bottom-div .first-colum-label {
+    width: 200px;
+}
+
+.ajax__calendar_day {
+    left: -5px !important;
+}
+
+#MainContent_upChild .family-info {
+    /*padding: 30px 29px;
+    margin-left: 17px;*/
+}
+
+.family .second-colum-field {
+    margin-left: 200px;
+    width: 470px;
+}
+
+.family .four-colum-field {
+    width: 510px;
+}
+
+.family .grid-data {
+    width: 90%;
+}
+
+.family label {
+    color: #454545;
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.family .InnerCalender input.date-picker-icon {
+    float: right;
+    margin-top: -25px;
+    margin-right: -7px;
+}
+
+.family-info-panel .ui-accordion .ui-accordion-content {
+    overflow: visible;
+}
+
+.family #MainContent_tblChildren .gridHeader, #MainContent_tblSiblings .gridHeader {
+    font-size: 14px !important;
+}
+
+.family #MainContent_gdvChildren th, #MainContent_dgSiblings th {
+    font-size: 14px !important;
+}
+
+.report-employee-photo {
+    height: 100px;
+    width: 100px;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+     -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+}
+
+    .report-employee-photo:hover {
+        transform: scale(1);
+         -webkit-transform: scale(1);
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        bottom: 0;
+        left: 0;
+    }
+
+.emp-timesheet-report-gridsimple {
+    word-wrap: break-word;
+}
+
+
+    /* ARS  */
+
+/*.tablesorter-header-inner {
+            color: #454545;
+            font-size: 16px !important;
+            font-weight: 600;
+            padding: 5px 8px;
+            text-align: left;
+            font-family: Verdana;
+         }*/
+ /*.generated-request .header2 > span {
+            padding-left:10px;
+        }*/
+
+  .generated-request span.next, .generated-request span.last, .generated-request span.first, .generated-request span.prev {
+                color: #fff;
+                background: #314B70;
+            }
+.request-bottom {
+    margin-bottom: 10px;
+   }
+.request-for-hr {
+    margin-bottom:40px;
+}
+
+.accept-btn {
+    background-color: #cccccc;
+    border: medium none;
+    color: #ffffff;
+    font-family: 'Roboto-Regular';
+    font-size: 14px;
+    font-weight: 400;
+    height: 32px;
+    line-height: 30px;
+    margin: 0 0 0 5px;
+    padding: 0 20px 4px 19px !important;
+   }
+
+.bottom-subheading {
+    margin-bottom: 10px;
+}
+
+.generated-request .header2 {
+            border-top: 1px solid #e2e2e2;
+        }
+ /*.header2 .tablesorter-header-inner{
+            padding: 5px 0;
+            cursor:pointer;
+        }
+ .header2 .sorter-false .tablesorter-header-inner {
+     padding: 5px 0;
+    cursor: default;
+}*/
+.employee-photo-height .grid tr {
+    height:100px;
+}
+
+.family-info-data .set-family-detail {
+    float:left;
+}
+
+.family-info-data .family-name-detail {
+    float: left;
+    margin-top:25px;    
+    width: calc(100% - 138px);
+}
+
+.family-info-data .mother-textbox-left {
+    float: left;
+    margin-top:25px;    
+    width: 82%;
+}
+.margin-bottom-left {
+    margin: 0 0 2em 1em;
+}
+
+.bold-data {
+    font-weight:600;
+}
+.grid.table-request-grid tbody tr:hover:first-child {
+    background-color: #f8f8f8 !important;
+}
+
+
+
+
+.employee-search {
+    display: inline-block; 
+    position: relative;
+    float:right;
+    padding-right:20px;
+}
+.searchEmployee-icon {
+    background: #314B70;
+    color: #fff !important;
+    font-size: 18px !important;
+    left: 190px;
+    padding: 6px 6px !important;
+    position: absolute;
+    top: 1px;
+    cursor:pointer;
+}
+    .searchEmployee-icon:hover {
+        background: #0b6a8d; 
+    }
+.employee-search .search-emplyee-box {
+    width:200px;
+    padding: 6px !important;   
+}
+
+/*  For Training Imparted */
+#trchildFeedbackTrainee_452_1{
+    border: medium none;
+}
+
+/* Feedback */
+.feedback-radiobox .content-scroll input.radio-custom {
+    height: 21px;
+    margin-top: 0;
+    width: 20px;
+}
+.upload-message div { 
+    padding:10px;
+    margin:5px 0;
+}
+/****For custom datepicker changes css*****/
+.datepicker-section{
+   
+}
+
+.datepicker-section .ui-datepicker-trigger {
+    left: 5px;
+    margin-top: 4px;
+    position: relative;
+}
+#FilterationParameters {
+    float: left;
+    width: 100%;
+}
+/****For custom scroll bar modifications css*****/
+.request-scroll{height:300px !important;}
+
+/****new version css*****/
+.form-footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+    position: fixed;
+    transition: all 0.3s linear 0s;
+    z-index: 2;
+    width:100%;
+    text-align:center;
+    margin: 0;
+}
+
+.user-profile-tabs .tab-content .active h2 {
+    border-bottom: 1px solid #eceaea;
+    padding: 10px 0;
+}

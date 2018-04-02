@@ -1,23 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="hrinnova_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="hrinnova_dbEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="epfo_details" EntityType="hrinnova_dbModel.epfo_details" />
-    <EntitySet Name="previous_company_details" EntityType="hrinnova_dbModel.previous_company_details" />
     <EntitySet Name="additional_information" EntityType="hrinnova_dbModel.additional_information" />
-    <EntitySet Name="feedback" EntityType="hrinnova_dbModel.feedback" />
-    <EntitySet Name="references" EntityType="hrinnova_dbModel.references" />
     <EntitySet Name="certifications" EntityType="hrinnova_dbModel.certifications" />
     <EntitySet Name="educational_qualifications" EntityType="hrinnova_dbModel.educational_qualifications" />
     <EntitySet Name="employee_details" EntityType="hrinnova_dbModel.employee_details" />
     <EntitySet Name="employee_refcheck" EntityType="hrinnova_dbModel.employee_refcheck" />
+    <EntitySet Name="epfo_details" EntityType="hrinnova_dbModel.epfo_details" />
     <EntitySet Name="esic_details" EntityType="hrinnova_dbModel.esic_details" />
     <EntitySet Name="family_details" EntityType="hrinnova_dbModel.family_details" />
+    <EntitySet Name="feedback" EntityType="hrinnova_dbModel.feedback" />
     <EntitySet Name="other_details" EntityType="hrinnova_dbModel.other_details" />
-    <EntitySet Name="prev_employ_1" EntityType="hrinnova_dbModel.prev_employ_1" />
-    <EntitySet Name="prev_employ_2" EntityType="hrinnova_dbModel.prev_employ_2" />
-    <EntitySet Name="prev_employ_3" EntityType="hrinnova_dbModel.prev_employ_3" />
-    <EntitySet Name="prev_employ_4" EntityType="hrinnova_dbModel.prev_employ_4" />
-    <EntitySet Name="prev_employ_5" EntityType="hrinnova_dbModel.prev_employ_5" />
+    <EntitySet Name="previous_company_details" EntityType="hrinnova_dbModel.previous_company_details" />
+    <EntitySet Name="references" EntityType="hrinnova_dbModel.references" />
     <AssociationSet Name="FK_additional_information_employee_details" Association="hrinnova_dbModel.FK_additional_information_employee_details">
       <End Role="employee_details" EntitySet="employee_details" />
       <End Role="additional_information" EntitySet="additional_information" />
@@ -54,26 +49,6 @@
       <End Role="employee_details" EntitySet="employee_details" />
       <End Role="feedback" EntitySet="feedback" />
     </AssociationSet>
-    <AssociationSet Name="FK_prev_employ_1_employee_details" Association="hrinnova_dbModel.FK_prev_employ_1_employee_details">
-      <End Role="employee_details" EntitySet="employee_details" />
-      <End Role="prev_employ_1" EntitySet="prev_employ_1" />
-    </AssociationSet>
-    <AssociationSet Name="FK_prev_employ_2_employee_details" Association="hrinnova_dbModel.FK_prev_employ_2_employee_details">
-      <End Role="employee_details" EntitySet="employee_details" />
-      <End Role="prev_employ_2" EntitySet="prev_employ_2" />
-    </AssociationSet>
-    <AssociationSet Name="FK_prev_employ_3_employee_details" Association="hrinnova_dbModel.FK_prev_employ_3_employee_details">
-      <End Role="employee_details" EntitySet="employee_details" />
-      <End Role="prev_employ_3" EntitySet="prev_employ_3" />
-    </AssociationSet>
-    <AssociationSet Name="FK_prev_employ_4_employee_details" Association="hrinnova_dbModel.FK_prev_employ_4_employee_details">
-      <End Role="employee_details" EntitySet="employee_details" />
-      <End Role="prev_employ_4" EntitySet="prev_employ_4" />
-    </AssociationSet>
-    <AssociationSet Name="FK_prev_employ_5_employee_details" Association="hrinnova_dbModel.FK_prev_employ_5_employee_details">
-      <End Role="employee_details" EntitySet="employee_details" />
-      <End Role="prev_employ_5" EntitySet="prev_employ_5" />
-    </AssociationSet>
     <AssociationSet Name="FK_previous_company_details_employee_details" Association="hrinnova_dbModel.FK_previous_company_details_employee_details">
       <End Role="employee_details" EntitySet="employee_details" />
       <End Role="previous_company_details" EntitySet="previous_company_details" />
@@ -82,39 +57,18 @@
       <End Role="employee_details" EntitySet="employee_details" />
       <End Role="references" EntitySet="references" />
     </AssociationSet>
+    <EntitySet Name="prev_employ_1" EntityType="hrinnova_dbModel.prev_employ_1" />
+    <AssociationSet Name="FK_prev_employ_1_employee_details" Association="hrinnova_dbModel.FK_prev_employ_1_employee_details">
+      <End Role="employee_details" EntitySet="employee_details" />
+      <End Role="prev_employ_1" EntitySet="prev_employ_1" />
+    </AssociationSet>
+    <EntitySet Name="department" EntityType="hrinnova_dbModel.department" />
+    <EntitySet Name="role" EntityType="hrinnova_dbModel.role" />
+    <AssociationSet Name="FK_role_employee_details" Association="hrinnova_dbModel.FK_role_employee_details">
+      <End Role="employee_details" EntitySet="employee_details" />
+      <End Role="role" EntitySet="role" />
+    </AssociationSet>
   </EntityContainer>
-  <EntityType Name="epfo_details">
-    <Key>
-      <PropertyRef Name="epfo_id" />
-    </Key>
-    <Property Name="epfo_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="employee_id" Type="Int32" Nullable="false" />
-    <Property Name="presentcompany_pfnumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="member_of_epfoscheme" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="member_of_epsscheme" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="universal_account_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="prev_pf_acc_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="scheme_certificate_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="ppo_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="international_worker" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="country_of_origin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_epfo_details_employee_details" FromRole="epfo_details" ToRole="employee_details" />
-  </EntityType>
-  <EntityType Name="previous_company_details">
-    <Key>
-      <PropertyRef Name="prevcomp_id" />
-    </Key>
-    <Property Name="prevcomp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="employee_id" Type="Int32" Nullable="false" />
-    <Property Name="pf_account_number" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="pf_employers_code_number" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="fps_account_number" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="life_insurance" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="mediclaim" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="esi_insurance_number" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="esi_employers_code_number" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_previous_company_details_employee_details" FromRole="previous_company_details" ToRole="employee_details" />
-  </EntityType>
   <EntityType Name="additional_information">
     <Key>
       <PropertyRef Name="additionalinformation_id" />
@@ -125,46 +79,6 @@
     <Property Name="name_of_knownemployee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="relationship_with_knownemployee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_additional_information_employee_details" FromRole="additional_information" ToRole="employee_details" />
-  </EntityType>
-  <EntityType Name="feedback">
-    <Key>
-      <PropertyRef Name="feedback_id" />
-    </Key>
-    <Property Name="feedback_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="employee_id" Type="Int32" Nullable="false" />
-    <Property Name="hr_manual" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="cims_idpassword" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="books" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="library_card" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="hr_anyother" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="identitycard" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="bank_account" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="notepad" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="pen" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="employee_card" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="admin_anyother" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="computer_system" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="headphones" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="emailid_password" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="network_ip" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="firewall_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="domain_usernamepassword" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="messengers_access" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="systemadmin_anyother" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="hrmanual_and_responsibilities" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_feedback_employee_details" FromRole="feedback" ToRole="employee_details" />
-  </EntityType>
-  <EntityType Name="references">
-    <Key>
-      <PropertyRef Name="reference_id" />
-    </Key>
-    <Property Name="reference_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="employee_id" Type="Int32" Nullable="false" />
-    <Property Name="ref_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_references_employee_details" FromRole="references" ToRole="employee_details" />
   </EntityType>
   <EntityType Name="certifications">
     <Key>
@@ -216,26 +130,26 @@
     <Property Name="middlename" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
     <Property Name="surname" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
     <Property Name="gender" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="date_of_birth" Type="DateTime" Nullable="false" Precision="7" />
-    <Property Name="date_of_joining" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="date_of_birth" Type="DateTime" Precision="0" />
+    <Property Name="date_of_joining" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="marital_status" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="marriage_anniversary" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="marriage_anniversary" Type="DateTime" Precision="0" />
     <Property Name="blood_group" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="mobile_number" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="home_number" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="alternate_number" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="emergency_number" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="email_id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="permanent_address" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="temporary_address" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Name="aadhar_card" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
-    <Property Name="pan_card" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="passport_number" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="passport_validity" Type="DateTime" Nullable="false" Precision="7" />
-    <Property Name="election_card" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="vehicle_number" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="single_bank_account" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="ifs_code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="aadhar_card" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="pan_card" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="passport_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="passport_validity" Type="DateTime" Precision="0" />
+    <Property Name="election_card" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vehicle_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="single_bank_account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ifs_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="allergies" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="known_ailments" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="additional_information" Relationship="hrinnova_dbModel.FK_additional_information_employee_details" FromRole="employee_details" ToRole="additional_information" />
@@ -247,13 +161,10 @@
     <NavigationProperty Name="esic_details" Relationship="hrinnova_dbModel.FK_esic_details_employee_details" FromRole="employee_details" ToRole="esic_details" />
     <NavigationProperty Name="family_details" Relationship="hrinnova_dbModel.FK_family_details_employee_details" FromRole="employee_details" ToRole="family_details" />
     <NavigationProperty Name="feedback" Relationship="hrinnova_dbModel.FK_feedback_employee_details" FromRole="employee_details" ToRole="feedback" />
-    <NavigationProperty Name="prev_employ_1" Relationship="hrinnova_dbModel.FK_prev_employ_1_employee_details" FromRole="employee_details" ToRole="prev_employ_1" />
-    <NavigationProperty Name="prev_employ_2" Relationship="hrinnova_dbModel.FK_prev_employ_2_employee_details" FromRole="employee_details" ToRole="prev_employ_2" />
-    <NavigationProperty Name="prev_employ_3" Relationship="hrinnova_dbModel.FK_prev_employ_3_employee_details" FromRole="employee_details" ToRole="prev_employ_3" />
-    <NavigationProperty Name="prev_employ_4" Relationship="hrinnova_dbModel.FK_prev_employ_4_employee_details" FromRole="employee_details" ToRole="prev_employ_4" />
-    <NavigationProperty Name="prev_employ_5" Relationship="hrinnova_dbModel.FK_prev_employ_5_employee_details" FromRole="employee_details" ToRole="prev_employ_5" />
     <NavigationProperty Name="previous_company_details" Relationship="hrinnova_dbModel.FK_previous_company_details_employee_details" FromRole="employee_details" ToRole="previous_company_details" />
     <NavigationProperty Name="references" Relationship="hrinnova_dbModel.FK_references_employee_details" FromRole="employee_details" ToRole="references" />
+    <NavigationProperty Name="prev_employ_1" Relationship="hrinnova_dbModel.FK_prev_employ_1_employee_details" FromRole="employee_details" ToRole="prev_employ_1" />
+    <NavigationProperty Name="role" Relationship="hrinnova_dbModel.FK_role_employee_details" FromRole="employee_details" ToRole="role" />
   </EntityType>
   <EntityType Name="employee_refcheck">
     <Key>
@@ -276,6 +187,23 @@
     <Property Name="verified_by_date" Type="DateTime" Precision="7" />
     <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_employee_refcheck_employee_details" FromRole="employee_refcheck" ToRole="employee_details" />
   </EntityType>
+  <EntityType Name="epfo_details">
+    <Key>
+      <PropertyRef Name="epfo_id" />
+    </Key>
+    <Property Name="epfo_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="employee_id" Type="Int32" Nullable="false" />
+    <Property Name="presentcompany_pfnumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="member_of_epfoscheme" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="member_of_epsscheme" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="universal_account_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="prev_pf_acc_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="scheme_certificate_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ppo_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="international_worker" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="country_of_origin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_epfo_details_employee_details" FromRole="epfo_details" ToRole="employee_details" />
+  </EntityType>
   <EntityType Name="esic_details">
     <Key>
       <PropertyRef Name="esic_id" />
@@ -286,7 +214,7 @@
     <Property Name="branch_office" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="dispensary" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="employers_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="date_of_appointment" Type="DateTime" Precision="7" />
+    <Property Name="date_of_appointment" Type="DateTime" Precision="0" />
     <Property Name="employers_nameandaddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="previous_insurance_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="name_of_nominee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -302,7 +230,7 @@
     <Property Name="employee_id" Type="Int32" Nullable="false" />
     <Property Name="member" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="fname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="fdateofbirth" Type="DateTime" Precision="7" />
+    <Property Name="fdateofbirth" Type="DateTime" Precision="0" />
     <Property Name="faadhar" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
     <Property Name="fcontact" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="foccupation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -311,11 +239,39 @@
     <Property Name="fstate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_family_details_employee_details" FromRole="family_details" ToRole="employee_details" />
   </EntityType>
+  <EntityType Name="feedback">
+    <Key>
+      <PropertyRef Name="feedback_id" />
+    </Key>
+    <Property Name="feedback_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="employee_id" Type="Int32" Nullable="false" />
+    <Property Name="hr_manual" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="cims_idpassword" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="books" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="library_card" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="hr_anyother" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="identitycard" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="bank_account" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="notepad" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="pen" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="employee_card" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="admin_anyother" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="computer_system" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="headphones" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="emailid_password" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="network_ip" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="firewall_id" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="domain_usernamepassword" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="messengers_access" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="systemadmin_anyother" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="hrmanual_and_responsibilities" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_feedback_employee_details" FromRole="feedback" ToRole="employee_details" />
+  </EntityType>
   <EntityType Name="other_details">
     <Key>
       <PropertyRef Name="otherdet_id" />
     </Key>
-    <Property Name="otherdet_id" Type="Int32" Nullable="false" />
+    <Property Name="otherdet_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="employee_id" Type="Int32" Nullable="false" />
     <Property Name="propertyowner_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="propertyowner_contact" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
@@ -331,70 +287,32 @@
     <Property Name="neighbour2_occupation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_employee_references_employee_details" FromRole="other_details" ToRole="employee_details" />
   </EntityType>
-  <EntityType Name="prev_employ_1">
+  <EntityType Name="previous_company_details">
     <Key>
-      <PropertyRef Name="prevemploy_id" />
+      <PropertyRef Name="prevcomp_id" />
     </Key>
-    <Property Name="prevemploy_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="prevcomp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="employee_id" Type="Int32" Nullable="false" />
-    <Property Name="employers_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="periodworked_from" Type="DateTime" Precision="7" />
-    <Property Name="periodworked_to" Type="DateTime" Precision="7" />
-    <Property Name="reason_of_leaving" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_prev_employ_1_employee_details" FromRole="prev_employ_1" ToRole="employee_details" />
+    <Property Name="pf_account_number" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="pf_employers_code_number" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fps_account_number" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="life_insurance" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="mediclaim" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="esi_insurance_number" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="esi_employers_code_number" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_previous_company_details_employee_details" FromRole="previous_company_details" ToRole="employee_details" />
   </EntityType>
-  <EntityType Name="prev_employ_2">
+  <EntityType Name="references">
     <Key>
-      <PropertyRef Name="prevemploy_id" />
+      <PropertyRef Name="reference_id" />
     </Key>
-    <Property Name="prevemploy_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="reference_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="employee_id" Type="Int32" Nullable="false" />
-    <Property Name="employers_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ref_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="periodworked_from" Type="DateTime" Precision="7" />
-    <Property Name="periodworked_to" Type="DateTime" Precision="7" />
-    <Property Name="reason_of_leaving" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_prev_employ_2_employee_details" FromRole="prev_employ_2" ToRole="employee_details" />
-  </EntityType>
-  <EntityType Name="prev_employ_3">
-    <Key>
-      <PropertyRef Name="prevemploy_id" />
-    </Key>
-    <Property Name="prevemploy_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="employee_id" Type="Int32" Nullable="false" />
-    <Property Name="employers_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="periodworked_from" Type="DateTime" Precision="7" />
-    <Property Name="periodworked_to" Type="DateTime" Precision="7" />
-    <Property Name="reason_of_leaving" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_prev_employ_3_employee_details" FromRole="prev_employ_3" ToRole="employee_details" />
-  </EntityType>
-  <EntityType Name="prev_employ_4">
-    <Key>
-      <PropertyRef Name="prevemploy_id" />
-    </Key>
-    <Property Name="prevemploy_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="employee_id" Type="Int32" Nullable="false" />
-    <Property Name="employers_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="periodworked_from" Type="DateTime" Precision="7" />
-    <Property Name="periodworked_to" Type="DateTime" Precision="7" />
-    <Property Name="reason_of_leaving" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_prev_employ_4_employee_details" FromRole="prev_employ_4" ToRole="employee_details" />
-  </EntityType>
-  <EntityType Name="prev_employ_5">
-    <Key>
-      <PropertyRef Name="prevemploy_id" />
-    </Key>
-    <Property Name="prevemploy_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="employee_id" Type="Int32" Nullable="false" />
-    <Property Name="employers_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="periodworked_from" Type="DateTime" Precision="7" />
-    <Property Name="periodworked_to" Type="DateTime" Precision="7" />
-    <Property Name="reason_of_leaving" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_prev_employ_5_employee_details" FromRole="prev_employ_5" ToRole="employee_details" />
+    <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_references_employee_details" FromRole="references" ToRole="employee_details" />
   </EntityType>
   <Association Name="FK_additional_information_employee_details">
     <End Type="hrinnova_dbModel.employee_details" Role="employee_details" Multiplicity="1" />
@@ -504,66 +422,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_prev_employ_1_employee_details">
-    <End Type="hrinnova_dbModel.employee_details" Role="employee_details" Multiplicity="1" />
-    <End Type="hrinnova_dbModel.prev_employ_1" Role="prev_employ_1" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="employee_details">
-        <PropertyRef Name="employee_id" />
-      </Principal>
-      <Dependent Role="prev_employ_1">
-        <PropertyRef Name="employee_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_prev_employ_2_employee_details">
-    <End Type="hrinnova_dbModel.employee_details" Role="employee_details" Multiplicity="1" />
-    <End Type="hrinnova_dbModel.prev_employ_2" Role="prev_employ_2" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="employee_details">
-        <PropertyRef Name="employee_id" />
-      </Principal>
-      <Dependent Role="prev_employ_2">
-        <PropertyRef Name="employee_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_prev_employ_3_employee_details">
-    <End Type="hrinnova_dbModel.employee_details" Role="employee_details" Multiplicity="1" />
-    <End Type="hrinnova_dbModel.prev_employ_3" Role="prev_employ_3" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="employee_details">
-        <PropertyRef Name="employee_id" />
-      </Principal>
-      <Dependent Role="prev_employ_3">
-        <PropertyRef Name="employee_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_prev_employ_4_employee_details">
-    <End Type="hrinnova_dbModel.employee_details" Role="employee_details" Multiplicity="1" />
-    <End Type="hrinnova_dbModel.prev_employ_4" Role="prev_employ_4" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="employee_details">
-        <PropertyRef Name="employee_id" />
-      </Principal>
-      <Dependent Role="prev_employ_4">
-        <PropertyRef Name="employee_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_prev_employ_5_employee_details">
-    <End Type="hrinnova_dbModel.employee_details" Role="employee_details" Multiplicity="1" />
-    <End Type="hrinnova_dbModel.prev_employ_5" Role="prev_employ_5" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="employee_details">
-        <PropertyRef Name="employee_id" />
-      </Principal>
-      <Dependent Role="prev_employ_5">
-        <PropertyRef Name="employee_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_previous_company_details_employee_details">
     <End Type="hrinnova_dbModel.employee_details" Role="employee_details" Multiplicity="1" />
     <End Type="hrinnova_dbModel.previous_company_details" Role="previous_company_details" Multiplicity="*" />
@@ -584,6 +442,71 @@
         <PropertyRef Name="employee_id" />
       </Principal>
       <Dependent Role="references">
+        <PropertyRef Name="employee_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="prev_employ_1">
+    <Key>
+      <PropertyRef Name="prevemploy_id" />
+    </Key>
+    <Property Name="prevemploy_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="employee_id" Type="Int32" Nullable="false" />
+    <Property Name="employment_ref" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="employers_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="periodworked_from" Type="DateTime" Precision="0" />
+    <Property Name="periodworked_to" Type="DateTime" Precision="0" />
+    <Property Name="reason_of_leaving" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_prev_employ_1_employee_details" FromRole="prev_employ_1" ToRole="employee_details" />
+  </EntityType>
+  <Association Name="FK_prev_employ_1_employee_details">
+    <End Type="hrinnova_dbModel.employee_details" Role="employee_details" Multiplicity="1" />
+    <End Type="hrinnova_dbModel.prev_employ_1" Role="prev_employ_1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee_details">
+        <PropertyRef Name="employee_id" />
+      </Principal>
+      <Dependent Role="prev_employ_1">
+        <PropertyRef Name="employee_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="DeptID" />
+    </Key>
+    <Property Name="DeptID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeptName" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IncrementPeriod" Type="Int32" />
+    <Property Name="DeptCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="IsMultipleShift" Type="Boolean" />
+    <Property Name="ProbationPeriod" Type="Int32" />
+    <Property Name="LookedByEmp" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoticePeriod" Type="Int32" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="roleID" />
+    </Key>
+    <Property Name="roleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="employee_id" Type="Int32" />
+    <Property Name="description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="InfrastructureCost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Abbreviation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PerDeskCost" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="employee_details" Relationship="hrinnova_dbModel.FK_role_employee_details" FromRole="role" ToRole="employee_details" />
+  </EntityType>
+  <Association Name="FK_role_employee_details">
+    <End Type="hrinnova_dbModel.employee_details" Role="employee_details" Multiplicity="0..1" />
+    <End Type="hrinnova_dbModel.role" Role="role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee_details">
+        <PropertyRef Name="employee_id" />
+      </Principal>
+      <Dependent Role="role">
         <PropertyRef Name="employee_id" />
       </Dependent>
     </ReferentialConstraint>

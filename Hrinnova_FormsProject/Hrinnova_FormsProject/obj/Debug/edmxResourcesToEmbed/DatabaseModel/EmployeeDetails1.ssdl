@@ -19,6 +19,20 @@
     <Property Name="cert_type" Type="varchar" MaxLength="10" />
     <Property Name="certification_name" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="DeptID" />
+    </Key>
+    <Property Name="DeptID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeptName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Description" Type="text" />
+    <Property Name="IncrementPeriod" Type="int" />
+    <Property Name="DeptCode" Type="varchar" MaxLength="5" />
+    <Property Name="IsMultipleShift" Type="bit" />
+    <Property Name="ProbationPeriod" Type="int" />
+    <Property Name="LookedByEmp" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoticePeriod" Type="int" />
+  </EntityType>
   <EntityType Name="educational_qualifications">
     <Key>
       <PropertyRef Name="eduqualifications_id" />
@@ -58,26 +72,26 @@
     <Property Name="middlename" Type="varchar" MaxLength="25" Nullable="false" />
     <Property Name="surname" Type="varchar" MaxLength="25" Nullable="false" />
     <Property Name="gender" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="date_of_birth" Type="datetime2" Precision="7" Nullable="false" />
-    <Property Name="date_of_joining" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="date_of_birth" Type="date" />
+    <Property Name="date_of_joining" Type="date" Nullable="false" />
     <Property Name="marital_status" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="marriage_anniversary" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="marriage_anniversary" Type="date" />
     <Property Name="blood_group" Type="varchar" MaxLength="10" />
     <Property Name="mobile_number" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="home_number" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="alternate_number" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="emergency_number" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="email_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email_id" Type="varchar" MaxLength="50" />
     <Property Name="permanent_address" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="temporary_address" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="aadhar_card" Type="varchar" MaxLength="12" Nullable="false" />
-    <Property Name="pan_card" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="passport_number" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="passport_validity" Type="datetime2" Precision="7" Nullable="false" />
-    <Property Name="election_card" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="vehicle_number" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="single_bank_account" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="ifs_code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="aadhar_card" Type="varchar" MaxLength="12" />
+    <Property Name="pan_card" Type="varchar" MaxLength="10" />
+    <Property Name="passport_number" Type="varchar" MaxLength="50" />
+    <Property Name="passport_validity" Type="date" />
+    <Property Name="election_card" Type="varchar" MaxLength="50" />
+    <Property Name="vehicle_number" Type="varchar" MaxLength="50" />
+    <Property Name="single_bank_account" Type="varchar" MaxLength="50" />
+    <Property Name="ifs_code" Type="varchar" MaxLength="50" />
     <Property Name="allergies" Type="varchar" MaxLength="50" />
     <Property Name="known_ailments" Type="varchar" MaxLength="50" />
   </EntityType>
@@ -127,7 +141,7 @@
     <Property Name="branch_office" Type="varchar" MaxLength="50" />
     <Property Name="dispensary" Type="varchar" MaxLength="50" />
     <Property Name="employers_code" Type="varchar" MaxLength="50" />
-    <Property Name="date_of_appointment" Type="datetime2" Precision="7" />
+    <Property Name="date_of_appointment" Type="date" />
     <Property Name="employers_nameandaddress" Type="nvarchar" MaxLength="200" />
     <Property Name="previous_insurance_number" Type="varchar" MaxLength="50" />
     <Property Name="name_of_nominee" Type="varchar" MaxLength="50" />
@@ -142,7 +156,7 @@
     <Property Name="employee_id" Type="int" Nullable="false" />
     <Property Name="member" Type="varchar" MaxLength="50" />
     <Property Name="fname" Type="varchar" MaxLength="20" />
-    <Property Name="fdateofbirth" Type="datetime2" Precision="7" />
+    <Property Name="fdateofbirth" Type="date" />
     <Property Name="faadhar" Type="varchar" MaxLength="12" />
     <Property Name="fcontact" Type="varchar" MaxLength="10" />
     <Property Name="foccupation" Type="varchar" MaxLength="50" />
@@ -181,7 +195,7 @@
     <Key>
       <PropertyRef Name="otherdet_id" />
     </Key>
-    <Property Name="otherdet_id" Type="int" Nullable="false" />
+    <Property Name="otherdet_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="employee_id" Type="int" Nullable="false" />
     <Property Name="propertyowner_name" Type="varchar" MaxLength="50" />
     <Property Name="propertyowner_contact" Type="varchar" MaxLength="10" />
@@ -202,58 +216,11 @@
     </Key>
     <Property Name="prevemploy_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="employee_id" Type="int" Nullable="false" />
+    <Property Name="employment_ref" Type="varchar" MaxLength="2" />
     <Property Name="employers_name" Type="varchar" MaxLength="50" />
     <Property Name="designation" Type="varchar" MaxLength="50" />
-    <Property Name="periodworked_from" Type="datetime2" Precision="7" />
-    <Property Name="periodworked_to" Type="datetime2" Precision="7" />
-    <Property Name="reason_of_leaving" Type="varchar" MaxLength="50" />
-  </EntityType>
-  <EntityType Name="prev_employ_2">
-    <Key>
-      <PropertyRef Name="prevemploy_id" />
-    </Key>
-    <Property Name="prevemploy_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="employee_id" Type="int" Nullable="false" />
-    <Property Name="employers_name" Type="varchar" MaxLength="50" />
-    <Property Name="designation" Type="varchar" MaxLength="50" />
-    <Property Name="periodworked_from" Type="datetime2" Precision="7" />
-    <Property Name="periodworked_to" Type="datetime2" Precision="7" />
-    <Property Name="reason_of_leaving" Type="varchar" MaxLength="50" />
-  </EntityType>
-  <EntityType Name="prev_employ_3">
-    <Key>
-      <PropertyRef Name="prevemploy_id" />
-    </Key>
-    <Property Name="prevemploy_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="employee_id" Type="int" Nullable="false" />
-    <Property Name="employers_name" Type="varchar" MaxLength="50" />
-    <Property Name="designation" Type="varchar" MaxLength="50" />
-    <Property Name="periodworked_from" Type="datetime2" Precision="7" />
-    <Property Name="periodworked_to" Type="datetime2" Precision="7" />
-    <Property Name="reason_of_leaving" Type="varchar" MaxLength="50" />
-  </EntityType>
-  <EntityType Name="prev_employ_4">
-    <Key>
-      <PropertyRef Name="prevemploy_id" />
-    </Key>
-    <Property Name="prevemploy_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="employee_id" Type="int" Nullable="false" />
-    <Property Name="employers_name" Type="varchar" MaxLength="50" />
-    <Property Name="designation" Type="varchar" MaxLength="50" />
-    <Property Name="periodworked_from" Type="datetime2" Precision="7" />
-    <Property Name="periodworked_to" Type="datetime2" Precision="7" />
-    <Property Name="reason_of_leaving" Type="varchar" MaxLength="50" />
-  </EntityType>
-  <EntityType Name="prev_employ_5">
-    <Key>
-      <PropertyRef Name="prevemploy_id" />
-    </Key>
-    <Property Name="prevemploy_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="employee_id" Type="int" Nullable="false" />
-    <Property Name="employers_name" Type="varchar" MaxLength="50" />
-    <Property Name="designation" Type="varchar" MaxLength="50" />
-    <Property Name="periodworked_from" Type="datetime2" Precision="7" />
-    <Property Name="periodworked_to" Type="datetime2" Precision="7" />
+    <Property Name="periodworked_from" Type="date" />
+    <Property Name="periodworked_to" Type="date" />
     <Property Name="reason_of_leaving" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="previous_company_details">
@@ -280,6 +247,18 @@
     <Property Name="name" Type="varchar" MaxLength="50" />
     <Property Name="address" Type="nvarchar" MaxLength="200" />
     <Property Name="designation" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="roleID" />
+    </Key>
+    <Property Name="roleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="employee_id" Type="int" />
+    <Property Name="description" Type="varchar" MaxLength="200" />
+    <Property Name="InfrastructureCost" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Abbreviation" Type="varchar" MaxLength="50" />
+    <Property Name="PerDeskCost" Type="numeric" Precision="18" Scale="2" />
   </EntityType>
   <Association Name="FK_additional_information_employee_details">
     <End Role="employee_details" Type="Self.employee_details" Multiplicity="1" />
@@ -401,54 +380,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_prev_employ_2_employee_details">
-    <End Role="employee_details" Type="Self.employee_details" Multiplicity="1" />
-    <End Role="prev_employ_2" Type="Self.prev_employ_2" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="employee_details">
-        <PropertyRef Name="employee_id" />
-      </Principal>
-      <Dependent Role="prev_employ_2">
-        <PropertyRef Name="employee_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_prev_employ_3_employee_details">
-    <End Role="employee_details" Type="Self.employee_details" Multiplicity="1" />
-    <End Role="prev_employ_3" Type="Self.prev_employ_3" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="employee_details">
-        <PropertyRef Name="employee_id" />
-      </Principal>
-      <Dependent Role="prev_employ_3">
-        <PropertyRef Name="employee_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_prev_employ_4_employee_details">
-    <End Role="employee_details" Type="Self.employee_details" Multiplicity="1" />
-    <End Role="prev_employ_4" Type="Self.prev_employ_4" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="employee_details">
-        <PropertyRef Name="employee_id" />
-      </Principal>
-      <Dependent Role="prev_employ_4">
-        <PropertyRef Name="employee_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_prev_employ_5_employee_details">
-    <End Role="employee_details" Type="Self.employee_details" Multiplicity="1" />
-    <End Role="prev_employ_5" Type="Self.prev_employ_5" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="employee_details">
-        <PropertyRef Name="employee_id" />
-      </Principal>
-      <Dependent Role="prev_employ_5">
-        <PropertyRef Name="employee_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_previous_company_details_employee_details">
     <End Role="employee_details" Type="Self.employee_details" Multiplicity="1" />
     <End Role="previous_company_details" Type="Self.previous_company_details" Multiplicity="*" />
@@ -473,9 +404,22 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_role_employee_details">
+    <End Role="employee_details" Type="Self.employee_details" Multiplicity="0..1" />
+    <End Role="role" Type="Self.role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee_details">
+        <PropertyRef Name="employee_id" />
+      </Principal>
+      <Dependent Role="role">
+        <PropertyRef Name="employee_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="hrinnova_dbModelStoreContainer">
     <EntitySet Name="additional_information" EntityType="Self.additional_information" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="certifications" EntityType="Self.certifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="educational_qualifications" EntityType="Self.educational_qualifications" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="employee_details" EntityType="Self.employee_details" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="employee_refcheck" EntityType="Self.employee_refcheck" Schema="dbo" store:Type="Tables" />
@@ -485,12 +429,9 @@
     <EntitySet Name="feedback" EntityType="Self.feedback" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="other_details" EntityType="Self.other_details" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="prev_employ_1" EntityType="Self.prev_employ_1" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="prev_employ_2" EntityType="Self.prev_employ_2" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="prev_employ_3" EntityType="Self.prev_employ_3" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="prev_employ_4" EntityType="Self.prev_employ_4" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="prev_employ_5" EntityType="Self.prev_employ_5" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="previous_company_details" EntityType="Self.previous_company_details" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="references" EntityType="Self.references" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="role" EntityType="Self.role" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_additional_information_employee_details" Association="Self.FK_additional_information_employee_details">
       <End Role="employee_details" EntitySet="employee_details" />
       <End Role="additional_information" EntitySet="additional_information" />
@@ -531,22 +472,6 @@
       <End Role="employee_details" EntitySet="employee_details" />
       <End Role="prev_employ_1" EntitySet="prev_employ_1" />
     </AssociationSet>
-    <AssociationSet Name="FK_prev_employ_2_employee_details" Association="Self.FK_prev_employ_2_employee_details">
-      <End Role="employee_details" EntitySet="employee_details" />
-      <End Role="prev_employ_2" EntitySet="prev_employ_2" />
-    </AssociationSet>
-    <AssociationSet Name="FK_prev_employ_3_employee_details" Association="Self.FK_prev_employ_3_employee_details">
-      <End Role="employee_details" EntitySet="employee_details" />
-      <End Role="prev_employ_3" EntitySet="prev_employ_3" />
-    </AssociationSet>
-    <AssociationSet Name="FK_prev_employ_4_employee_details" Association="Self.FK_prev_employ_4_employee_details">
-      <End Role="employee_details" EntitySet="employee_details" />
-      <End Role="prev_employ_4" EntitySet="prev_employ_4" />
-    </AssociationSet>
-    <AssociationSet Name="FK_prev_employ_5_employee_details" Association="Self.FK_prev_employ_5_employee_details">
-      <End Role="employee_details" EntitySet="employee_details" />
-      <End Role="prev_employ_5" EntitySet="prev_employ_5" />
-    </AssociationSet>
     <AssociationSet Name="FK_previous_company_details_employee_details" Association="Self.FK_previous_company_details_employee_details">
       <End Role="employee_details" EntitySet="employee_details" />
       <End Role="previous_company_details" EntitySet="previous_company_details" />
@@ -554,6 +479,10 @@
     <AssociationSet Name="FK_references_employee_details" Association="Self.FK_references_employee_details">
       <End Role="employee_details" EntitySet="employee_details" />
       <End Role="references" EntitySet="references" />
+    </AssociationSet>
+    <AssociationSet Name="FK_role_employee_details" Association="Self.FK_role_employee_details">
+      <End Role="employee_details" EntitySet="employee_details" />
+      <End Role="role" EntitySet="role" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

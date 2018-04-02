@@ -1,0 +1,51 @@
+﻿@model Hrinnova_FormsProject.Models.Model2
+
+@Html.AntiForgeryToken()
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h3 align="center">EMPLOYEE DETAILS FORM</h3>
+
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-8">
+            <div class="col-sm-5">
+                <label>Employee Code :</label>
+            </div>
+            <div class="col-sm-3">@Html.DisplayFor(model => model.employeedetails.employee_code, new { htmlAttributes = new { @class = "form-control" } })</div>
+        </div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-8">
+            <div class="col-sm-5">
+                <label>Designation and Department :</label>
+            </div>
+            <div class="col-sm-3">
+                @Html.DisplayFor(model => model.employeedetails.designation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DisplayFor(model => model.employeedetails.department, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+    </div>
+    <a href="javascript:demoFromHTML()" class="button" />
+
+    <div id="testcase">
+
+        <h1>
+            We support special element handlers. Register them with jQuery-style.
+        </h1>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -26,13 +26,10 @@ namespace Hrinnova_FormsProject.DatabaseModel
             this.esic_details = new HashSet<esic_details>();
             this.family_details = new HashSet<family_details>();
             this.feedback = new HashSet<feedback>();
-            this.prev_employ_1 = new HashSet<prev_employ_1>();
-            this.prev_employ_2 = new HashSet<prev_employ_2>();
-            this.prev_employ_3 = new HashSet<prev_employ_3>();
-            this.prev_employ_4 = new HashSet<prev_employ_4>();
-            this.prev_employ_5 = new HashSet<prev_employ_5>();
             this.previous_company_details = new HashSet<previous_company_details>();
             this.references = new HashSet<references>();
+            this.prev_employ_1 = new HashSet<prev_employ_1>();
+            this.role = new HashSet<role>();
         }
     
         public int employee_id { get; set; }
@@ -43,10 +40,10 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public string middlename { get; set; }
         public string surname { get; set; }
         public string gender { get; set; }
-        public System.DateTime date_of_birth { get; set; }
+        public Nullable<System.DateTime> date_of_birth { get; set; }
         public System.DateTime date_of_joining { get; set; }
         public string marital_status { get; set; }
-        public System.DateTime marriage_anniversary { get; set; }
+        public Nullable<System.DateTime> marriage_anniversary { get; set; }
         public string blood_group { get; set; }
         public string mobile_number { get; set; }
         public string home_number { get; set; }
@@ -58,7 +55,7 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public string aadhar_card { get; set; }
         public string pan_card { get; set; }
         public string passport_number { get; set; }
-        public System.DateTime passport_validity { get; set; }
+        public Nullable<System.DateTime> passport_validity { get; set; }
         public string election_card { get; set; }
         public string vehicle_number { get; set; }
         public string single_bank_account { get; set; }
@@ -85,18 +82,12 @@ namespace Hrinnova_FormsProject.DatabaseModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<feedback> feedback { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<prev_employ_1> prev_employ_1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<prev_employ_2> prev_employ_2 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<prev_employ_3> prev_employ_3 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<prev_employ_4> prev_employ_4 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<prev_employ_5> prev_employ_5 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<previous_company_details> previous_company_details { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<references> references { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<prev_employ_1> prev_employ_1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<role> role { get; set; }
     }
 }

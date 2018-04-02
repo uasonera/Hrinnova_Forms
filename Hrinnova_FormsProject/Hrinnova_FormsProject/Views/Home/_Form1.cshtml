@@ -1,335 +1,350 @@
-﻿<div class="container-fluid">
-            <div class="middel-content">
-                <div class="clearfix">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <h1 align="center">Employee Details</h1>
+﻿@model Hrinnova_FormsProject.Models.Model1
+<div class="container-fluid">
+    <div class="middel-content">
+        <div class="clearfix">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h1 align="center">Employee Details</h1>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+
+                                <div class="col-sm-3">
+                                    <label class="control-label">Company Name :</label>
+
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" value="Cygnet Infotech" disabled />
+                                </div>
+                            </div>
                             <br>
                             <div class="row">
-                                <div class="col-md-6">
-                                    <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Employee Code :</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    @*@Html.TextBoxFor(m => m.firstname)*@
+                                    <input type="text" name="employeecode" class="form-control" />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Designation :<span class="redText">*</span></label>
+                                </div>
 
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Company Name :</label>
+                                <div class="col-sm-8">
+                                    @*@Html.DropDownListFor(m=>m.MyProperty, new SelectList(Model.MyProperty.FirstOrDefault().name,  1))*@
+                                    @*<select name="designationdropdown" class="form-control">
+                                        <option value="developer">Developer</option>
+                                        <option value="businessanalyst">Business Analyst</option>
+                                        <option value="qualityanalyst">Quality Analyst</option>
+                                    </select>*@
+                                    <div class="chosen-results">
 
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" class="form-control" value="Cygnet Infotech" disabled />
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Employee Code :<span class="redText">*</span></label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            @*@Html.TextBoxFor(m => m.firstname)*@
-                                            <input type="text" name="employeecode" class="form-control" />
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Designation :<span class="redText">*</span></label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <select name="designationdropdown" class="form-control">
-                                                <option value="developer">Developer</option>
-                                                <option value="businessanalyst">Business Analyst</option>
-                                                <option value="qualityanalyst">Quality Analyst</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <br>
-                                    <div class="row">
-
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Department :<span class="redText">*</span></label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <select name="departmentdropdown" class="form-control">
-                                                <option value="microsoft">Microsoft</option>
-                                                <option value="java">Java</option>
-                                                <option value="accounts">Accounts</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <br>
-
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">First Name :<span class="redText">*</span></label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            @*@Html.TextBoxFor(m => m.firstname)*@
-                                            <input type="text" name="firstname" class="form-control" placeholder="First" required pattern="^([a-zA-Z]+)$" />
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Middle Name :<span class="redText">*</span></label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" name="middlename" class="form-control" placeholder="Middle" required pattern="^([a-zA-Z]+)$" />
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Surname :<span class="redText">*</span></label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" name="surname" class="form-control" placeholder="Last" required pattern="^([a-zA-Z]+)$" />
-                                        </div>
-                                    </div>
-
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Gender :<span class="redText">*</span></label>
-                                        </div>
-
-                                        <div class="col-sm-8">
-                                            <input type="radio" name="gender" value="male" checked required> Male <br>
-                                            <input type="radio" name="gender" value="female"> Female <br>
-                                            <input type="radio" name="gender" value="other"> Other <br>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Date of Birth :</label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="date" class="form-control" name="dateofbirth" required><br>
-                                        </div>
-                                    </div>
-                                    <br>
-
-
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Date of Joining :<span class="redText">*</span></label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="date" required class="form-control" name="joiningdate"><br>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <br>
-                                    <div class="row">
-
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Marital Status :<span class="redText">*</span></label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <select name="maritalstatus" class="form-control">
-                                                <option value="married">Married</option>
-                                                <option value="unmarried">Unmarried</option>
-                                                <option value="widow">Widow</option>
-                                                <option value="widower">Widower</option>
-                                                <option value="divorcee">Divorcee</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Marriage Anniversary :</label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="date" class="form-control" name="marriageanniversary"><br>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Blood Group :</label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" name="bloodgroup" class="form-control" />
-                                        </div>
-                                    </div>
-
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Contact Number :<span class="redText">*</span></label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" name="mobilenumber" class="form-control" placeholder="Mobile" required pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" />
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Home Number :<span class="redText">*</span></label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" name="homenumber" class="form-control" placeholder="Home" required />
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Alternate Number :<span class="redText">*</span></label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" name="alternatenumber" class="form-control" placeholder="Alternate" required />
-                                        </div>
+                                        @Html.DropDownList("Designations", (IEnumerable<SelectListItem>)ViewBag.PriorityID, new { @class = "form-control chosen-select", @name= "designationdropdown" })
+                                        
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Emergency Number :<span class="redText">*</span></label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" name="emergencynumber" class="form-control" placeholder="emergency" required />
-                                        </div>
-                                    </div>
-                                    <br>
+                            </div>
 
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Email Id :<span class="redText">*</span></label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="email" name="emailid" class="form-control" required />
-                                        </div>
-                                    </div>
+                            <br>
+                            <div class="row">
 
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Permanent Address :<span class="redText">*</span></label>
-                                        </div>
-                                        @*<div class="col-sm-8">
-                    <input type="text" name="permaddress" class="form-control" required/>
-                </div>*@
-                                        <div class="col-sm-8">
-                                            <textarea name="permaddress" id="" style="width:100%" class="col-sm-6 form-control" rows="5"></textarea>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Temporary Address :<span class="redText">*</span></label>
-                                        </div>
-                                        @*<div class="col-sm-8">
-                    <input type="text" name="tempaddress" class="form-control" required/>
-                </div>*@
-                                        <div class="col-sm-8">
-                                            <textarea name="tempaddress" id="" style="width:100%" class="col-sm-6 form-control" rows="5"></textarea>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Aadhar Card :<span class="redText">*</span></label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" name="aadharcard" class="form-control" placeholder="XXXX-XXXX-XXXX" pattern="^\(?([0-9]{4})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$" required />
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">PAN Card :</label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" name="pancard" class="form-control" maxlength="10" />
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Passport Number :</label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" name="passportnumber" class="form-control" />
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Department :<span class="redText">*</span></label>
+                                </div>
+                                <div class="col-sm-8 chosen-drop">
+                                    @*<select name="departmentdropdown" class="form-control">
+                                            <option value="microsoft">Microsoft</option>
+                                            <option value="java">Java</option>
+                                            <option value="accounts">Accounts</option>
+                                        </select>*@
+                                    @*@Html.DropDownList("depts",(IEnumerable<SelectListItem>ViewData["depts"]))*@
+                                    <div class="chosen-results">
+                                       
+                                        @Html.DropDownList("Departments", (IEnumerable<SelectListItem>)ViewBag.PriorityID, new { @class = "form-control chosen-select", @name = "departmentdropdown" })
 
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Validity of Passport :</label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="date" name="passportvalidity" class="form-control" />
-                                        </div>
                                     </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Election Card :<span class="redText">*</span></label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" name="electioncard" class="form-control" />
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Vehicle Number :<span class="redText">*</span></label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" name="vehiclenumber" class="form-control" />
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Single Bank Account :</label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" name="singlebankaccount" class="form-control" />
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">IFS Code :</label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" name="ifsc" class="form-control" />
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3 ">
-                                            <label class="control-label" align="center">Medical(if any) :</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
+                                </div>
+                            </div>
+                            <br>
 
-                                        <br>
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Allergies:</label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" name="allergies" class="form-control" required />
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <label class="control-label">Known Ailments:</label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <input type="text" name="knownailments" class="form-control" required />
-                                        </div>
-                                    </div>
-                                    <br>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">First Name :<span class="redText">*</span></label>
+                                </div>
+                                <div class="col-sm-8">
+                                    @*@Html.TextBoxFor(m => m.firstname)*@
+                                    <input type="text" name="firstname" class="form-control" placeholder="First" pattern="^([a-zA-Z]+)$" />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Middle Name :<span class="redText">*</span></label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="middlename" class="form-control" placeholder="Middle" pattern="^([a-zA-Z]+)$" />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Surname :<span class="redText">*</span></label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="surname" class="form-control" placeholder="Last" pattern="^([a-zA-Z]+)$" />
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Gender :<span class="redText">*</span></label>
+                                </div>
+
+                                <div class="col-sm-8">
+                                    <input type="radio" name="gender" value="male" checked required> Male &nbsp; &nbsp;
+                                    <input type="radio" name="gender" value="female"> Female &nbsp; &nbsp;
+                                    <input type="radio" name="gender" value="other"> Other &nbsp; &nbsp;
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Date of Birth :</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control datepicker" name="dateofbirth"><br>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Date of Joining :<span class="redText">*</span></label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" required class="form-control datepicker" name="joiningdate"><br>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+
+                                <div class="col-sm-3">
+                                    <label class="control-label">Marital Status :<span class="redText">*</span></label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <select name="maritalstatus" class="form-control">
+                                        <option value="married">Married</option>
+                                        <option value="unmarried">Unmarried</option>
+                                        <option value="widow">Widow</option>
+                                        <option value="widower">Widower</option>
+                                        <option value="divorcee">Divorcee</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Marriage <br> Anniversary :</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control datepicker" name="marriageanniversary"><br>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Blood Group :</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="bloodgroup" class="form-control" />
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Contact Number :<span class="redText">*</span></label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="mobilenumber" class="form-control" placeholder="Mobile" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Home Number :<span class="redText">*</span></label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="homenumber" class="form-control" placeholder="Home" required />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Alternate Number :<span class="redText">*</span></label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="alternatenumber" class="form-control" placeholder="Alternate" required />
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Emergency<br> Number :<span class="redText">*</span></label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="emergencynumber" class="form-control" placeholder="emergency" required />
                                 </div>
                             </div>
                         </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="col-md-6">
+
+
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Email Id :</label>
                                 </div>
+                                <div class="col-sm-8">
+                                    <input type="email" name="emailid" class="form-control" required />
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Temporary<br> Address :<span class="redText">*</span></label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <textarea name="tempaddress" id="tempaddress" style="width:100%" required class="col-sm-6 form-control" rows="5"></textarea>
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <input type="checkbox" onchange="copyaddress()" id="copyaddresscheck" />Permanent address is same as temporary address
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Permanent <br> Address :<span class="redText">*</span></label>
+                                </div>
+
+                                <div class="col-sm-8">
+                                    <textarea name="permaddress" id="permaddress" style="width:100%" required class="col-sm-6 form-control" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Aadhar Card :<span class="redText">*</span></label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="aadharcard" class="form-control" placeholder="XXXX-XXXX-XXXX" pattern="^\(?([0-9]{4})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$" />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">PAN Card :</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="pancard" class="form-control" maxlength="10" />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Passport Number :</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="passportnumber" class="form-control" />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+
+                                <div class="col-sm-3">
+                                    <label class="control-label">Validity of Passport :</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="passportvalidity" class="form-control datepicker" />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Election Card :<span class="redText">*</span></label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="electioncard" class="form-control" />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Vehicle Number :<span class="redText">*</span></label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="vehiclenumber" class="form-control" />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Single Bank <br> Account :</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="singlebankaccount" class="form-control" />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">IFS Code :</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="ifsc" class="form-control" />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3 ">
+                                    <label class="control-label" align="center">Medical(if any) :</label>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <br>
+                                <div class="col-sm-3">
+                                    <label class="control-label">Allergies:</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="allergies" class="form-control" />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="control-label">Known Ailments:</label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" name="knownailments" class="form-control" />
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/JsScript/Copyaddressjs.js"></script>

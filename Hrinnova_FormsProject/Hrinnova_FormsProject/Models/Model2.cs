@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Hrinnova_FormsProject.DatabaseModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Hrinnova_FormsProject.Models
 {
     public class Model2
     {
+
+        public List<department> departments { get; set; }
+        public List<role> designations { get; set; }
         public employee_details employeedetails { get; set; }
         public esic_details esicdetails { get; set; }
         public epfo_details epfodetails { get; set; }
@@ -20,10 +24,10 @@ namespace Hrinnova_FormsProject.Models
         public other_details otherdetails { get; set; }
         public previous_company_details previouscompanydetails { get; set; }
         public prev_employ_1 prevemploy1 { get; set; }
-        public prev_employ_2 prevemploy2 { get; set; }
-        public prev_employ_3 prevemploy3 { get; set; }
-        public prev_employ_4 prevemploy4 { get; set; }
-        public prev_employ_5 prevemploy5 { get; set; }
+        public prev_employ_1 prevemploy2 { get; set; }
+        public prev_employ_1 prevemploy3 { get; set; }
+        public prev_employ_1 prevemploy4 { get; set; }
+        public prev_employ_1 prevemploy5 { get; set; }
         public educational_qualifications educationalqualifications { get; set; }
         public references reference1 { get; set; }
         public references reference2 { get; set; }
@@ -35,7 +39,9 @@ namespace Hrinnova_FormsProject.Models
         public certifications certification4 { get; set; }
         public string id { get; set; }
         public feedback feedback { get; set;}
-      
-        
+        public List<designation> designation2 { get; set; }
+    }
+    public enum designation {
+        developer, businessanalyst, qualityanalyst
     }
 }

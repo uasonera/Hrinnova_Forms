@@ -16,6 +16,7 @@ namespace Hrinnova_FormsProject.DatabaseModel
     {
         public int prevemploy_id { get; set; }
         public int employee_id { get; set; }
+        public string employment_ref { get; set; }
         public string employers_name { get; set; }
         public string designation { get; set; }
         public Nullable<System.DateTime> periodworked_from { get; set; }

@@ -25,22 +25,20 @@ namespace Hrinnova_FormsProject.DatabaseModel
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<epfo_details> epfo_details { get; set; }
-        public virtual DbSet<previous_company_details> previous_company_details { get; set; }
         public virtual DbSet<additional_information> additional_information { get; set; }
-        public virtual DbSet<feedback> feedback { get; set; }
-        public virtual DbSet<references> references { get; set; }
         public virtual DbSet<certifications> certifications { get; set; }
         public virtual DbSet<educational_qualifications> educational_qualifications { get; set; }
         public virtual DbSet<employee_details> employee_details { get; set; }
         public virtual DbSet<employee_refcheck> employee_refcheck { get; set; }
+        public virtual DbSet<epfo_details> epfo_details { get; set; }
         public virtual DbSet<esic_details> esic_details { get; set; }
         public virtual DbSet<family_details> family_details { get; set; }
+        public virtual DbSet<feedback> feedback { get; set; }
         public virtual DbSet<other_details> other_details { get; set; }
+        public virtual DbSet<previous_company_details> previous_company_details { get; set; }
+        public virtual DbSet<references> references { get; set; }
         public virtual DbSet<prev_employ_1> prev_employ_1 { get; set; }
-        public virtual DbSet<prev_employ_2> prev_employ_2 { get; set; }
-        public virtual DbSet<prev_employ_3> prev_employ_3 { get; set; }
-        public virtual DbSet<prev_employ_4> prev_employ_4 { get; set; }
-        public virtual DbSet<prev_employ_5> prev_employ_5 { get; set; }
+        public virtual DbSet<department> department { get; set; }
+        public virtual DbSet<role> role { get; set; }
     }
 }

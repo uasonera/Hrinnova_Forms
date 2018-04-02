@@ -1,0 +1,167 @@
+﻿@model Hrinnova_FormsProject.Models.Model1
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="~/CSS/bootstrap/bootstrap-datepicker.min (2).css" rel="stylesheet" />
+<script src="~/JsScript/DP/bootstrap-datepicker.js"></script>
+<style>
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 2%;
+        right: 2%;
+        z-index: 99;
+        font-size: 14px;
+        border: none;
+        outline: none;
+        background-color: royalblue;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+        padding: 6px 12px;
+    }
+
+    .tab {
+    overflow: auto;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+        .tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+</style>
+@using (Html.BeginForm("CreatePost", "Home", FormMethod.Post))
+{
+    
+        <div class="container-wrap" style="padding-bottom:61px">
+
+            <h1 align="center">Joining Forms</h1>
+            <div class="clearfix">
+                <div class="container-fluid">
+                    <div class="middel-content">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+
+                                <div id="tabs" class="tab">
+                                    <button id="form1" type="button" class="btn tablinks active" value="Employee Details">Employee Details</button>
+                                    <button id="form2" type="button" class="btn tablinks" value="ESIC and EPFO">ESIC and EPFO</button>
+                                    <button id="form3" type="button" class="btn tablinks" value="Other Details">Other Details</button>
+                                    <button id="form4" type="button" class="btn tablinks" value="Feedback">Feedback</button>
+                                </div>
+                                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                                
+                                    @*<ul class="nav nav-tabs tab-pane hidden-xs list-group">
+                                        <li class="active " id="btn1"><a id="form1">Employee Details</a></li>
+                                        <li  id="btn2"><a id="form2">ESIC and EPFO</a></li>
+                                        <li  id="btn3"><a id="form3">Other Details</a></li>
+                                        <li  id="btn4"><a id="form4">Feedback</a></li>
+                                    </ul>*@
+                                
+
+
+
+                                <div id="form1content" class="tab-content"data-currenttab="1">
+                                    @{
+                                        Html.RenderPartial("_Form1", Model);
+                                    }
+                                </div>
+                                <div id="form2content" data-currenttab="1" style="display:none">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            @{
+
+                                                Html.RenderPartial("_Form2", Model);
+
+                                            }
+                                        </div>
+                                        <div class="col-md-6">
+                                            @{
+
+
+                                                Html.RenderPartial("_Form5", Model);
+                                            }
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div id="form3content" data-currenttab="1" style="display:none">
+                                    @{
+                                        Html.RenderPartial("_Form3", Model);
+                                    }
+                                </div>
+
+                                <div id="form4content" data-currenttab="1" style="display:none">
+                                    @{
+                                        Html.RenderPartial("_Form4", Model);
+                                    }
+                                </div>
+                                <div id="form5content" data-currenttab="1" style="display:none">
+                                    @{
+                                        Html.RenderPartial("_Form5", Model);
+                                    }
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="clearfix "></div>
+        <div class="clearfix "></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 form-footer">
+                    <div class="text-center no-margin-left">
+                        <br>
+
+                        <div>
+                            <input type="submit"  @*onclick="return confirm('Once you click on Save and Continue, you wont be allowed to go back. Do you wish to continue ?')"*@ class="btn btn-success tabButtons" value="Save and Continue">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                                        }
+      
+        <button onclick="topFunction()" class="btn tabButtons" id="myBtn" title="Go to top">Go Up</button>
+  
+                                           
+<script src="~/JsScript/scrollfunction.js"></script>
+<script src="~/JsScript/partialviewbuttons.js"></script>
+<script src="~/JsScript/datepickercaller.js"></script>

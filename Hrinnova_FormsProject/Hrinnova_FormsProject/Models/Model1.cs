@@ -1,7 +1,12 @@
-﻿using System;
+﻿using Hrinnova_FormsProject.Models;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
+using Hrinnova_FormsProject.DatabaseModel;
 
 namespace Hrinnova_FormsProject.Models
 {
@@ -10,26 +15,36 @@ namespace Hrinnova_FormsProject.Models
     //{
     //    public Model1 Model1 { get; set; }
     //}
-
+ 
     public class Model1
     {
+       
+        public List<department> departments { get; set; }
+        public IEnumerable<role> designations { get; set; }
         //EMPLOYEE DETAILS
         public string employeecode { get; set; }
         public string designationdropdown { get; set; }
         public string departmentdropdown { get; set; }
+        [Required]
         public string firstname { get; set; }
+        [Required]
         public string middlename { get; set; }
+        [Required]
         public string surname { get; set; }
+        [Required]
         public string gender { get; set; }
+        [Required]
         public DateTime dateofbirth { get; set; }
+        [Required]
         public DateTime joiningdate { get; set; }
+        [Required]
         public string maritalstatus { get; set; }
         public DateTime marriageanniversary { get; set; }
         public string bloodgroup { get; set; }
         public string mobilenumber { get; set; }
         public string homenumber { get; set; }
         public string alternatenumber { get; set; }
-        public string emergencynumber    { get; set; }
+        public string emergencynumber { get; set; }
         public string emailid { get; set; }
         public string permaddress { get; set; }
         public string tempaddress { get; set; }
@@ -131,7 +146,7 @@ namespace Hrinnova_FormsProject.Models
         public string owneraddress { get; set; }
         public string owneroccupation { get; set; }
 
-        public string neighbour1name{ get; set; }
+        public string neighbour1name { get; set; }
         public string neighbour1contact { get; set; }
         public string neighbour1address { get; set; }
         public string neighbour1occupation { get; set; }
@@ -142,7 +157,7 @@ namespace Hrinnova_FormsProject.Models
         public string neighbour2occupation { get; set; }
 
         //EDUCATIONAL QUALIFICATIONS
-        public string tenthschool  { get; set;}
+        public string tenthschool { get; set; }
         public string tenthboard { get; set; }
         public string tenthyearofpassing { get; set; }
         public string tenthgrade { get; set; }
@@ -188,34 +203,39 @@ namespace Hrinnova_FormsProject.Models
         public string mediclaim { get; set; }
 
         //PREVIOUS EMPLOYMENT 
+        public string employment_ref1 = "1";
         public string emp1nameandadd { get; set; }
         public string emp1designation { get; set; }
-        public string emp1workedfrom { get; set; }
-        public string emp1workedtill { get; set; }
+        public DateTime emp1workedfrom { get; set; }
+        public DateTime emp1workedtill { get; set; }
         public string emp1reasonofleaving { get; set; }
 
+        public string employment_ref2 = "2";
         public string emp2nameandadd { get; set; }
         public string emp2designation { get; set; }
-        public string emp2workedfrom { get; set; }
-        public string emp2workedtill { get; set; }
+        public DateTime emp2workedfrom { get; set; }
+        public DateTime emp2workedtill { get; set; }
         public string emp2reasonofleaving { get; set; }
 
+        public string employment_ref3 = "3";
         public string emp3nameandadd { get; set; }
         public string emp3designation { get; set; }
-        public string emp3workedfrom { get; set; }
-        public string emp3workedtill { get; set; }
+        public DateTime emp3workedfrom { get; set; }
+        public DateTime emp3workedtill { get; set; }
         public string emp3reasonofleaving { get; set; }
 
+        public string employment_ref4 = "4";
         public string emp4nameandadd { get; set; }
         public string emp4designation { get; set; }
-        public string emp4workedfrom { get; set; }
-        public string emp4workedtill { get; set; }
+        public DateTime emp4workedfrom { get; set; }
+        public DateTime emp4workedtill { get; set; }
         public string emp4reasonofleaving { get; set; }
 
+        public string employment_ref5 = "5";
         public string emp5nameandadd { get; set; }
         public string emp5designation { get; set; }
-        public string emp5workedfrom { get; set; }
-        public string emp5workedtill { get; set; }
+        public DateTime emp5workedfrom { get; set; }
+        public DateTime emp5workedtill { get; set; }
         public string emp5reasonofleaving { get; set; }
 
         //ADDITIONAL INFORMATION
@@ -255,9 +275,17 @@ namespace Hrinnova_FormsProject.Models
         public string messengeraccess { get; set; }
         public string saother { get; set; }
         public string hrmanualandismsresp { get; set; }
-
-
-
-
+        //public List<model> MyProperty { get; set; }
+        //public Model1()
+        //{
+        //    MyProperty = new List<model>();
+        //}
     }
+
+    //public class model
+    //{
+    //    public int Id { get; set; }
+    //    public string  name { get; set; }
+    //}
+    
 }

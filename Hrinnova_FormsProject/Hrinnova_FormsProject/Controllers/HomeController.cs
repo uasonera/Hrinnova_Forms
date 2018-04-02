@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Web;
 using System.Web.Mvc;
 
@@ -16,6 +17,17 @@ namespace Hrinnova_FormsProject.Controllers
         public int count = 0;
         public ActionResult Index()
         {
+           Model1 m = new Model1();
+            hrinnova_dbEntities hrb = new hrinnova_dbEntities();
+            m.designations = hrb.role.ToList();
+            m.departments = hrb.department.ToList();
+
+            var depts = new SelectList(m.departments, "DeptID", "DeptName",1);
+            var designs = new SelectList(m.designations, "roleID", "name", 1);
+            ViewBag.Departments= depts;
+            ViewBag.Designations = designs;
+
+            
             return View();
         }
         public PartialViewResult Form1()
@@ -43,36 +55,16 @@ namespace Hrinnova_FormsProject.Controllers
         public ActionResult CreatePost(Model1 form1)
         {
 
-            //var fathername = Request.Form["fathername"];
-            //var fatheraad = Request.Form["fathername"];
-            //var ReviewIds = Request.Form["fathername"];
-            //var ReviewIds = Request.Form["fathername"];
-            //var ReviewIds = Request.Form["fathername"];
-            //var ReviewIds = Request.Form["fathername"];
-
-            //var mother = Request.Form["fathername"];
-
-            //try
-            //{
+           
             hrinnova_dbEntities hd = new hrinnova_dbEntities();
-            //    _hrinnova_dbEntities.employee_details.Add(ed);
+           
+            try
+            {
+                // Your code...
+                // Could also be before try if you know the exception occurs in SaveChanges
+                
+                
 
-            // EmployeeDetail 
-            //    public ActionResult EmpDetails(Model1 parent)
-            //{
-            //    employee_details ed = new employee_details();
-            //    { 
-            //       parent.firstname=ed.firstname;
-
-            //     }
-            //   
-            //    // Tabularer
-            //    // 
-
-            //    _hrinnova_dbEntities.savechanges();
-            //    return View("Index");
-            //}
-            //Employee Details Form
             employee_details ed = new employee_details();
             ed.employee_code = form1.employeecode;
             ed.designation = form1.designationdropdown;
@@ -263,10 +255,50 @@ namespace Hrinnova_FormsProject.Controllers
             certifications cf4 = new certifications();
             cf4.cert_type = form1.cert4;
             cf4.certification_name = form1.cert_2;
-            
 
-            //PREVIOUS COMPANY DETAILS 
-            previous_company_details pd = new previous_company_details();
+                //PREVIOUS EMPLOYMENT
+                prev_employ_1 pe1 = new prev_employ_1();
+                pe1.employment_ref = form1.employment_ref1;
+                pe1.employers_name= form1.emp1nameandadd;
+                pe1.designation = form1.emp1designation;
+                pe1.periodworked_from = form1.emp1workedfrom;
+                pe1.periodworked_to = form1.emp1workedtill;
+                pe1.reason_of_leaving = form1.emp1reasonofleaving;
+
+                prev_employ_1 pe2 = new prev_employ_1();
+                pe2.employment_ref = form1.employment_ref2;
+                pe2.employers_name = form1.emp2nameandadd;
+                pe2.designation = form1.emp2designation;
+                pe2.periodworked_from = form1.emp2workedfrom;
+                pe2.periodworked_to = form1.emp2workedtill;
+                pe2.reason_of_leaving = form1.emp2reasonofleaving;
+
+                prev_employ_1 pe3 = new prev_employ_1();
+                pe3.employment_ref = form1.employment_ref3;
+                pe3.employers_name = form1.emp3nameandadd;
+                pe3.designation = form1.emp3designation;
+                pe3.periodworked_from = form1.emp3workedfrom;
+                pe3.periodworked_to = form1.emp3workedtill;
+                pe3.reason_of_leaving = form1.emp3reasonofleaving;
+
+                prev_employ_1 pe4 = new prev_employ_1();
+                pe4.employment_ref = form1.employment_ref4;
+                pe4.employers_name = form1.emp4nameandadd;
+                pe4.designation = form1.emp4designation;
+                pe4.periodworked_from = form1.emp4workedfrom;
+                pe4.periodworked_to = form1.emp4workedtill;
+                pe4.reason_of_leaving = form1.emp4reasonofleaving;
+
+                prev_employ_1 pe5 = new prev_employ_1();
+                pe5.employment_ref = form1.employment_ref5;
+                pe5.employers_name = form1.emp5nameandadd;
+                pe5.designation = form1.emp5designation;
+                pe5.periodworked_from = form1.emp5workedfrom;
+                pe5.periodworked_to = form1.emp5workedtill;
+                pe5.reason_of_leaving = form1.emp5reasonofleaving;
+
+                //PREVIOUS COMPANY DETAILS 
+                previous_company_details pd = new previous_company_details();
             pd.pf_account_number = form1.pfaccnumber;
             pd.fps_account_number = form1.accountnumber;
             pd.pf_employers_code_number = form1.employerscodenum;
@@ -324,9 +356,9 @@ namespace Hrinnova_FormsProject.Controllers
 
             //Joinee
             fb.hrmanual_and_responsibilities = form1.hrmanualandismsresp;
-
-
-
+                
+            hd.educational_qualifications.Add(eq);
+            hd.other_details.Add(od);
             hd.certifications.Add(cf1);
             hd.certifications.Add(cf2);
             hd.certifications.Add(cf3);
@@ -343,22 +375,32 @@ namespace Hrinnova_FormsProject.Controllers
             hd.additional_information.Add(ai);
             hd.references.Add(rf1);
             hd.references.Add(rf2);
+            hd.previous_company_details.Add(pd);
+            hd.feedback.Add(fb);
+            hd.prev_employ_1.Add(pe1);
+            hd.prev_employ_1.Add(pe2);
+            hd.prev_employ_1.Add(pe3);
+            hd.prev_employ_1.Add(pe4);
+            hd.prev_employ_1.Add(pe5);
+
             hd.SaveChanges();
-            //} 
-            //catch (DbEntityValidationException ex)
-            //{
-            //    // Retrieve the error messages as a list of strings.
-            //    var errorMessages = ex.EntityValidationErrors
-            //            .SelectMany(x => x.ValidationErrors)
-            //            .Select(x => x.ErrorMessage);
 
-            //    // Join the list to a single string.
-            //    var fullErrorMessage = string.Join("; ", errorMessages);
 
-            //    // Combine the original exception message with the new one.
-            //    var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
+            }
+            catch (DbEntityValidationException ex)
+            {
+                // Retrieve the error messages as a list of strings.
+                var errorMessages = ex.EntityValidationErrors
+                        .SelectMany(x => x.ValidationErrors)
+                        .Select(x => x.ErrorMessage);
 
-            //}
+                // Join the list to a single string.
+                var fullErrorMessage = string.Join("; ", errorMessages);
+
+                // Combine the original exception message with the new one.
+                var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
+                return View(exceptionMessage);
+            }
 
             return View("Index");
 

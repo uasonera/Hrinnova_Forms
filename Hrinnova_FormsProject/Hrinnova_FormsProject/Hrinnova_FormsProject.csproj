@@ -132,12 +132,17 @@
     <Content Include="Content\Site.css" />
     <Content Include="CSS\animate.css" />
     <Content Include="CSS\base.css" />
+    <Content Include="CSS\bootstrap\bootstrap-datepicker.min %282%29.css" />
+    <Content Include="CSS\bootstrap\bootstrap-datepicker.min.css" />
+    <Content Include="CSS\bootstrap\bootstrap-datetimepicker.min.css" />
     <Content Include="CSS\chosenIcon.css" />
     <Content Include="CSS\CimsStyle.css" />
     <Content Include="CSS\circle.css" />
     <Content Include="CSS\colorpicker.css" />
     <Content Include="CSS\cs-select.css" />
     <Content Include="CSS\cs-skin-elastic.css" />
+    <Content Include="CSS\datatable\dataTables.bootstrap.css" />
+    <Content Include="CSS\datatable\responsive.dataTables.min.css" />
     <Content Include="CSS\datepicker-jquery-ui.css" />
     <Content Include="CSS\default.css" />
     <Content Include="CSS\developer-edits.css" />
@@ -149,6 +154,8 @@
     <Content Include="CSS\font-awesome.css" />
     <Content Include="CSS\font-awesome.min.css" />
     <Content Include="CSS\getorgchart.css" />
+    <Content Include="CSS\HRIMS_Secure\style\datatable\dataTables.bootstrap.css" />
+    <Content Include="CSS\HRIMS_Secure\style\datatable\responsive.dataTables.min.css" />
     <Content Include="CSS\layout-mobile.css" />
     <Content Include="CSS\layout-tablet.css" />
     <Content Include="CSS\layout-tabletxl.css" />
@@ -505,18 +512,19 @@
     <Content Include="JsScript\AddKPIGuidelines.js" />
     <Content Include="JsScript\AddKRAScript.js" />
     <Content Include="JsScript\AngularJS.js" />
-    <Content Include="JsScript\bootstrap-datepicker.js" />
-    <Content Include="JsScript\bootstrap-datetimepicker.min.js" />
     <Content Include="JsScript\bootstrap-tabcollapse.js" />
     <Content Include="JsScript\chosen.jquery.min.js" />
     <Content Include="JsScript\Common.js" />
     <Content Include="JsScript\CommonFunctionsForKRA.js" />
     <Content Include="JsScript\CommonValidationForTeamSelection.js" />
+    <Content Include="JsScript\Copyaddressjs.js" />
     <Content Include="JsScript\d3.tip.v0.6.3.js" />
     <Content Include="JsScript\d3.v3.min.js" />
     <Content Include="JsScript\d3pie.min.js" />
     <Content Include="JsScript\dataTables.jqueryui.js" />
     <Content Include="JsScript\DatevalidationForJQueryPicker.js" />
+    <Content Include="JsScript\DP\bootstrap-datepicker.js" />
+    <Content Include="JsScript\DP\bootstrap-datepicker.min.js" />
     <Content Include="JsScript\drag-drop.js" />
     <Content Include="JsScript\dropzone.js" />
     <Content Include="JsScript\EmployeeEvaluation.js" />
@@ -527,6 +535,7 @@
     <Content Include="JsScript\getorgchart.js" />
     <Content Include="JsScript\inettuts.js" />
     <Content Include="JsScript\inettuts2.js" />
+    <Content Include="JsScript\datepickercaller.js" />
     <Content Include="JsScript\jquery-1.11.0.min.js" />
     <Content Include="JsScript\jquery-1.11.2.min.js" />
     <Content Include="JsScript\jquery-1.11.3.js" />
@@ -579,13 +588,17 @@
     <Content Include="JsScript\moment.min.js" />
     <Content Include="JsScript\new-icon-font.js" />
     <Content Include="JsScript\ObjectivesAndKRAsScript.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\datatable\dataTables.bootstrap.min.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\datatable\dataTables.responsive.min.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\datatable\jquery.dataTables.min.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\datepicker-jquery-1.10.2.js" />
+    <Content Include="JsScript\partialviewbuttons.js" />
     <Content Include="JsScript\ProjectKRA.js" />
     <Content Include="JsScript\ProjectList_New.js" />
     <Content Include="JsScript\ProjTeamDefinition2.js" />
     <Content Include="JsScript\RequestCard.js" />
     <Content Include="JsScript\scrollfunction.js" />
     <Content Include="JsScript\scw.js" />
-    <Content Include="JsScript\tabbuttons.js" />
     <Content Include="JsScript\Task.js" />
     <Content Include="JsScript\TimeoffRequest.js" />
     <Content Include="JsScript\TimeoffRequest_Attendance.js" />
@@ -595,6 +608,7 @@
     <Content Include="JsScript\ViewKRAApplicable.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\Hrinnova_Forms.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -603,20 +617,27 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jspdf.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <None Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EditController.cs" />
+    <Compile Include="Controllers\FormPopulateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DatabaseModel\additional_information.cs">
       <DependentUpon>EmployeeDetails1.tt</DependentUpon>
     </Compile>
     <Compile Include="DatabaseModel\certifications.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\department.cs">
       <DependentUpon>EmployeeDetails1.tt</DependentUpon>
     </Compile>
     <Compile Include="DatabaseModel\educational_qualifications.cs">
@@ -664,19 +685,10 @@
     <Compile Include="DatabaseModel\prev_employ_1.cs">
       <DependentUpon>EmployeeDetails1.tt</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseModel\prev_employ_2.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\prev_employ_3.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\prev_employ_4.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\prev_employ_5.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
     <Compile Include="DatabaseModel\references.cs">
+      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\role.cs">
       <DependentUpon>EmployeeDetails1.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
@@ -786,6 +798,7 @@
     <Content Include="Views\Home\_Form5.cshtml" />
     <Content Include="Views\Edit\_EditForm4.cshtml" />
     <Content Include="Views\Edit\_EditForm5.cshtml" />
+    <Content Include="Views\FormPopulate\EmployeeDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -797,14 +810,11 @@
     <Folder Include="App_Data\" />
     <Folder Include="CSS\Banner-css\" />
     <Folder Include="CSS\Basic\" />
-    <Folder Include="CSS\bootstrap\" />
     <Folder Include="CSS\common-images\" />
-    <Folder Include="CSS\datatable\" />
     <Folder Include="CSS\DropZone\" />
     <Folder Include="CSS\fonts\" />
     <Folder Include="CSS\Gantt\" />
     <Folder Include="CSS\HRIMS\" />
-    <Folder Include="CSS\HRIMS_Secure\" />
     <Folder Include="CSS\images\" />
     <Folder Include="CSS\jquery\" />
     <Folder Include="CSS\mixins\" />
@@ -830,7 +840,7 @@
     <Folder Include="JsScript\Gantt\" />
     <Folder Include="JsScript\images\" />
     <Folder Include="JsScript\JQAlert\" />
-    <Folder Include="JsScript\PageScripts\" />
+    <Folder Include="JsScript\PageScripts\HRIMS\" />
     <Folder Include="JsScript\pick-a-color-master\" />
     <Folder Include="JsScript\PMS\" />
     <Folder Include="JsScript\Scheduler\" />
@@ -838,6 +848,7 @@
     <Folder Include="JsScript\ThirdPartyPlugins\" />
     <Folder Include="JsScript\TinyMCE\" />
     <Folder Include="Views\EmployeeDetails\" />
+    <Folder Include="Views\Forms\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

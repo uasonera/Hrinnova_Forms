@@ -19,8 +19,8 @@ namespace Hrinnova_FormsProject.Models
     public class Model1
     {
        
-        public List<department> departments { get; set; }
-        public IEnumerable<role> designations { get; set; }
+        public List<department> Departments{ get; set; }
+        public List<role> Designations { get; set; }
         //EMPLOYEE DETAILS
         public string employeecode { get; set; }
         public string designationdropdown { get; set; }

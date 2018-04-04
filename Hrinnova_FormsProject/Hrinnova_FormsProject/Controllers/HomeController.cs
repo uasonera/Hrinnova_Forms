@@ -19,14 +19,14 @@ namespace Hrinnova_FormsProject.Controllers
         {
            Model1 m = new Model1();
             hrinnova_dbEntities hrb = new hrinnova_dbEntities();
-            m.designations = hrb.role.ToList();
-            m.departments = hrb.department.ToList();
+            m.Designations = hrb.role.ToList();
+            m.Departments = hrb.department.ToList();
 
-            var depts = new SelectList(m.departments, "DeptID", "DeptName",1);
-            var designs = new SelectList(m.designations, "roleID", "name", 1);
+            var depts = new SelectList(m.Departments, "DeptID", "DeptName",1);
+            var designs = new SelectList(m.Designations, "roleID", "name", 1);
             ViewBag.Departments= depts;
             ViewBag.Designations = designs;
-
+            
             
             return View();
         }

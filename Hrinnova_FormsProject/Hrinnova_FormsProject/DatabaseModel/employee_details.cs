@@ -11,7 +11,8 @@ namespace Hrinnova_FormsProject.DatabaseModel
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class employee_details
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -29,7 +30,6 @@ namespace Hrinnova_FormsProject.DatabaseModel
             this.previous_company_details = new HashSet<previous_company_details>();
             this.references = new HashSet<references>();
             this.prev_employ_1 = new HashSet<prev_employ_1>();
-            this.role = new HashSet<role>();
         }
     
         public int employee_id { get; set; }
@@ -40,9 +40,12 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public string middlename { get; set; }
         public string surname { get; set; }
         public string gender { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> date_of_birth { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public System.DateTime date_of_joining { get; set; }
         public string marital_status { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> marriage_anniversary { get; set; }
         public string blood_group { get; set; }
         public string mobile_number { get; set; }
@@ -87,7 +90,5 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public virtual ICollection<references> references { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<prev_employ_1> prev_employ_1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<role> role { get; set; }
     }
 }

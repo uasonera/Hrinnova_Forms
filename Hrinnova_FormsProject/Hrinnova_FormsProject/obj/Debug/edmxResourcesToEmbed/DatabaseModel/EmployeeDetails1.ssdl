@@ -254,7 +254,6 @@
     </Key>
     <Property Name="roleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="employee_id" Type="int" />
     <Property Name="description" Type="varchar" MaxLength="200" />
     <Property Name="InfrastructureCost" Type="decimal" Precision="18" Scale="2" />
     <Property Name="Abbreviation" Type="varchar" MaxLength="50" />
@@ -404,18 +403,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_role_employee_details">
-    <End Role="employee_details" Type="Self.employee_details" Multiplicity="0..1" />
-    <End Role="role" Type="Self.role" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="employee_details">
-        <PropertyRef Name="employee_id" />
-      </Principal>
-      <Dependent Role="role">
-        <PropertyRef Name="employee_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="hrinnova_dbModelStoreContainer">
     <EntitySet Name="additional_information" EntityType="Self.additional_information" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="certifications" EntityType="Self.certifications" Schema="dbo" store:Type="Tables" />
@@ -479,10 +466,6 @@
     <AssociationSet Name="FK_references_employee_details" Association="Self.FK_references_employee_details">
       <End Role="employee_details" EntitySet="employee_details" />
       <End Role="references" EntitySet="references" />
-    </AssociationSet>
-    <AssociationSet Name="FK_role_employee_details" Association="Self.FK_role_employee_details">
-      <End Role="employee_details" EntitySet="employee_details" />
-      <End Role="role" EntitySet="role" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

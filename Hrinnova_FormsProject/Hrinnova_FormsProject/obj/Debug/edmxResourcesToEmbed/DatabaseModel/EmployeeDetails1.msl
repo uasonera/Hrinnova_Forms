@@ -270,7 +270,6 @@
           <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
           <ScalarProperty Name="InfrastructureCost" ColumnName="InfrastructureCost" />
           <ScalarProperty Name="description" ColumnName="description" />
-          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="roleID" ColumnName="roleID" />
         </MappingFragment>

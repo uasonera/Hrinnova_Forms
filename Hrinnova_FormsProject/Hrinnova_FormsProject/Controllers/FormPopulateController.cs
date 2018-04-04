@@ -17,6 +17,7 @@ namespace Hrinnova_FormsProject.Controllers
         {
             Session["id"] = id;
             modelobject.employeedetails = entity.employee_details.FirstOrDefault(edid => edid.employee_id == id);
+            modelobject.fatherdetails = entity.family_details.FirstOrDefault(iid => iid.employee_id == id && iid.member == "father");
             return View(modelobject);
         }
     }

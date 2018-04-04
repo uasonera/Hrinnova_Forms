@@ -2,50 +2,205 @@
 
 @Html.AntiForgeryToken()
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/pagetypes.css" rel="stylesheet" />
+<script src="~/JsScript/jquery-1.11.3.js"></script>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-    <title></title>
+
 </head>
+
 <body>
-    <h3 align="center">EMPLOYEE DETAILS FORM</h3>
 
-    <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-8">
-            <div class="col-sm-5">
-                <label>Employee Code :</label>
-            </div>
-            <div class="col-sm-3">@Html.DisplayFor(model => model.employeedetails.employee_code, new { htmlAttributes = new { @class = "form-control" } })</div>
-        </div>
-        <div class="col-sm-3"></div>
-        <div class="col-sm-8">
-            <div class="col-sm-5">
-                <label>Designation and Department :</label>
-            </div>
-            <div class="col-sm-3">
-                @Html.DisplayFor(model => model.employeedetails.designation, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.DisplayFor(model => model.employeedetails.department, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
-        </div>
-    </div>
-    <a href="javascript:demoFromHTML()" class="button" />
+    <h3 align="center">Employee Details Form</h3>
+    <table width="700" align="center">
 
-    <div id="testcase">
+        <tbody>
+            <tr style="height:30px">
+                <td>Employee Code :</td>
+                <td>@Html.DisplayFor(model => model.employeedetails.employee_code, new { htmlAttributes = new { @class = "form-control" } })</td>
+            </tr>
+            <tr style="height:30px">
+                <td>Designation and Department :</td>
+                <td>
+                    @Html.DisplayFor(model => model.employeedetails.designation, new { htmlAttributes = new { @class = "form-control" } })<br />
+                    @Html.DisplayFor(model => model.employeedetails.department, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+            </tr>
+            <tr style="height:30px">
+                <td>Name of Member :</td>
+                <td>
+                    @Html.DisplayFor(model => model.employeedetails.firstname, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.DisplayFor(model => model.employeedetails.surname, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+            </tr>
+            <tr style="height:30px">
+                <td>Father/Husband's Name :</td>
+                <td>
+                    @Html.DisplayFor(model => model.employeedetails.middlename, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+            </tr>
+            <tr style="height:30px">
+                <td>Gender :</td>
+                <td>
+                    @Html.DisplayFor(model => model.employeedetails.gender, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+            </tr>
 
-        <h1>
-            We support special element handlers. Register them with jQuery-style.
-        </h1>
+            <tr style="height:30px">
+                <td>Date of Joining :</td>
+                <td>
+                    @Html.DisplayFor(model => model.employeedetails.date_of_joining, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+            </tr>
+            <tr style="height:30px">
+                <td>Date of Birth :</td>
+                <td>
+                    @Html.DisplayFor(model => model.employeedetails.date_of_birth, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+            </tr>
+            <tr style="height:30px">
+                <td>Marital Status :</td>
+                <td>
+                    @Html.DisplayFor(model => model.employeedetails.marital_status, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+            </tr>
+            <tr style="height:30px">
+                <td>Contact Number :</td>
+                <td>
+                    @Html.DisplayFor(model => model.employeedetails.mobile_number, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+            </tr>
+            <tr style="height:30px">
+                <td>Email Id :</td>
+                <td>
+                    @Html.DisplayFor(model => model.employeedetails.email_id, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+            </tr>
 
-    </div>
+            <tr style="height:30px">
+                <td>ESIC No(if any)<br /> UAN/PF No.(if any) :</td>
+                <td>
+                    @Html.DisplayFor(model => model.esicdetails.esic_id, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.DisplayFor(model => model.epfodetails.epfo_id, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+            </tr>
+            <tr style="height:30px">
+                <td>Permanent Address :</td>
+                <td>
+                    @Html.DisplayFor(model => model.employeedetails.permanent_address, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+            </tr>
+            <tr style="height:30px">
+                <td>Temporary Address :</td>
+                <td>
+                    @Html.DisplayFor(model => model.employeedetails.temporary_address, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="700" align="center" style="border:inset">
+        <thead>
+            <tr style="border:inset">
+                <th style="border:inset">Family Member</th>
+                <th style="border:inset">Name</th>
+                <th style="border:inset">DOB</th>
+                <th style="border:inset">Aadhar Card</th>
+                <th style="border:inset">Contact No</th>
+                <th style="border:inset">Occupation</th>
+                <th style="border:inset">Whether residing with him/her</th>
+                <th style="border:inset">Town</th>
+                <th style="border:inset">State</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td name="fathername">Father</td>
+                <td>@Html.DisplayFor(m=>m.fatherdetails.fname)</td>
+                <td>@Html.DisplayFor(m => m.fatherdetails.fdateofbirth)</td>
+                <td>@Html.DisplayFor(m => m.fatherdetails.faadhar)</td>
+                <td>@Html.DisplayFor(m => m.fatherdetails.fcontact)</td>
+                <td>@Html.DisplayFor(m => m.fatherdetails.foccupation)</td>
+                <td>@Html.DisplayFor(m => m.fatherdetails.freside)</td>
+                <td>@Html.DisplayFor(m => m.fatherdetails.ftown)</td>
+                <td>@Html.DisplayFor(m => m.fatherdetails.fstate)</td>
+            </tr>
+            <tr>
+                <td>Mother</td>
+                <td><input type="text" name="mothername" class="form-control"></td>
+                <td><input type="text" name="motherdob" class="form-control datepicker"></td>
+                <td><input type="text" name="motheraadhar" class="form-control"></td>
+                <td><input type="text" name="mothercontact" class="form-control"></td>
+                <td><input type="text" name="motheroccupation" class="form-control"></td>
+                <td><input type="text" name="motherresides" class="form-control"></td>
+                <td><input type="text" name="mothertown" class="form-control"></td>
+                <td><input type="text" name="motherstate" class="form-control"></td>
+
+            </tr>
+            <tr>
+                <td>Brother</td>
+
+                <td><input type="text" name="brothername" class="form-control"></td>
+                <td><input type="text" name="brotherdob" class="form-control datepicker"></td>
+                <td><input type="text" name="brotheraadhar" class="form-control"></td>
+                <td><input type="text" name="brothercontact" class="form-control"></td>
+                <td><input type="text" name="brotheroccupation" class="form-control"></td>
+                <td><input type="text" name="brotherresides" class="form-control"></td>
+                <td><input type="text" name="brothertown" class="form-control"></td>
+                <td><input type="text" name="brotherstate" class="form-control"></td>
+
+            </tr>
+            <tr>
+                <td>Sister</td>
+                <td><input type="text" name="sistername" class="form-control"></td>
+                <td><input type="text" name="sisterdob" class="form-control datepicker"></td>
+                <td><input type="text" name="sisteraadhar" class="form-control"></td>
+                <td><input type="text" name="sistercontact" class="form-control"></td>
+                <td><input type="text" name="sisteroccupation" class="form-control"></td>
+                <td><input type="text" name="sisterresides" class="form-control"></td>
+                <td><input type="text" name="sistertown" class="form-control"></td>
+                <td><input type="text" name="sisterstate" class="form-control"></td>
+
+            </tr>
+            <tr>
+                <td>Spouse (if married)</td>
+                <td><input type="text" name="spousename" class="form-control"></td>
+                <td><input type="text" name="spousedob" class="form-control datepicker"></td>
+                <td><input type="text" name="spouseaadhar" class="form-control"></td>
+                <td><input type="text" name="spousecontact" class="form-control"></td>
+                <td><input type="text" name="spouseoccupation" class="form-control"></td>
+                <td><input type="text" name="spouseresides" class="form-control"></td>
+                <td><input type="text" name="spousetown" class="form-control"></td>
+                <td><input type="text" name="spousestate" class="form-control"></td>
+
+            </tr>
+            <tr>
+                <td>Children (Specify gender)</td>
+                <td><input type="text" name="childrenname" class="form-control"></td>
+                <td><input type="text" name="childrendob" class="form-control datepicker"></td>
+                <td><input type="text" name="childrenaadhar" class="form-control"></td>
+                <td><input type="text" name="childrencontact" class="form-control"></td>
+                <td><input type="text" name="childrenoccupation" class="form-control"></td>
+                <td><input type="text" name="childrenresides" class="form-control"></td>
+                <td><input type="text" name="childrentown" class="form-control"></td>
+                <td><input type="text" name="childrenstate" class="form-control"></td>
+
+            </tr>
+
+        </tbody>
+    </table>
+    <div class="col-sm-3"></div>
+    <div class="col-sm-5"><button id="hidebutton">Generate PDF</button></div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
+<script>
+    $('#hidebutton').click(
+     function () {
+         $(this).hide();
+         window.print();
+         $(this).show();
+     }
+);
+</script>

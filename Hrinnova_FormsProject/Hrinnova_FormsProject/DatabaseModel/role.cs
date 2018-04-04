@@ -16,12 +16,9 @@ namespace Hrinnova_FormsProject.DatabaseModel
     {
         public int roleID { get; set; }
         public string name { get; set; }
-        public Nullable<int> employee_id { get; set; }
         public string description { get; set; }
         public Nullable<decimal> InfrastructureCost { get; set; }
         public string Abbreviation { get; set; }
         public Nullable<decimal> PerDeskCost { get; set; }
-    
-        public virtual employee_details employee_details { get; set; }
     }
 }

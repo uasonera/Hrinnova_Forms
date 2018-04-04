@@ -31,8 +31,7 @@
         <EntityTypeShape EntityType="hrinnova_dbModel.prev_employ_1" Width="1.5" PointX="3" PointY="67.75" />
         <AssociationConnector Association="hrinnova_dbModel.FK_prev_employ_1_employee_details" />
         <EntityTypeShape EntityType="hrinnova_dbModel.department" Width="1.5" PointX="5.375" PointY="0.75" />
-        <EntityTypeShape EntityType="hrinnova_dbModel.role" Width="1.5" PointX="3" PointY="37.625" />
-        <AssociationConnector Association="hrinnova_dbModel.FK_role_employee_details" />
+        <EntityTypeShape EntityType="hrinnova_dbModel.role" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

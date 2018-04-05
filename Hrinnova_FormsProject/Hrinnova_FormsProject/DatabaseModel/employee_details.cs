@@ -58,6 +58,7 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public string aadhar_card { get; set; }
         public string pan_card { get; set; }
         public string passport_number { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> passport_validity { get; set; }
         public string election_card { get; set; }
         public string vehicle_number { get; set; }

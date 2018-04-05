@@ -11,13 +11,15 @@ namespace Hrinnova_FormsProject.DatabaseModel
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class family_details
     {
         public int familydet_id { get; set; }
         public int employee_id { get; set; }
         public string member { get; set; }
         public string fname { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> fdateofbirth { get; set; }
         public string faadhar { get; set; }
         public string fcontact { get; set; }

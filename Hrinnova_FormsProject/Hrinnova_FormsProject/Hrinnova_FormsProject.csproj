@@ -421,6 +421,7 @@
     <Content Include="Images\profile-banner.jpg" />
     <Content Include="Images\profile-pic.jpg" />
     <Content Include="Images\qisms.png" />
+    <Content Include="Images\qisms2.png" />
     <Content Include="Images\quote-end.png" />
     <Content Include="Images\quote-start.png" />
     <Content Include="Images\radio-box-tick.png" />
@@ -534,6 +535,7 @@
     <Content Include="JsScript\FunctionListing.js" />
     <Content Include="JsScript\general.js" />
     <Content Include="JsScript\getorgchart.js" />
+    <Content Include="JsScript\hidebutton.js" />
     <Content Include="JsScript\inettuts.js" />
     <Content Include="JsScript\inettuts2.js" />
     <Content Include="JsScript\datepickercaller.js" />
@@ -801,6 +803,7 @@
     <Content Include="Views\Edit\_EditForm4.cshtml" />
     <Content Include="Views\Edit\_EditForm5.cshtml" />
     <Content Include="Views\FormPopulate\EmployeeDetails.cshtml" />
+    <Content Include="Views\FormPopulate\EmploymentForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

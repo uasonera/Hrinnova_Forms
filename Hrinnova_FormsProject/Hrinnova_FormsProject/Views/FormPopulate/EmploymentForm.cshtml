@@ -1,0 +1,198 @@
+﻿@model Hrinnova_FormsProject.Models.Model2
+
+@Html.AntiForgeryToken()
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/pagetypes.css" rel="stylesheet" />
+<script src="~/JsScript/jquery-1.11.3.js"></script>
+<style>
+    .tdformat {
+        border: solid;
+        border-width: 1px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    .boldfont {
+        font-weight:bold;
+    }
+</style>
+<!DOCTYPE html>
+
+<table width="700" align="center">
+    <tbody>
+        <tr>
+            <td><img src="~/Images/qisms2.png" /></td>
+            <td><h3>Employment Form</h3></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<table width="700" align="center">
+    <thead>
+        <tr>
+            <th>
+                <h4 style="font-weight:bold">1.0 EMPLOYEE DETAILS</h4>
+            </th>
+        </tr>
+    </thead>
+</table>
+<table width="700" align="center" style="border:solid;border-width:1px">
+    <tbody>
+        <tr>
+            <td class="tdformat boldfont" width="25%"">Name </td>
+            <td class="tdformat" width="50%"> @Html.DisplayFor(m => m.employeedetails.firstname) @Html.DisplayFor(m => m.employeedetails.surname)</td>
+            <td class="tdformat" rowspan="6" style="padding-left:20px">Fix Passport Size <br> [Photograph Here]</td>
+        </tr>
+        <tr>
+            <td class="tdformat boldfont">Gender </td>
+            <td class="tdformat"> @Html.DisplayFor(m => m.employeedetails.gender)</td>
+        </tr>
+        <tr>
+            <td class="tdformat boldfont">Date of Birth </td>
+            <td class="tdformat"> @Html.DisplayFor(m => m.employeedetails.date_of_birth)</td>
+        </tr>
+        <tr>
+            <td class="tdformat boldfont">Date of Joining</td>
+            <td class="tdformat"> @Html.DisplayFor(m => m.employeedetails.date_of_joining)</td>
+        </tr>
+        <tr>
+            <td class="tdformat boldfont">Designation</td>
+            <td class="tdformat"> @Html.DisplayFor(m => m.employeedetails.designation)</td>
+        </tr>
+        <tr>
+            <td class="tdformat boldfont">Department</td>
+            <td class="tdformat"> @Html.DisplayFor(m => m.employeedetails.department)</td>
+        </tr>
+        <tr>
+            <td class="tdformat boldfont">Present Address</td>
+            <td class="tdformat" colspan="2"> @Html.DisplayFor(m => m.employeedetails.temporary_address)</td>
+
+        </tr>
+        <tr>
+            <td class="tdformat boldfont">Permanent Address</td>
+            <td class="tdformat" colspan="2"> @Html.DisplayFor(m => m.employeedetails.permanent_address)</td>
+
+        </tr>
+        <tr class="tdformat">
+            <td class="tdformat boldfont" rowspan="2">Contact No.</td>
+            <td style="padding-top:10px; padding-left:10px">Mobile: @Html.DisplayFor(m => m.employeedetails.mobile_number)</td>
+            <td style="padding-top:10px; padding-left:10px">Home: @Html.DisplayFor(m => m.employeedetails.home_number)</td>
+        </tr>
+        <tr class="tdformat">
+            <td style="padding-top:10px; padding-left:10px">Emergency: @Html.DisplayFor(m => m.employeedetails.emergency_number)</td>
+            <td style="padding-top:10px; padding-left:10px">Alternate: @Html.DisplayFor(m => m.employeedetails.alternate_number)</td>
+        </tr>
+        <tr>
+            <td class="tdformat boldfont">Email Id</td>
+            <td class="tdformat" colspan="2">@Html.DisplayFor(m => m.employeedetails.email_id)</td>
+        </tr>
+        <tr>
+            <td class="tdformat boldfont" rowspan="2">Marital Status</td>
+            <td class="tdformat" colspan="2">@Html.DisplayFor(m => m.employeedetails.marital_status)</td>
+        </tr>
+        <tr>
+        <td class="tdformat" colspan="2">Marriage Anniversary :@Html.DisplayFor(m => m.employeedetails.marriage_anniversary)</td>
+        </tr>
+        <tr>
+            <td class="tdformat boldfont">Blood Group</td>
+            <td class="tdformat" colspan="2">@Html.DisplayFor(m => m.employeedetails.blood_group)</td>
+        </tr>
+        <tr>
+            <td class="tdformat boldfont">Passport No.</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.employeedetails.passport_number)</td>
+            <td class="tdformat">Valid till :@Html.DisplayFor(m => m.employeedetails.passport_validity)</td>
+        </tr>
+        <tr>
+            <td class="tdformat boldfont">Vehicle No.</td>
+            <td class="tdformat" colspan="2">@Html.DisplayFor(m => m.employeedetails.vehicle_number)</td>
+        </tr>
+        <tr>
+            <td class="tdformat boldfont">PAN No.</td>
+            <td class="tdformat" colspan="2">@Html.DisplayFor(m => m.employeedetails.pan_card)</td>
+        </tr>
+        <tr>
+            <td class="tdformat boldfont">Medical(if any)</td>
+            <td class="tdformat" >Allergies :@Html.DisplayFor(m => m.employeedetails.allergies)</td>
+            <td class="tdformat" >Known Ailments :@Html.DisplayFor(m => m.employeedetails.known_ailments)</td>
+        </tr>
+
+    </tbody>
+</table>
+<br />
+<table width="700" align="center">
+    <thead>
+        <tr>
+            <th>
+                <h4 style="font-weight:bold">2.0 FAMILY DETAILS</h4>
+            </th>
+        </tr>
+    </thead>
+</table>
+<table width="700" align="center">
+    <thead>
+        <tr>
+            <th>Family Member</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Contact No</th>
+            <th>Occupation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="tdformat">Father</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.fatherdetails.fname)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.fatherdetails.fdateofbirth)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.fatherdetails.fcontact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.fatherdetails.foccupation)</td>
+        </tr>
+        <tr>
+            <td class="tdformat">Mother</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.motherdetails.fname)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.motherdetails.fdateofbirth)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.motherdetails.fcontact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.motherdetails.foccupation)</td>
+        </tr>
+        <tr>
+            <td class="tdformat">Brother</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.brotherdetails.fname)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.brotherdetails.fdateofbirth)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.brotherdetails.fcontact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.brotherdetails.foccupation)</td>
+        </tr>
+        <tr>
+            <td class="tdformat">Sister</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.sisterdetails.fname)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.sisterdetails.fdateofbirth)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.sisterdetails.fcontact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.sisterdetails.foccupation)</td>
+        </tr>
+        <tr>
+            <td class="tdformat">Spouse</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.spousedetails.fname)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.spousedetails.fdateofbirth)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.spousedetails.fcontact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.spousedetails.foccupation)</td>
+        </tr>
+        <tr>
+            <td class="tdformat">Children</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.childrendetails.fname)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.childrendetails.fdateofbirth)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.childrendetails.fcontact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.childrendetails.foccupation)</td>
+        </tr>
+        </tbody>
+</table>
+
+    <button id="hidebutton" onclick="hidebutton()">Generate PDF</button>
+
+    <script>
+        $('#hidebutton').click(
+        function () {
+            $(this).hide();
+            window.print();
+            $(this).show();
+        }
+    );
+    </script>

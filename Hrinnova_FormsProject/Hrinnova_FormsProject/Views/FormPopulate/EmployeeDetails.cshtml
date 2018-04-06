@@ -4,6 +4,7 @@
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 <link href="~/Content/bootstrap.css" rel="stylesheet" />
 <link href="~/Content/pagetypes.css" rel="stylesheet" />
+<link href="~/CSS/cssfortableformat.css" rel="stylesheet" />
 <script src="~/JsScript/jquery-1.11.3.js"></script>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -118,18 +119,18 @@
         </thead>
         <tbody>
             <tr style="border:solid;border-width:1px">
-                <td width="100px" style="padding-top:10px;border:solid;border-width:1px">Father</td>
-                <td width="100px" style="padding-top:10px;border:solid;border-width:1px">@Html.DisplayFor(m => m.fatherdetails.fname)</td>
-                <td width="100px" style="padding-top:10px;border:solid;border-width:1px">@Html.DisplayFor(m => m.fatherdetails.fdateofbirth)</td>
-                <td width="100px" style="padding-top:10px;border:solid;border-width:1px">@Html.DisplayFor(m => m.fatherdetails.faadhar)</td>
-                <td width="100px" style="padding-top:10px;border:solid;border-width:1px" colspan="2">@Html.DisplayFor(m => m.fatherdetails.ftown), @Html.DisplayFor(m => m.fatherdetails.fstate)</td>
+                <td width="100px" class="tdformat">Father</td>
+                <td width="100px" class="tdformat">@Html.DisplayFor(m => m.fatherdetails.fname)</td>
+                <td width="100px" class="tdformat">@Html.DisplayFor(m => m.fatherdetails.fdateofbirth)</td>
+                <td width="100px" class="tdformat">@Html.DisplayFor(m => m.fatherdetails.faadhar)</td>
+                <td width="100px" class="tdformat" colspan="2">@Html.DisplayFor(m => m.fatherdetails.ftown), @Html.DisplayFor(m => m.fatherdetails.fstate)</td>
             </tr>
             <tr style="border:solid;border-width:1px">
-                <td style="padding-top:10px;border:solid;border-width:1px">Mother</td>
-                <td style="padding-top:10px;border:solid;border-width:1px">@Html.DisplayFor(m => m.motherdetails.fname)</td>
-                <td style="padding-top:10px;border:solid;border-width:1px">@Html.DisplayFor(m => m.motherdetails.fdateofbirth)</td>
-                <td style="padding-top:10px;border:solid;border-width:1px">@Html.DisplayFor(m => m.motherdetails.faadhar)</td>
-                <td style="padding-top:10px;border:solid;border-width:1px" width="100px" colspan="2">@Html.DisplayFor(m => m.motherdetails.ftown), @Html.DisplayFor(m => m.motherdetails.fstate)</td>
+                <td class="tdformat">Mother</td>
+                <td class="tdformat">@Html.DisplayFor(m => m.motherdetails.fname)</td>
+                <td class="tdformat">@Html.DisplayFor(m => m.motherdetails.fdateofbirth)</td>
+                <td class="tdformat">@Html.DisplayFor(m => m.motherdetails.faadhar)</td>
+                <td class="tdformat" width="100px" colspan="2">@Html.DisplayFor(m => m.motherdetails.ftown), @Html.DisplayFor(m => m.motherdetails.fstate)</td>
             </tr>
             @*<tr style="border:solid;border-width:1px">
                     <td style="padding-top:10px">Brother</td>
@@ -146,18 +147,18 @@
                     <td style="padding-top:10px" width="100px" colspan="2">@Html.DisplayFor(m => m.sisterdetails.ftown), @Html.DisplayFor(m => m.sisterdetails.fstate)</td>
                 </tr>*@
             <tr style="border:solid;border-width:1px">
-                <td style="padding-top:10px;border:solid;border-width:1px">Spouse</td>
-                <td style="padding-top:10px;border:solid;border-width:1px">@Html.DisplayFor(m => m.spousedetails.fname)</td>
-                <td style="padding-top:10px;border:solid;border-width:1px">@Html.DisplayFor(m => m.spousedetails.fdateofbirth)</td>
-                <td style="padding-top:10px;border:solid;border-width:1px">@Html.DisplayFor(m => m.spousedetails.faadhar)</td>
-                <td style="padding-top:10px;border:solid;border-width:1px" width="100px" colspan="2">@Html.DisplayFor(m => m.spousedetails.ftown), @Html.DisplayFor(m => m.spousedetails.fstate)</td>
+                <td class="tdformat">Spouse</td>
+                <td class="tdformat">@Html.DisplayFor(m => m.spousedetails.fname)</td>
+                <td class="tdformat">@Html.DisplayFor(m => m.spousedetails.fdateofbirth)</td>
+                <td class="tdformat">@Html.DisplayFor(m => m.spousedetails.faadhar)</td>
+                <td class="tdformat" width="100px" colspan="2">@Html.DisplayFor(m => m.spousedetails.ftown), @Html.DisplayFor(m => m.spousedetails.fstate)</td>
             </tr>
             <tr style="border:solid;border-width:1px">
-                <td style="padding-top:10px;border:solid;border-width:1px">Children (Specify gender)</td>
-                <td style="padding-top:10px;border:solid;border-width:1px">@Html.DisplayFor(m => m.childrendetails.fname)</td>
-                <td style="padding-top:10px;border:solid;border-width:1px">@Html.DisplayFor(m => m.childrendetails.fdateofbirth)</td>
-                <td style="padding-top:10px;border:solid;border-width:1px">@Html.DisplayFor(m => m.childrendetails.faadhar)</td>
-                <td style="padding-top:10px;border:solid;border-width:1px" width="100px" colspan="2">@Html.DisplayFor(m => m.childrendetails.ftown), @Html.DisplayFor(m => m.childrendetails.fstate)</td>
+                <td class="tdformat">Children (Specify gender)</td>
+                <td class="tdformat">@Html.DisplayFor(m => m.childrendetails.fname)</td>
+                <td class="tdformat">@Html.DisplayFor(m => m.childrendetails.fdateofbirth)</td>
+                <td class="tdformat">@Html.DisplayFor(m => m.childrendetails.faadhar)</td>
+                <td class="tdformat" width="100px" colspan="2">@Html.DisplayFor(m => m.childrendetails.ftown), @Html.DisplayFor(m => m.childrendetails.fstate)</td>
             </tr>
 
         </tbody>

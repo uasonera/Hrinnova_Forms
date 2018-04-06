@@ -4,20 +4,22 @@
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 <link href="~/Content/bootstrap.css" rel="stylesheet" />
 <link href="~/Content/pagetypes.css" rel="stylesheet" />
+<link href="~/CSS/cssfortableformat.css" rel="stylesheet" />
 <script src="~/JsScript/jquery-1.11.3.js"></script>
-<style>
+@*<style>
     .tdformat {
         border: solid;
         border-width: 1px;
         padding-top: 10px;
         padding-left: 10px;
     }
-    .boldfont {
-        font-weight:bold;
-    }
-</style>
-<!DOCTYPE html>
 
+    .boldfont {
+        font-weight: bold;
+    }
+</style>*@
+<!DOCTYPE html>
+@*Page Header*@
 <table width="700" align="center">
     <tbody>
         <tr>
@@ -27,7 +29,7 @@
     </tbody>
 </table>
 <br />
-<br />
+@*1.0 EMPLOYEE DETAILS CONTENT*@
 <table width="700" align="center">
     <thead>
         <tr>
@@ -40,7 +42,7 @@
 <table width="700" align="center" style="border:solid;border-width:1px">
     <tbody>
         <tr>
-            <td class="tdformat boldfont" width="25%"">Name </td>
+            <td class="tdformat boldfont" width="25%">Name </td>
             <td class="tdformat" width="50%"> @Html.DisplayFor(m => m.employeedetails.firstname) @Html.DisplayFor(m => m.employeedetails.surname)</td>
             <td class="tdformat" rowspan="6" style="padding-left:20px">Fix Passport Size <br> [Photograph Here]</td>
         </tr>
@@ -92,7 +94,7 @@
             <td class="tdformat" colspan="2">@Html.DisplayFor(m => m.employeedetails.marital_status)</td>
         </tr>
         <tr>
-        <td class="tdformat" colspan="2">Marriage Anniversary :@Html.DisplayFor(m => m.employeedetails.marriage_anniversary)</td>
+            <td class="tdformat" colspan="2">Marriage Anniversary :@Html.DisplayFor(m => m.employeedetails.marriage_anniversary)</td>
         </tr>
         <tr>
             <td class="tdformat boldfont">Blood Group</td>
@@ -113,13 +115,15 @@
         </tr>
         <tr>
             <td class="tdformat boldfont">Medical(if any)</td>
-            <td class="tdformat" >Allergies :@Html.DisplayFor(m => m.employeedetails.allergies)</td>
-            <td class="tdformat" >Known Ailments :@Html.DisplayFor(m => m.employeedetails.known_ailments)</td>
+            <td class="tdformat">Allergies :@Html.DisplayFor(m => m.employeedetails.allergies)</td>
+            <td class="tdformat">Known Ailments :@Html.DisplayFor(m => m.employeedetails.known_ailments)</td>
         </tr>
 
     </tbody>
 </table>
 <br />
+<br />
+@*FAMILY DETAILS CONTENT*@
 <table width="700" align="center">
     <thead>
         <tr>
@@ -132,11 +136,11 @@
 <table width="700" align="center">
     <thead>
         <tr>
-            <th>Family Member</th>
-            <th>Name</th>
-            <th>DOB</th>
-            <th>Contact No</th>
-            <th>Occupation</th>
+            <th class="tdformat" width="25%">Family Member</th>
+            <th class="tdformat" width="20%">Name</th>
+            <th class="tdformat">DOB</th>
+            <th class="tdformat">Contact No</th>
+            <th class="tdformat">Occupation</th>
         </tr>
     </thead>
     <tbody>
@@ -182,9 +186,314 @@
             <td class="tdformat">@Html.DisplayFor(m => m.childrendetails.fcontact)</td>
             <td class="tdformat">@Html.DisplayFor(m => m.childrendetails.foccupation)</td>
         </tr>
-        </tbody>
+    </tbody>
 </table>
+<br />
+<br />
+@*OTHER DETAILS CONTENT*@
+<table width="700" align="center">
+    <thead>
+        <tr>
+            <th>
+                <h4 style="font-weight:bold">3.0 OTHER DETAILS</h4>
+            </th>
+        </tr>
+    </thead>
+</table>
+<table width="700" align="center">
+    <thead>
+        <tr>
+            <th class="tdformat" width="25%">References</th>
+            <th class="tdformat" width="20%">Name</th>
+            <th class="tdformat">Contact No</th>
+            <th class="tdformat">Current Address</th>
+            <th class="tdformat">Occupation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="tdformat" width="25%">Property Owner(if staying in rented accomodation)</td>
+            <td class="tdformat" width="20%">@Html.DisplayFor(m => m.otherdetails.neighbour2_name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.neighbour2_contact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.neighbour2_address)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.neighbour2_occupation)</td>
+        </tr>
+        <tr>
+            <td class="tdformat" width="25%">Neighbour 1</td>
+            <td class="tdformat" width="20%">@Html.DisplayFor(m=>m.otherdetails.propertyowner_name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.propertyowner_contact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.propertyowner_address)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.propertyowner_occupation)</td>
+        </tr>
+        <tr>
+            <td class="tdformat" width="25%">Neighbour 2</td>
+            <td class="tdformat" width="20%">@Html.DisplayFor(m => m.otherdetails.neighbour1_name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.neighbour1_contact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.neighbour1_address)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.neighbour1_occupation)</td>
+        </tr>
 
+    </tbody>
+</table>
+<br />
+<br />
+@*EDUCATIONAL QUALIFICATIONS CONTENT*@
+<table width="700" align="center">
+    <thead>
+        <tr>
+            <th>
+                <h4 style="font-weight:bold">4.0 EDUCATIONAL QUALIFICATIONS</h4>
+            </th>
+        </tr>
+    </thead>
+</table>
+<table width="700" align="center">
+    <thead>
+        <tr>
+            <th class="tdformat" width="20%">Examination/Degree</th>
+            <th class="tdformat" width="25%">School/College</th>
+            <th class="tdformat" width="25%">University/Board</th>
+            <th class="tdformat" width="15%">Year of Passing</th>
+            <th class="tdformat" width="15%">Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="tdformat" width="20%">10th Std</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.tenth_school)</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.tenth_board)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.tenth_yearofpassing)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.tenth_grade)</td>
+        </tr>
+        <tr>
+            <td class="tdformat" width="20%">12th Std</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.twelfth_school)</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.twelfth_board)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.twelfth_yearofpassing)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.twelfth_grade)</td>
+        </tr>
+        <tr>
+            <td class="tdformat" width="20%">Bachelors</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.bachelors_college)</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.bachelors_university)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.bachelors_yearofpassing)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.bachelors_grade)</td>
+        </tr>
+        <tr>
+            <td class="tdformat" width="20%">Masters</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.masters_college)</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.masters_university)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.masters_yearofpassing)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.masters_grade)</td>
+        </tr>
+        <tr>
+            <td class="tdformat" width="20%">Others</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.other_school)</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.other_board)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.other_yearofpassing)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.other_grade)</td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+@*CERTIFICATIONS CONTENT*@
+<table width="700" align="center">
+    <thead>
+        <tr>
+            <th>
+                <h4 style="font-weight:bold">5.0 CERTIFICATIONS</h4>
+            </th>
+        </tr>
+    </thead>
+</table>
+<table width="700" align="center">
+    <tbody>
+        <tr>
+            <td class="tdformat">1. @Html.DisplayFor(m=>m.certification1.certification_name)</td>
+        </tr>
+        <tr>
+            <td class="tdformat">2. @Html.DisplayFor(m => m.certification2.certification_name)</td>
+        </tr>
+        <tr>
+            <td class="tdformat">3. @Html.DisplayFor(m => m.certification3.certification_name)</td>
+        </tr>
+        <tr>
+            <td class="tdformat">4. @Html.DisplayFor(m => m.certification4.certification_name)</td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+@*PREVIOUS COMPANY DETAILS CONTENT*@
+<table width="700" align="center">
+    <thead>
+        <tr>
+            <th>
+                <h4 style="font-weight:bold">6.0 PREVIOUS COMPANY DETAILS</h4>
+            </th>
+        </tr>
+    </thead>
+</table>
+<table width="700" align="center">
+    <thead>
+        <tr>
+            <th class="tdformat" width="20%">Provident Fund</th>
+            <th class="tdformat" width="25%">Family Pension Scheme</th>
+            <th class="tdformat" width="25%">Employee State Insurance</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="tdformat">PF A/C No.: @Html.DisplayFor(m => m.previouscompanydetails.pf_account_number)</td>
+            <td class="tdformat">Account No.: @Html.DisplayFor(m => m.previouscompanydetails.fps_account_number)</td>
+            <td class="tdformat">Insurance No.: @Html.DisplayFor(m => m.previouscompanydetails.esi_insurance_number)</td>
+        </tr>
+        <tr>
+            <td class="tdformat">Employer's Code No.: @Html.DisplayFor(m => m.previouscompanydetails.pf_employers_code_number)</td>
+            <td class="tdformat">Life Insurance : @Html.DisplayFor(m => m.previouscompanydetails.life_insurance)</td>
+            <td class="tdformat">Employer's Code No.: @Html.DisplayFor(m => m.previouscompanydetails.esi_employers_code_number)</td>
+        </tr>
+        <tr>
+            <td class="tdformat"></td>
+            <td class="tdformat">Mediclaim : @Html.DisplayFor(m => m.previouscompanydetails.mediclaim)</td>
+            <td class="tdformat"></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+@*PREVIOUS EMPLOYMENT CONTENT *@
+<table width="700" align="center">
+    <thead>
+        <tr>
+            <th>
+                <h4 style="font-weight:bold">7.0 PREVIOUS EMPLOYMENT</h4>
+            </th>
+        </tr>
+    </thead>
+</table>
+<table width="700" height="800" align="center">
+    <thead>
+        <tr>
+            <th class="tdformat" colspan="5">Starting with the recent employment</th>
+        </tr>
+        <tr>
+            <th class="tdformat" height="20%" width="20%">Employer's Name and Address</th>
+            <th class="tdformat" height="20%" width="20%">Designation</th>
+            <th class="tdformat" height="20%" width="15%">Worked From</th>
+            <th class="tdformat" height="20%" width="15%">Worked Till</th>
+            <th class="tdformat" height="20%" width="30%">Reason of Leaving</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy1.employers_name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy1.designation)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy1.periodworked_from)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy1.periodworked_to)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy1.reason_of_leaving)</td>
+        </tr>
+        <tr>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy2.employers_name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy2.designation)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy2.periodworked_from)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy2.periodworked_to)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy2.reason_of_leaving)</td>
+        </tr>
+        <tr>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy3.employers_name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy3.designation)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy3.periodworked_from)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy3.periodworked_to)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy3.reason_of_leaving)</td>
+        </tr>
+        <tr>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy4.employers_name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy4.designation)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy4.periodworked_from)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy4.periodworked_to)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy4.reason_of_leaving)</td>
+        </tr>
+        <tr>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy5.employers_name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy5.designation)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy5.periodworked_from)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy5.periodworked_to)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy5.reason_of_leaving)</td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<br />
+<br />
+<br />
+@*ADDITIONAL INFORMATION CONTENT*@
+
+<table width="700" align="center">
+    <thead>
+        <tr>
+            <th>
+                <h4 style="font-weight:bold">8.0 ADDITIONAL INFORMATION</h4>
+            </th>
+        </tr>
+    </thead>
+</table>
+<table width="700" align="center">
+    <tbody>
+        <tr>
+            <td class="tdformat" colspan="4">Are you related/known to any of the present employeed of our company ? @Html.DisplayFor(m=>m.additionalinformation.known_to_presentemployee)</td>
+        </tr>
+        <tr>
+            <td class="tdformat" width="20%">If yes, Specify Name :</td>
+            <td class="tdformat" width="30%">@Html.DisplayFor(m => m.additionalinformation.name_of_knownemployee)</td>
+            <td class="tdformat" width="20%">Relationship :</td>
+            <td class="tdformat" width="30%">@Html.DisplayFor(m => m.additionalinformation.relationship_with_knownemployee)</td>
+        </tr>
+        <tr>
+            <td class="tdformat" colspan="4">Have you ever worked with us before ? </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+@*REFERENCES CONTENT*@
+<table width="700" align="center">
+    <thead>
+        <tr>
+            <th>
+                <h4 style="font-weight:bold">9.0 REFERENCES</h4>
+            </th>
+        </tr>
+    </thead>
+</table>
+<table width="700" height="300" align="center">
+    <thead>
+        <tr>
+            <th class="tdformat" colspan="3">
+                Provide contact details and current designation of two professional references, who had supervised you in the past. 
+            </th>
+        </tr>
+        <tr>
+            <th class="tdformat" width="25%">Name</th>
+            <th class="tdformat">Address(Including Phone Number)</th>
+            <th class="tdformat">Designation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="tdformat" height="30%">@Html.DisplayFor(m => m.reference1.name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.reference1.address)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.reference1.designation)</td>
+        </tr>
+        <tr>
+            <td class="tdformat" height="30%">@Html.DisplayFor(m => m.reference2.name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.reference2.address)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.reference2.designation)</td>
+        </tr>
+    </tbody>
+</table>
     <button id="hidebutton" onclick="hidebutton()">Generate PDF</button>
 
     <script>

@@ -37,7 +37,24 @@ namespace Hrinnova_FormsProject.Controllers
             modelobject.spousedetails = entity.family_details.FirstOrDefault(sid => sid.employee_id == id && sid.member == "spouse");
             modelobject.sisterdetails= entity.family_details.FirstOrDefault(sisid => sisid.employee_id == id && sisid.member == "brother");
             modelobject.childrendetails= entity.family_details.FirstOrDefault(cid => cid.employee_id == id && cid.member == "children");
+            modelobject.otherdetails = entity.other_details.FirstOrDefault(oid => oid.employee_id == id);
+            modelobject.educationalqualifications = entity.educational_qualifications.FirstOrDefault(eq => eq.employee_id == id);
+            modelobject.certification1 = entity.certifications.FirstOrDefault(c1 => c1.employee_id == id && c1.cert_type == "1");
+            modelobject.certification2 = entity.certifications.FirstOrDefault(c2 => c2.employee_id == id && c2.cert_type == "2");
+            modelobject.certification3 = entity.certifications.FirstOrDefault(c3 => c3.employee_id == id && c3.cert_type == "3");
+            modelobject.certification4 = entity.certifications.FirstOrDefault(c4 => c4.employee_id == id && c4.cert_type == "4");
+            modelobject.previouscompanydetails = entity.previous_company_details.FirstOrDefault(pcd => pcd.employee_id == id);
+            modelobject.prevemploy1 = entity.prev_employ_1.FirstOrDefault(pe1 => pe1.employee_id == id && pe1.employment_ref == "1");
+            modelobject.prevemploy2 = entity.prev_employ_1.FirstOrDefault(pe2 => pe2.employee_id == id && pe2.employment_ref == "2");
+            modelobject.prevemploy3 = entity.prev_employ_1.FirstOrDefault(pe3 => pe3.employee_id == id && pe3.employment_ref == "3");
+            modelobject.prevemploy4 = entity.prev_employ_1.FirstOrDefault(pe4 => pe4.employee_id == id && pe4.employment_ref == "4");
+            modelobject.prevemploy5 = entity.prev_employ_1.FirstOrDefault(pe5 => pe5.employee_id == id && pe5.employment_ref == "5");
             return View(modelobject);
         }
+        public ActionResult Esicform(int id)
+        {
+            return View();
+        }
+
     }
 }

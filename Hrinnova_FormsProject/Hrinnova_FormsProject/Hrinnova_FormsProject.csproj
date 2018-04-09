@@ -142,7 +142,9 @@
     <Content Include="CSS\colorpicker.css" />
     <Content Include="CSS\cs-select.css" />
     <Content Include="CSS\cs-skin-elastic.css" />
+    <Content Include="CSS\cssfortableformat.css" />
     <Content Include="CSS\datatable\dataTables.bootstrap.css" />
+    <Content Include="CSS\datatable\responsive.bootstrap.min.css" />
     <Content Include="CSS\datatable\responsive.dataTables.min.css" />
     <Content Include="CSS\datepicker-jquery-ui.css" />
     <Content Include="CSS\default.css" />
@@ -296,6 +298,8 @@
     <Content Include="Images\error-bg.png" />
     <Content Include="Images\ErrorCicrle.jpeg" />
     <Content Include="Images\Errors.gif" />
+    <Content Include="Images\esic-logo.png" />
+    <Content Include="Images\esic-logo2.jpg" />
     <Content Include="Images\estimated-hour.png" />
     <Content Include="Images\excel.png" />
     <Content Include="Images\excel2.jpg" />
@@ -804,6 +808,7 @@
     <Content Include="Views\Edit\_EditForm5.cshtml" />
     <Content Include="Views\FormPopulate\EmployeeDetails.cshtml" />
     <Content Include="Views\FormPopulate\EmploymentForm.cshtml" />
+    <Content Include="Views\FormPopulate\Esicform.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

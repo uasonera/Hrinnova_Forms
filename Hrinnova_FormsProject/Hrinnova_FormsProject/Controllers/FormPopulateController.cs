@@ -53,7 +53,17 @@ namespace Hrinnova_FormsProject.Controllers
         }
         public ActionResult Esicform(int id)
         {
-            return View();
+            Session["id"] = id;
+            modelobject.esicdetails = entity.esic_details.FirstOrDefault(ms => ms.employee_id == id);
+            modelobject.employeedetails = entity.employee_details.FirstOrDefault(nid => nid.employee_id == id);
+            modelobject.fatherdetails = entity.family_details.FirstOrDefault(fid => fid.employee_id == id && fid.member == "father");
+            modelobject.motherdetails = entity.family_details.FirstOrDefault(mid => mid.employee_id == id && mid.member == "mother");
+            modelobject.brotherdetails = entity.family_details.FirstOrDefault(bid => bid.employee_id == id && bid.member == "brother");
+            modelobject.spousedetails = entity.family_details.FirstOrDefault(sid => sid.employee_id == id && sid.member == "spouse");
+            modelobject.sisterdetails = entity.family_details.FirstOrDefault(sisid => sisid.employee_id == id && sisid.member == "brother");
+            modelobject.childrendetails = entity.family_details.FirstOrDefault(cid => cid.employee_id == id && cid.member == "children");
+            var employernameaddress = System.Configuration.ConfigurationManager.AppSettings["employernameaddress"].ToString();
+            return View(modelobject);
         }
 
     }

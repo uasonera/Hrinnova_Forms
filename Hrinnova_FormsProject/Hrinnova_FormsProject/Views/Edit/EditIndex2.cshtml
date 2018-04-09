@@ -6,6 +6,8 @@
 }
 
 <link href="~/CSS/HRIMS_Secure/style/datatable/dataTables.bootstrap.css" rel="stylesheet" />
+<link href="~/CSS/datatable/responsive.bootstrap.min.css" rel="stylesheet" />
+<link href="~/CSS/datatable/responsive.dataTables.min.css" rel="stylesheet" />
 <script src="~/JsScript/PageScripts/HRIMS_Secure/datatable/dataTables.responsive.min.js"></script>
 <h2 align="center">Edit Employee Details Index</h2>
 
@@ -53,6 +55,8 @@
                                     @Html.ActionLink("Edit", "Edit", new { id = item.employee_id }) |
                                     @Html.ActionLink("Details", "Details", new { id = item.employee_id }) |
                                     @Html.ActionLink("Delete", "Delete", new { id = item.employee_id })
+                                    @Html.ActionLink("Print ESIC details", "Esicform","FormPopulate", new { id = item.employee_id }, null)
+                                    @Html.ActionLink("Print PF details", "", new { id = item.employee_id })
                                 </td>
                             </tr>
                         }

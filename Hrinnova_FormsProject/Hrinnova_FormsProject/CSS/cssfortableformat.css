@@ -1,0 +1,16 @@
+.tdformat {
+        border: solid;
+        border-width: 1px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+.tdpadding{
+
+    padding-top: 10px;
+        padding-left: 10px;
+}
+
+
+    .boldfont {
+        font-weight: bold;
+    }

@@ -11,7 +11,8 @@ namespace Hrinnova_FormsProject.DatabaseModel
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class prev_employ_1
     {
         public int prevemploy_id { get; set; }
@@ -19,7 +20,9 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public string employment_ref { get; set; }
         public string employers_name { get; set; }
         public string designation { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> periodworked_from { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> periodworked_to { get; set; }
         public string reason_of_leaving { get; set; }
     

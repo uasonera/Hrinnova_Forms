@@ -11,7 +11,8 @@ namespace Hrinnova_FormsProject.DatabaseModel
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class esic_details
     {
         public int esic_id { get; set; }
@@ -20,6 +21,7 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public string branch_office { get; set; }
         public string dispensary { get; set; }
         public string employers_code { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> date_of_appointment { get; set; }
         public string employers_nameandaddress { get; set; }
         public string previous_insurance_number { get; set; }

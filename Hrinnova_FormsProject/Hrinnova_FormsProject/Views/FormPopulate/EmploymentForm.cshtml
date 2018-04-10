@@ -492,16 +492,7 @@
             <td class="tdformat">@Html.DisplayFor(m => m.reference2.address)</td>
             <td class="tdformat">@Html.DisplayFor(m => m.reference2.designation)</td>
         </tr>
+        <tr><td colspan="4" style="text-align:center; padding-top:10px"><button class="btn-primary" align="center" id="hidebutton">Generate PDF</button></td></tr>
     </tbody>
 </table>
-    <button id="hidebutton" onclick="hidebutton()">Generate PDF</button>
-
-    <script>
-        $('#hidebutton').click(
-        function () {
-            $(this).hide();
-            window.print();
-            $(this).show();
-        }
-    );
-    </script>
+  <script src="~/JsScript/hidebutton.js"></script> 

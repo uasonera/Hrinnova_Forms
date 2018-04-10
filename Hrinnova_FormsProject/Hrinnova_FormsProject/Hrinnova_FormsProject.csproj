@@ -600,6 +600,7 @@
     <Content Include="JsScript\PageScripts\HRIMS_Secure\datatable\dataTables.responsive.min.js" />
     <Content Include="JsScript\PageScripts\HRIMS_Secure\datatable\jquery.dataTables.min.js" />
     <Content Include="JsScript\PageScripts\HRIMS_Secure\datepicker-jquery-1.10.2.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\general-designer.js" />
     <Content Include="JsScript\partialviewbuttons.js" />
     <Content Include="JsScript\ProjectKRA.js" />
     <Content Include="JsScript\ProjectList_New.js" />
@@ -809,6 +810,7 @@
     <Content Include="Views\FormPopulate\EmployeeDetails.cshtml" />
     <Content Include="Views\FormPopulate\EmploymentForm.cshtml" />
     <Content Include="Views\FormPopulate\Esicform.cshtml" />
+    <Content Include="Views\FormPopulate\Epfoform.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

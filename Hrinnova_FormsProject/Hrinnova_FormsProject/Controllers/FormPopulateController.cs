@@ -66,5 +66,14 @@ namespace Hrinnova_FormsProject.Controllers
             return View(modelobject);
         }
 
+        public ActionResult Epfoform(int id)
+        {
+            Session["id"] = id;
+            modelobject.epfodetails = entity.epfo_details.FirstOrDefault(epfid => epfid.employee_id == id);
+            modelobject.employeedetails = entity.employee_details.FirstOrDefault(nid => nid.employee_id == id);
+            modelobject.prevemploy1 = entity.prev_employ_1.FirstOrDefault(pe1 => pe1.employee_id == id && pe1.employment_ref == "1");
+            return View(modelobject);
+        }
+
     }
 }

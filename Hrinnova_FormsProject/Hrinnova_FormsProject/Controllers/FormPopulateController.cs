@@ -75,13 +75,5 @@ namespace Hrinnova_FormsProject.Controllers
             return View(modelobject);
         }
 
-        public ActionResult SUMSEmployeeVerification(int id)
-        {
-            Session["id"] = id;
-            return View(modelobject);
-        }
-
-
-
     }
 }

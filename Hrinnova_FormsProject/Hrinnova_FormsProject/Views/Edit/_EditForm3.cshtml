@@ -2,7 +2,7 @@
 @model Hrinnova_FormsProject.Models.Model2
 
 
-@Html.AntiForgeryToken() 
+@Html.AntiForgeryToken()
 <div class="container-fluid">
     <div class="middel-content">
         <div class="clearfix">
@@ -65,36 +65,36 @@
                                     <td>Mother</td>
                                     <td>
                                         @Html.EditorFor(model => model.motherdetails.fname, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.motherdetails.fname, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.motherdetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
-                                @Html.ValidationMessageFor(model => model.motherdetails.fdateofbirth, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.motherdetails.faadhar, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.motherdetails.faadhar, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.motherdetails.fcontact, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.motherdetails.fcontact, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.motherdetails.foccupation, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.motherdetails.foccupation, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.motherdetails.freside, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.motherdetails.freside, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.motherdetails.ftown, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.motherdetails.ftown, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.motherdetails.fstate, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.motherdetails.fstate, "", new { @class = "text-danger" })
-                                </td>
+                                        @Html.ValidationMessageFor(model => model.motherdetails.fname, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.motherdetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.motherdetails.fdateofbirth, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.motherdetails.faadhar, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.motherdetails.faadhar, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.motherdetails.fcontact, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.motherdetails.fcontact, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.motherdetails.foccupation, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.motherdetails.foccupation, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.motherdetails.freside, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.motherdetails.freside, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.motherdetails.ftown, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.motherdetails.ftown, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.motherdetails.fstate, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.motherdetails.fstate, "", new { @class = "text-danger" })
+                                    </td>
 
                                 </tr>
                                 <tr>
@@ -102,144 +102,144 @@
 
                                     <td>
                                         @Html.EditorFor(model => model.brotherdetails.fname, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.brotherdetails.fname, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.brotherdetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
-                                @Html.ValidationMessageFor(model => model.brotherdetails.fdateofbirth, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.brotherdetails.faadhar, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.brotherdetails.faadhar, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.brotherdetails.fcontact, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.brotherdetails.fcontact, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.brotherdetails.foccupation, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.brotherdetails.foccupation, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.brotherdetails.freside, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.brotherdetails.freside, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.brotherdetails.ftown, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.brotherdetails.ftown, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.brotherdetails.fstate, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.brotherdetails.fstate, "", new { @class = "text-danger" })
-                                </td>
+                                        @Html.ValidationMessageFor(model => model.brotherdetails.fname, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.brotherdetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.brotherdetails.fdateofbirth, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.brotherdetails.faadhar, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.brotherdetails.faadhar, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.brotherdetails.fcontact, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.brotherdetails.fcontact, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.brotherdetails.foccupation, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.brotherdetails.foccupation, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.brotherdetails.freside, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.brotherdetails.freside, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.brotherdetails.ftown, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.brotherdetails.ftown, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.brotherdetails.fstate, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.brotherdetails.fstate, "", new { @class = "text-danger" })
+                                    </td>
 
                                 </tr>
                                 <tr>
                                     <td>Sister</td>
                                     <td>
                                         @Html.EditorFor(model => model.sisterdetails.fname, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.sisterdetails.fname, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.sisterdetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
-                                @Html.ValidationMessageFor(model => model.sisterdetails.fdateofbirth, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.sisterdetails.faadhar, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.sisterdetails.faadhar, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.sisterdetails.fcontact, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.sisterdetails.fcontact, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.sisterdetails.foccupation, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.sisterdetails.foccupation, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.sisterdetails.freside, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.sisterdetails.freside, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.sisterdetails.ftown, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.sisterdetails.ftown, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.sisterdetails.fstate, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.sisterdetails.fstate, "", new { @class = "text-danger" })
-                                </td>
+                                        @Html.ValidationMessageFor(model => model.sisterdetails.fname, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.sisterdetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.sisterdetails.fdateofbirth, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.sisterdetails.faadhar, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.sisterdetails.faadhar, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.sisterdetails.fcontact, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.sisterdetails.fcontact, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.sisterdetails.foccupation, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.sisterdetails.foccupation, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.sisterdetails.freside, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.sisterdetails.freside, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.sisterdetails.ftown, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.sisterdetails.ftown, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.sisterdetails.fstate, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.sisterdetails.fstate, "", new { @class = "text-danger" })
+                                    </td>
 
                                 </tr>
                                 <tr>
                                     <td>Spouse (if married)</td>
                                     <td>
                                         @Html.EditorFor(model => model.spousedetails.fname, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.spousedetails.fname, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.spousedetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
-                                @Html.ValidationMessageFor(model => model.spousedetails.fdateofbirth, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.spousedetails.faadhar, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.spousedetails.faadhar, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.spousedetails.fcontact, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.spousedetails.fcontact, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.spousedetails.foccupation, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.spousedetails.foccupation, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.spousedetails.freside, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.spousedetails.freside, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.spousedetails.ftown, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.spousedetails.ftown, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.spousedetails.fstate, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.spousedetails.fstate, "", new { @class = "text-danger" })
-                                </td>
+                                        @Html.ValidationMessageFor(model => model.spousedetails.fname, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.spousedetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.spousedetails.fdateofbirth, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.spousedetails.faadhar, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.spousedetails.faadhar, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.spousedetails.fcontact, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.spousedetails.fcontact, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.spousedetails.foccupation, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.spousedetails.foccupation, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.spousedetails.freside, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.spousedetails.freside, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.spousedetails.ftown, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.spousedetails.ftown, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.spousedetails.fstate, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.spousedetails.fstate, "", new { @class = "text-danger" })
+                                    </td>
 
                                 </tr>
                                 <tr>
                                     <td>Children (Specify gender)</td>
                                     <td>
                                         @Html.EditorFor(model => model.childrendetails.fname, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.childrendetails.fname, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.childrendetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
-                                @Html.ValidationMessageFor(model => model.childrendetails.fdateofbirth, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.childrendetails.faadhar, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.childrendetails.faadhar, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.childrendetails.fcontact, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.childrendetails.fcontact, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.childrendetails.foccupation, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.childrendetails.foccupation, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.childrendetails.freside, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.childrendetails.freside, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.childrendetails.ftown, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.childrendetails.ftown, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.childrendetails.fstate, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.childrendetails.fstate, "", new { @class = "text-danger" })
-                                </td>
+                                        @Html.ValidationMessageFor(model => model.childrendetails.fname, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.childrendetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.childrendetails.fdateofbirth, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.childrendetails.faadhar, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.childrendetails.faadhar, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.childrendetails.fcontact, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.childrendetails.fcontact, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.childrendetails.foccupation, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.childrendetails.foccupation, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.childrendetails.freside, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.childrendetails.freside, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.childrendetails.ftown, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.childrendetails.ftown, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.childrendetails.fstate, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.childrendetails.fstate, "", new { @class = "text-danger" })
+                                    </td>
 
                                 </tr>
 
@@ -271,33 +271,41 @@
                             <tbody>
                                 <tr>
                                     <td>Property Owner</td>
-                                    <td>@Html.EditorFor(model => model.otherdetails.propertyowner_name, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.otherdetails.propertyowner_name, "", new { @class = "text-danger" })</td>
-                                    <td>@Html.EditorFor(model => model.otherdetails.propertyowner_contact, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.otherdetails.propertyowner_contact, "", new { @class = "text-danger" })</td>
-                                    <td>@Html.EditorFor(model => model.otherdetails.propertyowner_address, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.otherdetails.propertyowner_contact, "", new { @class = "text-danger" })</td>
-                                    <td>@Html.EditorFor(model => model.otherdetails.propertyowner_occupation, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.otherdetails.propertyowner_occupation, "", new { @class = "text-danger" })</td>
+                                    <td>
+                                        @Html.EditorFor(model => model.otherdetails.propertyowner_name, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.otherdetails.propertyowner_name, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.otherdetails.propertyowner_contact, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.otherdetails.propertyowner_contact, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.otherdetails.propertyowner_address, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.otherdetails.propertyowner_contact, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.otherdetails.propertyowner_occupation, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.otherdetails.propertyowner_occupation, "", new { @class = "text-danger" })
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Neighbour 1</td>
                                     <td>
                                         @Html.EditorFor(model => model.otherdetails.neighbour1_name, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.otherdetails.neighbour1_name, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.otherdetails.neighbour1_contact, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.otherdetails.neighbour1_contact, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.otherdetails.neighbour1_address, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.otherdetails.neighbour1_contact, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.otherdetails.neighbour1_occupation, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.otherdetails.neighbour1_occupation, "", new { @class = "text-danger" })
-                                </td>
+                                        @Html.ValidationMessageFor(model => model.otherdetails.neighbour1_name, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.otherdetails.neighbour1_contact, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.otherdetails.neighbour1_contact, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.otherdetails.neighbour1_address, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.otherdetails.neighbour1_contact, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.otherdetails.neighbour1_occupation, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.otherdetails.neighbour1_occupation, "", new { @class = "text-danger" })
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Neighbour 2</td>
@@ -348,52 +356,60 @@
                             <tbody>
                                 <tr>
                                     <td>10th Std</td>
-                                    <td>@Html.EditorFor(model => model.educationalqualifications.tenth_school, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.educationalqualifications.tenth_school, "", new { @class = "text-danger" })</td>
-                                    <td>@Html.EditorFor(model => model.educationalqualifications.tenth_board, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.educationalqualifications.tenth_board, "", new { @class = "text-danger" })</td>
-                                    <td>@Html.EditorFor(model => model.educationalqualifications.tenth_yearofpassing, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.educationalqualifications.tenth_yearofpassing, "", new { @class = "text-danger" })</td>
-                                    <td>@Html.EditorFor(model => model.educationalqualifications.tenth_grade, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.educationalqualifications.tenth_grade, "", new { @class = "text-danger" })</td>
+                                    <td>
+                                        @Html.EditorFor(model => model.educationalqualifications.tenth_school, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.educationalqualifications.tenth_school, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.educationalqualifications.tenth_board, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.educationalqualifications.tenth_board, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.educationalqualifications.tenth_yearofpassing, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.educationalqualifications.tenth_yearofpassing, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.educationalqualifications.tenth_grade, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.educationalqualifications.tenth_grade, "", new { @class = "text-danger" })
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>12th Std</td>
                                     <td>
                                         @Html.EditorFor(model => model.educationalqualifications.twelfth_school, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.educationalqualifications.twelfth_school, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.educationalqualifications.twelfth_board, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.educationalqualifications.twelfth_board, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.educationalqualifications.twelfth_yearofpassing, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.educationalqualifications.twelfth_yearofpassing, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.educationalqualifications.twelfth_grade, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.educationalqualifications.twelfth_grade, "", new { @class = "text-danger" })
-                                </td>
+                                        @Html.ValidationMessageFor(model => model.educationalqualifications.twelfth_school, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.educationalqualifications.twelfth_board, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.educationalqualifications.twelfth_board, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.educationalqualifications.twelfth_yearofpassing, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.educationalqualifications.twelfth_yearofpassing, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.educationalqualifications.twelfth_grade, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.educationalqualifications.twelfth_grade, "", new { @class = "text-danger" })
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Bachelors</td>
                                     <td>
                                         @Html.EditorFor(model => model.educationalqualifications.bachelors_college, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.educationalqualifications.bachelors_college, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.educationalqualifications.bachelors_university, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.educationalqualifications.bachelors_university, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.educationalqualifications.bachelors_yearofpassing, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.educationalqualifications.bachelors_yearofpassing, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.educationalqualifications.bachelors_grade, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.educationalqualifications.bachelors_grade, "", new { @class = "text-danger" })
-                                </td>
+                                        @Html.ValidationMessageFor(model => model.educationalqualifications.bachelors_college, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.educationalqualifications.bachelors_university, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.educationalqualifications.bachelors_university, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.educationalqualifications.bachelors_yearofpassing, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.educationalqualifications.bachelors_yearofpassing, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.educationalqualifications.bachelors_grade, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.educationalqualifications.bachelors_grade, "", new { @class = "text-danger" })
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Masters</td>
@@ -456,23 +472,31 @@
                             <tbody>
                                 <tr>
                                     <td class="col-sm-1">1 :</td>
-                                    <td>@Html.EditorFor(model => model.certification1.certification_name, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.certification1.certification_name, "", new { @class = "text-danger" })</td>
+                                    <td>
+                                        @Html.EditorFor(model => model.certification1.certification_name, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.certification1.certification_name, "", new { @class = "text-danger" })
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="col-sm-1">2 :</td>
-                                    <td>@Html.EditorFor(model => model.certification2.certification_name, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.certification2.certification_name, "", new { @class = "text-danger" })</td>
+                                    <td>
+                                        @Html.EditorFor(model => model.certification2.certification_name, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.certification2.certification_name, "", new { @class = "text-danger" })
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="col-sm-1">3 :</td>
-                                    <td>@Html.EditorFor(model => model.certification3.certification_name, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.certification3.certification_name, "", new { @class = "text-danger" })</td>
+                                    <td>
+                                        @Html.EditorFor(model => model.certification3.certification_name, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.certification3.certification_name, "", new { @class = "text-danger" })
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="col-sm-1">4 :</td>
-                                    <td>@Html.EditorFor(model => model.certification4.certification_name, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.certification4.certification_name, "", new { @class = "text-danger" })</td>
+                                    <td>
+                                        @Html.EditorFor(model => model.certification4.certification_name, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.certification4.certification_name, "", new { @class = "text-danger" })
+                                    </td>
                                 </tr>
                             </tbody>
 
@@ -501,27 +525,41 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>PF A/c No.:@Html.EditorFor(model => model.previouscompanydetails.pf_account_number, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.previouscompanydetails.pf_account_number, "", new { @class = "text-danger" })</td>
-                                    <td>Account No.:@Html.EditorFor(model => model.previouscompanydetails.fps_account_number, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.previouscompanydetails.fps_account_number, "", new { @class = "text-danger" })</td>
-                                    <td>Insurance No.:@Html.EditorFor(model => model.previouscompanydetails.esi_insurance_number, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.previouscompanydetails.esi_insurance_number, "", new { @class = "text-danger" })</td>
+                                    <td>
+                                        PF A/c No.:@Html.EditorFor(model => model.previouscompanydetails.pf_account_number, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.previouscompanydetails.pf_account_number, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        Account No.:@Html.EditorFor(model => model.previouscompanydetails.fps_account_number, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.previouscompanydetails.fps_account_number, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        Insurance No.:@Html.EditorFor(model => model.previouscompanydetails.esi_insurance_number, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.previouscompanydetails.esi_insurance_number, "", new { @class = "text-danger" })
+                                    </td>
 
                                 </tr>
                                 <tr>
-                                    <td>Employer's Code No.:@Html.EditorFor(model => model.previouscompanydetails.pf_employers_code_number, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.previouscompanydetails.pf_employers_code_number, "", new { @class = "text-danger" })</td>
-                                    <td>Life Insurance :@Html.EditorFor(model => model.previouscompanydetails.life_insurance, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.previouscompanydetails.life_insurance, "", new { @class = "text-danger" })</td>
-                                    <td>Employer's Code No.:@Html.EditorFor(model => model.previouscompanydetails.esi_employers_code_number, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.previouscompanydetails.esi_employers_code_number, "", new { @class = "text-danger" })</td>
+                                    <td>
+                                        Employer's Code No.:@Html.EditorFor(model => model.previouscompanydetails.pf_employers_code_number, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.previouscompanydetails.pf_employers_code_number, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        Life Insurance :@Html.EditorFor(model => model.previouscompanydetails.life_insurance, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.previouscompanydetails.life_insurance, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        Employer's Code No.:@Html.EditorFor(model => model.previouscompanydetails.esi_employers_code_number, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.previouscompanydetails.esi_employers_code_number, "", new { @class = "text-danger" })
+                                    </td>
 
                                 </tr>
                                 <tr>
                                     <td></td>
-                                    <td>Mediclaim :@Html.EditorFor(model => model.previouscompanydetails.mediclaim, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.previouscompanydetails.mediclaim, "", new { @class = "text-danger" })</td>
+                                    <td>
+                                        Mediclaim :@Html.EditorFor(model => model.previouscompanydetails.mediclaim, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.previouscompanydetails.mediclaim, "", new { @class = "text-danger" })
+                                    </td>
                                     <td></td>
 
                                 </tr>
@@ -551,43 +589,116 @@
                                     <th>Designation</th>
                                     <th>Worked From</th>
                                     <th>Worked Till</th>
+                                    <th>Reporting Manager</th>
+                                    <th>Designation of Reporting Manager</th>
+                                    <th>Contact of Reporting Manager</th>
+                                    <th>CTC</th>
+                                    <th>Monthly Salary</th>
+                                    <th>Attendence</th>
+                                    <th>Re-Hire Status</th>-+++++++++
                                     <th>Reason of Leaving</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>@Html.EditorFor(model => model.prevemploy1.employers_name, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.prevemploy1.employers_name, "", new { @class = "text-danger" })</td>
-                                    <td>@Html.EditorFor(model => model.prevemploy1.designation, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.prevemploy1.designation, "", new { @class = "text-danger" })</td>
-                                    <td>@Html.EditorFor(model => model.prevemploy1.periodworked_from, new { htmlAttributes = new { @class = "form-control datepicker" } })
-                                    @Html.ValidationMessageFor(model => model.prevemploy1.periodworked_from, "", new { @class = "text-danger" })</td>
-                                    <td>@Html.EditorFor(model => model.prevemploy1.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker" } })
-                                    @Html.ValidationMessageFor(model => model.prevemploy1.periodworked_to, "", new { @class = "text-danger" })</td>
-                                    <td>@Html.EditorFor(model => model.prevemploy1.reason_of_leaving, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.prevemploy1.reason_of_leaving, "", new { @class = "text-danger" })</td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy1.employers_name, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy1.employers_name, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy1.designation, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy1.designation, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy1.periodworked_from, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy1.periodworked_from, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy1.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy1.periodworked_to, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy1.reporting_manager, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy1.reporting_manager, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy1.rm_designation, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy1.rm_designation, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy1.rm_contact, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy1.rm_contact, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy1.ctc, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy1.ctc, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy1.monthly_gross_salary, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy1.monthly_gross_salary, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy1.attendence, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy1.attendence, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy1.re_hire_status, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy1.re_hire_status, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy1.reason_of_leaving, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy1.reason_of_leaving, "", new { @class = "text-danger" })
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         @Html.EditorFor(model => model.prevemploy2.employers_name, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.prevemploy2.employers_name, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.prevemploy2.designation, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.prevemploy2.designation, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.prevemploy2.periodworked_from, new { htmlAttributes = new { @class = "form-control datepicker" } })
-                                @Html.ValidationMessageFor(model => model.prevemploy2.periodworked_from, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.prevemploy2.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker" } })
-                                @Html.ValidationMessageFor(model => model.prevemploy2.periodworked_to, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.prevemploy2.reason_of_leaving, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.prevemploy2.reason_of_leaving, "", new { @class = "text-danger" })
-                                </td>
+                                        @Html.ValidationMessageFor(model => model.prevemploy2.employers_name, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy2.designation, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy2.designation, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy2.periodworked_from, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy2.periodworked_from, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy2.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy2.periodworked_to, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy2.reporting_manager, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy2.reporting_manager, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy2.rm_designation, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy2.rm_designation, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy2.rm_contact, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy2.rm_contact, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy2.ctc, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy2.ctc, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy2.monthly_gross_salary, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy2.monthly_gross_salary, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy2.attendence, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy2.attendence, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy2.re_hire_status, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy2.re_hire_status, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy2.reason_of_leaving, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy2.reason_of_leaving, "", new { @class = "text-danger" })
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -605,6 +716,34 @@
                                     <td>
                                         @Html.EditorFor(model => model.prevemploy3.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker" } })
                                         @Html.ValidationMessageFor(model => model.prevemploy3.periodworked_to, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy3.reporting_manager, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy3.reporting_manager, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy3.rm_designation, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy3.rm_designation, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy3.rm_contact, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy3.rm_contact, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy3.ctc, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy3.ctc, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy3.monthly_gross_salary, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy3.monthly_gross_salary, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy3.attendence, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy3.attendence, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy3.re_hire_status, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy3.re_hire_status, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
                                         @Html.EditorFor(model => model.prevemploy3.reason_of_leaving, new { htmlAttributes = new { @class = "form-control" } })
@@ -629,6 +768,34 @@
                                         @Html.ValidationMessageFor(model => model.prevemploy4.periodworked_to, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
+                                        @Html.EditorFor(model => model.prevemploy4.reporting_manager, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy4.reporting_manager, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy4.rm_designation, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy4.rm_designation, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy4.rm_contact, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy4.rm_contact, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy4.ctc, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy4.ctc, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy4.monthly_gross_salary, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy4.monthly_gross_salary, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy4.attendence, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy4.attendence, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy4.re_hire_status, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy4.re_hire_status, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
                                         @Html.EditorFor(model => model.prevemploy4.reason_of_leaving, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.prevemploy4.reason_of_leaving, "", new { @class = "text-danger" })
                                     </td>
@@ -649,6 +816,34 @@
                                     <td>
                                         @Html.EditorFor(model => model.prevemploy5.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker" } })
                                         @Html.ValidationMessageFor(model => model.prevemploy5.periodworked_to, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy5.reporting_manager, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy5.reporting_manager, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy5.rm_designation, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy5.rm_designation, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy5.rm_contact, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy5.rm_contact, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy5.ctc, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy5.ctc, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy5.monthly_gross_salary, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy5.monthly_gross_salary, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy5.attendence, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy5.attendence, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.prevemploy5.re_hire_status, new { htmlAttributes = new { @class = "form-control " } })
+                                        @Html.ValidationMessageFor(model => model.prevemploy5.re_hire_status, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
                                         @Html.EditorFor(model => model.prevemploy5.reason_of_leaving, new { htmlAttributes = new { @class = "form-control" } })
@@ -691,11 +886,15 @@
                             <tbody>
                                 <tr>
                                     <td>If yes, specify name :</td>
-                                    <td>@Html.EditorFor(model => model.additionalinformation.name_of_knownemployee, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.additionalinformation.name_of_knownemployee, "", new { @class = "text-danger" })</td>
+                                    <td>
+                                        @Html.EditorFor(model => model.additionalinformation.name_of_knownemployee, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.additionalinformation.name_of_knownemployee, "", new { @class = "text-danger" })
+                                    </td>
                                     <td>Relationship :</td>
-                                    <td>@Html.EditorFor(model => model.additionalinformation.relationship_with_knownemployee, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.additionalinformation.relationship_with_knownemployee, "", new { @class = "text-danger" })</td>
+                                    <td>
+                                        @Html.EditorFor(model => model.additionalinformation.relationship_with_knownemployee, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.additionalinformation.relationship_with_knownemployee, "", new { @class = "text-danger" })
+                                    </td>
 
                                 </tr>
                                 <tr>
@@ -735,26 +934,32 @@
 
                                 </tr>
                                 <tr>
-                                    <td>@Html.EditorFor(model => model.reference1.name, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.reference1.name, "", new { @class = "text-danger" })</td>
-                                    <td>@Html.EditorFor(model => model.reference1.address, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.reference1.address, "", new { @class = "text-danger" })</td>
-                                    <td>@Html.EditorFor(model => model.reference1.designation, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.reference1.designation, "", new { @class = "text-danger" })</td>
+                                    <td>
+                                        @Html.EditorFor(model => model.reference1.name, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.reference1.name, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.reference1.address, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.reference1.address, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.reference1.designation, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.reference1.designation, "", new { @class = "text-danger" })
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         @Html.EditorFor(model => model.reference2.name, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.reference2.name, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.reference2.address, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.reference2.address, "", new { @class = "text-danger" })
-                                </td>
-                                <td>
-                                    @Html.EditorFor(model => model.reference2.designation, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.reference2.designation, "", new { @class = "text-danger" })
-                                </td>
+                                        @Html.ValidationMessageFor(model => model.reference2.name, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.reference2.address, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.reference2.address, "", new { @class = "text-danger" })
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(model => model.reference2.designation, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.reference2.designation, "", new { @class = "text-danger" })
+                                    </td>
                                 </tr>
 
 

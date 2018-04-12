@@ -222,6 +222,14 @@
     <Property Name="periodworked_from" Type="date" />
     <Property Name="periodworked_to" Type="date" />
     <Property Name="reason_of_leaving" Type="varchar" MaxLength="50" />
+    <Property Name="reporting_manager" Type="varchar" MaxLength="50" />
+    <Property Name="rm_designation" Type="varchar" MaxLength="50" />
+    <Property Name="rm_contact" Type="varchar" MaxLength="50" />
+    <Property Name="ctc" Type="varchar" MaxLength="10" />
+    <Property Name="monthly_gross_salary" Type="varchar" MaxLength="10" />
+    <Property Name="pr_employee_id" Type="varchar" MaxLength="10" />
+    <Property Name="attendence" Type="varchar" MaxLength="50" />
+    <Property Name="re_hire_status" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="previous_company_details">
     <Key>

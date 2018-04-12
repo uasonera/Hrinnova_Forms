@@ -37,8 +37,8 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public virtual DbSet<other_details> other_details { get; set; }
         public virtual DbSet<previous_company_details> previous_company_details { get; set; }
         public virtual DbSet<references> references { get; set; }
-        public virtual DbSet<prev_employ_1> prev_employ_1 { get; set; }
         public virtual DbSet<department> department { get; set; }
         public virtual DbSet<role> role { get; set; }
+        public virtual DbSet<prev_employ_1> prev_employ_1 { get; set; }
     }
 }

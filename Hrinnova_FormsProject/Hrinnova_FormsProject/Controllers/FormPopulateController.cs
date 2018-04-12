@@ -75,5 +75,39 @@ namespace Hrinnova_FormsProject.Controllers
             return View(modelobject);
         }
 
+        public ActionResult SUMSEmployeeVerification(int id)
+        {
+            Session["id"] = id;
+            modelobject.employeedetails = entity.employee_details.FirstOrDefault(eid => eid.employee_id == id);
+            modelobject.prevemploy1 = entity.prev_employ_1.FirstOrDefault(pe1 => pe1.employee_id == id && pe1.employment_ref == "1");
+            modelobject.prevemploy2 = entity.prev_employ_1.FirstOrDefault(pe1 => pe1.employee_id == id && pe1.employment_ref == "2");
+            modelobject.prevemploy3 = entity.prev_employ_1.FirstOrDefault(pe1 => pe1.employee_id == id && pe1.employment_ref == "3");
+            return View(modelobject);
+        }
+        public ActionResult PFTransferForm(int id) {
+
+            Session["id"] = id;
+            modelobject.employeedetails = entity.employee_details.FirstOrDefault(eid => eid.employee_id == id);
+            modelobject.epfodetails = entity.epfo_details.FirstOrDefault(epfid => epfid.employee_id == id);
+            modelobject.prevemploy1 = entity.prev_employ_1.FirstOrDefault(pe1 => pe1.employee_id == id && pe1.employment_ref == "1");
+            return View(modelobject);
+        }
+
+        public ActionResult EmployeeReferenceCheck(int id)
+        {
+            Session["id"] = id;
+            modelobject.employeedetails = entity.employee_details.FirstOrDefault(eid => eid.employee_id == id);
+            modelobject.prevemploy1 = entity.prev_employ_1.FirstOrDefault(pe1 => pe1.employee_id == id && pe1.employment_ref == "1");
+            return View(modelobject);
+        }
+
+
+
+        public ActionResult FeedbackForm(int id) {
+
+            Session["id"] = id;
+
+            return View(modelobject);
+        }
     }
 }

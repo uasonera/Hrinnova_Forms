@@ -53,10 +53,9 @@
 
                                 <td>
                                     @Html.ActionLink("Edit", "Edit", new { id = item.employee_id }) |
-                                    @Html.ActionLink("Details", "Details", new { id = item.employee_id }) |
                                     @Html.ActionLink("Delete", "Delete", new { id = item.employee_id }) |
-                                    @Html.ActionLink("Print ESIC details", "Esicform","FormPopulate", new { id = item.employee_id }, null) |
-                                    @Html.ActionLink("Print PF details", "", new { id = item.employee_id })
+                                    @Html.ActionLink("ESIC", "Esicform","FormPopulate", new { id = item.employee_id }, null) |
+                                    @Html.ActionLink("PF", "Epfoform", "FormPopulate", new { id = item.employee_id },null)
                                 </td>
                             </tr>
                         }

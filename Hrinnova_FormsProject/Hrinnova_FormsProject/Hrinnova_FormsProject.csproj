@@ -458,6 +458,7 @@
     <Content Include="Images\star-icon.png" />
     <Content Include="Images\Status_add.png" />
     <Content Include="Images\stewardship.jpg" />
+    <Content Include="Images\sums.png" />
     <Content Include="Images\Suspend.gif" />
     <Content Include="Images\Suspnd_disable.gif" />
     <Content Include="Images\tab-active-bg.jpg" />
@@ -811,6 +812,10 @@
     <Content Include="Views\FormPopulate\EmploymentForm.cshtml" />
     <Content Include="Views\FormPopulate\Esicform.cshtml" />
     <Content Include="Views\FormPopulate\Epfoform.cshtml" />
+    <Content Include="Views\FormPopulate\SUMSEmployeeVerification.cshtml" />
+    <Content Include="Views\FormPopulate\PFTransferForm.cshtml" />
+    <Content Include="Views\FormPopulate\FeedbackForm.cshtml" />
+    <Content Include="Views\FormPopulate\EmployeeReferenceCheck.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

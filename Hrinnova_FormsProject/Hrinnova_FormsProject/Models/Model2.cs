@@ -5,6 +5,7 @@ using System.Web;
 using Hrinnova_FormsProject.DatabaseModel;
 using System.ComponentModel.DataAnnotations;
 
+
 namespace Hrinnova_FormsProject.Models
 {
     public class Model2

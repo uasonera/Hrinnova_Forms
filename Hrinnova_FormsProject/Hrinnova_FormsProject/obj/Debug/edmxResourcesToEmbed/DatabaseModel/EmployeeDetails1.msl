@@ -234,20 +234,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="prev_employ_1">
-      <EntityTypeMapping TypeName="hrinnova_dbModel.prev_employ_1">
-        <MappingFragment StoreEntitySet="prev_employ_1">
-          <ScalarProperty Name="reason_of_leaving" ColumnName="reason_of_leaving" />
-          <ScalarProperty Name="periodworked_to" ColumnName="periodworked_to" />
-          <ScalarProperty Name="periodworked_from" ColumnName="periodworked_from" />
-          <ScalarProperty Name="designation" ColumnName="designation" />
-          <ScalarProperty Name="employers_name" ColumnName="employers_name" />
-          <ScalarProperty Name="employment_ref" ColumnName="employment_ref" />
-          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
-          <ScalarProperty Name="prevemploy_id" ColumnName="prevemploy_id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="department">
       <EntityTypeMapping TypeName="hrinnova_dbModel.department">
         <MappingFragment StoreEntitySet="department">
@@ -272,6 +258,28 @@
           <ScalarProperty Name="description" ColumnName="description" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="roleID" ColumnName="roleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prev_employ_1">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.prev_employ_1">
+        <MappingFragment StoreEntitySet="prev_employ_1">
+          <ScalarProperty Name="re_hire_status" ColumnName="re_hire_status" />
+          <ScalarProperty Name="attendence" ColumnName="attendence" />
+          <ScalarProperty Name="pr_employee_id" ColumnName="pr_employee_id" />
+          <ScalarProperty Name="monthly_gross_salary" ColumnName="monthly_gross_salary" />
+          <ScalarProperty Name="ctc" ColumnName="ctc" />
+          <ScalarProperty Name="rm_contact" ColumnName="rm_contact" />
+          <ScalarProperty Name="rm_designation" ColumnName="rm_designation" />
+          <ScalarProperty Name="reporting_manager" ColumnName="reporting_manager" />
+          <ScalarProperty Name="reason_of_leaving" ColumnName="reason_of_leaving" />
+          <ScalarProperty Name="periodworked_to" ColumnName="periodworked_to" />
+          <ScalarProperty Name="periodworked_from" ColumnName="periodworked_from" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="employers_name" ColumnName="employers_name" />
+          <ScalarProperty Name="employment_ref" ColumnName="employment_ref" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="prevemploy_id" ColumnName="prevemploy_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

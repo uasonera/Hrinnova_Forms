@@ -208,27 +208,61 @@ namespace Hrinnova_FormsProject.Models
         public string emp1designation { get; set; }
         public DateTime emp1workedfrom { get; set; }
         public DateTime emp1workedtill { get; set; }
+        public string emp1reportingmanager {get; set;}
+        public string emp1rmdesignation    {get; set;}
+        public string emp1rmcontact        {get; set;}
+        public string emp1ctc              {get; set;}
+        public string emp1monthlysalary    {get; set;}
+        public string emp1attendence       {get; set;}
+        public string emp1rehirestatus     {get; set;}
         public string emp1reasonofleaving { get; set; }
+
+
 
         public string employment_ref2 = "2";
         public string emp2nameandadd { get; set; }
         public string emp2designation { get; set; }
         public DateTime emp2workedfrom { get; set; }
         public DateTime emp2workedtill { get; set; }
+        public string emp2reportingmanager { get; set; }
+        public string emp2rmdesignation { get; set; }
+        public string emp2rmcontact { get; set; }
+        public string emp2ctc { get; set; }
+        public string emp2monthlysalary { get; set; }
+        public string emp2attendence { get; set; }
+        public string emp2rehirestatus { get; set; }
         public string emp2reasonofleaving { get; set; }
+
+
 
         public string employment_ref3 = "3";
         public string emp3nameandadd { get; set; }
         public string emp3designation { get; set; }
         public DateTime emp3workedfrom { get; set; }
         public DateTime emp3workedtill { get; set; }
+        public string emp3reportingmanager { get; set; }
+        public string emp3rmdesignation { get; set; }
+        public string emp3rmcontact { get; set; }
+        public string emp3ctc { get; set; }
+        public string emp3monthlysalary { get; set; }
+        public string emp3attendence { get; set; }
+        public string emp3rehirestatus { get; set; }
         public string emp3reasonofleaving { get; set; }
+
+
 
         public string employment_ref4 = "4";
         public string emp4nameandadd { get; set; }
         public string emp4designation { get; set; }
         public DateTime emp4workedfrom { get; set; }
         public DateTime emp4workedtill { get; set; }
+        public string emp4reportingmanager { get; set; }
+        public string emp4rmdesignation { get; set; }
+        public string emp4rmcontact { get; set; }
+        public string emp4ctc { get; set; }
+        public string emp4monthlysalary { get; set; }
+        public string emp4attendence { get; set; }
+        public string emp4rehirestatus { get; set; }
         public string emp4reasonofleaving { get; set; }
 
         public string employment_ref5 = "5";
@@ -236,6 +270,13 @@ namespace Hrinnova_FormsProject.Models
         public string emp5designation { get; set; }
         public DateTime emp5workedfrom { get; set; }
         public DateTime emp5workedtill { get; set; }
+        public string emp5reportingmanager { get; set; }
+        public string emp5rmdesignation { get; set; }
+        public string emp5rmcontact { get; set; }
+        public string emp5ctc { get; set; }
+        public string emp5monthlysalary { get; set; }
+        public string emp5attendence { get; set; }
+        public string emp5rehirestatus { get; set; }
         public string emp5reasonofleaving { get; set; }
 
         //ADDITIONAL INFORMATION

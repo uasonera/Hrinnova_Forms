@@ -19,7 +19,7 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public int employee_id { get; set; }
         public string member { get; set; }
         public string fname { get; set; }
-        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MMM/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> fdateofbirth { get; set; }
         public string faadhar { get; set; }
         public string fcontact { get; set; }

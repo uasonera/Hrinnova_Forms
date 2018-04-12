@@ -263,6 +263,13 @@ namespace Hrinnova_FormsProject.Controllers
                 pe1.designation = form1.emp1designation;
                 pe1.periodworked_from = form1.emp1workedfrom;
                 pe1.periodworked_to = form1.emp1workedtill;
+                pe1.reporting_manager = form1.emp1reportingmanager;
+                pe1.rm_designation = form1.emp1rmdesignation;
+                pe1.rm_contact = form1.emp1rmcontact;
+                pe1.ctc = form1.emp1ctc;
+                pe1.monthly_gross_salary= form1.emp1monthlysalary;
+                pe1.attendence = form1.emp1attendence;
+                pe1.re_hire_status= form1.emp1rehirestatus;
                 pe1.reason_of_leaving = form1.emp1reasonofleaving;
 
                 prev_employ_1 pe2 = new prev_employ_1();
@@ -271,6 +278,13 @@ namespace Hrinnova_FormsProject.Controllers
                 pe2.designation = form1.emp2designation;
                 pe2.periodworked_from = form1.emp2workedfrom;
                 pe2.periodworked_to = form1.emp2workedtill;
+                pe2.reporting_manager = form1.emp2reportingmanager;
+                pe2.rm_designation = form1.emp2rmdesignation;
+                pe2.rm_contact = form1.emp2rmcontact;
+                pe2.ctc = form1.emp2ctc;
+                pe2.monthly_gross_salary = form1.emp2monthlysalary;
+                pe2.attendence = form1.emp2attendence;
+                pe2.re_hire_status = form1.emp2rehirestatus;
                 pe2.reason_of_leaving = form1.emp2reasonofleaving;
 
                 prev_employ_1 pe3 = new prev_employ_1();
@@ -279,6 +293,13 @@ namespace Hrinnova_FormsProject.Controllers
                 pe3.designation = form1.emp3designation;
                 pe3.periodworked_from = form1.emp3workedfrom;
                 pe3.periodworked_to = form1.emp3workedtill;
+                pe3.reporting_manager = form1.emp3reportingmanager;
+                pe3.rm_designation = form1.emp3rmdesignation;
+                pe3.rm_contact = form1.emp3rmcontact;
+                pe3.ctc = form1.emp3ctc;
+                pe3.monthly_gross_salary = form1.emp3monthlysalary;
+                pe3.attendence = form1.emp3attendence;
+                pe3.re_hire_status = form1.emp3rehirestatus;
                 pe3.reason_of_leaving = form1.emp3reasonofleaving;
 
                 prev_employ_1 pe4 = new prev_employ_1();
@@ -287,6 +308,13 @@ namespace Hrinnova_FormsProject.Controllers
                 pe4.designation = form1.emp4designation;
                 pe4.periodworked_from = form1.emp4workedfrom;
                 pe4.periodworked_to = form1.emp4workedtill;
+                pe4.reporting_manager = form1.emp4reportingmanager;
+                pe4.rm_designation = form1.emp4rmdesignation;
+                pe4.rm_contact = form1.emp4rmcontact;
+                pe4.ctc = form1.emp4ctc;
+                pe4.monthly_gross_salary = form1.emp4monthlysalary;
+                pe4.attendence = form1.emp4attendence;
+                pe4.re_hire_status = form1.emp4rehirestatus;
                 pe4.reason_of_leaving = form1.emp4reasonofleaving;
 
                 prev_employ_1 pe5 = new prev_employ_1();
@@ -295,6 +323,13 @@ namespace Hrinnova_FormsProject.Controllers
                 pe5.designation = form1.emp5designation;
                 pe5.periodworked_from = form1.emp5workedfrom;
                 pe5.periodworked_to = form1.emp5workedtill;
+                pe1.reporting_manager = form1.emp5reportingmanager;
+                pe1.rm_designation = form1.emp5rmdesignation;
+                pe1.rm_contact = form1.emp5rmcontact;
+                pe1.ctc = form1.emp5ctc;
+                pe1.monthly_gross_salary = form1.emp5monthlysalary;
+                pe1.attendence = form1.emp5attendence;
+                pe1.re_hire_status = form1.emp5rehirestatus;
                 pe5.reason_of_leaving = form1.emp5reasonofleaving;
 
                 //PREVIOUS COMPANY DETAILS 

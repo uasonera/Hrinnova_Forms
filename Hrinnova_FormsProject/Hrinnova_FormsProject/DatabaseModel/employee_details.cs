@@ -12,6 +12,7 @@ namespace Hrinnova_FormsProject.DatabaseModel
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Globalization;
 
     public partial class employee_details
     {
@@ -40,12 +41,12 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public string middlename { get; set; }
         public string surname { get; set; }
         public string gender { get; set; }
-        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MMM/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> date_of_birth { get; set; }
-        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MMM/yyyy}", ApplyFormatInEditMode = true)]
         public System.DateTime date_of_joining { get; set; }
         public string marital_status { get; set; }
-        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MMM/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> marriage_anniversary { get; set; }
         public string blood_group { get; set; }
         public string mobile_number { get; set; }
@@ -58,7 +59,7 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public string aadhar_card { get; set; }
         public string pan_card { get; set; }
         public string passport_number { get; set; }
-        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MMM/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> passport_validity { get; set; }
         public string election_card { get; set; }
         public string vehicle_number { get; set; }

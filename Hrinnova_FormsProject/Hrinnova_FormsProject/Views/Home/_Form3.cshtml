@@ -25,7 +25,7 @@
                                         <tr>
                                             <td name="fathername">Father</td>
                                             <td><input type="text" name="fathername" class="form-control"></td>
-                                            <td><input type="text" name="fatherdob" class="form-control datepicker"></td>
+                                            <td><input type="text" name="fatherdob" onkeydown="return false"class="form-control datepicker"></td>
                                             <td><input type="text" name="fatheraadhar" class="form-control"></td>
                                             <td><input type="text" name="fathercontact" class="form-control"></td>
                                             <td><input type="text" name="fatheroccupation" class="form-control"></td>
@@ -36,7 +36,7 @@
                                         <tr>
                                             <td>Mother</td>
                                             <td><input type="text" name="mothername" class="form-control"></td>
-                                            <td><input type="text" name="motherdob" class="form-control datepicker"></td>
+                                            <td><input type="text" name="motherdob" onkeydown="return false"class="form-control datepicker"></td>
                                             <td><input type="text" name="motheraadhar" class="form-control"></td>
                                             <td><input type="text" name="mothercontact" class="form-control"></td>
                                             <td><input type="text" name="motheroccupation" class="form-control"></td>
@@ -49,7 +49,7 @@
                                             <td>Brother</td>
 
                                             <td><input type="text" name="brothername" class="form-control"></td>
-                                            <td><input type="text" name="brotherdob" class="form-control datepicker"></td>
+                                            <td><input type="text" name="brotherdob" class="form-control datepicker"onkeydown="return false"></td>
                                             <td><input type="text" name="brotheraadhar" class="form-control"></td>
                                             <td><input type="text" name="brothercontact" class="form-control"></td>
                                             <td><input type="text" name="brotheroccupation" class="form-control"></td>
@@ -61,7 +61,7 @@
                                         <tr>
                                             <td>Sister</td>
                                             <td><input type="text" name="sistername" class="form-control"></td>
-                                            <td><input type="text" name="sisterdob" class="form-control datepicker"></td>
+                                            <td><input type="text" name="sisterdob" class="form-control datepicker"onkeydown="return false"></td>
                                             <td><input type="text" name="sisteraadhar" class="form-control"></td>
                                             <td><input type="text" name="sistercontact" class="form-control"></td>
                                             <td><input type="text" name="sisteroccupation" class="form-control"></td>
@@ -73,7 +73,7 @@
                                         <tr>
                                             <td>Spouse (if married)</td>
                                             <td><input type="text" name="spousename" class="form-control"></td>
-                                            <td><input type="text" name="spousedob" class="form-control datepicker"></td>
+                                            <td><input type="text" name="spousedob" class="form-control datepicker"onkeydown="return false"></td>
                                             <td><input type="text" name="spouseaadhar" class="form-control"></td>
                                             <td><input type="text" name="spousecontact" class="form-control"></td>
                                             <td><input type="text" name="spouseoccupation" class="form-control"></td>
@@ -85,7 +85,7 @@
                                         <tr>
                                             <td>Children (Specify gender)</td>
                                             <td><input type="text" name="childrenname" class="form-control"></td>
-                                            <td><input type="text" name="childrendob" class="form-control datepicker"></td>
+                                            <td><input type="text" name="childrendob" class="form-control datepicker"onkeydown="return false"></td>
                                             <td><input type="text" name="childrenaadhar" class="form-control"></td>
                                             <td><input type="text" name="childrencontact" class="form-control"></td>
                                             <td><input type="text" name="childrenoccupation" class="form-control"></td>
@@ -312,6 +312,13 @@
                                             <th>Designation</th>
                                             <th>Worked From</th>
                                             <th>Worked Till</th>
+                                            <th>Reporting Manager</th>
+                                            <th>Designation of Reporting Manager</th>
+                                            <th>Contact of Reporting Manager</th>
+                                            <th>CTC</th>
+                                            <th>Monthly Salary</th>
+                                            <th>Attendence</th>
+                                            <th>Re-Hire Status</th>
                                             <th>Reason of Leaving</th>
                                         </tr>
                                     </thead>
@@ -319,36 +326,72 @@
                                         <tr>
                                             <td><input type="text" name="emp1nameandadd"   class="form-control"></td>
                                             <td><input type="text" name="emp1designation"       class="form-control"></td>
-                                            <td><input type="text" name="emp1workedfrom"        class="form-control datepicker"></td>
-                                            <td><input type="text" name="emp1workedtill"        class="form-control datepicker"></td>
+                                            <td><input type="text" name="emp1workedfrom"onkeydown="return false"class="form-control datepicker"></td>
+                                            <td><input type="text" name="emp1workedtill"onkeydown="return false"class="form-control datepicker"></td>
+                                            <td><input type="text" name="emp1reportingmanager" class="form-control"></td>
+                                            <td><input type="text" name="emp1rmdesignation"     class="form-control"></td>
+                                            <td><input type="text" name="emp1rmcontact"         class="form-control"></td>
+                                            <td><input type="text" name="emp1ctc"               class="form-control"></td>
+                                            <td><input type="text" name="emp1monthlysalary"     class="form-control"></td>
+                                            <td><input type="text" name="emp1attendence"        class="form-control"></td>
+                                            <td><input type="text" name="emp1rehirestatus"      class="form-control"></td>
                                             <td><input type="text" name="emp1reasonofleaving"   class="form-control"></td>
+
                                         </tr>
                                         <tr>
                                             <td><input type="text" name="emp2nameandadd"   class="form-control"></td>
                                             <td><input type="text" name="emp2designation"       class="form-control"></td>
-                                            <td><input type="text" name="emp2workedfrom"        class="form-control datepicker"></td>
-                                            <td><input type="text" name="emp2workedtill"        class="form-control datepicker"></td>
+                                            <td><input type="text" name="emp2workedfrom"onkeydown="return false"class="form-control datepicker"></td>
+                                            <td><input type="text" name="emp2workedtill"onkeydown="return false"class="form-control datepicker"></td>
+                                            <td><input type="text" name="emp2reportingmanager" class="form-control"></td>
+                                            <td><input type="text" name="emp2rmdesignation" class="form-control"></td>
+                                            <td><input type="text" name="emp2rmcontact" class="form-control"></td>
+                                            <td><input type="text" name="emp2ctc" class="form-control"></td>
+                                            <td><input type="text" name="emp2monthlysalary" class="form-control"></td>
+                                            <td><input type="text" name="emp2attendence" class="form-control"></td>
+                                            <td><input type="text" name="emp2rehirestatus" class="form-control"></td>
                                             <td><input type="text" name="emp2reasonofleaving"   class="form-control"></td>
                                         </tr>
                                         <tr>
                                             <td><input type="text" name="emp3nameandadd"   class="form-control"></td>
                                             <td><input type="text" name="emp3designation"       class="form-control"></td>
-                                            <td><input type="text" name="emp3workedfrom"        class="form-control datepicker"></td>
-                                            <td><input type="text" name="emp3workedtill"        class="form-control datepicker"></td>
+                                            <td><input type="text" name="emp3workedfrom"onkeydown="return false"class="form-control datepicker"></td>
+                                            <td><input type="text" name="emp3workedtill"onkeydown="return false"class="form-control datepicker"></td>
+                                            <td><input type="text" name="emp3reportingmanager" class="form-control"></td>
+                                            <td><input type="text" name="emp3rmdesignation" class="form-control"></td>
+                                            <td><input type="text" name="emp3rmcontact" class="form-control"></td>
+                                            <td><input type="text" name="emp3ctc" class="form-control"></td>
+                                            <td><input type="text" name="emp3monthlysalary" class="form-control"></td>
+                                            <td><input type="text" name="emp3attendence" class="form-control"></td>
+                                            <td><input type="text" name="emp3rehirestatus" class="form-control"></td>
                                             <td><input type="text" name="emp3reasonofleaving"   class="form-control"></td>
                                         </tr>
                                         <tr>
                                             <td><input type="text" name="emp4nameandadd"   class="form-control"></td>
                                             <td><input type="text" name="emp4designation"       class="form-control"></td>
-                                            <td><input type="text" name="emp4workedfrom"        class="form-control datepicker"></td>
-                                            <td><input type="text" name="emp4workedtill"        class="form-control datepicker"></td>
+                                            <td><input type="text" name="emp4workedfrom"onkeydown="return false"class="form-control datepicker"></td>
+                                            <td><input type="text" name="emp4workedtill"onkeydown="return false"class="form-control datepicker"></td>
+                                            <td><input type="text" name="emp4reportingmanager" class="form-control"></td>
+                                            <td><input type="text" name="emp4rmdesignation" class="form-control"></td>
+                                            <td><input type="text" name="emp4rmcontact" class="form-control"></td>
+                                            <td><input type="text" name="emp4ctc" class="form-control"></td>
+                                            <td><input type="text" name="emp4monthlysalary" class="form-control"></td>
+                                            <td><input type="text" name="emp4attendence" class="form-control"></td>
+                                            <td><input type="text" name="emp4rehirestatus" class="form-control"></td>
                                             <td><input type="text" name="emp4reasonofleaving"   class="form-control"></td>
                                         </tr>
                                         <tr>
                                             <td><input type="text" name="emp5nameandadd"   class="form-control"></td>
                                             <td><input type="text" name="emp5designation"       class="form-control"></td>
-                                            <td><input type="text" name="emp5workedfrom"        class="form-control datepicker"></td>
-                                            <td><input type="text" name="emp5workedtill"        class="form-control datepicker"></td>
+                                            <td><input type="text" name="emp5workedfrom"onkeydown="return false"class="form-control datepicker"></td>
+                                            <td><input type="text" name="emp5workedtill"onkeydown="return false"class="form-control datepicker"></td>
+                                            <td><input type="text" name="emp5reportingmanager" class="form-control"></td>
+                                            <td><input type="text" name="emp5rmdesignation" class="form-control"></td>
+                                            <td><input type="text" name="emp5rmcontact" class="form-control"></td>
+                                            <td><input type="text" name="emp5ctc" class="form-control"></td>
+                                            <td><input type="text" name="emp5monthlysalary" class="form-control"></td>
+                                            <td><input type="text" name="emp5attendence" class="form-control"></td>
+                                            <td><input type="text" name="emp5rehirestatus" class="form-control"></td>
                                             <td><input type="text" name="emp5reasonofleaving"   class="form-control"></td>
                                         </tr>
 

@@ -21,8 +21,8 @@ namespace Hrinnova_FormsProject.Controllers
             modelobject.motherdetails = entity.family_details.FirstOrDefault(mid => mid.employee_id == id && mid.member == "mother");
             modelobject.brotherdetails = entity.family_details.FirstOrDefault(bid => bid.employee_id == id && bid.member == "brother");
             modelobject.spousedetails = entity.family_details.FirstOrDefault(sid => sid.employee_id == id && sid.member == "spouse");
-            modelobject.sisterdetails= entity.family_details.FirstOrDefault(sisid => sisid.employee_id == id && sisid.member == "brother");
-            modelobject.childrendetails= entity.family_details.FirstOrDefault(cid => cid.employee_id == id && cid.member == "children");
+            modelobject.sisterdetails = entity.family_details.FirstOrDefault(sisid => sisid.employee_id == id && sisid.member == "brother");
+            modelobject.childrendetails = entity.family_details.FirstOrDefault(cid => cid.employee_id == id && cid.member == "children");
             return View(modelobject);
         }
 
@@ -35,8 +35,8 @@ namespace Hrinnova_FormsProject.Controllers
             modelobject.motherdetails = entity.family_details.FirstOrDefault(mid => mid.employee_id == id && mid.member == "mother");
             modelobject.brotherdetails = entity.family_details.FirstOrDefault(bid => bid.employee_id == id && bid.member == "brother");
             modelobject.spousedetails = entity.family_details.FirstOrDefault(sid => sid.employee_id == id && sid.member == "spouse");
-            modelobject.sisterdetails= entity.family_details.FirstOrDefault(sisid => sisid.employee_id == id && sisid.member == "brother");
-            modelobject.childrendetails= entity.family_details.FirstOrDefault(cid => cid.employee_id == id && cid.member == "children");
+            modelobject.sisterdetails = entity.family_details.FirstOrDefault(sisid => sisid.employee_id == id && sisid.member == "brother");
+            modelobject.childrendetails = entity.family_details.FirstOrDefault(cid => cid.employee_id == id && cid.member == "children");
             modelobject.otherdetails = entity.other_details.FirstOrDefault(oid => oid.employee_id == id);
             modelobject.educationalqualifications = entity.educational_qualifications.FirstOrDefault(eq => eq.employee_id == id);
             modelobject.certification1 = entity.certifications.FirstOrDefault(c1 => c1.employee_id == id && c1.cert_type == "1");
@@ -84,7 +84,8 @@ namespace Hrinnova_FormsProject.Controllers
             modelobject.prevemploy3 = entity.prev_employ_1.FirstOrDefault(pe1 => pe1.employee_id == id && pe1.employment_ref == "3");
             return View(modelobject);
         }
-        public ActionResult PFTransferForm(int id) {
+        public ActionResult PFTransferForm(int id)
+        {
 
             Session["id"] = id;
             modelobject.employeedetails = entity.employee_details.FirstOrDefault(eid => eid.employee_id == id);
@@ -103,10 +104,12 @@ namespace Hrinnova_FormsProject.Controllers
 
 
 
-        public ActionResult FeedbackForm(int id) {
+        public ActionResult FeedbackForm(int id)
+        {
 
             Session["id"] = id;
-
+            modelobject.employeedetails = entity.employee_details.FirstOrDefault(eid => eid.employee_id == id);
+            modelobject.feedback = entity.feedback.FirstOrDefault(fid => fid.employee_id == id);
             return View(modelobject);
         }
     }

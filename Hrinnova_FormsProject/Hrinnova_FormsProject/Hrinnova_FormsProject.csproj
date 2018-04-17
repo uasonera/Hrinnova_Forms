@@ -865,7 +865,6 @@
     <Folder Include="JsScript\ThirdPartyPlugins\" />
     <Folder Include="JsScript\TinyMCE\" />
     <Folder Include="Views\EmployeeDetails\" />
-    <Folder Include="Views\Forms\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

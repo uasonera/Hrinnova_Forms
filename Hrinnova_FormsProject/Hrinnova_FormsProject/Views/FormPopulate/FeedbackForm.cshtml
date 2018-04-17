@@ -6,17 +6,369 @@
 <link href="~/CSS/cssfortableformat.css" rel="stylesheet" />
 <script src="~/JsScript/jquery-1.11.3.js"></script>
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
     <style>
         .boldit {
             border: solid;
-            border-width: 3px;
+            border-width: 2px;
+            padding-bottom: 3px;
+            padding-top: 2px;
+            padding-left: 10px;
         }
     </style>
 </head>
 
 <body>
+    <div style="font-family:Verdana">
+        <table width="700" align="center">
+            <tr>
+                <td width="25%"><img src="~/Images/qisms2.png" /></td>
+                <td style="text-align:center"><h3>Feedback Form</h3></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-top:10px">Name : @Html.DisplayFor(m => m.employeedetails.firstname) @Html.DisplayFor(m => m.employeedetails.surname) </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-top:10px">Employee Code : @Html.DisplayFor(m => m.employeedetails.employee_code)</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-top:10px">Designation : @Html.DisplayFor(m => m.employeedetails.designation)</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-top:10px">Date of Joining : @Html.DisplayFor(m => m.employeedetails.date_of_joining)</td>
+            </tr>
+        </table>
+        <table width="700" align="center">
+            <thead>
+                <tr style="background-color:darkgrey">
+                    <th width="10%" class="boldit">
+                        <b>Sr. No.</b>
+                    </th>
 
+                    <th width="40%" class="boldit">
+                        <b>Department Details</b>
+                    </th>
+
+                    <th width="30%" class="boldit">
+                        <b>Remarks</b>
+                    </th>
+
+                    <th width="20%" class="boldit">
+                        <b>Sign</b>
+                    </th>
+                </tr>
+            </thead>
+            <tr>
+                <td width="10%" class="boldit">
+                    <b>I</b>
+                </td>
+
+                <td width="40%" colspan="3" class="boldit">
+                    <b>HR Department</b>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    1
+                </td>
+
+                <td width="40%" class="boldit">
+                    HR Manual
+                </td>
+
+                <td width="30%" class="boldit">
+                    @Html.DisplayFor(m => m.feedback.hr_manual)
+                </td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    2
+                </td>
+
+                <td width="40%" class="boldit">
+                    CIMS ID/Password
+                </td>
+
+                <td width="30%" class="boldit">
+                    @Html.DisplayFor(m => m.feedback.cims_idpassword)
+                </td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    3
+                </td>
+
+                <td width="40%" class="boldit">
+                    Books(if required)
+                </td>
+
+                <td width="30%" class="boldit">
+                    @Html.DisplayFor(m => m.feedback.books)
+                </td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    4
+                </td>
+
+                <td width="40%" class="boldit">
+                    Library Card (if required)
+                </td>
+
+                <td width="30%" class="boldit">
+                    @Html.DisplayFor(m => m.feedback.library_card)
+                </td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    5
+                </td>
+
+                <td width="40%" class="boldit">
+                    Any Other
+                </td>
+
+                <td width="30%" class="boldit">
+                    @Html.DisplayFor(m => m.feedback.hr_anyother)
+                </td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    <b>II.</b>
+                </td>
+
+                <td width="40%" colspan="3" class="boldit">
+                    <b>Administration</b>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    1
+                </td>
+
+                <td width="40%" class="boldit">
+                    Identity Card
+                </td>
+
+                <td width="30%" class="boldit">@Html.DisplayFor(m => m.feedback.identitycard)</td>
+                
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    2
+                </td>
+
+                <td width="40%" class="boldit">
+                    Bank Account
+                </td>
+
+                <td width="30%" class="boldit">@Html.DisplayFor(m => m.feedback.bank_account)</td>
+                
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    3
+                </td>
+
+                <td width="40%" class="boldit">
+                    Notepad
+                </td>
+
+                <td width="30%" class="boldit">@Html.DisplayFor(m => m.feedback.notepad)</td>
+              
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    3
+                </td>
+
+                <td width="40%" class="boldit">
+                    Pen
+                </td>
+
+                <td width="30%" class="boldit">@Html.DisplayFor(m => m.feedback.pen)</td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    4
+                </td>
+
+                <td width="40%" class="boldit">
+                    Employee Card
+                </td>
+
+                <td width="30%" class="boldit">@Html.DisplayFor(m => m.feedback.employee_card)</td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    5
+                </td>
+
+                <td width="40%" class="boldit">
+                    Any Other
+                </td>
+
+                <td width="30%" class="boldit">@Html.DisplayFor(m => m.feedback.admin_anyother)</td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    <b>III</b>
+                </td>
+
+                <td width="40%" class="boldit" colspan="3">
+                    <b>System Administration</b>
+                </td>
+
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    1
+                </td>
+
+                <td width="40%" class="boldit">
+                    Computer System (PC No.)
+                </td>
+
+                <td width="30%" class="boldit">@Html.DisplayFor(m => m.feedback.computer_system)</td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    2
+                </td>
+
+                <td width="40%" class="boldit">
+                    Headphone (if required)
+                </td>
+
+                <td width="30%" class="boldit">@Html.DisplayFor(m => m.feedback.headphones)</td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    3
+                </td>
+
+                <td width="40%" class="boldit">
+                    E-Mail Id/Password
+                </td>
+
+                <td width="30%" class="boldit">@Html.DisplayFor(m => m.feedback.emailid_password)</td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    4
+                </td>
+
+                <td width="40%" class="boldit">
+                    Network IP
+                </td>
+
+                <td width="30%" class="boldit">@Html.DisplayFor(m => m.feedback.network_ip)</td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    5
+                </td>
+
+                <td width="40%" class="boldit">
+                    Firewall ID
+                </td>
+
+                <td width="30%" class="boldit">@Html.DisplayFor(m => m.feedback.firewall_id)</td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    6
+                </td>
+
+                <td width="40%" class="boldit">
+                    Domain Username & Password
+                </td>
+
+                <td width="30%" class="boldit">@Html.DisplayFor(m => m.feedback.domain_usernamepassword)</td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    7
+                </td>
+
+                <td width="40%" class="boldit">
+                    Access to Messengers(Yahoo/MSN/Google/Skype etc.)
+                </td>
+
+                <td width="30%" class="boldit">@Html.DisplayFor(m => m.feedback.messengers_access)</td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    8
+                </td>
+
+                <td width="40%" class="boldit">
+                    Any Other
+                </td>
+
+                <td width="30%" class="boldit">@Html.DisplayFor(m => m.feedback.systemadmin_anyother)</td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    <b>IV.</b>
+                </td>
+
+                <td class="boldit" colspan="3">
+                    <b>Joinee</b>
+                </td>
+
+            </tr>
+            <tr>
+                <td width="10%" class="boldit">
+                    1
+                </td>
+
+                <td width="40%" class="boldit">
+                    HR Manual studied and ISMS responsibilities understood
+                </td>
+
+                <td width="30%" class="boldit">@Html.DisplayFor(m => m.feedback.hrmanual_and_responsibilities)</td>
+
+                <td width="20%" class="boldit"></td>
+            </tr>
+            <tr><td colspan="4" style="text-align:center; padding-top:10px"><button class="btn-primary" align="center" id="hidebutton">PRINT</button></td></tr>
+        </table>
+    </div>
 </body>
 </html>
+<script src="~/JsScript/hidebutton.js"></script>

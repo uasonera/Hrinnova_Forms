@@ -10,6 +10,27 @@ namespace Hrinnova_FormsProject.Models
 {
     public class Model2
     {
+        public Model2()
+        {
+            fatherdetails = new family_details(){ member = "Father"};
+            motherdetails = new family_details() { member="Mother"};
+            brotherdetails = new family_details() { member = "Brother" };
+            sisterdetails= new family_details() { member = "Sister" };
+            spousedetails = new family_details() { member = "Spouse" };
+            childrendetails = new family_details() { member = "Children" };
+            certification1 = new certifications() { cert_type="1"};
+            certification2 = new certifications() { cert_type = "2" };
+            certification3 = new certifications() { cert_type = "3" };
+            certification4 = new certifications() { cert_type = "4" };
+            prevemploy1 = new prev_employ_1() { employment_ref="1" };
+            prevemploy2 = new prev_employ_1() { employment_ref = "1" };
+            prevemploy3 = new prev_employ_1() { employment_ref = "1" };
+            prevemploy4 = new prev_employ_1() { employment_ref = "1" };
+            prevemploy5 = new prev_employ_1() { employment_ref = "1" };
+            reference1 = new references() {ref_type="1" };
+            reference2 = new references() { ref_type = "2" };
+
+        }
         
         public List<department> departments { get; set; }
         public List<role> designations { get; set; }

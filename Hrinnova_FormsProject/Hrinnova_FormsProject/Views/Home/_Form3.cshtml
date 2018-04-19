@@ -28,9 +28,9 @@
                             <tbody>
                                 <tr>
                                     <td name="fathername">Father</td>
-                                    @{Model.fatherdetails.member = "Father"}
+                                    @Html.HiddenFor(model => model.fatherdetails.member)
                                     <td>
-                                        @Html.EditorFor(model => model.fatherdetails.fname, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.HiddenFor(model => model.fatherdetails.fname, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.fatherdetails.fname, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -64,7 +64,7 @@
                                 </tr>
                                 <tr>
                                     <td>Mother</td>
-                                    @{Model.motherdetails.member = "Mother"}
+                                    @{Model.motherdetails.member = "Mother";}
                                     <td>
                                         @Html.EditorFor(model => model.motherdetails.fname, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.motherdetails.fname, "", new { @class = "text-danger" })
@@ -101,7 +101,7 @@
                                 </tr>
                                 <tr>
                                     <td>Brother</td>
-                                    @{Model.brotherdetails.member = "Brother"}
+                                    @{Model.brotherdetails.member = "Brother";}
                                     <td>
                                         @Html.EditorFor(model => model.brotherdetails.fname, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.brotherdetails.fname, "", new { @class = "text-danger" })
@@ -138,7 +138,7 @@
                                 </tr>
                                 <tr>
                                     <td>Sister</td>
-                                    @{Model.sisterdetails.member = "Sister"}
+                                    @{Model.sisterdetails.member = "Sister";}
                                     <td>
                                         @Html.EditorFor(model => model.sisterdetails.fname, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.sisterdetails.fname, "", new { @class = "text-danger" })
@@ -175,7 +175,7 @@
                                 </tr>
                                 <tr>
                                     <td>Spouse (if married)</td>
-                                    @{Model.spousedetails.member = "Spouse"}
+                                    @{Model.spousedetails.member = "Spouse";}
                                     <td>
                                         @Html.EditorFor(model => model.spousedetails.fname, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.spousedetails.fname, "", new { @class = "text-danger" })
@@ -212,7 +212,7 @@
                                 </tr>
                                 <tr>
                                     <td>Children (Specify gender)</td>
-                                    @{Model.childrendetails.member = "Children"}
+                                    @{Model.childrendetails.member = "Children";}
                                     <td>
                                         @Html.EditorFor(model => model.childrendetails.fname, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.childrendetails.fname, "", new { @class = "text-danger" })
@@ -477,7 +477,7 @@
                             <tbody>
                                 <tr>
                                     <td class="col-sm-1">1 :</td>
-                                    @{Model.certification1.cert_type= "1"}
+                                    
                                     <td>
                                         @Html.EditorFor(model => model.certification1.certification_name, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.certification1.certification_name, "", new { @class = "text-danger" })
@@ -485,7 +485,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-sm-1">2 :</td>
-                                    @{Model.certification2.cert_type = "2"}
+                                    
                                     <td>
                                         @Html.EditorFor(model => model.certification2.certification_name, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.certification2.certification_name, "", new { @class = "text-danger" })
@@ -493,7 +493,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-sm-1">3 :</td>
-                                    @{Model.certification3.cert_type = "3"}
+                                    
                                     <td>
                                         @Html.EditorFor(model => model.certification3.certification_name, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.certification3.certification_name, "", new { @class = "text-danger" })
@@ -501,7 +501,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-sm-1">4 :</td>
-                                    @{Model.certification4.cert_type = "4"}
+                                    
                                     <td>
                                         @Html.EditorFor(model => model.certification4.certification_name, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.certification4.certification_name, "", new { @class = "text-danger" })
@@ -610,11 +610,6 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    @{Model.prevemploy1.employment_ref = "1"}
-                                    @{Model.prevemploy2.employment_ref = "2"}
-                                    @{Model.prevemploy3.employment_ref = "3"}
-                                    @{Model.prevemploy4.employment_ref = "4"}
-                                    @{Model.prevemploy5.employment_ref = "5"}
                                     <td>
                                         @Html.EditorFor(model => model.prevemploy1.employers_name, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.prevemploy1.employers_name, "", new { @class = "text-danger" })
@@ -948,8 +943,8 @@
 
                                 </tr>
                                 <tr>
-                                    @{Model.reference1.ref_type= "1"}
-                                    @{Model.reference2.ref_type = "2"}
+                                    
+                                    
                                     <td>
                                         @Html.EditorFor(model => model.reference1.name, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.reference1.name, "", new { @class = "text-danger" })

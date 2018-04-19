@@ -26,7 +26,7 @@ namespace Hrinnova_FormsProject.Controllers
             //var test = from employee_details in entity.employee_details.Take(100) select employee_details;
 
             eim.employeedetails = from employee_details in entity.employee_details.Take(1000) select employee_details;
-                        
+            
             return View(eim);
 
         }
@@ -86,6 +86,7 @@ namespace Hrinnova_FormsProject.Controllers
             model.certification3 = entity.certifications.FirstOrDefault(c3 => c3.employee_id == id && c3.cert_type == "3");
             model.certification4 = entity.certifications.FirstOrDefault(c4 => c4.employee_id == id && c4.cert_type == "4");
             model.feedback = entity.feedback.FirstOrDefault(fb => fb.employee_id == id);
+            model.brotherdetails.member = "faher";
 
             return View(model);
         }

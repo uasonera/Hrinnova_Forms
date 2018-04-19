@@ -26,8 +26,7 @@ namespace Hrinnova_FormsProject.Controllers
             //var test = from employee_details in entity.employee_details.Take(100) select employee_details;
 
             eim.employeedetails = from employee_details in entity.employee_details.Take(1000) select employee_details;
-
-
+                        
             return View(eim);
 
         }
@@ -45,17 +44,19 @@ namespace Hrinnova_FormsProject.Controllers
         // POST: Edit/Create
 
 
-        // GET: Edit/Edit/5
+        // GET: Edit/Edit/5  
         public ActionResult Edit(int id)
         {
             model.departments = entity.department.ToList();
             model.designations = entity.role.ToList();
-         
-            
-            var depts = new SelectList(model.departments, "DeptID", "DeptName", 1);
-            var designs = new SelectList(model.designations, "roleID", "name", 1);
-            ViewBag.Departments = depts;
-            ViewBag.Designations = designs;
+            model.maritalstatus = new List<maritalstatus>()
+            {
+                new maritalstatus { id=1,status="Married"},
+                new maritalstatus { id=2,status="Unmarried"},
+                new maritalstatus { id=3,status="Widow"},
+                new maritalstatus { id=4,status="Widower"},
+                new maritalstatus { id=5,status="Divorcee"}
+            };
 
             Session["id"] = id;
             eim.employeedetails = entity.employee_details.Where(mm => mm.employee_id == id);

@@ -28,13 +28,9 @@
                                 <label class="control-label">Designation :<span style="color:red" class="required">*</span></label>
                             </div>
                             <div class="col-sm-8">
-                              @Html.DropDownList("Designations", (IEnumerable<SelectListItem>)ViewBag.PriorityID, new { @class = "form-control chosen-select" })
+                              @*@Html.DropDownList("Designations", (IEnumerable<SelectListItem>)ViewBag.PriorityID, new { @class = "form-control chosen-select" })*@
                                 @Html.ValidationMessageFor(model => model.employeedetails.designation, "", new { @class = "text-danger" })
-                                @*<select name="designationdropdown" class="form-control">
-                                    <option value="developer">Developer</option>
-                                    <option value="businessanalyst">Business Analyst</option>
-                                    <option value="qualityanalyst">Quality Analyst</option>
-                                </select>*@
+                                @Html.DropDownListFor(m => m.employeedetails.roleID, Model.designations.Select(d => new SelectListItem() { Value = d.roleID.ToString(), Text = d.name.ToString() }), new { @class = "form-control chosen-select"})
                             </div>
                         </div>
 
@@ -44,9 +40,9 @@
                                 <label class="control-label">Department :<span style="color:red" class="required">*</span></label>
                             </div>
                             <div class="col-sm-8">
-                              @Html.DropDownList("Departments", (IEnumerable<SelectListItem>)ViewBag.PriorityID, new { @class = "form-control chosen-select" })
+                              @*@Html.DropDownList("Departments", (IEnumerable<SelectListItem>)ViewBag.PriorityID, new { @class = "form-control chosen-select" })*@
                                 @Html.ValidationMessageFor(model => model.employeedetails.department, "", new { @class = "text-danger" })
-                                
+                                @Html.DropDownListFor(m => m.employeedetails.DeptID, Model.departments.Select(d => new SelectListItem() { Value = d.DeptID.ToString(), Text = d.DeptName.ToString() }), new { @class = "form-control chosen-select" })
                             </div>
                         </div>
                         <br>
@@ -85,8 +81,9 @@
                                 <label class="control-label">Gender :</label>
                             </div>
                             <div class="col-sm-8">
-                                @Html.EditorFor(model => model.employeedetails.gender, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.employeedetails.gender, "", new { @class = "text-danger" })
+                                @Html.RadioButtonFor(m => m.employeedetails.gender, "male") <label class="control-label">Male</label>
+                                @Html.RadioButtonFor(m => m.employeedetails.gender, "female") <label class="control-label">Female</label>
+                                @Html.RadioButtonFor(m => m.employeedetails.gender, "other") <label class="control-label">Other</label>
                             </div>
                         </div>
                         <br>
@@ -95,7 +92,7 @@
                                 <label class="control-label">Date of Birth :</label>
                             </div>
                             <div class="col-sm-8">
-                                @Html.EditorFor(model => model.employeedetails.date_of_birth, new { htmlAttributes = new { @class = "form-control datepicker", Type = "text" } })
+                                @Html.EditorFor(model => model.employeedetails.date_of_birth, new { htmlAttributes = new { @class = "form-control datepicker" } })
                                 @Html.ValidationMessageFor(model => model.employeedetails.date_of_birth, "", new { @class = "text-danger" })
                             </div>
 
@@ -116,8 +113,8 @@
                                 <label class="control-label">Marital Status :<span style="color:red" class="required">*</span></label>
                             </div>
                             <div class="col-sm-8">
-                                @Html.EditorFor(model => model.employeedetails.marital_status, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.employeedetails.marital_status, "", new { @class = "text-danger" })
+                                @Html.DropDownListFor(m => m.employeedetails.marital_status, Model.maritalstatus.Select(d => new SelectListItem() { Value = d.id.ToString(), Text = d.status.ToString() }), new { @class = "form-control chosen-select" })
                             </div>
                         </div>
                         <br>
@@ -189,7 +186,7 @@
                                 <label class="control-label">Email Id :<span style="color:red" class="required">*</span></label>
                             </div>
                             <div class="col-sm-8">
-                                @Html.EditorFor(model => model.employeedetails.email_id, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.EditorFor(model => model.employeedetails.email_id, new { htmlAttributes = new { @class = "form-control", Type="email" } })
                                 @Html.ValidationMessageFor(model => model.employeedetails.email_id, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -225,7 +222,7 @@
                                 <label class="control-label">Aadhar Card :<span style="color:red" class="required">*</span></label>
                             </div>
                             <div class="col-sm-8">
-                                @Html.EditorFor(model => model.employeedetails.aadhar_card, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.EditorFor(model => model.employeedetails.aadhar_card, new { htmlAttributes = new { @class = "form-control", pattern= @"^\(?([0-9]{4})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$" } })
                                 @Html.ValidationMessageFor(model => model.employeedetails.aadhar_card, "", new { @class = "text-danger" })
                             </div>
                         </div>

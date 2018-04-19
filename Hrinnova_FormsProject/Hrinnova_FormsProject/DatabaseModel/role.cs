@@ -14,11 +14,20 @@ namespace Hrinnova_FormsProject.DatabaseModel
     
     public partial class role
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public role()
+        {
+            this.employee_details = new HashSet<employee_details>();
+        }
+    
         public int roleID { get; set; }
         public string name { get; set; }
         public string description { get; set; }
         public Nullable<decimal> InfrastructureCost { get; set; }
         public string Abbreviation { get; set; }
         public Nullable<decimal> PerDeskCost { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<employee_details> employee_details { get; set; }
     }
 }

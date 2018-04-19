@@ -49,6 +49,10 @@ namespace Hrinnova_FormsProject.Controllers
             modelobject.prevemploy3 = entity.prev_employ_1.FirstOrDefault(pe3 => pe3.employee_id == id && pe3.employment_ref == "3");
             modelobject.prevemploy4 = entity.prev_employ_1.FirstOrDefault(pe4 => pe4.employee_id == id && pe4.employment_ref == "4");
             modelobject.prevemploy5 = entity.prev_employ_1.FirstOrDefault(pe5 => pe5.employee_id == id && pe5.employment_ref == "5");
+            modelobject.additionalinformation = entity.additional_information.FirstOrDefault(ai => ai.employee_id == id);
+            modelobject.reference1 = entity.references.FirstOrDefault(re1 => re1.employee_id == id);
+            modelobject.reference2 = entity.references.FirstOrDefault(re2 => re2.employee_id == id);
+
             return View(modelobject);
         }
         public ActionResult Esicform(int id)

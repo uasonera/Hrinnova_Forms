@@ -50,42 +50,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="employee_details">
-      <EntityTypeMapping TypeName="hrinnova_dbModel.employee_details">
-        <MappingFragment StoreEntitySet="employee_details">
-          <ScalarProperty Name="known_ailments" ColumnName="known_ailments" />
-          <ScalarProperty Name="allergies" ColumnName="allergies" />
-          <ScalarProperty Name="ifs_code" ColumnName="ifs_code" />
-          <ScalarProperty Name="single_bank_account" ColumnName="single_bank_account" />
-          <ScalarProperty Name="vehicle_number" ColumnName="vehicle_number" />
-          <ScalarProperty Name="election_card" ColumnName="election_card" />
-          <ScalarProperty Name="passport_validity" ColumnName="passport_validity" />
-          <ScalarProperty Name="passport_number" ColumnName="passport_number" />
-          <ScalarProperty Name="pan_card" ColumnName="pan_card" />
-          <ScalarProperty Name="aadhar_card" ColumnName="aadhar_card" />
-          <ScalarProperty Name="temporary_address" ColumnName="temporary_address" />
-          <ScalarProperty Name="permanent_address" ColumnName="permanent_address" />
-          <ScalarProperty Name="email_id" ColumnName="email_id" />
-          <ScalarProperty Name="emergency_number" ColumnName="emergency_number" />
-          <ScalarProperty Name="alternate_number" ColumnName="alternate_number" />
-          <ScalarProperty Name="home_number" ColumnName="home_number" />
-          <ScalarProperty Name="mobile_number" ColumnName="mobile_number" />
-          <ScalarProperty Name="blood_group" ColumnName="blood_group" />
-          <ScalarProperty Name="marriage_anniversary" ColumnName="marriage_anniversary" />
-          <ScalarProperty Name="marital_status" ColumnName="marital_status" />
-          <ScalarProperty Name="date_of_joining" ColumnName="date_of_joining" />
-          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
-          <ScalarProperty Name="gender" ColumnName="gender" />
-          <ScalarProperty Name="surname" ColumnName="surname" />
-          <ScalarProperty Name="middlename" ColumnName="middlename" />
-          <ScalarProperty Name="firstname" ColumnName="firstname" />
-          <ScalarProperty Name="department" ColumnName="department" />
-          <ScalarProperty Name="designation" ColumnName="designation" />
-          <ScalarProperty Name="employee_code" ColumnName="employee_code" />
-          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="employee_refcheck">
       <EntityTypeMapping TypeName="hrinnova_dbModel.employee_refcheck">
         <MappingFragment StoreEntitySet="employee_refcheck">
@@ -280,6 +244,44 @@
           <ScalarProperty Name="employment_ref" ColumnName="employment_ref" />
           <ScalarProperty Name="employee_id" ColumnName="employee_id" />
           <ScalarProperty Name="prevemploy_id" ColumnName="prevemploy_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employee_details">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.employee_details">
+        <MappingFragment StoreEntitySet="employee_details">
+          <ScalarProperty Name="known_ailments" ColumnName="known_ailments" />
+          <ScalarProperty Name="allergies" ColumnName="allergies" />
+          <ScalarProperty Name="ifs_code" ColumnName="ifs_code" />
+          <ScalarProperty Name="single_bank_account" ColumnName="single_bank_account" />
+          <ScalarProperty Name="vehicle_number" ColumnName="vehicle_number" />
+          <ScalarProperty Name="election_card" ColumnName="election_card" />
+          <ScalarProperty Name="passport_validity" ColumnName="passport_validity" />
+          <ScalarProperty Name="passport_number" ColumnName="passport_number" />
+          <ScalarProperty Name="pan_card" ColumnName="pan_card" />
+          <ScalarProperty Name="aadhar_card" ColumnName="aadhar_card" />
+          <ScalarProperty Name="temporary_address" ColumnName="temporary_address" />
+          <ScalarProperty Name="permanent_address" ColumnName="permanent_address" />
+          <ScalarProperty Name="email_id" ColumnName="email_id" />
+          <ScalarProperty Name="emergency_number" ColumnName="emergency_number" />
+          <ScalarProperty Name="alternate_number" ColumnName="alternate_number" />
+          <ScalarProperty Name="home_number" ColumnName="home_number" />
+          <ScalarProperty Name="mobile_number" ColumnName="mobile_number" />
+          <ScalarProperty Name="blood_group" ColumnName="blood_group" />
+          <ScalarProperty Name="marriage_anniversary" ColumnName="marriage_anniversary" />
+          <ScalarProperty Name="marital_status" ColumnName="marital_status" />
+          <ScalarProperty Name="date_of_joining" ColumnName="date_of_joining" />
+          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="middlename" ColumnName="middlename" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="DeptID" ColumnName="DeptID" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="roleID" ColumnName="roleID" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="employee_code" ColumnName="employee_code" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

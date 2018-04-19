@@ -10,9 +10,10 @@ namespace Hrinnova_FormsProject.Models
 {
     public class Model2
     {
-
+        
         public List<department> departments { get; set; }
         public List<role> designations { get; set; }
+        public IEnumerable<maritalstatus> maritalstatus { get; set; }
         public employee_details employeedetails { get; set; }
         public esic_details esicdetails { get; set; }
         public epfo_details epfodetails { get; set; }
@@ -40,9 +41,12 @@ namespace Hrinnova_FormsProject.Models
         public certifications certification4 { get; set; }
         public string id { get; set; }
         public feedback feedback { get; set;}
-        public List<designation> designation2 { get; set; }
+        
     }
-    public enum designation {
-        developer, businessanalyst, qualityanalyst
+    public class maritalstatus
+    {
+        public int id { get; set; }
+        public string status { get; set; }
+
     }
 }

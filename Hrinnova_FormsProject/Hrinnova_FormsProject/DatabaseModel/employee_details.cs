@@ -12,7 +12,6 @@ namespace Hrinnova_FormsProject.DatabaseModel
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.Globalization;
 
     public partial class employee_details
     {
@@ -28,25 +27,27 @@ namespace Hrinnova_FormsProject.DatabaseModel
             this.esic_details = new HashSet<esic_details>();
             this.family_details = new HashSet<family_details>();
             this.feedback = new HashSet<feedback>();
+            this.prev_employ_1 = new HashSet<prev_employ_1>();
             this.previous_company_details = new HashSet<previous_company_details>();
             this.references = new HashSet<references>();
-            this.prev_employ_1 = new HashSet<prev_employ_1>();
         }
     
         public int employee_id { get; set; }
         public string employee_code { get; set; }
         public string designation { get; set; }
+        public Nullable<int> roleID { get; set; }
         public string department { get; set; }
+        public Nullable<int> DeptID { get; set; }
         public string firstname { get; set; }
         public string middlename { get; set; }
         public string surname { get; set; }
         public string gender { get; set; }
-        [DisplayFormat(DataFormatString = "{0:dd/MMM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> date_of_birth { get; set; }
-        [DisplayFormat(DataFormatString = "{0:dd/MMM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public System.DateTime date_of_joining { get; set; }
         public string marital_status { get; set; }
-        [DisplayFormat(DataFormatString = "{0:dd/MMM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> marriage_anniversary { get; set; }
         public string blood_group { get; set; }
         public string mobile_number { get; set; }
@@ -59,7 +60,7 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public string aadhar_card { get; set; }
         public string pan_card { get; set; }
         public string passport_number { get; set; }
-        [DisplayFormat(DataFormatString = "{0:dd/MMM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> passport_validity { get; set; }
         public string election_card { get; set; }
         public string vehicle_number { get; set; }
@@ -72,8 +73,10 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public virtual ICollection<additional_information> additional_information { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<certifications> certifications { get; set; }
+        public virtual department department1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<educational_qualifications> educational_qualifications { get; set; }
+        public virtual role role { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<employee_refcheck> employee_refcheck { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -87,10 +90,10 @@ namespace Hrinnova_FormsProject.DatabaseModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<feedback> feedback { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<prev_employ_1> prev_employ_1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<previous_company_details> previous_company_details { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<references> references { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<prev_employ_1> prev_employ_1 { get; set; }
     }
 }

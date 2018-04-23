@@ -66,8 +66,10 @@
     </Key>
     <Property Name="employee_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="employee_code" Type="varchar" MaxLength="10" />
-    <Property Name="designation" Type="varchar" MaxLength="25" Nullable="false" />
-    <Property Name="department" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="designation" Type="varchar" MaxLength="25" />
+    <Property Name="roleID" Type="int" />
+    <Property Name="department" Type="varchar" MaxLength="25" />
+    <Property Name="DeptID" Type="int" />
     <Property Name="firstname" Type="varchar" MaxLength="25" Nullable="false" />
     <Property Name="middlename" Type="varchar" MaxLength="25" Nullable="false" />
     <Property Name="surname" Type="varchar" MaxLength="25" Nullable="false" />
@@ -303,6 +305,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_employee_details_department">
+    <End Role="department" Type="Self.department" Multiplicity="0..1" />
+    <End Role="employee_details" Type="Self.employee_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="DeptID" />
+      </Principal>
+      <Dependent Role="employee_details">
+        <PropertyRef Name="DeptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_employee_details_role">
+    <End Role="role" Type="Self.role" Multiplicity="0..1" />
+    <End Role="employee_details" Type="Self.employee_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="role">
+        <PropertyRef Name="roleID" />
+      </Principal>
+      <Dependent Role="employee_details">
+        <PropertyRef Name="roleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_employee_refcheck_employee_details">
     <End Role="employee_details" Type="Self.employee_details" Multiplicity="1" />
     <End Role="employee_refcheck" Type="Self.employee_refcheck" Multiplicity="*" />
@@ -411,6 +437,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_role_role">
+    <End Role="role" Type="Self.role" Multiplicity="1" />
+    <End Role="role1" Type="Self.role" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="role">
+        <PropertyRef Name="roleID" />
+      </Principal>
+      <Dependent Role="role1">
+        <PropertyRef Name="roleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="hrinnova_dbModelStoreContainer">
     <EntitySet Name="additional_information" EntityType="Self.additional_information" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="certifications" EntityType="Self.certifications" Schema="dbo" store:Type="Tables" />
@@ -438,6 +476,14 @@
     <AssociationSet Name="FK_educational_qualifications_employee_details" Association="Self.FK_educational_qualifications_employee_details">
       <End Role="employee_details" EntitySet="employee_details" />
       <End Role="educational_qualifications" EntitySet="educational_qualifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_employee_details_department" Association="Self.FK_employee_details_department">
+      <End Role="department" EntitySet="department" />
+      <End Role="employee_details" EntitySet="employee_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_employee_details_role" Association="Self.FK_employee_details_role">
+      <End Role="role" EntitySet="role" />
+      <End Role="employee_details" EntitySet="employee_details" />
     </AssociationSet>
     <AssociationSet Name="FK_employee_refcheck_employee_details" Association="Self.FK_employee_refcheck_employee_details">
       <End Role="employee_details" EntitySet="employee_details" />
@@ -474,6 +520,10 @@
     <AssociationSet Name="FK_references_employee_details" Association="Self.FK_references_employee_details">
       <End Role="employee_details" EntitySet="employee_details" />
       <End Role="references" EntitySet="references" />
+    </AssociationSet>
+    <AssociationSet Name="FK_role_role" Association="Self.FK_role_role">
+      <End Role="role" EntitySet="role" />
+      <End Role="role1" EntitySet="role" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

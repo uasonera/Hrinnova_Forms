@@ -28,7 +28,7 @@
 
                             </div>
                             <div class="col-sm-5">
-                                @Html.RadioButton("epfs", "Yes")  Yes &nbsp;&nbsp; @Html.RadioButton("epfs", "No") No
+                                @Html.RadioButtonFor(m=>m.epfodetails.member_of_epfoscheme, "yes")  Yes &nbsp;&nbsp; @Html.RadioButtonFor(m => m.epfodetails.member_of_epfoscheme, "no") No
                             </div>
                         </div>
                         <br>
@@ -38,7 +38,7 @@
 
                             </div>
                             <div class="col-sm-5">
-                                @Html.RadioButton("eps", "Yes")  Yes &nbsp;&nbsp; @Html.RadioButton("eps", "No") No
+                                @Html.RadioButtonFor(m => m.epfodetails.member_of_epsscheme, "yes")  Yes &nbsp;&nbsp; @Html.RadioButtonFor(m => m.epfodetails.member_of_epsscheme, "no") No
                             </div>
                         </div>
                         <br>
@@ -92,8 +92,10 @@
 
                             </div>
                             <div class="col-sm-8">
-                                @Html.EditorFor(model => model.epfodetails.international_worker, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.epfodetails.international_worker, "", new { @class = "text-danger" })
+                                @*@Html.EditorFor(model => model.epfodetails.international_worker, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.epfodetails.international_worker, "", new { @class = "text-danger" })*@
+                                @Html.RadioButtonFor(model => model.epfodetails.international_worker, "Yes")&nbsp;<label>Yes</label> &nbsp; &nbsp;
+                                @Html.RadioButtonFor(model => model.epfodetails.international_worker, "No")&nbsp;<label>No</label>
                             </div>
                         </div>
                         <br>

@@ -11,7 +11,8 @@ namespace Hrinnova_FormsProject.DatabaseModel
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class employee_refcheck
     {
         public int refcheck_id { get; set; }
@@ -28,6 +29,7 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public string attendence { get; set; }
         public string re_hire_status { get; set; }
         public string verified_by_name { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> verified_by_date { get; set; }
     
         public virtual employee_details employee_details { get; set; }

@@ -1,346 +1,323 @@
-﻿@model Hrinnova_FormsProject.Models.Model1
+﻿@model Hrinnova_FormsProject.Models.Model2
+<link href="~/CSS/select2.min.css" rel="stylesheet" />
+<script src="~/JsScript/Copyaddressjs.js"></script>
+<script src="~/JsScript/select2/dist/js/select2.full.min.js"></script>
+<script src="~/JsScript/select2/dist/js/select2.js"></script>
+@Html.AntiForgeryToken()
 <div class="container-fluid">
     <div class="middel-content">
         <div class="clearfix">
             <div class="panel panel-default">
                 <div class="panel-body">
+
                     <h1 align="center">Employee Details</h1>
                     <br>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="row">
 
-                                <div class="col-sm-3">
-                                    <label class="control-label">Company Name :</label>
-
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" value="Cygnet Infotech" disabled />
-                                </div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.employeedetails.employee_id)
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Employee Code :<span style="color:red" class="required">*</span></label>
                             </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Employee Code :</label>
-                                </div>
-                                <div class="col-sm-8">
-                                    @*@Html.TextBoxFor(m => m.firstname)*@
-                                    <input type="text" name="employeecode" class="form-control" />
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Designation :<span class="redText">*</span></label>
-                                </div>
-
-                                <div class="col-sm-8">
-                                    @*@Html.DropDownListFor(m=>m.MyProperty, new SelectList(Model.MyProperty.FirstOrDefault().name,  1))*@
-                                    @*<select name="designationdropdown" class="form-control">
-                                        <option value="developer">Developer</option>
-                                        <option value="businessanalyst">Business Analyst</option>
-                                        <option value="qualityanalyst">Quality Analyst</option>
-                                    </select>*@
-                                    
-                                    <div class="chosen-results">
-
-                                        @Html.DropDownList("Designations", (IEnumerable<SelectListItem>)ViewBag.PriorityID, new { @class = "form-control chosen-select dropdown", @name= "designationdropdown" })
-                                        
-                                    </div>
-                                </div>
-                            </div>
-
-                            <br>
-                            <div class="row">
-
-                                <div class="col-sm-3">
-                                    <label class="control-label">Department :<span class="redText">*</span></label>
-                                </div>
-                                <div class="col-sm-8 chosen-drop">
-                                    @*<select name="departmentdropdown" class="form-control">
-                                            <option value="microsoft">Microsoft</option>
-                                            <option value="java">Java</option>
-                                            <option value="accounts">Accounts</option>
-                                        </select>*@
-                                    @*@Html.DropDownList("depts",(IEnumerable<SelectListItem>ViewData["depts"]))*@
-                                    <div class="chosen-results">
-                                       
-                                        @Html.DropDownList("Departments", (IEnumerable<SelectListItem>)ViewBag.PriorityID, new { @class = "form-control chosen-select", @name = "departmentdropdown" })
-
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">First Name :<span class="redText">*</span></label>
-                                </div>
-                                <div class="col-sm-8">
-                                    @*@Html.TextBoxFor(m => m.firstname)*@
-                                    <input type="text" name="model.firstname" class="form-control" placeholder="First" pattern="^([a-zA-Z]+)$" />
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Middle Name :<span class="redText">*</span></label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="middlename" class="form-control" placeholder="Middle" pattern="^([a-zA-Z]+)$" />
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Surname :<span class="redText">*</span></label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="surname" class="form-control" placeholder="Last" pattern="^([a-zA-Z]+)$" />
-                                </div>
-                            </div>
-
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Gender :<span class="redText">*</span></label>
-                                </div>
-
-                                <div class="col-sm-8">
-                                    <input type="radio" name="gender" value="male" checked required> Male &nbsp; &nbsp;
-                                    <input type="radio" name="gender" value="female"> Female &nbsp; &nbsp;
-                                    <input type="radio" name="gender" value="other"> Other &nbsp; &nbsp;
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Date of Birth :</label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control datepicker" name="dateofbirth" onkeydown="return false"><br>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Date of Joining :<span class="redText">*</span></label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" required class="form-control datepicker" name="joiningdate" onkeydown="return false"><br>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-
-                                <div class="col-sm-3">
-                                    <label class="control-label">Marital Status :<span class="redText">*</span></label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <select name="maritalstatus" class="form-control">
-                                        <option value="married">Married</option>
-                                        <option value="unmarried">Unmarried</option>
-                                        <option value="widow">Widow</option>
-                                        <option value="widower">Widower</option>
-                                        <option value="divorcee">Divorcee</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Marriage <br> Anniversary :</label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control datepicker" name="marriageanniversary"><br>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Blood Group :</label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="bloodgroup" class="form-control" />
-                                </div>
-                            </div>
-
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Contact Number :<span class="redText">*</span></label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="mobilenumber" class="form-control" placeholder="Mobile" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" />
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Home Number :<span class="redText">*</span></label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="homenumber" class="form-control" placeholder="Home" required />
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Alternate Number :<span class="redText">*</span></label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="alternatenumber" class="form-control" placeholder="Alternate" required />
-                                </div>
-                            </div>
-                            <br>
-
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Emergency<br> Number :<span class="redText">*</span></label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="emergencynumber" class="form-control" placeholder="emergency" required />
-                                </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.employee_code, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.employee_code, "", new { @class = "text-danger" })
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Designation :<span style="color:red" class="required">*</span></label>
+                            </div>
+                            <div class="col-sm-8">
+                                @*@Html.DropDownList("Designations", (IEnumerable<SelectListItem>)ViewBag.PriorityID, new { @class = "form-control chosen-select" })*@
+                                @Html.ValidationMessageFor(model => model.employeedetails.designation, "", new { @class = "text-danger" })
+                                @Html.DropDownListFor(m => m.employeedetails.roleID, Model.designations.Select(d => new SelectListItem() { Value = d.roleID.ToString(), Text = d.name.ToString() }),"", new { @class = "form-control select2"})
+                            </div>
+                        </div>
 
-
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Email Id :</label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="email" name="emailid" class="form-control" required />
-                                </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Department :<span style="color:red" class="required">*</span></label>
+                            </div>
+                            <div class="col-sm-8">
+                                @*@Html.DropDownList("Departments", (IEnumerable<SelectListItem>)ViewBag.PriorityID, new { @class = "form-control chosen-select" })*@
+                                @Html.ValidationMessageFor(model => model.employeedetails.department, "", new { @class = "text-danger" })
+                                @Html.DropDownListFor(m => m.employeedetails.DeptID, Model.departments.Select(d => new SelectListItem() { Value = d.DeptID.ToString(), Text = d.DeptName.ToString() }),"", new { @class = "form-control select2" })                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">First Name :<span style="color:red" class="required">*</span></label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.firstname, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.firstname, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Middle Name :<span style="color:red" class="required">*</span></label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.middlename, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.middlename, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Surname :<span style="color:red" class="required">*</span></label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.surname, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.surname, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Gender :</label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.RadioButtonFor(m => m.employeedetails.gender, "male") <label class="control-label">Male</label>
+                                @Html.RadioButtonFor(m => m.employeedetails.gender, "female") <label class="control-label">Female</label>
+                                @Html.RadioButtonFor(m => m.employeedetails.gender, "other") <label class="control-label">Other</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Date of Birth :</label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.date_of_birth, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.date_of_birth, "", new { @class = "text-danger" })
                             </div>
 
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Temporary<br> Address :<span class="redText">*</span></label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <textarea name="tempaddress" id="tempaddress" style="width:100%" required class="col-sm-6 form-control" rows="5"></textarea>
-                                </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Date of Joining :<span style="color:red" class="required">*</span></label>
                             </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.date_of_joining, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.date_of_joining, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Marital Status :<span style="color:red" class="required">*</span></label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.ValidationMessageFor(model => model.employeedetails.marital_status, "", new { @class = "text-danger" })
+                                @Html.DropDownListFor(m => m.employeedetails.marital_status, Model.maritalstatus.Select(d => new SelectListItem() { Value = d.id.ToString(), Text = d.status.ToString() }), new { @class = "form-control chosen-select" })
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
 
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <input type="checkbox" onchange="copyaddress()" id="copyaddresscheck" />Permanent address is same as temporary address
-                                </div>
-                            </div>
-                            <br />
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Permanent <br> Address :<span class="redText">*</span></label>
-                                </div>
+                                <label class="control-label">Marriage <br> Anniversary :</label>
 
-                                <div class="col-sm-8">
-                                    <textarea name="permaddress" id="permaddress" style="width:100%" required class="col-sm-6 form-control" rows="5"></textarea>
-                                </div>
                             </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Aadhar Card :<span class="redText">*</span></label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="aadharcard" class="form-control" placeholder="XXXX-XXXX-XXXX" pattern="^\(?([0-9]{4})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$" />
-                                </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.marriage_anniversary, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.marriage_anniversary, "", new { @class = "text-danger" })
                             </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">PAN Card :</label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="pancard" class="form-control" maxlength="10" />
-                                </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Blood Group :</label>
                             </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Passport Number :</label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="passportnumber" class="form-control" />
-                                </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.blood_group, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.blood_group, "", new { @class = "text-danger" })
                             </div>
-                            <br>
-                            <div class="row">
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Contact Number :<span style="color:red" class="required">*</span></label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.mobile_number, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.mobile_number, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Home Number :<span style="color:red" class="required">*</span></label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.home_number, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.home_number, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Alternate Number :<span style="color:red" class="required">*</span></label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.alternate_number, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.alternate_number, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Emergency <br /> Number :<span style="color:red" class="required">*</span></label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.emergency_number, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.emergency_number, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Email Id :<span style="color:red" class="required">*</span></label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.email_id, new { htmlAttributes = new { @class = "form-control", Type = "email" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.email_id, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Temporary<br> Address :<span style="color:red" class="required">*</span></label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.TextAreaFor(model => model.employeedetails.temporary_address, new { @style = "width:100%", @rows = 5, @id = "tempaddress", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.employeedetails.temporary_address, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <input type="checkbox" onchange="copyaddress()" id="copyaddresscheck" />Permanent address is same as temporary address
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Permanent <br>Address:<span style="color:red" class="required">*</span></label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.TextAreaFor(model => model.employeedetails.permanent_address, new { @style = "width:100%", @rows = 5, @id = "permaddress", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.employeedetails.permanent_address, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Aadhar Card :<span style="color:red" class="required">*</span></label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.aadhar_card, new { htmlAttributes = new { @class = "form-control", pattern = @"^\(?([0-9]{4})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.aadhar_card, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">PAN Card :</label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.pan_card, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.pan_card, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Passport Number :</label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.passport_number, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.passport_number, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Validity of Passport :</label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.passport_validity, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.passport_validity, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Election Card :<span style="color:red" class="required">*</span></label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.election_card, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.election_card, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Vehicle Number :<span style="color:red" class="required">*</span></label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.vehicle_number, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.vehicle_number, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Single Bank Account :</label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.single_bank_account, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.single_bank_account, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">IFS Code :</label>
+                            </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.ifs_code, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.ifs_code, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br>
 
-                                <div class="col-sm-3">
-                                    <label class="control-label">Validity of Passport :</label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="passportvalidity" class="form-control datepicker" onkeydown="return false"/>
-                                </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Allergies:</label>
                             </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Election Card :<span class="redText">*</span></label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="electioncard" class="form-control" />
-                                </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.allergies, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.allergies, "", new { @class = "text-danger" })
                             </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Vehicle Number :<span class="redText">*</span></label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="vehiclenumber" class="form-control" />
-                                </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label">Known Ailments:</label>
                             </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Single Bank <br> Account :</label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="singlebankaccount" class="form-control" />
-                                </div>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.employeedetails.known_ailments, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.employeedetails.known_ailments, "", new { @class = "text-danger" })
                             </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">IFS Code :</label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="ifsc" class="form-control" />
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3 ">
-                                    <label class="control-label" align="center">Medical(if any) :</label>
-                                </div>
-                            </div>
-                            <div class="row">
-
-                                <br>
-                                <div class="col-sm-3">
-                                    <label class="control-label">Allergies:</label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="allergies" class="form-control" />
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="control-label">Known Ailments:</label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" name="knownailments" class="form-control" />
-                                </div>
-                            </div>
-                            <br>
                         </div>
                     </div>
                 </div>
@@ -348,4 +325,10 @@
         </div>
     </div>
 </div>
-<script src="~/JsScript/Copyaddressjs.js"></script>
+
+<script>
+  $(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2()
+  })
+</script>

@@ -49,8 +49,8 @@
                                         @Html.ValidationMessageFor(model => model.fatherdetails.foccupation, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.fatherdetails.freside, new { htmlAttributes = new { @class = "form-control" } })
-                                        @Html.ValidationMessageFor(model => model.fatherdetails.freside, "", new { @class = "text-danger" })
+                                        @Html.RadioButtonFor(model => model.fatherdetails.freside, "Yes") &nbsp; <label class="control-label">Yes</label>&nbsp;&nbsp;
+                                        @Html.RadioButtonFor(model => model.fatherdetails.freside, "No") &nbsp; <label class="control-label">No</label>
                                     </td>
                                     <td>
                                         @Html.EditorFor(model => model.fatherdetails.ftown, new { htmlAttributes = new { @class = "form-control" } })
@@ -84,8 +84,8 @@
                                         @Html.ValidationMessageFor(model => model.motherdetails.foccupation, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.motherdetails.freside, new { htmlAttributes = new { @class = "form-control" } })
-                                        @Html.ValidationMessageFor(model => model.motherdetails.freside, "", new { @class = "text-danger" })
+                                        @Html.RadioButtonFor(model => model.motherdetails.freside, "Yes") &nbsp; <label class="control-label">Yes</label>&nbsp;&nbsp;
+                                        @Html.RadioButtonFor(model => model.motherdetails.freside, "No") &nbsp; <label class="control-label">No</label>
                                     </td>
                                     <td>
                                         @Html.EditorFor(model => model.motherdetails.ftown, new { htmlAttributes = new { @class = "form-control" } })
@@ -121,8 +121,8 @@
                                         @Html.ValidationMessageFor(model => model.brotherdetails.foccupation, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.brotherdetails.freside, new { htmlAttributes = new { @class = "form-control" } })
-                                        @Html.ValidationMessageFor(model => model.brotherdetails.freside, "", new { @class = "text-danger" })
+                                        @Html.RadioButtonFor(model => model.brotherdetails.freside, "Yes") &nbsp; <label class="control-label">Yes</label>&nbsp;&nbsp;
+                                        @Html.RadioButtonFor(model => model.brotherdetails.freside, "No") &nbsp; <label class="control-label">No</label>
                                     </td>
                                     <td>
                                         @Html.EditorFor(model => model.brotherdetails.ftown, new { htmlAttributes = new { @class = "form-control" } })
@@ -157,8 +157,8 @@
                                         @Html.ValidationMessageFor(model => model.sisterdetails.foccupation, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.sisterdetails.freside, new { htmlAttributes = new { @class = "form-control" } })
-                                        @Html.ValidationMessageFor(model => model.sisterdetails.freside, "", new { @class = "text-danger" })
+                                        @Html.RadioButtonFor(model => model.sisterdetails.freside, "Yes") &nbsp; <label class="control-label">Yes</label>&nbsp;&nbsp;
+                                        @Html.RadioButtonFor(model => model.sisterdetails.freside, "No") &nbsp; <label class="control-label">No</label>
                                     </td>
                                     <td>
                                         @Html.EditorFor(model => model.sisterdetails.ftown, new { htmlAttributes = new { @class = "form-control" } })
@@ -193,8 +193,8 @@
                                         @Html.ValidationMessageFor(model => model.spousedetails.foccupation, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.spousedetails.freside, new { htmlAttributes = new { @class = "form-control" } })
-                                        @Html.ValidationMessageFor(model => model.spousedetails.freside, "", new { @class = "text-danger" })
+                                        @Html.RadioButtonFor(model => model.spousedetails.freside, "Yes") &nbsp; <label class="control-label">Yes</label>&nbsp;&nbsp;
+                                        @Html.RadioButtonFor(model => model.spousedetails.freside, "No") &nbsp; <label class="control-label">No</label>
                                     </td>
                                     <td>
                                         @Html.EditorFor(model => model.spousedetails.ftown, new { htmlAttributes = new { @class = "form-control" } })
@@ -229,8 +229,8 @@
                                         @Html.ValidationMessageFor(model => model.childrendetails.foccupation, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.childrendetails.freside, new { htmlAttributes = new { @class = "form-control" } })
-                                        @Html.ValidationMessageFor(model => model.childrendetails.freside, "", new { @class = "text-danger" })
+                                        @Html.RadioButtonFor(model => model.childrendetails.freside, "Yes") &nbsp; <label class="control-label">Yes</label>&nbsp;&nbsp;
+                                        @Html.RadioButtonFor(model => model.childrendetails.freside, "No") &nbsp; <label class="control-label">No</label>
                                     </td>
                                     <td>
                                         @Html.EditorFor(model => model.childrendetails.ftown, new { htmlAttributes = new { @class = "form-control" } })
@@ -730,7 +730,7 @@
                                         @Html.ValidationMessageFor(model => model.prevemploy3.rm_contact, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.prevemploy3.ctc, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.prevemploy3.ctc, new { htmlAttributes = new { @class = "form-control " } })
                                         @Html.ValidationMessageFor(model => model.prevemploy3.ctc, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -973,6 +973,3 @@
         </div>
     </div>
 </div>
-
-
-

@@ -52,10 +52,28 @@
                                 </td>
 
                                 <td>
-                                    @Html.ActionLink("Edit", "Edit", new { id = item.employee_id }) |
-                                    @Html.ActionLink("Delete", "Delete", new { id = item.employee_id }) |
-                                    @Html.ActionLink("ESIC", "Esicform","FormPopulate", new { id = item.employee_id }, null) |
-                                    @Html.ActionLink("PF", "Epfoform", "FormPopulate", new { id = item.employee_id },null)
+                                    @*@Html.ActionLink("Edit", "Edit", new { id = item.employee_id }) |
+    @Html.ActionLink("Delete", "Delete", new { id = item.employee_id }) |
+    @Html.ActionLink("ESIC", "Esicform","FormPopulate", new { id = item.employee_id }, null) |
+        @Html.ActionLink("PF", "Epfoform", "FormPopulate", new { id = item.employee_id },null)*@
+                                    @Html.DropDownList(
+    "url",
+    new SelectList(new[]
+    {
+        new SelectListItem { Text = "Edit User Details", Value = Url.Action("Edit", "Edit", new {id=item.employee_id }) },
+        new SelectListItem { Text = "Employee Details Form", Value = Url.Action("EmployeeDetails", "FormPopulate", new {id=item.employee_id }) },
+        new SelectListItem { Text = "Employee Reference Check", Value = Url.Action("EmployeeReferenceCheck", "FormPopulate", new {id=item.employee_id }) },
+        new SelectListItem { Text = "Employment Form", Value = Url.Action("EmploymentForm", "FormPopulate", new {id=item.employee_id }) },
+        new SelectListItem { Text = "EPFO Form", Value = Url.Action("Epfoform", "FormPopulate", new {id=item.employee_id }) },
+        new SelectListItem { Text = "Esicform", Value = Url.Action("Esicform", "FormPopulate", new {id=item.employee_id }) },
+        new SelectListItem { Text = "PF Transfer Form", Value = Url.Action("PFTransferForm", "FormPopulate", new {id=item.employee_id }) },
+        new SelectListItem { Text = "SUMS Employee Verification", Value = Url.Action("SUMSEmployeeVerification", "FormPopulate", new {id=item.employee_id }) },
+        new SelectListItem { Text = "Feedback", Value = Url.Action("FeedbackForm", "FormPopulate", new {id=item.employee_id }) },
+        
+    }, "Value", "Text"),
+    "---Action---",
+    new { @class="form-control urlddl" }
+)
                                 </td>
                             </tr>
                         }
@@ -68,7 +86,18 @@
 </div>
 
 <script>
-$(document).ready( function () {
-    $('#myTable').DataTable();
-} );
+    $(document).ready(function () {
+        $('#myTable').DataTable();
+    });
+</script>
+<script>
+    $(function ddslect() {
+        $('.urlddl').change(function () {
+            var url = $(this).val();
+            if (url != null && url != '') {
+                window.location.href = url;
+            };
+            $(this).text("---Action---");
+        });
+    });
 </script>

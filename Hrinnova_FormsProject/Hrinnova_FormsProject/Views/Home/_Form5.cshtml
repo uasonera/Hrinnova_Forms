@@ -1,8 +1,14 @@
-﻿<div class="container-fluid">
+﻿@model Hrinnova_FormsProject.Models.Model2
+
+
+@Html.AntiForgeryToken()
+<div class="container-fluid">
     <div class="middel-content">
         <div class="clearfix">
             <div class="panel panel-default">
                 <div class="panel-body">
+
+
                     <h1 align="center">Employee's Provident Fund Information</h1>
                     <br>
                     <div class="row">
@@ -11,7 +17,8 @@
 
                         </div>
                         <div class="col-sm-8">
-                            <input type="text" name="presentcomppfno" class="form-control" />
+                            @Html.EditorFor(model => model.epfodetails.presentcompany_pfnumber, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.epfodetails.presentcompany_pfnumber, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <br>
@@ -21,9 +28,7 @@
 
                         </div>
                         <div class="col-sm-5">
-                            <input type="radio" name="epfs" value="yes" /> Yes
-                            &nbsp; &nbsp;
-                            <input type="radio" name="epfs" value="no" /> No
+                            @Html.RadioButtonFor(m => m.epfodetails.member_of_epfoscheme, "yes")  Yes &nbsp;&nbsp; @Html.RadioButtonFor(m => m.epfodetails.member_of_epfoscheme, "no") No
                         </div>
                     </div>
                     <br>
@@ -33,9 +38,7 @@
 
                         </div>
                         <div class="col-sm-5">
-                            <input type="radio" name="eps" value="yes" /> Yes
-                            &nbsp; &nbsp;
-                            <input type="radio" name="eps" value="no" /> No
+                            @Html.RadioButtonFor(m => m.epfodetails.member_of_epsscheme, "yes")  Yes &nbsp;&nbsp; @Html.RadioButtonFor(m => m.epfodetails.member_of_epsscheme, "no") No
                         </div>
                     </div>
                     <br>
@@ -45,7 +48,8 @@
 
                         </div>
                         <div class="col-sm-8">
-                            <input type="text" name="universalaccnumber" class="form-control" />
+                            @Html.EditorFor(model => model.epfodetails.universal_account_number, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.epfodetails.universal_account_number, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <br>
@@ -55,7 +59,8 @@
 
                         </div>
                         <div class="col-sm-8">
-                            <input type="text" name="prevpfaccountnumber" class="form-control" />
+                            @Html.EditorFor(model => model.epfodetails.prev_pf_acc_number, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.epfodetails.prev_pf_acc_number, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <br>
@@ -65,7 +70,8 @@
 
                         </div>
                         <div class="col-sm-8">
-                            <input type="text" name="schemecertificatenumber" class="form-control" />
+                            @Html.EditorFor(model => model.epfodetails.scheme_certificate_number, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.epfodetails.scheme_certificate_number, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <br>
@@ -75,7 +81,8 @@
 
                         </div>
                         <div class="col-sm-8">
-                            <input type="text" name="pponumber" class="form-control" />
+                            @Html.EditorFor(model => model.epfodetails.ppo_number, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.epfodetails.ppo_number, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <br>
@@ -85,8 +92,10 @@
 
                         </div>
                         <div class="col-sm-8">
-                            <input type="radio" name="intworker" value="yes" /> Yes
-                            <input type="radio" name="intworker" value="no" /> No
+                            @*@Html.EditorFor(model => model.epfodetails.international_worker, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.epfodetails.international_worker, "", new { @class = "text-danger" })*@
+                            @Html.RadioButtonFor(model => model.epfodetails.international_worker, "Yes")&nbsp;<label>Yes</label> &nbsp; &nbsp; 
+                            @Html.RadioButtonFor(model => model.epfodetails.international_worker, "No")&nbsp;<label>No</label>
                         </div>
                     </div>
                     <br>
@@ -95,14 +104,15 @@
                             <label class="control-label">If yes, State country of origin (India/Name of other country) :</label>
                         </div>
                         <div class="col-sm-8">
-                            <input type="text" name="countryoforigin" class="form-control" />
+                            @Html.EditorFor(model => model.epfodetails.country_of_origin, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.epfodetails.country_of_origin, "", new { @class = "text-danger" })
                         </div>
                     </div>
-                    <br>
-                    @*<input type="submit" onclick="location.href='@Url.Action("test", "Home")'" class="btn btn-success" align="center" value="Save and Continue" />
-                        <input type="submit" class="btn btn-success" align="center" formaction="_Form1" value="Previous Page" />*@
-                    @*<input type="submit" class="btn btn-success" align="center" formaction="projectform2.html" value="Save and Continue" />*@
                 </div>
+                <br>
+                @*<input type="submit" onclick="location.href='@Url.Action("test", "Home")'" class="btn btn-success" align="center" value="Save and Continue" />
+                    <input type="submit" class="btn btn-success" align="center" formaction="_Form1" value="Previous Page" />*@
+                @*<input type="submit" class="btn btn-success" align="center" formaction="projectform2.html" value="Save and Continue" />*@
             </div>
         </div>
     </div>

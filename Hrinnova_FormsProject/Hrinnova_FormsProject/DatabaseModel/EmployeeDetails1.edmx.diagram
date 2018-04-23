@@ -8,7 +8,6 @@
         <EntityTypeShape EntityType="hrinnova_dbModel.additional_information" Width="1.5" PointX="3" PointY="30.125" />
         <EntityTypeShape EntityType="hrinnova_dbModel.certifications" Width="1.5" PointX="3" PointY="4" />
         <EntityTypeShape EntityType="hrinnova_dbModel.educational_qualifications" Width="1.5" PointX="3" PointY="61" />
-        <EntityTypeShape EntityType="hrinnova_dbModel.employee_details" Width="1.5" PointX="0.75" PointY="30.25" />
         <EntityTypeShape EntityType="hrinnova_dbModel.employee_refcheck" Width="1.5" PointX="3" PointY="22" />
         <EntityTypeShape EntityType="hrinnova_dbModel.epfo_details" Width="1.5" PointX="3" PointY="50.75" />
         <EntityTypeShape EntityType="hrinnova_dbModel.esic_details" Width="1.5" PointX="3" PointY="17.75" />
@@ -17,21 +16,24 @@
         <EntityTypeShape EntityType="hrinnova_dbModel.other_details" Width="1.5" PointX="3" PointY="10" />
         <EntityTypeShape EntityType="hrinnova_dbModel.previous_company_details" Width="1.5" PointX="3" PointY="33.125" />
         <EntityTypeShape EntityType="hrinnova_dbModel.references" Width="1.5" PointX="3" PointY="14.625" />
+        <EntityTypeShape EntityType="hrinnova_dbModel.department" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="hrinnova_dbModel.role" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="hrinnova_dbModel.prev_employ_1" Width="1.5" PointX="3" PointY="37.625" />
+        <EntityTypeShape EntityType="hrinnova_dbModel.employee_details" Width="1.5" PointX="7.625" PointY="0.75" />
         <AssociationConnector Association="hrinnova_dbModel.FK_additional_information_employee_details" />
         <AssociationConnector Association="hrinnova_dbModel.FK_certifications_employee_details" />
+        <AssociationConnector Association="hrinnova_dbModel.FK_employee_details_department" />
         <AssociationConnector Association="hrinnova_dbModel.FK_educational_qualifications_employee_details" />
+        <AssociationConnector Association="hrinnova_dbModel.FK_employee_details_role" />
         <AssociationConnector Association="hrinnova_dbModel.FK_employee_refcheck_employee_details" />
         <AssociationConnector Association="hrinnova_dbModel.FK_employee_references_employee_details" />
         <AssociationConnector Association="hrinnova_dbModel.FK_epfo_details_employee_details" />
         <AssociationConnector Association="hrinnova_dbModel.FK_esic_details_employee_details" />
         <AssociationConnector Association="hrinnova_dbModel.FK_family_details_employee_details" />
         <AssociationConnector Association="hrinnova_dbModel.FK_feedback_employee_details" />
+        <AssociationConnector Association="hrinnova_dbModel.FK_prev_employ_1_employee_details" />
         <AssociationConnector Association="hrinnova_dbModel.FK_previous_company_details_employee_details" />
         <AssociationConnector Association="hrinnova_dbModel.FK_references_employee_details" />
-        <EntityTypeShape EntityType="hrinnova_dbModel.department" Width="1.5" PointX="5.375" PointY="0.75" />
-        <EntityTypeShape EntityType="hrinnova_dbModel.role" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="hrinnova_dbModel.prev_employ_1" Width="1.5" PointX="3" PointY="37.625" />
-        <AssociationConnector Association="hrinnova_dbModel.FK_prev_employ_1_employee_details" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

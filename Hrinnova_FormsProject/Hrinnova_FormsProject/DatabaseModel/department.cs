@@ -14,6 +14,12 @@ namespace Hrinnova_FormsProject.DatabaseModel
     
     public partial class department
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public department()
+        {
+            this.employee_details = new HashSet<employee_details>();
+        }
+    
         public int DeptID { get; set; }
         public string DeptName { get; set; }
         public string Description { get; set; }
@@ -23,5 +29,8 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public Nullable<int> ProbationPeriod { get; set; }
         public string LookedByEmp { get; set; }
         public Nullable<int> NoticePeriod { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<employee_details> employee_details { get; set; }
     }
 }

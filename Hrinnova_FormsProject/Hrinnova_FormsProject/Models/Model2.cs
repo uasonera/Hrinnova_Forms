@@ -12,62 +12,72 @@ namespace Hrinnova_FormsProject.Models
     {
         public Model2()
         {
-            fatherdetails = new family_details(){ member = "Father"};
-            motherdetails = new family_details() { member="Mother"};
-            brotherdetails = new family_details() { member = "Brother" };
-            sisterdetails= new family_details() { member = "Sister" };
-            spousedetails = new family_details() { member = "Spouse" };
-            childrendetails = new family_details() { member = "Children" };
-            certification1 = new certifications() { cert_type="1"};
-            certification2 = new certifications() { cert_type = "2" };
-            certification3 = new certifications() { cert_type = "3" };
-            certification4 = new certifications() { cert_type = "4" };
-            prevemploy1 = new prev_employ_1() { employment_ref="1" };
-            prevemploy2 = new prev_employ_1() { employment_ref = "2" };
-            prevemploy3 = new prev_employ_1() { employment_ref = "3" };
-            prevemploy4 = new prev_employ_1() { employment_ref = "4" };
-            prevemploy5 = new prev_employ_1() { employment_ref = "5" };
-            reference1 = new references() {ref_type="1" };
-            reference2 = new references() { ref_type = "2" };
-
+            Fatherdetails = new family_details(){ member = "Father"};
+            Motherdetails = new family_details() { member="Mother"};
+            Brotherdetails = new family_details() { member = "Brother" };
+            Sisterdetails= new family_details() { member = "Sister" };
+            Spousedetails = new family_details() { member = "Spouse" };
+            Childrendetails = new family_details() { member = "Children" };
+            Certification1 = new certifications() { cert_type="1"};
+            Certification2 = new certifications() { cert_type = "2" };
+            Certification3 = new certifications() { cert_type = "3" };
+            Certification4 = new certifications() { cert_type = "4" };
+            Prevemploy1 = new prev_employ_1() { employment_ref="1" };
+            Prevemploy2 = new prev_employ_1() { employment_ref = "2" };
+            Prevemploy3 = new prev_employ_1() { employment_ref = "3" };
+            Prevemploy4 = new prev_employ_1() { employment_ref = "4" };
+            Prevemploy5 = new prev_employ_1() { employment_ref = "5" };
+            Reference1 = new references() {ref_type="1" };
+            Reference2 = new references() { ref_type = "2" };
+            Feedback = new feedback();
+            Employeedetails=  new employee_details();
         }
         
-        public List<department> departments { get; set; }
-        public List<role> designations { get; set; }
-        public IEnumerable<maritalstatus> maritalstatus { get; set; }
-        public employee_details employeedetails { get; set; }
-        public esic_details esicdetails { get; set; }
-        public epfo_details epfodetails { get; set; }
-        public family_details motherdetails { get; set; }
-        public family_details fatherdetails { get; set; }
-        public family_details brotherdetails { get; set; }
-        public family_details sisterdetails { get; set; }
-        public family_details spousedetails { get; set; }
-        public family_details childrendetails { get; set; }
-        public other_details otherdetails { get; set; }
-        public previous_company_details previouscompanydetails { get; set; }
-        public prev_employ_1 prevemploy1 { get; set; }
-        public prev_employ_1 prevemploy2 { get; set; }
-        public prev_employ_1 prevemploy3 { get; set; }
-        public prev_employ_1 prevemploy4 { get; set; }
-        public prev_employ_1 prevemploy5 { get; set; }
-        public educational_qualifications educationalqualifications { get; set; }
-        public references reference1 { get; set; }
-        public references reference2 { get; set; }
-        public additional_information additionalinformation { get; set; }
-        public employee_refcheck employeerefcheck { get; set; }
-        public certifications certification1 { get; set; }
-        public certifications certification2 { get; set; }
-        public certifications certification3 { get; set; }
-        public certifications certification4 { get; set; }
-        public string id { get; set; }
-        public feedback feedback { get; set;}
+        public List<department> Departments { get; set; }
+        public List<role> Designations { get; set; }
+        public IEnumerable<Maritalstatus> Maritalstatus { get; set; }
+        public IEnumerable<Bloodgroups> Bloodgroups { get; set; }
+        public employee_details Employeedetails { get; set; }
+        public esic_details Esicdetails { get; set; }
+        public epfo_details Epfodetails { get; set; }
+        public family_details Motherdetails { get; set; }
+        public family_details Fatherdetails { get; set; }
+        public family_details Brotherdetails { get; set; }
+        public family_details Sisterdetails { get; set; }
+        public family_details Spousedetails { get; set; }
+        public family_details Childrendetails { get; set; }
+        public other_details Otherdetails { get; set; }
+        public previous_company_details Previouscompanydetails { get; set; }
+        public prev_employ_1 Prevemploy1 { get; set; }
+        public prev_employ_1 Prevemploy2 { get; set; }
+        public prev_employ_1 Prevemploy3 { get; set; }
+        public prev_employ_1 Prevemploy4 { get; set; }
+        public prev_employ_1 Prevemploy5 { get; set; }
+        public educational_qualifications Educationalqualifications { get; set; }
+        public references Reference1 { get; set; }
+        public references Reference2 { get; set; }
+        public additional_information Additionalinformation { get; set; }
+        public employee_refcheck Employeerefcheck { get; set; }
+        public certifications Certification1 { get; set; }
+        public certifications Certification2 { get; set; }
+        public certifications Certification3 { get; set; }
+        public certifications Certification4 { get; set; }
+        public string Id { get; set; }
+        public feedback Feedback { get; set;}
         
     }
-    public class maritalstatus
+    public class Maritalstatus
     {
-        public int id { get; set; }
-        public string status { get; set; }
+        public int Id { get; set; }
+        public string Status { get; set; }
 
     }
+
+    public class Bloodgroups
+    {
+        public int Id { get; set; }
+        public string Bloodgroup { get; set; }
+    }
+
+    
 }

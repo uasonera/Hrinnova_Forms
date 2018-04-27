@@ -8,6 +8,6 @@ namespace Hrinnova_FormsProject.Models
 {
     public class EditIndexModel
     {
-        public IEnumerable<employee_details> employeedetails { get; set; }
+        public IEnumerable<employee_details> Employeedetails { get; set; }
     }
 }

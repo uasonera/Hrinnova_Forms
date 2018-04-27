@@ -17,6 +17,7 @@ namespace Hrinnova_FormsProject.DatabaseModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public role()
         {
+            this.additional_information = new HashSet<additional_information>();
             this.employee_details = new HashSet<employee_details>();
         }
     
@@ -27,6 +28,10 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public string Abbreviation { get; set; }
         public Nullable<decimal> PerDeskCost { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<additional_information> additional_information { get; set; }
+        public virtual role role1 { get; set; }
+        public virtual role role2 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<employee_details> employee_details { get; set; }
     }

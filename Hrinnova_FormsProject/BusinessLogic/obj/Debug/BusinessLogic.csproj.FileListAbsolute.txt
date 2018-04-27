@@ -1,0 +1,5 @@
+D:\Hrinnova_FormsProject\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\Hrinnova_FormsProject\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\Hrinnova_FormsProject\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+D:\Hrinnova_FormsProject\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\Hrinnova_FormsProject\BusinessLogic\obj\Debug\BusinessLogic.pdb

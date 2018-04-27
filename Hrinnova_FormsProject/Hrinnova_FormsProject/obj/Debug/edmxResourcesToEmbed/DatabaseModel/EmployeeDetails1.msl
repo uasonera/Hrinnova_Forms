@@ -1,17 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="hrinnova_dbModelStoreContainer" CdmEntityContainer="hrinnova_dbEntities">
-    <EntitySetMapping Name="additional_information">
-      <EntityTypeMapping TypeName="hrinnova_dbModel.additional_information">
-        <MappingFragment StoreEntitySet="additional_information">
-          <ScalarProperty Name="relationship_with_knownemployee" ColumnName="relationship_with_knownemployee" />
-          <ScalarProperty Name="name_of_knownemployee" ColumnName="name_of_knownemployee" />
-          <ScalarProperty Name="known_to_presentemployee" ColumnName="known_to_presentemployee" />
-          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
-          <ScalarProperty Name="additionalinformation_id" ColumnName="additionalinformation_id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="certifications">
       <EntityTypeMapping TypeName="hrinnova_dbModel.certifications">
         <MappingFragment StoreEntitySet="certifications">
@@ -244,6 +233,21 @@
           <ScalarProperty Name="employment_ref" ColumnName="employment_ref" />
           <ScalarProperty Name="employee_id" ColumnName="employee_id" />
           <ScalarProperty Name="prevemploy_id" ColumnName="prevemploy_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="additional_information">
+      <EntityTypeMapping TypeName="hrinnova_dbModel.additional_information">
+        <MappingFragment StoreEntitySet="additional_information">
+          <ScalarProperty Name="DeptID" ColumnName="DeptID" />
+          <ScalarProperty Name="roleID" ColumnName="roleID" />
+          <ScalarProperty Name="periodworked_to" ColumnName="periodworked_to" />
+          <ScalarProperty Name="periodworked_from" ColumnName="periodworked_from" />
+          <ScalarProperty Name="relationship_with_knownemployee" ColumnName="relationship_with_knownemployee" />
+          <ScalarProperty Name="name_of_knownemployee" ColumnName="name_of_knownemployee" />
+          <ScalarProperty Name="known_to_presentemployee" ColumnName="known_to_presentemployee" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="additionalinformation_id" ColumnName="additionalinformation_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

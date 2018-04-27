@@ -9,6 +9,10 @@
     <Property Name="known_to_presentemployee" Type="varchar" MaxLength="50" />
     <Property Name="name_of_knownemployee" Type="varchar" MaxLength="50" />
     <Property Name="relationship_with_knownemployee" Type="varchar" MaxLength="50" />
+    <Property Name="periodworked_from" Type="date" />
+    <Property Name="periodworked_to" Type="date" />
+    <Property Name="roleID" Type="int" />
+    <Property Name="DeptID" Type="int" />
   </EntityType>
   <EntityType Name="certifications">
     <Key>
@@ -68,24 +72,24 @@
     <Property Name="employee_code" Type="varchar" MaxLength="10" />
     <Property Name="designation" Type="varchar" MaxLength="25" />
     <Property Name="roleID" Type="int" />
-    <Property Name="department" Type="varchar" MaxLength="25" />
+    <Property Name="department" Type="varchar" MaxLength="50" />
     <Property Name="DeptID" Type="int" />
-    <Property Name="firstname" Type="varchar" MaxLength="25" Nullable="false" />
-    <Property Name="middlename" Type="varchar" MaxLength="25" Nullable="false" />
-    <Property Name="surname" Type="varchar" MaxLength="25" Nullable="false" />
-    <Property Name="gender" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="25" />
+    <Property Name="middlename" Type="varchar" MaxLength="25" />
+    <Property Name="surname" Type="varchar" MaxLength="25" />
+    <Property Name="gender" Type="varchar" MaxLength="10" />
     <Property Name="date_of_birth" Type="date" />
-    <Property Name="date_of_joining" Type="date" Nullable="false" />
-    <Property Name="marital_status" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="date_of_joining" Type="date" />
+    <Property Name="marital_status" Type="int" />
     <Property Name="marriage_anniversary" Type="date" />
     <Property Name="blood_group" Type="varchar" MaxLength="10" />
-    <Property Name="mobile_number" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="home_number" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="alternate_number" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="emergency_number" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="mobile_number" Type="varchar" MaxLength="10" />
+    <Property Name="home_number" Type="varchar" MaxLength="10" />
+    <Property Name="alternate_number" Type="varchar" MaxLength="10" />
+    <Property Name="emergency_number" Type="varchar" MaxLength="10" />
     <Property Name="email_id" Type="varchar" MaxLength="50" />
-    <Property Name="permanent_address" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="temporary_address" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="permanent_address" Type="varchar" MaxLength="200" />
+    <Property Name="temporary_address" Type="varchar" MaxLength="200" />
     <Property Name="aadhar_card" Type="varchar" MaxLength="12" />
     <Property Name="pan_card" Type="varchar" MaxLength="10" />
     <Property Name="passport_number" Type="varchar" MaxLength="50" />
@@ -269,6 +273,18 @@
     <Property Name="Abbreviation" Type="varchar" MaxLength="50" />
     <Property Name="PerDeskCost" Type="numeric" Precision="18" Scale="2" />
   </EntityType>
+  <Association Name="FK_additional_information_department">
+    <End Role="department" Type="Self.department" Multiplicity="0..1" />
+    <End Role="additional_information" Type="Self.additional_information" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="DeptID" />
+      </Principal>
+      <Dependent Role="additional_information">
+        <PropertyRef Name="DeptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_additional_information_employee_details">
     <End Role="employee_details" Type="Self.employee_details" Multiplicity="1" />
     <End Role="additional_information" Type="Self.additional_information" Multiplicity="*" />
@@ -278,6 +294,18 @@
       </Principal>
       <Dependent Role="additional_information">
         <PropertyRef Name="employee_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_additional_information_role">
+    <End Role="role" Type="Self.role" Multiplicity="0..1" />
+    <End Role="additional_information" Type="Self.additional_information" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="role">
+        <PropertyRef Name="roleID" />
+      </Principal>
+      <Dependent Role="additional_information">
+        <PropertyRef Name="roleID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -465,8 +493,16 @@
     <EntitySet Name="previous_company_details" EntityType="Self.previous_company_details" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="references" EntityType="Self.references" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="role" EntityType="Self.role" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_additional_information_department" Association="Self.FK_additional_information_department">
+      <End Role="department" EntitySet="department" />
+      <End Role="additional_information" EntitySet="additional_information" />
+    </AssociationSet>
     <AssociationSet Name="FK_additional_information_employee_details" Association="Self.FK_additional_information_employee_details">
       <End Role="employee_details" EntitySet="employee_details" />
+      <End Role="additional_information" EntitySet="additional_information" />
+    </AssociationSet>
+    <AssociationSet Name="FK_additional_information_role" Association="Self.FK_additional_information_role">
+      <End Role="role" EntitySet="role" />
       <End Role="additional_information" EntitySet="additional_information" />
     </AssociationSet>
     <AssociationSet Name="FK_certifications_employee_details" Association="Self.FK_certifications_employee_details">

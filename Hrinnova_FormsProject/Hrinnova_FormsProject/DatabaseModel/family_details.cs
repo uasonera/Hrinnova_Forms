@@ -18,10 +18,13 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public int familydet_id { get; set; }
         public int employee_id { get; set; }
         public string member { get; set; }
+        [RegularExpression("^[a-zA-Z/s]+$", ErrorMessage = "Name cannot contain numbers or special characters")]
         public string fname { get; set; }
         [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> fdateofbirth { get; set; }
+        [RegularExpression("^([0-9]{12})$", ErrorMessage = "Please enter a valid Aadhar Number (Contains 12 digits without special characters)")]
         public string faadhar { get; set; }
+        [RegularExpression("^([+][9][1]|[9][1]|[0]){0,1}([0-9]{1})([0-9]{9})$", ErrorMessage = "Please enter a valid Phone Number")]
         public string fcontact { get; set; }
         public string foccupation { get; set; }
         public string freside { get; set; }

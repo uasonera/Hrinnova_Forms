@@ -14,7 +14,7 @@
     <style>
         .boldit {
             border: solid;
-            border-width: 2px;
+            border-width: 1px;
             padding-bottom:7px;
             padding-top:7px;
             padding-left:10px;
@@ -46,7 +46,7 @@
                     1.
                 </td>
                 <td class="boldit" width="47%">Name of member</td>
-                <td class="boldit" width="47%">@Html.DisplayFor(m => m.employeedetails.firstname) @Html.DisplayFor(m => m.employeedetails.surname)</td>
+                <td class="boldit" width="47%">@Html.DisplayFor(m => m.Employeedetails.firstname) @Html.DisplayFor(m => m.Employeedetails.surname)</td>
             </tr>
             <tr>
                 <td class="boldit">2.</td>
@@ -54,28 +54,28 @@
                     Father's Name/Spouse's Name<br>
                     Please tick whichever is applicable
                 </td>
-                <td class="boldit">@Html.DisplayFor(m => m.employeedetails.middlename) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Employeedetails.middlename) </td>
             </tr>
             <tr>
                 <td class="boldit">3.</td>
                 <td class="boldit">
                     Date of Birth:
                 </td>
-                <td class="boldit">@Html.DisplayFor(m => m.employeedetails.date_of_birth) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Employeedetails.date_of_birth) </td>
             </tr>
             <tr>
                 <td class="boldit">4.</td>
                 <td class="boldit">
                     Gender
                 </td>
-                <td class="boldit">@Html.DisplayFor(m => m.employeedetails.gender) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Employeedetails.gender) </td>
             </tr>
             <tr>
                 <td class="boldit">5.</td>
                 <td class="boldit">
                     Marital Status: (Married/Unmarried/Widow/Widower/Divorcee)
                 </td>
-                <td class="boldit">@Html.DisplayFor(m => m.employeedetails.marital_status) </td>
+                <td class="boldit">@Html.DisplayFor(model => model.Maritalstatus.SingleOrDefault(m => m.Id == model.Employeedetails.marital_status).Status, new { htmlAttributes = new { @class = "form-control" } }) </td>
             </tr>
             <tr>
                 <td class="boldit">6.</td>
@@ -83,21 +83,21 @@
                     (a) Email Id :<br>
                     (b) Mobile No.:
                 </td>
-                <td class="boldit">@Html.DisplayFor(m => m.employeedetails.email_id)<br />@Html.DisplayFor(m => m.employeedetails.mobile_number)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Employeedetails.email_id)<br />@Html.DisplayFor(m => m.Employeedetails.mobile_number)</td>
             </tr>
             <tr>
                 <td class="boldit">7.</td>
                 <td class="boldit">
                     Whether earlier a member of Employees' Provident Fund Scheme, 1952
                 </td>
-                <td class="boldit">@Html.DisplayFor(m => m.epfodetails.member_of_epfoscheme) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Epfodetails.member_of_epfoscheme) </td>
             </tr>
             <tr>
                 <td class="boldit">8.</td>
                 <td class="boldit">
                     Whether earlier a member of Employees' Pension Scheme,1995
                 </td>
-                <td class="boldit">@Html.DisplayFor(m => m.epfodetails.member_of_epsscheme) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Epfodetails.member_of_epsscheme) </td>
             </tr>
             <tr>
                 <td rowspan="5" class="boldit">9.</td>
@@ -105,48 +105,48 @@
                     <p style="font-weight:bold">Previous employment details:[If yes to 7 and/or 8 above]</p>
                     <p>a) Universal Account Number :</p>
                 </td>
-                <td class="boldit">@Html.DisplayFor(m => m.epfodetails.universal_account_number) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Epfodetails.universal_account_number) </td>
             </tr>
             <tr>
                 <td class="boldit">
                     b) Previous PF Account Number:
-                <td class="boldit">@Html.DisplayFor(m => m.epfodetails.prev_pf_acc_number) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Epfodetails.prev_pf_acc_number) </td>
             </tr>
             <tr>
                 <td class="boldit">
                     c) Date of exit from Previous Employment:(DD/MM/YYYY)
-                <td class="boldit">@Html.DisplayFor(m => m.prevemploy1.periodworked_to) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Prevemploy1.periodworked_to) </td>
             </tr>
             <tr>
                 <td class="boldit">
                     d) Scheme Certificate Number(if issued):
-                <td class="boldit">@Html.DisplayFor(m => m.epfodetails.scheme_certificate_number) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Epfodetails.scheme_certificate_number) </td>
             </tr>
             <tr>
                 <td class="boldit">
                     e) Pension Payment Order(PPO) Number(if issued):
-                <td class="boldit">@Html.DisplayFor(m => m.epfodetails.ppo_number) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Epfodetails.ppo_number) </td>
             </tr>
             <tr>
                 <td class="boldit" rowspan="4">10.</td>
                 <td class="boldit">
                     a) International Worker:
-                <td class="boldit">@Html.DisplayFor(m => m.epfodetails.international_worker) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Epfodetails.international_worker) </td>
             </tr>
             <tr>
                 <td class="boldit">
                     b) If yes, State country of origin :
-                <td class="boldit">@Html.DisplayFor(m => m.epfodetails.country_of_origin) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Epfodetails.country_of_origin) </td>
             </tr>
             <tr>
                 <td class="boldit">
                     c) Passport No.:
-                <td class="boldit">@Html.DisplayFor(m => m.employeedetails.passport_number) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Employeedetails.passport_number) </td>
             </tr>
             <tr>
                 <td class="boldit">
                     d) Validity of Passport:
-                <td class="boldit">@Html.DisplayFor(m => m.employeedetails.passport_validity) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Employeedetails.passport_validity) </td>
             </tr>
             <tr>
                 <td class="boldit" rowspan="4">11.</td>
@@ -158,17 +158,17 @@
             <tr>
                 <td class="boldit">
                     a) Bank Account No. and IFS Code:
-                <td class="boldit">@Html.DisplayFor(m => m.employeedetails.single_bank_account) @Html.DisplayFor(m => m.employeedetails.ifs_code) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Employeedetails.single_bank_account) @Html.DisplayFor(m => m.Employeedetails.ifs_code) </td>
             </tr>
             <tr>
                 <td class="boldit">
                     b) AADHAR No.:
-                <td class="boldit">@Html.DisplayFor(m => m.employeedetails.aadhar_card) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Employeedetails.aadhar_card) </td>
             </tr>
             <tr>
                 <td class="boldit">
                     c) Permanent Account No.(PAN), if available :
-                <td class="boldit">@Html.DisplayFor(m => m.employeedetails.pan_card) </td>
+                <td class="boldit">@Html.DisplayFor(m => m.Employeedetails.pan_card) </td>
             </tr>
             <tr>
                 <td colspan="3" style="font-weight:bold; text-align:center; padding-top:10px"><u>UNDERTAKING</u></td>
@@ -187,15 +187,15 @@
                 <td style="text-align:right"><br>Signature of Member</td>
             </tr>
             <tr>
-                <td colspan="3" style="text-align:center;padding-top:20px"">
+                <td colspan="3" style="text-align:center;padding-top:20px">
                     <u style="font-weight:bold">DECLARATION BY PRESENT EMPLOYER</u>
                 </td>
             </tr>
             <tr>
                 <td colspan="3">
                     <p>
-                        A. The member Mr./Ms./Mrs. <u>@Html.DisplayFor(m => m.employeedetails.firstname) @Html.DisplayFor(m => m.employeedetails.surname)</u> has joined on
-                        <u>@Html.DisplayFor(m => m.employeedetails.date_of_joining)</u> and has been alloted PF Number ....................
+                        A. The member Mr./Ms./Mrs. <u>@Html.DisplayFor(m => m.Employeedetails.firstname) @Html.DisplayFor(m => m.Employeedetails.surname)</u> has joined on
+                        <u>@Html.DisplayFor(m => m.Employeedetails.date_of_joining)</u> and has been alloted PF Number ....................
                     </p>
                     <p>B. In case the person was earlier not a member of EPF Scheme, 1952 and EPS, 1995:<br></p>
                     <ul>

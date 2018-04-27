@@ -11,15 +11,25 @@ namespace Hrinnova_FormsProject.DatabaseModel
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class additional_information
     {
         public int additionalinformation_id { get; set; }
         public int employee_id { get; set; }
         public string known_to_presentemployee { get; set; }
+        [RegularExpression("^[a-zA-Z/s]+$", ErrorMessage = "Name cannot contain numbers or special characters")]
         public string name_of_knownemployee { get; set; }
         public string relationship_with_knownemployee { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
+        public Nullable<System.DateTime> periodworked_from { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
+        public Nullable<System.DateTime> periodworked_to { get; set; }
+        public Nullable<int> roleID { get; set; }
+        public Nullable<int> DeptID { get; set; }
     
+        public virtual department department { get; set; }
+        public virtual role role { get; set; }
         public virtual employee_details employee_details { get; set; }
     }
 }

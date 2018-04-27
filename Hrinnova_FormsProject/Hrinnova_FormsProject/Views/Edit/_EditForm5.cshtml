@@ -17,8 +17,8 @@
 
                             </div>
                             <div class="col-sm-8">
-                                @Html.EditorFor(model => model.epfodetails.presentcompany_pfnumber, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.epfodetails.presentcompany_pfnumber, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.Epfodetails.presentcompany_pfnumber, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Epfodetails.presentcompany_pfnumber, "", new { @class = "text-danger" })
                             </div>
                         </div>
                         <br>
@@ -28,7 +28,7 @@
 
                             </div>
                             <div class="col-sm-5">
-                                @Html.RadioButtonFor(m=>m.epfodetails.member_of_epfoscheme, "yes")  Yes &nbsp;&nbsp; @Html.RadioButtonFor(m => m.epfodetails.member_of_epfoscheme, "no") No
+                                @Html.RadioButtonFor(m=>m.Epfodetails.member_of_epfoscheme, "yes", new { @style = "width:20px;height:20px;" })  Yes &nbsp;&nbsp; @Html.RadioButtonFor(m => m.Epfodetails.member_of_epfoscheme, "no", new { @style = "width:20px;height:20px;" }) No
                             </div>
                         </div>
                         <br>
@@ -38,7 +38,7 @@
 
                             </div>
                             <div class="col-sm-5">
-                                @Html.RadioButtonFor(m => m.epfodetails.member_of_epsscheme, "yes")  Yes &nbsp;&nbsp; @Html.RadioButtonFor(m => m.epfodetails.member_of_epsscheme, "no") No
+                                @Html.RadioButtonFor(m => m.Epfodetails.member_of_epsscheme, "yes", new { @style = "width:20px;height:20px;" })  Yes &nbsp;&nbsp; @Html.RadioButtonFor(m => m.Epfodetails.member_of_epsscheme, "no", new { @style = "width:20px;height:20px;" }) No
                             </div>
                         </div>
                         <br>
@@ -48,8 +48,8 @@
 
                             </div>
                             <div class="col-sm-8">
-                                @Html.EditorFor(model => model.epfodetails.universal_account_number, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.epfodetails.universal_account_number, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.Epfodetails.universal_account_number, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Epfodetails.universal_account_number, "", new { @class = "text-danger" })
                             </div>
                         </div>
                         <br>
@@ -59,8 +59,8 @@
 
                             </div>
                             <div class="col-sm-8">
-                                @Html.EditorFor(model => model.epfodetails.prev_pf_acc_number, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.epfodetails.prev_pf_acc_number, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.Epfodetails.prev_pf_acc_number, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Epfodetails.prev_pf_acc_number, "", new { @class = "text-danger" })
                             </div>
                         </div>
                         <br>
@@ -70,8 +70,8 @@
 
                             </div>
                             <div class="col-sm-8">
-                                @Html.EditorFor(model => model.epfodetails.scheme_certificate_number, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.epfodetails.scheme_certificate_number, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.Epfodetails.scheme_certificate_number, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Epfodetails.scheme_certificate_number, "", new { @class = "text-danger" })
                             </div>
                         </div>
                         <br>
@@ -81,8 +81,8 @@
 
                             </div>
                             <div class="col-sm-8">
-                                @Html.EditorFor(model => model.epfodetails.ppo_number, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.epfodetails.ppo_number, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.Epfodetails.ppo_number, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Epfodetails.ppo_number, "", new { @class = "text-danger" })
                             </div>
                         </div>
                         <br>
@@ -92,10 +92,8 @@
 
                             </div>
                             <div class="col-sm-8">
-                                @*@Html.EditorFor(model => model.epfodetails.international_worker, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.epfodetails.international_worker, "", new { @class = "text-danger" })*@
-                                @Html.RadioButtonFor(model => model.epfodetails.international_worker, "Yes")&nbsp;<label>Yes</label> &nbsp; &nbsp;
-                                @Html.RadioButtonFor(model => model.epfodetails.international_worker, "No")&nbsp;<label>No</label>
+                                @Html.RadioButtonFor(model => model.Epfodetails.international_worker, "Yes", new { @style = "width:20px;height:20px;" })&nbsp;Yes &nbsp; &nbsp;
+                                @Html.RadioButtonFor(model => model.Epfodetails.international_worker, "No", new { @style = "width:20px;height:20px;" })&nbsp;No
                             </div>
                         </div>
                         <br>
@@ -104,15 +102,13 @@
                                 <label class="control-label">If yes, State country of origin (India/Name of other country) :</label>
                             </div>
                             <div class="col-sm-8">
-                                @Html.EditorFor(model => model.epfodetails.country_of_origin, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.epfodetails.country_of_origin, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.Epfodetails.country_of_origin, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Epfodetails.country_of_origin, "", new { @class = "text-danger" })
                             </div>
                         </div>
                     </div>
                     <br>
-                    @*<input type="submit" onclick="location.href='@Url.Action("test", "Home")'" class="btn btn-success" align="center" value="Save and Continue" />
-                        <input type="submit" class="btn btn-success" align="center" formaction="_Form1" value="Previous Page" />*@
-                    @*<input type="submit" class="btn btn-success" align="center" formaction="projectform2.html" value="Save and Continue" />*@
+                    
                 </div>
             </div>
         </div>

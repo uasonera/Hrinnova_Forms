@@ -1,4 +1,5 @@
-﻿@model Hrinnova_FormsProject.Models.Model2
+﻿@using System.Configuration
+@model Hrinnova_FormsProject.Models.Model2
 @Html.AntiForgeryToken()
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 <link href="~/Content/bootstrap.css" rel="stylesheet" />
@@ -11,7 +12,7 @@
     <style>
         .boldit {
             border: solid;
-            border-width: 3px;
+            border-width: 2px;
         }
     </style>
 </head>
@@ -59,29 +60,29 @@
    
     <table width="900" align="center">
         <tr>
-            <td width="24%" class="boldit">
+            <td width="21%" class="boldit">
                 1. बिमा संख्या/Insurance No.
             </td>
-            <td class="boldit" width="24%">@Html.DisplayFor(m => m.esicdetails.insurance_number)</td>
+            <td class="boldit" width="21%">@Html.DisplayFor(m => m.Esicdetails.insurance_number)</td>
             <td width="2%"></td>
             <td class="boldit" width="20%">
                 9. नियोजक की कूट संख्या<br />
-                Employer's Code No
+                Employer's Code No.
             </td>
-            <td class="boldit"></td>
+            <td class="boldit">@System.Configuration.ConfigurationManager.AppSettings["employerscode"]</td>
         </tr>
         <tr>
             <td class="boldit">2. नाम(स्पष्ट अक्षरों में)<br />Name in block letters</td>
-            <td class="boldit">@Html.DisplayFor(m => m.employeedetails.firstname) @Html.DisplayFor(m => m.employeedetails.surname)</td>
+            <td class="boldit">&nbsp;@Html.DisplayFor(m => m.Employeedetails.firstname) @Html.DisplayFor(m => m.Employeedetails.surname)</td>
             <td></td>
             <td class="boldit">10.नियुक्ति की तारीख<br />Date of Appointment</td>
-            <td class="boldit"></td>
+            <td class="boldit">@Html.DisplayFor(m=>m.Employeedetails.date_of_joining)</td>
         </tr>
         <tr>
             <td class="boldit">3. पिता/पति का नाम<br />Father's Husband's Name</td>
-            <td class="boldit">@Html.DisplayFor(m => m.employeedetails.middlename)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Employeedetails.middlename)</td>
             <td></td>
-            <td colspan="2" rowspan="2" class="boldit" >11. नियोजक का नाम और पता<br />Name and Address of the Employer</td>
+            <td colspan="2" rowspan="2" class="boldit" >11. नियोजक का नाम और पता<br />Name and Address of the Employer<br/>@System.Configuration.ConfigurationManager.AppSettings["employernameaddress"]</td>
         </tr>
         <tr>
             <td class="boldit">4.जन्म की तिथि<br />Date of Birth</td>
@@ -101,18 +102,18 @@
                             5.वैवाहिक परिस्थिति<br />Marital Status
                         </td>
                         <td class="boldit" style="border-top:0; border-right:0">
-                            @Html.DisplayFor(m => m.employeedetails.marital_status)
+                            @Html.DisplayFor(model => model.Maritalstatus.SingleOrDefault(m => m.Id == model.Employeedetails.marital_status).Status, new { htmlAttributes = new { @class = "form-control" } }) 
                         </td>
                     </tr>
                     <tr>
                         <td colspan="3" class="boldit" style="border-left:0; border-bottom:0">
-                            @Html.DisplayFor(m => m.employeedetails.date_of_birth)
+                            @Html.DisplayFor(m => m.Employeedetails.date_of_birth)
                         </td>
                         <td class="boldit" style="border-bottom:0">
                             6. लिंग/Sex
                         </td>
                         <td class="boldit" style="border-bottom:0; border-right:0">
-                            @Html.DisplayFor(m => m.employeedetails.gender)
+                            @Html.DisplayFor(m => m.Employeedetails.gender)
                         </td>
 
                     </tr>
@@ -121,25 +122,25 @@
             <td></td>
         </tr>
         <tr>
-            <td rowspan="3" class="boldit">7. वर्तमान पता/Present Address<br />@Html.DisplayFor(m => m.employeedetails.temporary_address) <br />
-            @Html.DisplayFor(m => m.employeedetails.mobile_number) </td>
-            <td rowspan="3" class="boldit">8. स्थायी पता/Permanent Address<br />@Html.DisplayFor(m => m.employeedetails.permanent_address) <br />
-            @Html.DisplayFor(m => m.employeedetails.mobile_number) </td>
+            <td rowspan="3" class="boldit">7. वर्तमान पता/Present Address<br />@Html.DisplayFor(m => m.Employeedetails.temporary_address) <br />
+            @Html.DisplayFor(m => m.Employeedetails.mobile_number) </td>
+            <td rowspan="3" class="boldit">8. स्थायी पता/Permanent Address<br />@Html.DisplayFor(m => m.Employeedetails.permanent_address) <br />
+            @Html.DisplayFor(m => m.Employeedetails.mobile_number) </td>
             <td rowspan="3"></td>
             <td class="boldit" colspan="2">यदि पहले नियोजन में रहे है तो कृपया निम्नलिखित ब्योरे दीजिये<br />In case of any previous employment please fill up the details as under</td>
         </tr>
         <tr>
-            <td colspan="2" class="boldit">(क) पिछली बिमा संख्या<br />(a) Previous Insurance No. :&nbsp;@Html.DisplayFor(m => m.esicdetails.previous_insurance_number)</td>
+            <td colspan="2" class="boldit">(क) पिछली बिमा संख्या<br />(a) Previous Insurance No. :&nbsp;@Html.DisplayFor(m => m.Esicdetails.previous_insurance_number)</td>
         </tr>
         <tr>
             <td colspan="2" class="boldit">(ख) नियोजक कूट संख्या<br />(b) Employer's Code No. :</td>
             
         </tr>
         <tr>
-            <td rowspan="2" class="boldit">शाखा कार्यालय Branch Office :<br />&nbsp;@Html.DisplayFor(m => m.esicdetails.branch_office)</td>
-            <td rowspan="2" class="boldit">औषधालय Dispensary :&nbsp;@Html.DisplayFor(m => m.esicdetails.dispensary) </td>
+            <td rowspan="2" class="boldit">शाखा कार्यालय Branch Office :<br />&nbsp;@Html.DisplayFor(m => m.Esicdetails.branch_office)</td>
+            <td rowspan="2" class="boldit">औषधालय Dispensary :&nbsp;@Html.DisplayFor(m => m.Esicdetails.dispensary) </td>
             <td rowspan="2"></td>
-            <td colspan="2" rowspan="2" class="boldit">(ग) नियोजक का नाम व पता<br />(c) Name and Address of the Employer :<br />&nbsp;@Html.DisplayFor(m => m.esicdetails.employers_nameandaddress)</td>
+            <td colspan="2" rowspan="2" class="boldit">(ग) नियोजक का नाम व पता<br />(c) Name and Address of the Employer :<br />&nbsp;@Html.DisplayFor(m => m.Esicdetails.employers_nameandaddress)</td>
         </tr>
         @*<tr>
             
@@ -167,13 +168,13 @@
         </tr>
         <tr>
             <td class="boldit" style="padding-left:5px">
-                @Html.DisplayFor(m => m.esicdetails.name_of_nominee)
+                @Html.DisplayFor(m => m.Esicdetails.name_of_nominee)
             </td>
             <td class="boldit" style="padding-left:5px">
-                @Html.DisplayFor(m => m.esicdetails.nominee_relationship)
+                @Html.DisplayFor(m => m.Esicdetails.nominee_relationship)
             </td>
             <td class="boldit" style="padding-left:5px">
-                @Html.DisplayFor(m => m.esicdetails.nominee_address)
+                @Html.DisplayFor(m => m.Esicdetails.nominee_address)
             </td>
         </tr>
         <tr>
@@ -240,51 +241,51 @@
             </tr>
             <tr>
                 <td class="boldit">1</td>
-                <td class="boldit">@Html.DisplayFor(m => m.fatherdetails.fname)</td>
-                <td class="boldit">@Html.DisplayFor(m => m.fatherdetails.fdateofbirth)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Fatherdetails.fname)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Fatherdetails.fdateofbirth)</td>
                 <td class="boldit">Father</td>
-                <td class="boldit">@Html.DisplayFor(m => m.fatherdetails.freside)</td>
-                <td class="boldit">@Html.DisplayFor(m => m.fatherdetails.ftown), @Html.DisplayFor(m => m.fatherdetails.fstate)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Fatherdetails.freside)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Fatherdetails.ftown), @Html.DisplayFor(m => m.Fatherdetails.fstate)</td>
             </tr>
             <tr>
                 <td class="boldit">2</td>
-                <td class="boldit">@Html.DisplayFor(m => m.motherdetails.fname)</td>
-                <td class="boldit">@Html.DisplayFor(m => m.motherdetails.fdateofbirth)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Motherdetails.fname)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Motherdetails.fdateofbirth)</td>
                 <td class="boldit">Mother</td>
-                <td class="boldit">@Html.DisplayFor(m => m.motherdetails.freside)</td>
-                <td class="boldit">@Html.DisplayFor(m => m.fatherdetails.ftown), @Html.DisplayFor(m => m.fatherdetails.fstate)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Motherdetails.freside)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Fatherdetails.ftown), @Html.DisplayFor(m => m.Fatherdetails.fstate)</td>
             </tr>
             <tr>
                 <td class="boldit">3</td>
-                <td class="boldit">@Html.DisplayFor(m => m.brotherdetails.fname)</td>
-                <td class="boldit">@Html.DisplayFor(m => m.brotherdetails.fdateofbirth)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Brotherdetails.fname)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Brotherdetails.fdateofbirth)</td>
                 <td class="boldit">Brother</td>
-                <td class="boldit">@Html.DisplayFor(m => m.brotherdetails.freside)</td>
-                <td class="boldit">@Html.DisplayFor(m => m.brotherdetails.ftown), @Html.DisplayFor(m => m.fatherdetails.fstate)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Brotherdetails.freside)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Brotherdetails.ftown), @Html.DisplayFor(m => m.Fatherdetails.fstate)</td>
             </tr>
             <tr>
                 <td class="boldit">4</td>
-                <td class="boldit">@Html.DisplayFor(m => m.sisterdetails.fname)</td>
-                <td class="boldit">@Html.DisplayFor(m => m.sisterdetails.fdateofbirth)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Sisterdetails.fname)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Sisterdetails.fdateofbirth)</td>
                 <td class="boldit">Sister</td>
-                <td class="boldit">@Html.DisplayFor(m => m.sisterdetails.freside)</td>
-                <td class="boldit">@Html.DisplayFor(m => m.sisterdetails.ftown), @Html.DisplayFor(m => m.fatherdetails.fstate)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Sisterdetails.freside)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Sisterdetails.ftown), @Html.DisplayFor(m => m.Fatherdetails.fstate)</td>
             </tr>
             <tr>
                 <td class="boldit">5</td>
-                <td class="boldit">@Html.DisplayFor(m => m.spousedetails.fname)</td>
-                <td class="boldit">@Html.DisplayFor(m => m.spousedetails.fdateofbirth)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Spousedetails.fname)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Spousedetails.fdateofbirth)</td>
                 <td class="boldit">Spouse</td>
-                <td class="boldit">@Html.DisplayFor(m => m.spousedetails.freside)</td>
-                <td class="boldit">@Html.DisplayFor(m => m.spousedetails.ftown), @Html.DisplayFor(m => m.fatherdetails.fstate)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Spousedetails.freside)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Spousedetails.ftown), @Html.DisplayFor(m => m.Fatherdetails.fstate)</td>
             </tr>
             <tr>
                 <td class="boldit">6</td>
-                <td class="boldit">@Html.DisplayFor(m => m.childrendetails.fname)</td>
-                <td class="boldit">@Html.DisplayFor(m => m.childrendetails.fdateofbirth)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Childrendetails.fname)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Childrendetails.fdateofbirth)</td>
                 <td class="boldit">Children</td>
-                <td class="boldit">@Html.DisplayFor(m => m.childrendetails.freside)</td>
-                <td class="boldit">@Html.DisplayFor(m => m.childrendetails.ftown), @Html.DisplayFor(m => m.fatherdetails.fstate)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Childrendetails.freside)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Childrendetails.ftown), @Html.DisplayFor(m => m.Fatherdetails.fstate)</td>
             </tr>
         </tbody>
     </table >

@@ -846,7 +846,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\EditIndexModel.cs" />
-    <Compile Include="Models\Model1.cs" />
     <Compile Include="Models\Model2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

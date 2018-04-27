@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bd16ea4e55bf4c1bbdea63134885564b" Name="Diagram1">
+        <EntityTypeShape EntityType="DatabaseModel.additional_information" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.certifications" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.department" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.educational_qualifications" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.employee_details" Width="1.5" PointX="0.75" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.employee_refcheck" Width="1.5" PointX="3" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.epfo_details" Width="1.5" PointX="3" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.esic_details" Width="1.5" PointX="3" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.family_details" Width="1.5" PointX="3" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.feedback" Width="1.5" PointX="3" PointY="32.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.other_details" Width="1.5" PointX="3" PointY="38.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.prev_employ_1" Width="1.5" PointX="3" PointY="43.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.previous_company_details" Width="1.5" PointX="3" PointY="48.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.references" Width="1.5" PointX="3" PointY="52.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.role" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="DatabaseModel.FK_additional_information_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_certifications_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_educational_qualifications_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_employee_refcheck_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_employee_references_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_epfo_details_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_esic_details_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_family_details_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_feedback_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_prev_employ_1_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_previous_company_details_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_references_employee_details" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

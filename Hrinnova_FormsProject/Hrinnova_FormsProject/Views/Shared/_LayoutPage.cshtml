@@ -30,7 +30,7 @@
     <!-- Jquery js -->
     
     <script type="text/javascript" src="~/JsScript/PageScripts/HRIMS_Secure/jquery-2.2.1.min.js"></script>
-    <!-- <script  type="text/javascript" src="js/less-min.js"></script> -->
+     <script  type="text/javascript" src="js/less-min.js"></script> 
     <!-- Bootstrap js -->
     <script type="text/javascript" src="~/JsScript/PageScripts/HRIMS_Secure/bootstrap.js"></script>
     <!-- Datatable js -->
@@ -39,7 +39,7 @@
     <script type="text/javascript" src="~/JsScript/PageScripts/HRIMS_Secure/datatable/dataTables.responsive.min.js"></script>
     <script type="text/javascript" src="~/JsScript/PageScripts/HRIMS_Secure/datatable/responsive.bootstrap.min.js"></script>
     <!-- Custome scroll bar for side bar -->
-    @*<script type="text/javascript" src="~/JsScript/PageScripts/HRIMS_Secure/jquery.mCustomScrollbar.min.js"></script>*@
+    <script type="text/javascript" src="~/JsScript/PageScripts/HRIMS_Secure/jquery.mCustomScrollbar.min.js"></script>
     <!-- Charts  -->
     <script type="text/javascript" src="~/JsScript/PageScripts/HRIMS_Secure/Chart.js"></script>
     <script type="text/javascript" src="~/JsScript/PageScripts/HRIMS_Secure/Chart.min.js"></script>
@@ -62,7 +62,7 @@
     @*<script type="text/javascript" src="~/JsScript/PageScripts/HRIMS_Secure/general-designer.js"></script>*@
     <!--Script ends-->
     <!--Custom MasterPageCims -->
-    @*<script type="text/javascript" src="~/JsScript/PageScripts/MasterPageCims.js"></script>*@
+    <script type="text/javascript" src="~/JsScript/PageScripts/MasterPageCims.js"></script>
     <!--Toastr -->
     <link href="~/CSS/TaskImport/toastr.min.css" rel="stylesheet" />
     <script type="text/javascript" src="~/JsScript/angular/toastr.min.js"></script>
@@ -255,12 +255,23 @@
                             <div class="dxm-main dxm-horizontal" id="UcMenu1_adminMenu">
                                 <ul class="dx dxm-image-l dxm-noImages">
                                     <li class="dxm-item dxm-tmpl dashboard-menu">
+                                        <a href="@Url.Action("Index","Home")" class="haschild Manage" title="New Employee"><i class="fa fa-dashboard"></i><span>New Employee</span><span class="caret-1"></span></a>
+                                        
+                                    </li>
+
+                                    <li class="dxm-item dxm-tmpl dashboard-menu">
+                                        <a href="@Url.Action("EditIndex2","Edit")" class="haschild Manage" title="Edit Employee Details"><i class="fa fa-dashboard"></i><span>Edit Employee Details</span><span class="caret-1"></span></a>
+                                        
+                                    </li>
+
+                                    @*<li class="dxm-item dxm-tmpl dashboard-menu">
                                         <a href="javascript:void(0)" class="haschild Manage" title="Dashboard"><i class="fa fa-dashboard"></i><span>Dashboard</span><span class="caret-1"></span></a>
                                         <ul>
                                             <li><a class="" href="dashboard.html" title="HR"><span>HR</span></a></li>
                                             <li><a class="" href="dashboard_employee.html" title="Employee"><span>Employee</span></a></li>
                                         </ul>
                                     </li>
+                                  
                                     <li class="dxm-item dxm-tmpl performance-management-system-menu">
                                         <a href="javascript:void(0)" class="haschild Manage" title="Performance Management System"><i class="fa fa-user"></i><span>PMS</span><span class="caret-1"></span></a>
                                         <ul>
@@ -320,7 +331,7 @@
                                             <li><a class="" href="pinsandapproval.html" title="Headcount"><span>PINs & Approval </span></a></li>
 
                                         </ul>
-                                    </li>
+                                    </li>*@
                                 </ul>
                                 <!--  active -> active -> activeMenuItem -->
                             </div>

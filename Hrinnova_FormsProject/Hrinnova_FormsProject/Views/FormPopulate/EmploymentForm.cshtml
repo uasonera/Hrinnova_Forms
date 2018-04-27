@@ -44,80 +44,80 @@
     <tbody>
         <tr>
             <td class="tdformat boldfont" width="25%">Name </td>
-            <td class="tdformat" width="50%"> @Html.DisplayFor(m => m.employeedetails.firstname) @Html.DisplayFor(m => m.employeedetails.surname)</td>
+            <td class="tdformat" width="50%"> @Html.DisplayFor(m => m.Employeedetails.firstname) @Html.DisplayFor(m => m.Employeedetails.surname)</td>
             <td class="tdformat" rowspan="6" style="padding-left:20px">Fix Passport Size <br> [Photograph Here]</td>
         </tr>
         <tr>
             <td class="tdformat boldfont">Gender </td>
-            <td class="tdformat"> @Html.DisplayFor(m => m.employeedetails.gender)</td>
+            <td class="tdformat"> @Html.DisplayFor(m => m.Employeedetails.gender)</td>
         </tr>
         <tr>
             <td class="tdformat boldfont">Date of Birth </td>
-            <td class="tdformat"> @Html.DisplayFor(m => m.employeedetails.date_of_birth)</td>
+            <td class="tdformat"> @Html.DisplayFor(m => m.Employeedetails.date_of_birth)</td>
         </tr>
         <tr>
             <td class="tdformat boldfont">Date of Joining</td>
-            <td class="tdformat"> @Html.DisplayFor(m => m.employeedetails.date_of_joining)</td>
+            <td class="tdformat"> @Html.DisplayFor(m => m.Employeedetails.date_of_joining)</td>
         </tr>
         <tr>
             <td class="tdformat boldfont">Designation</td>
-            <td class="tdformat"> @Html.DisplayFor(m => m.employeedetails.designation)</td>
+            <td class="tdformat"> @Html.DisplayFor(model => model.Employeedetails.role.name, new { htmlAttributes = new { @class = "form-control" } })</td>
         </tr>
         <tr>
             <td class="tdformat boldfont">Department</td>
-            <td class="tdformat"> @Html.DisplayFor(m => m.employeedetails.department)</td>
+            <td class="tdformat"> @Html.DisplayFor(model => model.Employeedetails.department1.DeptName, new { htmlAttributes = new { @class = "form-control" } })</td>
         </tr>
         <tr>
             <td class="tdformat boldfont">Present Address</td>
-            <td class="tdformat" colspan="2"> @Html.DisplayFor(m => m.employeedetails.temporary_address)</td>
+            <td class="tdformat" colspan="2"> @Html.DisplayFor(m => m.Employeedetails.temporary_address)</td>
 
         </tr>
         <tr>
             <td class="tdformat boldfont">Permanent Address</td>
-            <td class="tdformat" colspan="2"> @Html.DisplayFor(m => m.employeedetails.permanent_address)</td>
+            <td class="tdformat" colspan="2"> @Html.DisplayFor(m => m.Employeedetails.permanent_address)</td>
 
         </tr>
         <tr class="tdformat">
             <td class="tdformat boldfont" rowspan="2">Contact No.</td>
-            <td style="padding-top:10px; padding-left:10px">Mobile: @Html.DisplayFor(m => m.employeedetails.mobile_number)</td>
-            <td style="padding-top:10px; padding-left:10px">Home: @Html.DisplayFor(m => m.employeedetails.home_number)</td>
+            <td style="padding-top:10px; padding-left:10px">Mobile: @Html.DisplayFor(m => m.Employeedetails.mobile_number)</td>
+            <td style="padding-top:10px; padding-left:10px">Home: @Html.DisplayFor(m => m.Employeedetails.home_number)</td>
         </tr>
         <tr class="tdformat">
-            <td style="padding-top:10px; padding-left:10px">Emergency: @Html.DisplayFor(m => m.employeedetails.emergency_number)</td>
-            <td style="padding-top:10px; padding-left:10px">Alternate: @Html.DisplayFor(m => m.employeedetails.alternate_number)</td>
+            <td style="padding-top:10px; padding-left:10px">Emergency: @Html.DisplayFor(m => m.Employeedetails.emergency_number)</td>
+            <td style="padding-top:10px; padding-left:10px">Alternate: @Html.DisplayFor(m => m.Employeedetails.alternate_number)</td>
         </tr>
         <tr>
             <td class="tdformat boldfont">Email Id</td>
-            <td class="tdformat" colspan="2">@Html.DisplayFor(m => m.employeedetails.email_id)</td>
+            <td class="tdformat" colspan="2">@Html.DisplayFor(m => m.Employeedetails.email_id)</td>
         </tr>
         <tr>
             <td class="tdformat boldfont" rowspan="2">Marital Status</td>
-            <td class="tdformat" colspan="2">@Html.DisplayFor(m => m.employeedetails.marital_status)</td>
+            <td class="tdformat" colspan="2">@Html.DisplayFor(m => m.Employeedetails.marital_status)</td>
         </tr>
         <tr>
-            <td class="tdformat" colspan="2">Marriage Anniversary :@Html.DisplayFor(m => m.employeedetails.marriage_anniversary)</td>
+            <td class="tdformat" colspan="2">Marriage Anniversary :@Html.DisplayFor(m => m.Employeedetails.marriage_anniversary)</td>
         </tr>
         <tr>
             <td class="tdformat boldfont">Blood Group</td>
-            <td class="tdformat" colspan="2">@Html.DisplayFor(m => m.employeedetails.blood_group)</td>
+            <td class="tdformat" colspan="2">@Html.DisplayFor(m => m.Employeedetails.blood_group)</td>
         </tr>
         <tr>
             <td class="tdformat boldfont">Passport No.</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.employeedetails.passport_number)</td>
-            <td class="tdformat">Valid till :@Html.DisplayFor(m => m.employeedetails.passport_validity)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Employeedetails.passport_number)</td>
+            <td class="tdformat">Valid till :@Html.DisplayFor(m => m.Employeedetails.passport_validity)</td>
         </tr>
         <tr>
             <td class="tdformat boldfont">Vehicle No.</td>
-            <td class="tdformat" colspan="2">@Html.DisplayFor(m => m.employeedetails.vehicle_number)</td>
+            <td class="tdformat" colspan="2">@Html.DisplayFor(m => m.Employeedetails.vehicle_number)</td>
         </tr>
         <tr>
             <td class="tdformat boldfont">PAN No.</td>
-            <td class="tdformat" colspan="2">@Html.DisplayFor(m => m.employeedetails.pan_card)</td>
+            <td class="tdformat" colspan="2">@Html.DisplayFor(m => m.Employeedetails.pan_card)</td>
         </tr>
         <tr>
             <td class="tdformat boldfont">Medical(if any)</td>
-            <td class="tdformat">Allergies :@Html.DisplayFor(m => m.employeedetails.allergies)</td>
-            <td class="tdformat">Known Ailments :@Html.DisplayFor(m => m.employeedetails.known_ailments)</td>
+            <td class="tdformat">Allergies :@Html.DisplayFor(m => m.Employeedetails.allergies)</td>
+            <td class="tdformat">Known Ailments :@Html.DisplayFor(m => m.Employeedetails.known_ailments)</td>
         </tr>
 
     </tbody>
@@ -147,45 +147,45 @@
     <tbody>
         <tr>
             <td class="tdformat">Father</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.fatherdetails.fname)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.fatherdetails.fdateofbirth)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.fatherdetails.fcontact)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.fatherdetails.foccupation)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Fatherdetails.fname)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Fatherdetails.fdateofbirth)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Fatherdetails.fcontact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Fatherdetails.foccupation)</td>
         </tr>
         <tr>
             <td class="tdformat">Mother</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.motherdetails.fname)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.motherdetails.fdateofbirth)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.motherdetails.fcontact)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.motherdetails.foccupation)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Motherdetails.fname)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Motherdetails.fdateofbirth)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Motherdetails.fcontact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Motherdetails.foccupation)</td>
         </tr>
         <tr>
             <td class="tdformat">Brother</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.brotherdetails.fname)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.brotherdetails.fdateofbirth)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.brotherdetails.fcontact)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.brotherdetails.foccupation)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Brotherdetails.fname)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Brotherdetails.fdateofbirth)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Brotherdetails.fcontact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Brotherdetails.foccupation)</td>
         </tr>
         <tr>
             <td class="tdformat">Sister</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.sisterdetails.fname)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.sisterdetails.fdateofbirth)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.sisterdetails.fcontact)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.sisterdetails.foccupation)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Sisterdetails.fname)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Sisterdetails.fdateofbirth)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Sisterdetails.fcontact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Sisterdetails.foccupation)</td>
         </tr>
         <tr>
             <td class="tdformat">Spouse</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.spousedetails.fname)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.spousedetails.fdateofbirth)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.spousedetails.fcontact)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.spousedetails.foccupation)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Spousedetails.fname)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Spousedetails.fdateofbirth)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Spousedetails.fcontact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Spousedetails.foccupation)</td>
         </tr>
         <tr>
             <td class="tdformat">Children</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.childrendetails.fname)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.childrendetails.fdateofbirth)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.childrendetails.fcontact)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.childrendetails.foccupation)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Childrendetails.fname)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Childrendetails.fdateofbirth)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Childrendetails.fcontact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Childrendetails.foccupation)</td>
         </tr>
     </tbody>
 </table>
@@ -214,24 +214,24 @@
     <tbody>
         <tr>
             <td class="tdformat" width="25%">Property Owner(if staying in rented accomodation)</td>
-            <td class="tdformat" width="20%">@Html.DisplayFor(m => m.otherdetails.neighbour2_name)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.neighbour2_contact)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.neighbour2_address)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.neighbour2_occupation)</td>
+            <td class="tdformat" width="20%">@Html.DisplayFor(m => m.Otherdetails.neighbour2_name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Otherdetails.neighbour2_contact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Otherdetails.neighbour2_address)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Otherdetails.neighbour2_occupation)</td>
         </tr>
         <tr>
             <td class="tdformat" width="25%">Neighbour 1</td>
-            <td class="tdformat" width="20%">@Html.DisplayFor(m=>m.otherdetails.propertyowner_name)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.propertyowner_contact)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.propertyowner_address)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.propertyowner_occupation)</td>
+            <td class="tdformat" width="20%">@Html.DisplayFor(m=>m.Otherdetails.propertyowner_name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Otherdetails.propertyowner_contact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Otherdetails.propertyowner_address)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Otherdetails.propertyowner_occupation)</td>
         </tr>
         <tr>
             <td class="tdformat" width="25%">Neighbour 2</td>
-            <td class="tdformat" width="20%">@Html.DisplayFor(m => m.otherdetails.neighbour1_name)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.neighbour1_contact)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.neighbour1_address)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.otherdetails.neighbour1_occupation)</td>
+            <td class="tdformat" width="20%">@Html.DisplayFor(m => m.Otherdetails.neighbour1_name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Otherdetails.neighbour1_contact)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Otherdetails.neighbour1_address)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Otherdetails.neighbour1_occupation)</td>
         </tr>
 
     </tbody>
@@ -261,38 +261,38 @@
     <tbody>
         <tr>
             <td class="tdformat" width="20%">10th Std</td>
-            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.tenth_school)</td>
-            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.tenth_board)</td>
-            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.tenth_yearofpassing)</td>
-            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.tenth_grade)</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.Educationalqualifications.tenth_school)</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.Educationalqualifications.tenth_board)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.Educationalqualifications.tenth_yearofpassing)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.Educationalqualifications.tenth_grade)</td>
         </tr>
         <tr>
             <td class="tdformat" width="20%">12th Std</td>
-            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.twelfth_school)</td>
-            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.twelfth_board)</td>
-            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.twelfth_yearofpassing)</td>
-            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.twelfth_grade)</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.Educationalqualifications.twelfth_school)</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.Educationalqualifications.twelfth_board)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.Educationalqualifications.twelfth_yearofpassing)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.Educationalqualifications.twelfth_grade)</td>
         </tr>
         <tr>
             <td class="tdformat" width="20%">Bachelors</td>
-            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.bachelors_college)</td>
-            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.bachelors_university)</td>
-            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.bachelors_yearofpassing)</td>
-            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.bachelors_grade)</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.Educationalqualifications.bachelors_college)</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.Educationalqualifications.bachelors_university)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.Educationalqualifications.bachelors_yearofpassing)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.Educationalqualifications.bachelors_grade)</td>
         </tr>
         <tr>
             <td class="tdformat" width="20%">Masters</td>
-            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.masters_college)</td>
-            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.masters_university)</td>
-            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.masters_yearofpassing)</td>
-            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.masters_grade)</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.Educationalqualifications.masters_college)</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.Educationalqualifications.masters_university)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.Educationalqualifications.masters_yearofpassing)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.Educationalqualifications.masters_grade)</td>
         </tr>
         <tr>
             <td class="tdformat" width="20%">Others</td>
-            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.other_school)</td>
-            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.educationalqualifications.other_board)</td>
-            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.other_yearofpassing)</td>
-            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.educationalqualifications.other_grade)</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.Educationalqualifications.other_school)</td>
+            <td class="tdformat" width="25%">@Html.DisplayFor(m => m.Educationalqualifications.other_board)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.Educationalqualifications.other_yearofpassing)</td>
+            <td class="tdformat" width="15%">@Html.DisplayFor(m => m.Educationalqualifications.other_grade)</td>
         </tr>
     </tbody>
 </table>
@@ -311,16 +311,16 @@
 <table width="700" align="center">
     <tbody>
         <tr>
-            <td class="tdformat">1. @Html.DisplayFor(m=>m.certification1.certification_name)</td>
+            <td class="tdformat">1. @Html.DisplayFor(m=>m.Certification1.certification_name)</td>
         </tr>
         <tr>
-            <td class="tdformat">2. @Html.DisplayFor(m => m.certification2.certification_name)</td>
+            <td class="tdformat">2. @Html.DisplayFor(m => m.Certification2.certification_name)</td>
         </tr>
         <tr>
-            <td class="tdformat">3. @Html.DisplayFor(m => m.certification3.certification_name)</td>
+            <td class="tdformat">3. @Html.DisplayFor(m => m.Certification3.certification_name)</td>
         </tr>
         <tr>
-            <td class="tdformat">4. @Html.DisplayFor(m => m.certification4.certification_name)</td>
+            <td class="tdformat">4. @Html.DisplayFor(m => m.Certification4.certification_name)</td>
         </tr>
     </tbody>
 </table>
@@ -346,18 +346,18 @@
     </thead>
     <tbody>
         <tr>
-            <td class="tdformat">PF A/C No.: @Html.DisplayFor(m => m.previouscompanydetails.pf_account_number)</td>
-            <td class="tdformat">Account No.: @Html.DisplayFor(m => m.previouscompanydetails.fps_account_number)</td>
-            <td class="tdformat">Insurance No.: @Html.DisplayFor(m => m.previouscompanydetails.esi_insurance_number)</td>
+            <td class="tdformat">PF A/C No.: @Html.DisplayFor(m => m.Previouscompanydetails.pf_account_number)</td>
+            <td class="tdformat">Account No.: @Html.DisplayFor(m => m.Previouscompanydetails.fps_account_number)</td>
+            <td class="tdformat">Insurance No.: @Html.DisplayFor(m => m.Previouscompanydetails.esi_insurance_number)</td>
         </tr>
         <tr>
-            <td class="tdformat">Employer's Code No.: @Html.DisplayFor(m => m.previouscompanydetails.pf_employers_code_number)</td>
-            <td class="tdformat">Life Insurance : @Html.DisplayFor(m => m.previouscompanydetails.life_insurance)</td>
-            <td class="tdformat">Employer's Code No.: @Html.DisplayFor(m => m.previouscompanydetails.esi_employers_code_number)</td>
+            <td class="tdformat">Employer's Code No.: @Html.DisplayFor(m => m.Previouscompanydetails.pf_employers_code_number)</td>
+            <td class="tdformat">Life Insurance : @Html.DisplayFor(m => m.Previouscompanydetails.life_insurance)</td>
+            <td class="tdformat">Employer's Code No.: @Html.DisplayFor(m => m.Previouscompanydetails.esi_employers_code_number)</td>
         </tr>
         <tr>
             <td class="tdformat"></td>
-            <td class="tdformat">Mediclaim : @Html.DisplayFor(m => m.previouscompanydetails.mediclaim)</td>
+            <td class="tdformat">Mediclaim : @Html.DisplayFor(m => m.Previouscompanydetails.mediclaim)</td>
             <td class="tdformat"></td>
         </tr>
     </tbody>
@@ -389,39 +389,39 @@
     </thead>
     <tbody>
         <tr>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy1.employers_name)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy1.designation)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy1.periodworked_from)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy1.periodworked_to)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy1.reason_of_leaving)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy1.employers_name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy1.designation)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy1.periodworked_from)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy1.periodworked_to)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy1.reason_of_leaving)</td>
         </tr>
         <tr>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy2.employers_name)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy2.designation)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy2.periodworked_from)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy2.periodworked_to)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy2.reason_of_leaving)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy2.employers_name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy2.designation)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy2.periodworked_from)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy2.periodworked_to)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy2.reason_of_leaving)</td>
         </tr>
         <tr>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy3.employers_name)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy3.designation)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy3.periodworked_from)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy3.periodworked_to)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy3.reason_of_leaving)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy3.employers_name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy3.designation)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy3.periodworked_from)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy3.periodworked_to)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy3.reason_of_leaving)</td>
         </tr>
         <tr>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy4.employers_name)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy4.designation)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy4.periodworked_from)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy4.periodworked_to)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy4.reason_of_leaving)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy4.employers_name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy4.designation)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy4.periodworked_from)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy4.periodworked_to)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy4.reason_of_leaving)</td>
         </tr>
         <tr>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy5.employers_name)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy5.designation)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy5.periodworked_from)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy5.periodworked_to)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.prevemploy5.reason_of_leaving)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy5.employers_name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy5.designation)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy5.periodworked_from)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy5.periodworked_to)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Prevemploy5.reason_of_leaving)</td>
         </tr>
     </tbody>
 </table>
@@ -444,13 +444,13 @@
 <table width="700" align="center">
     <tbody>
         <tr>
-            <td class="tdformat" colspan="4">Are you related/known to any of the present employeed of our company ? @Html.DisplayFor(m=>m.additionalinformation.known_to_presentemployee)</td>
+            <td class="tdformat" colspan="4">Are you related/known to any of the present employeed of our company ? @Html.DisplayFor(m=>m.Additionalinformation.known_to_presentemployee)</td>
         </tr>
         <tr>
             <td class="tdformat" width="20%">If yes, Specify Name :</td>
-            <td class="tdformat" width="30%">@Html.DisplayFor(m => m.additionalinformation.name_of_knownemployee)</td>
+            <td class="tdformat" width="30%">@Html.DisplayFor(m => m.Additionalinformation.name_of_knownemployee)</td>
             <td class="tdformat" width="20%">Relationship :</td>
-            <td class="tdformat" width="30%">@Html.DisplayFor(m => m.additionalinformation.relationship_with_knownemployee)</td>
+            <td class="tdformat" width="30%">@Html.DisplayFor(m => m.Additionalinformation.relationship_with_knownemployee)</td>
         </tr>
         <tr>
             <td class="tdformat" colspan="4">Have you ever worked with us before ? </td>
@@ -484,14 +484,14 @@
     </thead>
     <tbody>
         <tr>
-            <td class="tdformat" height="30%">@Html.DisplayFor(m => m.reference1.name)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.reference1.address)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.reference1.designation)</td>
+            <td class="tdformat" height="30%">@Html.DisplayFor(m => m.Reference1.name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Reference1.address)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Reference1.designation)</td>
         </tr>
         <tr>
-            <td class="tdformat" height="30%">@Html.DisplayFor(m => m.reference2.name)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.reference2.address)</td>
-            <td class="tdformat">@Html.DisplayFor(m => m.reference2.designation)</td>
+            <td class="tdformat" height="30%">@Html.DisplayFor(m => m.Reference2.name)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Reference2.address)</td>
+            <td class="tdformat">@Html.DisplayFor(m => m.Reference2.designation)</td>
         </tr>
         <tr><td colspan="4" style="text-align:center; padding-top:10px"><button class="btn-primary" align="center" id="hidebutton">PRINT</button></td></tr>
     </tbody>

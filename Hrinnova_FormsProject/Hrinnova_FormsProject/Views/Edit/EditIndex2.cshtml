@@ -35,7 +35,7 @@
                             </tr>
                         </thead>
 
-                        @foreach (var item in Model.employeedetails)
+                        @foreach (var item in Model.Employeedetails)
                         {
                             <tr>
                                 <td>
@@ -53,9 +53,9 @@
 
                                 <td>
                                     @*@Html.ActionLink("Edit", "Edit", new { id = item.employee_id }) |
-    @Html.ActionLink("Delete", "Delete", new { id = item.employee_id }) |
-    @Html.ActionLink("ESIC", "Esicform","FormPopulate", new { id = item.employee_id }, null) |
-        @Html.ActionLink("PF", "Epfoform", "FormPopulate", new { id = item.employee_id },null)*@
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.employee_id }) |
+                                        @Html.ActionLink("ESIC", "Esicform","FormPopulate", new { id = item.employee_id }, null) |
+                                            @Html.ActionLink("PF", "Epfoform", "FormPopulate", new { id = item.employee_id },null)*@
                                     @Html.DropDownList(
     "url",
     new SelectList(new[]
@@ -69,10 +69,10 @@
         new SelectListItem { Text = "PF Transfer Form", Value = Url.Action("PFTransferForm", "FormPopulate", new {id=item.employee_id }) },
         new SelectListItem { Text = "SUMS Employee Verification", Value = Url.Action("SUMSEmployeeVerification", "FormPopulate", new {id=item.employee_id }) },
         new SelectListItem { Text = "Feedback", Value = Url.Action("FeedbackForm", "FormPopulate", new {id=item.employee_id }) },
-        
-    }, "Value", "Text"),
+
+    }, "Value" , "Text"),
     "---Action---",
-    new { @class="form-control urlddl" }
+    new { @class = "form-control urlddl" }
 )
                                 </td>
                             </tr>
@@ -85,19 +85,17 @@
     </div>
 </div>
 
-<script>
+<script type="text/javascript">
     $(document).ready(function () {
-        $('#myTable').DataTable();
-    });
-</script>
-<script>
-    $(function ddslect() {
-        $('.urlddl').change(function () {
+
+        $('.urlddl').change(function (e) {
+            debugger;
             var url = $(this).val();
             if (url != null && url != '') {
                 window.location.href = url;
             };
             $(this).text("---Action---");
         });
+        $('#myTable').DataTable();
     });
 </script>

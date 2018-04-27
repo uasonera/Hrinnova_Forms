@@ -4,8 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7d0577faf5734f809d2e731e20eb9e6f" Name="Diagram1" ZoomLevel="66">
-        <EntityTypeShape EntityType="hrinnova_dbModel.additional_information" Width="1.5" PointX="3" PointY="30.125" />
+      <Diagram DiagramId="7d0577faf5734f809d2e731e20eb9e6f" Name="Diagram1" ZoomLevel="75">
         <EntityTypeShape EntityType="hrinnova_dbModel.certifications" Width="1.5" PointX="3" PointY="4" />
         <EntityTypeShape EntityType="hrinnova_dbModel.educational_qualifications" Width="1.5" PointX="3" PointY="61" />
         <EntityTypeShape EntityType="hrinnova_dbModel.employee_refcheck" Width="1.5" PointX="3" PointY="22" />
@@ -19,6 +18,10 @@
         <EntityTypeShape EntityType="hrinnova_dbModel.department" Width="1.5" PointX="5.375" PointY="0.75" />
         <EntityTypeShape EntityType="hrinnova_dbModel.role" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="hrinnova_dbModel.prev_employ_1" Width="1.5" PointX="3" PointY="37.625" />
+        <EntityTypeShape EntityType="hrinnova_dbModel.additional_information" Width="1.5" PointX="9.875" PointY="4" />
+        <AssociationConnector Association="hrinnova_dbModel.FK_additional_information_department" />
+        <AssociationConnector Association="hrinnova_dbModel.FK_additional_information_role" />
+        <AssociationConnector Association="hrinnova_dbModel.FK_role_role" />
         <EntityTypeShape EntityType="hrinnova_dbModel.employee_details" Width="1.5" PointX="7.625" PointY="0.75" />
         <AssociationConnector Association="hrinnova_dbModel.FK_additional_information_employee_details" />
         <AssociationConnector Association="hrinnova_dbModel.FK_certifications_employee_details" />

@@ -12,41 +12,39 @@
                         <div class="row">
                             <label class="col-sm-6 control-label">HR Manual :</label>
 
-                            @*@Html.EditorFor(model => Model.feedback.hr_manual, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => Model.feedback.hr_manual, "", new { @class = "text-danger" })*@
-                            @Html.RadioButtonFor(model => model.feedback.hr_manual, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(model => model.feedback.hr_manual, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(model => model.Feedback.hr_manual, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(model => model.Feedback.hr_manual, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
                         </div>
                         <br>
                         <div class="row">
                             <label class="col-sm-6 control-label">CIMS ID/Password:</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.cims_idpassword, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.cims_idpassword, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.cims_idpassword, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.cims_idpassword, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                         <br>
                         <div class="row">
                             <label class="col-sm-6 control-label">Books (if required):</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.books, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.books, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.books, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.books, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                         <br>
                         <div class="row">
                             <label class="col-sm-6 control-label">Library Card (if required) :</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.library_card, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.library_card, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.library_card, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.library_card, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                         <br>
                         <div class="row">
                             <label class="col-sm-6 control-label">Any other :</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.hr_anyother, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.hr_anyother, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.hr_anyother, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.hr_anyother, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                     </div>
@@ -56,48 +54,48 @@
                         <h3>Administration</h3>
                         <div class="row">
                             <label class="col-sm-6 control-label">Identity Card :</label>
-                            @Html.RadioButtonFor(i => i.feedback.identitycard, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.identitycard, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.identitycard, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.identitycard, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                         <br>
                         <div class="row">
                             <label class="col-sm-6 control-label">Bank Account :</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.bank_account, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.bank_account, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.bank_account, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.bank_account, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                         <br>
                         <div class="row">
-                            <label class="col-sm-6 control-label">notepad :</label>
+                            <label class="col-sm-6 control-label">Notepad :</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.notepad, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.notepad, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.notepad, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.notepad, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                         <br>
                         <div class="row">
                             <label class="col-sm-6 control-label">Pen :</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.pen, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.pen, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.pen, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.pen, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                         <br>
                         <div class="row">
                             <label class="col-sm-6 control-label">Employee Card :</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.employee_card, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.employee_card, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.employee_card, "Yes", new {@style="width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.employee_card, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                         <br>
                         <div class="row">
                             <label class="col-sm-6 control-label">Any other :</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.admin_anyother, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.admin_anyother, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.admin_anyother, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.admin_anyother, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                     </div>
@@ -106,56 +104,56 @@
                         <div class="row">
                             <label class="col-sm-6 control-label">Computer System(PC) :</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.computer_system, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.computer_system, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.computer_system, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.computer_system, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                         <br>
                         <div class="row">
                             <label class="col-sm-6 control-label">Headphones (if required) :</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.headphones, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.headphones, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.headphones, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.headphones, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                         <br>
                         <div class="row">
                             <label class="col-sm-6 control-label">Email ID/Password :</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.emailid_password, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.emailid_password, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.emailid_password, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.emailid_password, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                         <br>
                         <div class="row">
                             <label class="col-sm-6 control-label">Network IP :</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.network_ip, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.network_ip, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.network_ip, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.network_ip, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                         <br>
                         <div class="row">
                             <label class="col-sm-6 control-label">Firewall ID:</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.firewall_id, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.firewall_id, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.firewall_id, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.firewall_id, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                         <br>
                         <div class="row">
                             <label class="col-sm-6 control-label">Domain Username and Password :</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.domain_usernamepassword, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.domain_usernamepassword, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.domain_usernamepassword, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.domain_usernamepassword, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                         <br>
                         <div class="row">
                             <label class="col-sm-6 control-label">Access to messengers(Yahoo, MSN, Skype, Google Talk, etc.):</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.messengers_access, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.messengers_access, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.messengers_access, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.messengers_access, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
 
                         </div>
@@ -163,8 +161,8 @@
                         <div class="row">
                             <label class="col-sm-6 control-label">Any other :</label>
 
-                            @Html.RadioButtonFor(i => i.feedback.systemadmin_anyother, "Yes") <label class="control-label">yes</label>
-                            @Html.RadioButtonFor(i => i.feedback.systemadmin_anyother, "No") <label class="control-label">no</label>
+                            @Html.RadioButtonFor(i => i.Feedback.systemadmin_anyother, "Yes", new { @style = "width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                            @Html.RadioButtonFor(i => i.Feedback.systemadmin_anyother, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
 
                         </div>
                     </div>
@@ -182,8 +180,8 @@
                     <h3>Joinee</h3>
                     <div class="row">
                         <label class="col-sm-6 control-label">HR Manual studied and ISMS responsibilities understood :</label>
-                        @Html.RadioButtonFor(i => i.feedback.hrmanual_and_responsibilities, "Yes") <label class="control-label">yes</label>
-                        @Html.RadioButtonFor(i => i.feedback.hrmanual_and_responsibilities, "No") <label class="control-label">no</label>
+                        @Html.RadioButtonFor(i => i.Feedback.hrmanual_and_responsibilities, "Yes", new {@style="width:20px;height:20px;" }) <label class="control-label">Yes</label>
+                        @Html.RadioButtonFor(i => i.Feedback.hrmanual_and_responsibilities, "No", new { @style = "width:20px;height:20px;" }) <label class="control-label">No</label>
                         <br>
                     </div>
                 </div>

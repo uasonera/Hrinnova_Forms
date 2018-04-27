@@ -43,19 +43,19 @@
         </tr>
         <tr>
             <td class="boldit" width="20%" style="font-weight:bold">Full Name*:</td>
-            <td class="boldit" width="25%">@Html.DisplayFor(m => m.employeedetails.firstname)</td>
+            <td class="boldit" width="25%">@Html.DisplayFor(m => m.Employeedetails.firstname)</td>
             <td class="boldit" width="20%" style="font-weight:bold">ID(for internal tracking):</td>
             <td class="boldit" width="25%"></td>
         </tr>
         <tr>
             <td class="boldit" style="font-weight:bold">Date of Birth*:</td>
-            <td class="boldit" >@Html.DisplayFor(m=>m.employeedetails.date_of_birth)</td>
+            <td class="boldit" >@Html.DisplayFor(m=>m.Employeedetails.date_of_birth)</td>
             <td class="boldit" style="font-weight:bold">Gender :</td>
-            <td class="boldit" >@Html.DisplayFor(m=>m.employeedetails.gender)</td>
+            <td class="boldit" >@Html.DisplayFor(m=>m.Employeedetails.gender)</td>
         </tr>
         <tr>
             <td class="boldit" style="font-weight:bold">Father's Name*:</td>
-            <td class="boldit" colspan="3">@Html.DisplayFor(m => m.employeedetails.middlename)</td>
+            <td class="boldit" colspan="3">@Html.DisplayFor(m => m.Employeedetails.middlename)</td>
         </tr>
     </table>
     <br />
@@ -67,20 +67,20 @@
         </tr>
         <tr>
             <td class="boldit" width="22%" style="font-weight:bold">Present Address*:</td>
-            <td class="boldit" colspan="3">@Html.DisplayFor(m => m.employeedetails.temporary_address)</td>
+            <td class="boldit" colspan="3">@Html.DisplayFor(m => m.Employeedetails.temporary_address)</td>
         </tr>
         <tr>
             <td class="boldit" style="font-weight:bold">Permanent Address*:</td>
-            <td class="boldit" colspan="3">@Html.DisplayFor(m => m.employeedetails.permanent_address)</td>
+            <td class="boldit" colspan="3">@Html.DisplayFor(m => m.Employeedetails.permanent_address)</td>
             
         </tr>
         <tr>
             <td class="boldit" style="font-weight:bold">Email Address*:</td>
-            <td class="boldit" colspan="3">@Html.DisplayFor(m => m.employeedetails.email_id)</td>
+            <td class="boldit" colspan="3">@Html.DisplayFor(m => m.Employeedetails.email_id)</td>
         </tr>
         <tr>
             <td class="boldit" style="font-weight:bold">Mobile Number*:</td>
-            <td class="boldit" colspan="3">@Html.DisplayFor(m => m.employeedetails.mobile_number)</td>
+            <td class="boldit" colspan="3">@Html.DisplayFor(m => m.Employeedetails.mobile_number)</td>
         </tr>
     </table>
     <br />
@@ -101,39 +101,39 @@
         </tr>
         <tr>
             <td class="boldit" width="5%" style="font-weight:bold">1</td>
-            <td class="boldit">@Html.DisplayFor(m => m.prevemploy1.employers_name)</td>
-            <td class="boldit">@Html.DisplayFor(m => m.prevemploy1.designation)</td>
-            <td class="boldit">@Html.DisplayFor(m => m.prevemploy1.periodworked_from)-@Html.DisplayFor(m => m.prevemploy1.periodworked_to)<br></td>
-            <td class="boldit">@Html.DisplayFor(m => m.prevemploy1.pr_employee_id)</td>
-            <td class="boldit">@Html.DisplayFor(m => m.prevemploy1.ctc)</td>
-            <td class="boldit"><br>@Html.DisplayFor(m => m.prevemploy1.reporting_manager)<br>@Html.DisplayFor(m => m.prevemploy1.rm_designation)<br />@Html.DisplayFor(m => m.prevemploy1.rm_contact)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy1.employers_name)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy1.designation)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy1.periodworked_from)-@Html.DisplayFor(m => m.Prevemploy1.periodworked_to)<br></td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy1.pr_employee_id)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy1.ctc)</td>
+            <td class="boldit"><br>@Html.DisplayFor(m => m.Prevemploy1.reporting_manager)<br>@Html.DisplayFor(m => m.Prevemploy1.rm_designation)<br />@Html.DisplayFor(m => m.Prevemploy1.rm_contact)</td>
         </tr>
         <tr>
-            <td colspan="7" class="boldit">Reason for Leaving/Comment : @Html.DisplayFor(m => m.prevemploy1.reason_of_leaving)</td>
+            <td colspan="7" class="boldit">Reason for Leaving/Comment : @Html.DisplayFor(m => m.Prevemploy1.reason_of_leaving)</td>
         </tr>
         <tr>
             <td class="boldit" width="5%" style="font-weight:bold">2</td>
-            <td class="boldit">@Html.DisplayFor(m => m.prevemploy2.employers_name)</td>
-            <td class="boldit">@Html.DisplayFor(m => m.prevemploy2.designation)</td>
-            <td class="boldit">@Html.DisplayFor(m => m.prevemploy2.periodworked_from)-@Html.DisplayFor(m => m.prevemploy2.periodworked_to)<br></td>
-            <td class="boldit">@Html.DisplayFor(m => m.prevemploy2.pr_employee_id)</td>
-            <td class="boldit">@Html.DisplayFor(m => m.prevemploy2.ctc)</td>
-            <td class="boldit"><br>@Html.DisplayFor(m => m.prevemploy2.reporting_manager)<br>@Html.DisplayFor(m => m.prevemploy2.rm_designation)<br />@Html.DisplayFor(m => m.prevemploy2.rm_contact)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy2.employers_name)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy2.designation)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy2.periodworked_from)-@Html.DisplayFor(m => m.Prevemploy2.periodworked_to)<br></td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy2.pr_employee_id)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy2.ctc)</td>
+            <td class="boldit"><br>@Html.DisplayFor(m => m.Prevemploy2.reporting_manager)<br>@Html.DisplayFor(m => m.Prevemploy2.rm_designation)<br />@Html.DisplayFor(m => m.Prevemploy2.rm_contact)</td>
         </tr>
         <tr>
-            <td colspan="7" class="boldit">Reason for Leaving/Comment : @Html.DisplayFor(m => m.prevemploy2.reason_of_leaving)</td>
+            <td colspan="7" class="boldit">Reason for Leaving/Comment : @Html.DisplayFor(m => m.Prevemploy2.reason_of_leaving)</td>
         </tr>
         <tr>
             <td class="boldit" width="5%" style="font-weight:bold">3</td>
-            <td class="boldit">@Html.DisplayFor(m => m.prevemploy3.employers_name)</td>
-            <td class="boldit">@Html.DisplayFor(m => m.prevemploy3.designation)</td>
-            <td class="boldit">@Html.DisplayFor(m => m.prevemploy3.periodworked_from)-@Html.DisplayFor(m => m.prevemploy3.periodworked_to)<br></td>
-            <td class="boldit">@Html.DisplayFor(m => m.prevemploy3.pr_employee_id)</td>
-            <td class="boldit">@Html.DisplayFor(m => m.prevemploy3.ctc)</td>
-            <td class="boldit"><br>@Html.DisplayFor(m => m.prevemploy3.reporting_manager)<br>@Html.DisplayFor(m => m.prevemploy3.rm_designation)<br />@Html.DisplayFor(m => m.prevemploy3.rm_contact)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy3.employers_name)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy3.designation)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy3.periodworked_from)-@Html.DisplayFor(m => m.Prevemploy3.periodworked_to)<br></td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy3.pr_employee_id)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy3.ctc)</td>
+            <td class="boldit"><br>@Html.DisplayFor(m => m.Prevemploy3.reporting_manager)<br>@Html.DisplayFor(m => m.Prevemploy3.rm_designation)<br />@Html.DisplayFor(m => m.Prevemploy3.rm_contact)</td>
         </tr>
         <tr>
-            <td colspan="7" class="boldit">Reason for Leaving/Comment : @Html.DisplayFor(m => m.prevemploy3.reason_of_leaving)</td>
+            <td colspan="7" class="boldit">Reason for Leaving/Comment : @Html.DisplayFor(m => m.Prevemploy3.reason_of_leaving)</td>
         </tr>
         <tr>
             <td  colspan="7" style="text-align:center; font-weight:bold; font-size:large;  padding-top:20px">
@@ -161,7 +161,7 @@
             </td></tr>
         <tr>
             <td style="padding-top:20px" colspan="7">
-                Name of Candidate : @Html.DisplayFor(m=>m.employeedetails.firstname)&nbsp;@Html.DisplayFor(m=>m.employeedetails.surname)<br /><br />
+                Name of Candidate : @Html.DisplayFor(m=>m.Employeedetails.firstname)&nbsp;@Html.DisplayFor(m=>m.Employeedetails.surname)<br /><br />
                 Signature of Candidate :<br /><br />
                 Date & Place : @System.DateTime.Now, Ahmedabad
             </td>

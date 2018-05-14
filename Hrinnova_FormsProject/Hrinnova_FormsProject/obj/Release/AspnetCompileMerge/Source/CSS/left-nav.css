@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+.left-nav{width:220px;	float:left;}
+
+
+
+.left-nav ul 	{margin:0px; padding:10px 0px 0px 0px; list-style:none;}
+
+.left-nav li 	{width:220px; }
+
+.left-nav li a 	{font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#666666; text-decoration:none; display:block; font-weight:bold; padding:10px 0px 10px 38px; background:url(../../images/grey-arrow.gif) 20px center no-repeat; }
+
+.left-nav li a:hover 	{font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#fff; text-decoration:none; display:block; background:url(../../images/white-arrow.gif) 20px center no-repeat #f9962e;}
+

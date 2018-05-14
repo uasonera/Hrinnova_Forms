@@ -1,0 +1,367 @@
+﻿@using System.Configuration
+@model Hrinnova_FormsProject.Models.Model2
+@Html.AntiForgeryToken()
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/pagetypes.css" rel="stylesheet" />
+<link href="~/CSS/cssfortableformat.css" rel="stylesheet" />
+<script src="~/JsScript/jquery-1.11.3.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <style>
+        .boldit {
+            border: solid;
+            border-width: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    @*header table content*@
+    <table width="900" align="center">
+        <thead>
+            <tr>
+                <th width="15%" class="tdpadding" rowspan="3">
+
+                    <img src="~/Images/esic-logo2.jpg" />
+                </th>
+                <th>
+                    <h3 align="center">घोषणा पत्र  DECLARATION FORM</h3>
+                </th>
+            </tr>
+            <tr>
+                <th class="tdpadding " colspan="2">
+                    घोषणा पत्र कर्मचारी द्वारा भरा जाएगा | फार्म के साथ पोस्टकार्ड आकार के दो फोटोग्राफ भी लगाने जाने चाहिए | फार्म भरने से पहले पीठ पृष्ठ पर दी गई हिदायतों को भली-भांति पढ़ लेना चाहिए | यह फार्म निःशुल्क है |
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2" class="tdpadding ">
+                    To be filled by employee after reading instructions overleaf. Two postcard sized photographs to be attached with the form. This form is free of cost.
+                </th>
+            </tr>
+            <tr>
+                <th style="padding-top:20px" colspan="2">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th width="500">(क) बीमाकृत व्यक्ति के विवरण <br />(A) Insured Persons Particulars</th>
+                                <th width="450">(ख) नियोजक के विवरण <br />(A) Employer's Particulars</th>
+                            </tr>
+                        </thead>
+                    </table>
+
+                </th>
+            </tr>
+        </thead>
+    </table>
+    <br />
+    @*form table content*@
+   
+    <table width="900" align="center">
+        <tr>
+            <td width="21%" class="boldit">
+                1. बिमा संख्या/Insurance No.
+            </td>
+            <td class="boldit" width="21%">@Html.DisplayFor(m => m.Esicdetails.insurance_number)</td>
+            <td width="2%"></td>
+            <td class="boldit" width="20%">
+                9. नियोजक की कूट संख्या<br />
+                Employer's Code No.
+            </td>
+            <td class="boldit">@System.Configuration.ConfigurationManager.AppSettings["employerscode"]</td>
+        </tr>
+        <tr>
+            <td class="boldit">2. नाम(स्पष्ट अक्षरों में)<br />Name in block letters</td>
+            <td class="boldit">&nbsp;@Html.DisplayFor(m => m.Employeedetails.firstname) @Html.DisplayFor(m => m.Employeedetails.surname)</td>
+            <td></td>
+            <td class="boldit">10.नियुक्ति की तारीख<br />Date of Appointment</td>
+            <td class="boldit">@Html.DisplayFor(m=>m.Employeedetails.date_of_joining)</td>
+        </tr>
+        <tr>
+            <td class="boldit">3. पिता/पति का नाम<br />Father's Husband's Name</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Employeedetails.middlename)</td>
+            <td></td>
+            <td colspan="2" rowspan="2" class="boldit" >11. नियोजक का नाम और पता<br />Name and Address of the Employer<br/>@System.Configuration.ConfigurationManager.AppSettings["employernameaddress"]</td>
+        </tr>
+        <tr>
+            <td class="boldit">4.जन्म की तिथि<br />Date of Birth</td>
+            <td class="boldit">
+                <table>
+                    <tr>
+                        <td class="boldit" style="border-left:0;border-top:0">
+                            दिन<br />Day
+                        </td>
+                        <td class="boldit" style="border-top:0">
+                            महिना<br />Month
+                        </td>
+                        <td class="boldit" style="border-top:0">
+                            वर्ष<br />Year
+                        </td>
+                        <td class="boldit" style="border-top:0">
+                            5.वैवाहिक परिस्थिति<br />Marital Status
+                        </td>
+                        <td class="boldit" style="border-top:0; border-right:0">
+                            @Html.DisplayFor(model => model.Maritalstatus.SingleOrDefault(m => m.Id == model.Employeedetails.marital_status).Status, new { htmlAttributes = new { @class = "form-control" } }) 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="boldit" style="border-left:0; border-bottom:0">
+                            @Html.DisplayFor(m => m.Employeedetails.date_of_birth)
+                        </td>
+                        <td class="boldit" style="border-bottom:0">
+                            6. लिंग/Sex
+                        </td>
+                        <td class="boldit" style="border-bottom:0; border-right:0">
+                            @Html.DisplayFor(m => m.Employeedetails.gender)
+                        </td>
+
+                    </tr>
+                </table>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="3" class="boldit">7. वर्तमान पता/Present Address<br />@Html.DisplayFor(m => m.Employeedetails.temporary_address) <br />
+            @Html.DisplayFor(m => m.Employeedetails.mobile_number) </td>
+            <td rowspan="3" class="boldit">8. स्थायी पता/Permanent Address<br />@Html.DisplayFor(m => m.Employeedetails.permanent_address) <br />
+            @Html.DisplayFor(m => m.Employeedetails.mobile_number) </td>
+            <td rowspan="3"></td>
+            <td class="boldit" colspan="2">यदि पहले नियोजन में रहे है तो कृपया निम्नलिखित ब्योरे दीजिये<br />In case of any previous employment please fill up the details as under</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="boldit">(क) पिछली बिमा संख्या<br />(a) Previous Insurance No. :&nbsp;@Html.DisplayFor(m => m.Esicdetails.previous_insurance_number)</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="boldit">(ख) नियोजक कूट संख्या<br />(b) Employer's Code No. :</td>
+            
+        </tr>
+        <tr>
+            <td rowspan="2" class="boldit">शाखा कार्यालय Branch Office :<br />&nbsp;@Html.DisplayFor(m => m.Esicdetails.branch_office)</td>
+            <td rowspan="2" class="boldit">औषधालय Dispensary :&nbsp;@Html.DisplayFor(m => m.Esicdetails.dispensary) </td>
+            <td rowspan="2"></td>
+            <td colspan="2" rowspan="2" class="boldit">(ग) नियोजक का नाम व पता<br />(c) Name and Address of the Employer :<br />&nbsp;@Html.DisplayFor(m => m.Esicdetails.employers_nameandaddress)</td>
+        </tr>
+        @*<tr>
+            
+           
+        </tr>*@
+    </table>
+    <br />
+    <table align="center" width="900">
+        <tr>
+            <td colspan="3">
+                (क) मृत्यु की स्थिति में नकद हितलाभ के भुगतान के लिए क.रा.बी. अधिनियम, 1948 के धारा 71/क.रा.बी. (केन्द्रीय) नियम, 1950 के नियम 56(2) के अंतर्गत नामित के ब्यौरे |<br>
+                (c) Details of nominee u/s 71 of ESI Act 1948/Rule-56(2) of ESI(Central) Rules, 1950 for payment of cash benefit in event of death.
+            </td>
+        </tr>
+        <tr class="boldit">
+            <td class="boldit" style="padding-left:5px" width="33%">
+                नाम/Name
+            </td>
+            <td class="boldit" style="padding-left:5px" width="33%">
+                नातेदारी/Relationship
+            </td>
+            <td class="boldit" style="padding-left:5px">
+                पता/Address
+            </td>
+        </tr>
+        <tr>
+            <td class="boldit" style="padding-left:5px">
+                @Html.DisplayFor(m => m.Esicdetails.name_of_nominee)
+            </td>
+            <td class="boldit" style="padding-left:5px">
+                @Html.DisplayFor(m => m.Esicdetails.nominee_relationship)
+            </td>
+            <td class="boldit" style="padding-left:5px">
+                @Html.DisplayFor(m => m.Esicdetails.nominee_address)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                मैं एतद्द्वारा घोषणा करता/करती हूँ की मेरे द्वारा प्रस्तुत किये गए विवरण मेरी जानकारी और विश्वास के अनुसार सही है |
+                मैं अपने परिवार के सदस्यों में हुए परिवर्तन की सुचना 15 दिन के भीतर प्रस्तुत करने का वचन भी देता/देती हूँ |
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                I hereby declare that the particulars given by me are correct to the best of my knowledge and belief.
+                I undertake to intimate the corporation any changes in the membership of my family within 15 days of such change.
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:left;padding-top:50px">
+                नियोजक के प्रतिहस्ताक्षर<br>
+                Counter Signature by the Employer
+            </td>
+            <td style="text-align:right;padding-top:50px" colspan="2">
+                बीमाकृत व्यक्ति के हस्ताक्षर<br>
+                Signature/T.I. of I.P
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-top:70px">
+                सील सहित हस्ताक्षर<br>
+                Signature with Seal
+            </td>
+        </tr>
+    </table>
+    <br />
+
+    <table width="900" align="center">
+        <thead>
+            <tr>
+                <td colspan="6">
+                    (घ) बीमाकृत व्यक्ति के परिजनों का विवरण<br>
+                    (D) Family Particulars of the Insured Person
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td width="5%" class="boldit">
+                    क्र.सं.<br>Sr. No.
+                </td>
+                <td width="25%" class="boldit">
+                    नाम<br>Name
+                </td>
+                <td width="15%" class="boldit">
+                    फार्म भरने की तारीख को आयु/जन्म तारीख<br>Date of Birth/Age as on date of filling form
+                </td>
+                <td width="15%" class="boldit">
+                    कर्मचारी के साथ नातेदारी<br>Relationship with the employee
+                </td>
+                <td width="15%" class="boldit">
+                    क्या उनके साथ रह रहे है? बताएं<br>Whether residing with him/her
+                </td>
+                <td class="boldit">
+                    यदि नहीं तो आवास का स्थान दर्शाएं<br>If No, State Place of Residence
+                </td>
+
+            </tr>
+            <tr>
+                <td class="boldit">1</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Fatherdetails.fname)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Fatherdetails.fdateofbirth)</td>
+                <td class="boldit">Father</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Fatherdetails.freside)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Fatherdetails.ftown), @Html.DisplayFor(m => m.Fatherdetails.fstate)</td>
+            </tr>
+            <tr>
+                <td class="boldit">2</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Motherdetails.fname)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Motherdetails.fdateofbirth)</td>
+                <td class="boldit">Mother</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Motherdetails.freside)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Fatherdetails.ftown), @Html.DisplayFor(m => m.Fatherdetails.fstate)</td>
+            </tr>
+            <tr>
+                <td class="boldit">3</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Brotherdetails.fname)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Brotherdetails.fdateofbirth)</td>
+                <td class="boldit">Brother</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Brotherdetails.freside)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Brotherdetails.ftown), @Html.DisplayFor(m => m.Fatherdetails.fstate)</td>
+            </tr>
+            <tr>
+                <td class="boldit">4</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Sisterdetails.fname)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Sisterdetails.fdateofbirth)</td>
+                <td class="boldit">Sister</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Sisterdetails.freside)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Sisterdetails.ftown), @Html.DisplayFor(m => m.Fatherdetails.fstate)</td>
+            </tr>
+            <tr>
+                <td class="boldit">5</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Spousedetails.fname)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Spousedetails.fdateofbirth)</td>
+                <td class="boldit">Spouse</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Spousedetails.freside)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Spousedetails.ftown), @Html.DisplayFor(m => m.Fatherdetails.fstate)</td>
+            </tr>
+            <tr>
+                <td class="boldit">6</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Childrendetails.fname)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Childrendetails.fdateofbirth)</td>
+                <td class="boldit">Children</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Childrendetails.freside)</td>
+                <td class="boldit">@Html.DisplayFor(m => m.Childrendetails.ftown), @Html.DisplayFor(m => m.Fatherdetails.fstate)</td>
+            </tr>
+        </tbody>
+    </table >
+    <br />
+    <table align="center" width="900">
+        <tr>
+            <td>
+                क.रा.बी. निगम अस्थायी पह्चान पत्र <br>
+                ESI Corporation Temporary Identity Card
+            </td>
+            <td>
+                (नियुत्की की तारीख से 3 महीने तक वैध)<br>
+                (Valid for 3 months from the date of appointment)
+            </td>
+        </tr>
+    </table>
+    <table width="900" height="250" align="center">
+        <tr>
+            <td class="boldit" style="padding-left:5px" width="20%">
+                नाम/Name
+            </td>
+            <td class="boldit" style="padding-left:5px" width="20%"></td>
+            <td class="boldit" style="padding-left:5px" width="40%"></td>
+            <td class="boldit" rowspan="4" width="20%" style="text-align:center">
+                फोटो के लिए स्थान<br>(Space for Photograph)
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-left:5px" class="boldit">बिमा संख्या/Ins. No.</td>
+            <td style="padding-left:5px" class="boldit"></td>
+            <td style="padding-left:5px" class="boldit">
+                नियुक्ति की तारीख/Date of Appointment
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="padding-left:5px" class="boldit">शाखा कार्यालय/Branch Office</td>
+            <td style="padding-left:5px" class="boldit"></td>
+            <td style="padding-left:5px" class="boldit">
+                औषधालय <br>
+                Dispensary
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="padding-left:5px" class="boldit" colspan="2">नियोजक की कूट संख्या व पता/Employer's Code No. and Address</td>
+            <td style="padding-left:5px" class="boldit"></td>
+            <td></td>
+        </tr>
+    </table>
+    <br />
+    <table width="900" align="center">
+        <tr>
+            <td>
+                वैधता<br />
+                Validity
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" width="30%">
+                तारीख<br />
+                Dated
+            </td>
+            <td width="30%" style="text-align:center">
+                बीमाकृत व्यक्ति के हस्ताक्षर/अंगूठे का निशान<br />
+                Signature/T.I. of I.P.
+            </td>
+            <td width="30%" style="text-align:right">
+                सील सहित शाखा प्रबंधक के हस्ताक्षर<br />
+                Signature of B.M. with seal
+            </td>
+
+        </tr>
+        <tr><td colspan="4" style="text-align:center; padding-top:10px"><button class="btn-primary" align="center" id="hidebutton">PRINT</button></td></tr>
+    </table>
+
+</body>
+</html>
+<script src="~/JsScript/hidebutton.js"></script>

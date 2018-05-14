@@ -1,0 +1,178 @@
+﻿@model Hrinnova_FormsProject.Models.Model2
+@Html.AntiForgeryToken()
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/pagetypes.css" rel="stylesheet" />
+<link href="~/CSS/cssfortableformat.css" rel="stylesheet" />
+<script src="~/JsScript/jquery-1.11.3.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <style>
+        .boldit {
+            border: solid;
+            border-width: 2px;
+            padding-top:5px;
+            padding-bottom:5px;
+            padding-left:5px;
+        }
+        .textblue {
+            color:#3b75ab !important;
+        }
+
+    </style>
+</head>
+<body>
+    <table width="900" align="center">
+        <thead>
+            <tr>
+                <th colspan="4" style="text-align:left">
+                    <img src="~/Images/sums.png" />
+                </th>
+            </tr>
+        </thead>
+        <tr>
+            <td colspan="4" class="textblue" style="text-align:center; font-weight:bold; font-size:large">
+                Employment Verification Form<br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="boldit" style="font-weight:bold; background-color:#d9e6f2 !important">
+                Applicant Detail
+            </td>
+        </tr>
+        <tr>
+            <td class="boldit" width="20%" style="font-weight:bold">Full Name*:</td>
+            <td class="boldit" width="25%">@Html.DisplayFor(m => m.Employeedetails.firstname)</td>
+            <td class="boldit" width="20%" style="font-weight:bold">ID(for internal tracking):</td>
+            <td class="boldit" width="25%"></td>
+        </tr>
+        <tr>
+            <td class="boldit" style="font-weight:bold">Date of Birth*:</td>
+            <td class="boldit" >@Html.DisplayFor(m=>m.Employeedetails.date_of_birth)</td>
+            <td class="boldit" style="font-weight:bold">Gender :</td>
+            <td class="boldit" >@Html.DisplayFor(m=>m.Employeedetails.gender)</td>
+        </tr>
+        <tr>
+            <td class="boldit" style="font-weight:bold">Father's Name*:</td>
+            <td class="boldit" colspan="3">@Html.DisplayFor(m => m.Employeedetails.middlename)</td>
+        </tr>
+    </table>
+    <br />
+    <table width="900" align="center">
+        <tr>
+            <td colspan="4" class="boldit" style="font-weight:bold; background-color:#d9e6f2 !important">
+                Contact Detail
+            </td>
+        </tr>
+        <tr>
+            <td class="boldit" width="22%" style="font-weight:bold">Present Address*:</td>
+            <td class="boldit" colspan="3">@Html.DisplayFor(m => m.Employeedetails.temporary_address)</td>
+        </tr>
+        <tr>
+            <td class="boldit" style="font-weight:bold">Permanent Address*:</td>
+            <td class="boldit" colspan="3">@Html.DisplayFor(m => m.Employeedetails.permanent_address)</td>
+            
+        </tr>
+        <tr>
+            <td class="boldit" style="font-weight:bold">Email Address*:</td>
+            <td class="boldit" colspan="3">@Html.DisplayFor(m => m.Employeedetails.email_id)</td>
+        </tr>
+        <tr>
+            <td class="boldit" style="font-weight:bold">Mobile Number*:</td>
+            <td class="boldit" colspan="3">@Html.DisplayFor(m => m.Employeedetails.mobile_number)</td>
+        </tr>
+    </table>
+    <br />
+    <table width="900" align="center">
+        <tr>
+            <td colspan="7" class="boldit" style="font-weight:bold; background-color:#d9e6f2 !important">
+               Experience Details
+            </td>
+        </tr>
+        <tr>
+            <td class="boldit" width="5%" style="font-weight:bold"></td>
+            <td class="boldit" style="font-weight:bold">Company Name and Address</td>
+            <td class="boldit" style="font-weight:bold">Designation</td>
+            <td class="boldit" style="font-weight:bold">Duration<br>Start Date-End Date</td>
+            <td class="boldit" style="font-weight:bold">Employee ID</td>
+            <td class="boldit" style="font-weight:bold">CTC per annum</td>
+            <td class="boldit" style="font-weight:bold">Reporting Manager<br>(Name, Designation and Contact Details)</td>
+        </tr>
+        <tr>
+            <td class="boldit" width="5%" style="font-weight:bold">1</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy1.employers_name)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy1.designation)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy1.periodworked_from)-@Html.DisplayFor(m => m.Prevemploy1.periodworked_to)<br></td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy1.pr_employee_id)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy1.ctc)</td>
+            <td class="boldit"><br>@Html.DisplayFor(m => m.Prevemploy1.reporting_manager)<br>@Html.DisplayFor(m => m.Prevemploy1.rm_designation)<br />@Html.DisplayFor(m => m.Prevemploy1.rm_contact)</td>
+        </tr>
+        <tr>
+            <td colspan="7" class="boldit">Reason for Leaving/Comment : @Html.DisplayFor(m => m.Prevemploy1.reason_of_leaving)</td>
+        </tr>
+        <tr>
+            <td class="boldit" width="5%" style="font-weight:bold">2</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy2.employers_name)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy2.designation)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy2.periodworked_from)-@Html.DisplayFor(m => m.Prevemploy2.periodworked_to)<br></td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy2.pr_employee_id)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy2.ctc)</td>
+            <td class="boldit"><br>@Html.DisplayFor(m => m.Prevemploy2.reporting_manager)<br>@Html.DisplayFor(m => m.Prevemploy2.rm_designation)<br />@Html.DisplayFor(m => m.Prevemploy2.rm_contact)</td>
+        </tr>
+        <tr>
+            <td colspan="7" class="boldit">Reason for Leaving/Comment : @Html.DisplayFor(m => m.Prevemploy2.reason_of_leaving)</td>
+        </tr>
+        <tr>
+            <td class="boldit" width="5%" style="font-weight:bold">3</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy3.employers_name)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy3.designation)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy3.periodworked_from)-@Html.DisplayFor(m => m.Prevemploy3.periodworked_to)<br></td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy3.pr_employee_id)</td>
+            <td class="boldit">@Html.DisplayFor(m => m.Prevemploy3.ctc)</td>
+            <td class="boldit"><br>@Html.DisplayFor(m => m.Prevemploy3.reporting_manager)<br>@Html.DisplayFor(m => m.Prevemploy3.rm_designation)<br />@Html.DisplayFor(m => m.Prevemploy3.rm_contact)</td>
+        </tr>
+        <tr>
+            <td colspan="7" class="boldit">Reason for Leaving/Comment : @Html.DisplayFor(m => m.Prevemploy3.reason_of_leaving)</td>
+        </tr>
+        <tr>
+            <td  colspan="7" style="text-align:center; font-weight:bold; font-size:large;  padding-top:20px">
+                <u class="textblue">Letter of Authorization for Employee Screening</u>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-top:20px" colspan="7">
+                <p>
+                    I, hereby authorize SUMS Corpsolutions LLP, and/or its agents to make an independent
+                    investigation of my background, references, past employment, education, credit history,
+                    criminal or police records, and motor vehicle records including those maintained by both
+                    public and private organizations and all public records for the purpose of confirming the
+                    information contained on my Application and/or obtaining other information which may be
+                    material to my qualifications for service now and, if applicable, during the trnure of my
+                    employment or service with
+                </p>
+                <p>
+                    I release ______ (Name of Company) and its agents and any person or entity,
+                    which provides information pursuant to this authorization, from any and all liabilities, claims or
+                    law suits in regards to the information obtained from any and all the above referenced
+                    sources used. The following is true to and complete legal name and all information is true and
+                    correct to the best of my knowledge.
+                </p>
+            </td></tr>
+        <tr>
+            <td style="padding-top:20px" colspan="7">
+                Name of Candidate : @Html.DisplayFor(m=>m.Employeedetails.firstname)&nbsp;@Html.DisplayFor(m=>m.Employeedetails.surname)<br /><br />
+                Signature of Candidate :<br /><br />
+                Date & Place : @System.DateTime.Now, Ahmedabad
+            </td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td colspan="7">CONFIDENTIAL: This document contains confidential information and must be handled with care.</td>
+            </tr>
+        </tfoot>
+        <tr><td colspan="4" style="text-align:center; padding-top:10px"><button class="btn-primary" align="center" id="hidebutton">PRINT</button></td></tr>
+    </table>
+</body>
+</html>
+<script src="~/JsScript/hidebutton.js"></script>

@@ -18,7 +18,7 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public int additionalinformation_id { get; set; }
         public int employee_id { get; set; }
         public string known_to_presentemployee { get; set; }
-        [RegularExpression("^[a-zA-Z/s]+$", ErrorMessage = "Name cannot contain numbers or special characters")]
+        [RegularExpression("^[a-zA-Z_ ]*$", ErrorMessage = "Name cannot contain numbers or special characters")]
         public string name_of_knownemployee { get; set; }
         public string relationship_with_knownemployee { get; set; }
         [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]

@@ -1,4 +1,4 @@
-﻿@model Hrinnova_FormsProject.Models.Model2
+﻿@model Cygnet.ProjMan.EFData.ViewModels.MainModel
 
 
 @Html.AntiForgeryToken()
@@ -29,16 +29,17 @@
                         </div>
                         <div class="col-sm-5">
                             @Html.RadioButtonFor(m => m.Epfodetails.member_of_epfoscheme, "yes", new { @style = "width:20px;height:20px;" })  Yes &nbsp;&nbsp; @Html.RadioButtonFor(m => m.Epfodetails.member_of_epfoscheme, "no", new { @style = "width:20px;height:20px;" }) No
+                            @Html.ValidationMessageFor(model=>model.Epfodetails.member_of_epfoscheme,"",new { @class="text-danger"})
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-sm-6">
                             <label class="control-label">Whether earlier a member of Employee's Pension Scheme, 1952 :</label>
-
                         </div>
                         <div class="col-sm-5">
                             @Html.RadioButtonFor(m => m.Epfodetails.member_of_epsscheme, "yes", new { @style = "width:20px;height:20px;" })  Yes &nbsp;&nbsp; @Html.RadioButtonFor(m => m.Epfodetails.member_of_epsscheme, "no", new { @style = "width:20px;height:20px;" }) No
+                            @Html.ValidationMessageFor(model => model.Epfodetails.member_of_epsscheme, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <br>
@@ -94,6 +95,7 @@
                         <div class="col-sm-8">
                             @Html.RadioButtonFor(model => model.Epfodetails.international_worker, "Yes", new { @style = "width:20px;height:20px;" })&nbsp;Yes&nbsp; &nbsp; 
                             @Html.RadioButtonFor(model => model.Epfodetails.international_worker, "No", new { @style = "width:20px;height:20px;" })&nbsp;No
+                            @Html.ValidationMessageFor(model => model.Epfodetails.international_worker, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <br>

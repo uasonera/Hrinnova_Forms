@@ -1,0 +1,199 @@
+﻿@model Hrinnova_FormsProject.Models.Model2
+
+@Html.AntiForgeryToken()
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/pagetypes.css" rel="stylesheet" />
+<link href="~/CSS/cssfortableformat.css" rel="stylesheet" />
+<script src="~/JsScript/jquery-1.11.3.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <style>
+        .tsformat {
+            border: solid;
+            border-width: 1px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="font-family:Verdana">
+        <h3 align="center">Employee Details Form</h3>
+        <table width="700" align="center">
+
+            <tbody>
+                <tr>
+                    <td style="padding-top:20px" width="47%">Company's Name :</td>
+                    <td style="padding-top:20px">Cygnet Infotech Pvt. Ltd.</td>
+                </tr>
+                @*<tr>
+                    <td style="padding-top:20px">Employee Code :</td>
+                    <td style="padding-top:20px">@Html.DisplayFor(model => model.Employeedetails.employee_code, new { htmlAttributes = new { @class = "form-control" } })</td>
+                </tr>*@
+                <tr>
+                    <td style="padding-top:20px">Designation and Department :</td>
+                    <td style="padding-top:20px">
+                        @Html.DisplayFor(model => model.Employeedetails.role.name, new { htmlAttributes = new { @class = "form-control" } })<br />
+                        @Html.DisplayFor(model => model.Employeedetails.department1.DeptName, new { htmlAttributes = new { @class = "form-control" } })
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top:20px">Name of Member :</td>
+                    <td style="padding-top:20px">
+                        @Html.DisplayFor(model => model.Employeedetails.firstname, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.DisplayFor(model => model.Employeedetails.surname, new { htmlAttributes = new { @class = "form-control" } })
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top:20px">Father/Husband's Name :</td>
+                    <td style="padding-top:20px">
+                        @Html.DisplayFor(model => model.Employeedetails.middlename, new { htmlAttributes = new { @class = "form-control" } })
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top:20px">Gender :</td>
+                    <td style="padding-top:20px">
+                        @Html.DisplayFor(model => model.Employeedetails.gender, new { htmlAttributes = new { @class = "form-control" } })
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding-top:20px">Date of Joining :</td>
+                    <td style="padding-top:20px">
+                        @Html.DisplayFor(model => model.Employeedetails.date_of_joining, new { htmlAttributes = new { @class = "form-control" } })
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top:20px">Date of Birth :</td>
+                    <td style="padding-top:20px">
+                        @Html.DisplayFor(model => model.Employeedetails.date_of_birth, new { htmlAttributes = new { @class = "form-control" } })
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top:20px">Marital Status :</td>
+                    <td style="padding-top:20px">
+                        @*@Html.DisplayFor(model => model.Employeedetails.marital_status, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.DisplayFor(model=>model.Maritalstatus.SingleOrDefault(m=>m.Id==model.Employeedetails.marital_status).Status, new { htmlAttributes = new { @class = "form-control" } })
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top:20px">Contact Number :</td>
+                    <td style="padding-top:20px">
+                        @Html.DisplayFor(model => model.Employeedetails.mobile_number, new { htmlAttributes = new { @class = "form-control" } })
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top:20px">Email Id :</td>
+                    <td style="padding-top:20px">
+                        @Html.DisplayFor(model => model.Employeedetails.email_id, new { htmlAttributes = new { @class = "form-control" } })
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding-top:20px">ESIC No(if any)<br /> UAN/PF No.(if any) :</td>
+                    <td style="padding-top:20px">
+                        @Html.DisplayFor(model => model.Esicdetails.esic_id, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.DisplayFor(model => model.Epfodetails.epfo_id, new { htmlAttributes = new { @class = "form-control" } })
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top:20px">Permanent Address :</td>
+                    <td style="padding-top:20px">
+                        @Html.DisplayFor(model => model.Employeedetails.permanent_address, new { htmlAttributes = new { @class = "form-control" } })
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top:20px">Temporary Address :</td>
+                    <td style="padding-top:20px">
+                        @Html.DisplayFor(model => model.Employeedetails.temporary_address, new { htmlAttributes = new { @class = "form-control" } })
+                    </td>
+                </tr>
+                <tr><td style="padding-top:20px; font-weight:bold">Family Details(Except brother and sister) :</td></tr>
+            </tbody>
+        </table>
+        <table width="700" height="350" align="center" style="border:solid;border-width:1px">
+
+            <thead style="width:50px; border:solid;border-width:1px">
+                <tr>
+                    <th style="border:solid;border-width:1px">Family Member</th>
+                    <th style="border:solid;border-width:1px">Name</th>
+                    <th style="border:solid;border-width:1px">DOB</th>
+                    <th style="border:solid;border-width:1px">Aadhar Card</th>
+                    <th style="border:solid;border-width:1px" colspan="2">Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border:solid;border-width:1px">
+                    <td class="tsformat">Father</td>
+                    <td class="tsformat">@Html.DisplayFor(m => m.Fatherdetails.fname)</td>
+                    <td class="tsformat">@Html.DisplayFor(m => m.Fatherdetails.fdateofbirth)</td>
+                    <td class="tsformat">@Html.DisplayFor(m => m.Fatherdetails.faadhar)</td>
+                    <td class="tsformat" colspan="2">@Html.DisplayFor(m => m.Fatherdetails.ftown), @Html.DisplayFor(m => m.Fatherdetails.fstate)</td>
+                </tr>
+                <tr style="border:solid;border-width:1px">
+                    <td class="tsformat">Mother</td>
+                    <td class="tsformat">@Html.DisplayFor(m => m.Motherdetails.fname)</td>
+                    <td class="tsformat">@Html.DisplayFor(m => m.Motherdetails.fdateofbirth)</td>
+                    <td class="tsformat">@Html.DisplayFor(m => m.Motherdetails.faadhar)</td>
+                    <td class="tsformat" width="100px" colspan="2">@Html.DisplayFor(m => m.Motherdetails.ftown), @Html.DisplayFor(m => m.Motherdetails.fstate)</td>
+                </tr>
+                @*<tr style="border:solid;border-width:1px">
+                        <td style="padding-top:10px">Brother</td>
+                        <td style="padding-top:10px">@Html.DisplayFor(m => m.brotherdetails.fname)</td>
+                        <td style="padding-top:10px">@Html.DisplayFor(m => m.brotherdetails.fdateofbirth)</td>
+                        <td style="padding-top:10px">@Html.DisplayFor(m => m.brotherdetails.faadhar)</td>
+                        <td style="padding-top:10px" width="100px" colspan="2">@Html.DisplayFor(m => m.brotherdetails.ftown), @Html.DisplayFor(m => m.brotherdetails.fstate)</td>
+                    </tr>
+                    <tr style="border:solid;border-width:1px">
+                        <td style="padding-top:10px">Sister</td>
+                        <td style="padding-top:10px">@Html.DisplayFor(m => m.sisterdetails.fname)</td>
+                        <td style="padding-top:10px">@Html.DisplayFor(m => m.sisterdetails.fdateofbirth)</td>
+                        <td style="padding-top:10px">@Html.DisplayFor(m => m.sisterdetails.faadhar)</td>
+                        <td style="padding-top:10px" width="100px" colspan="2">@Html.DisplayFor(m => m.sisterdetails.ftown), @Html.DisplayFor(m => m.sisterdetails.fstate)</td>
+                    </tr>*@
+                <tr style="border:solid;border-width:1px">
+                    <td class="tsformat">Spouse</td>
+                    <td class="tsformat">@Html.DisplayFor(m => m.Spousedetails.fname)</td>
+                    <td class="tsformat">@Html.DisplayFor(m => m.Spousedetails.fdateofbirth)</td>
+                    <td class="tsformat">@Html.DisplayFor(m => m.Spousedetails.faadhar)</td>
+                    <td class="tsformat" width="100px" colspan="2">@Html.DisplayFor(m => m.Spousedetails.ftown), @Html.DisplayFor(m => m.Spousedetails.fstate)</td>
+                </tr>
+                <tr style="border:solid;border-width:1px">
+                    <td class="tsformat">Children (Specify gender)</td>
+                    <td class="tsformat">@Html.DisplayFor(m => m.Childrendetails.fname)</td>
+                    <td class="tsformat">@Html.DisplayFor(m => m.Childrendetails.fdateofbirth)</td>
+                    <td class="tsformat">@Html.DisplayFor(m => m.Childrendetails.faadhar)</td>
+                    <td class="tsformat" width="100px" colspan="2">@Html.DisplayFor(m => m.Childrendetails.ftown), @Html.DisplayFor(m => m.Childrendetails.fstate)</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <br />
+        <table align="center" width="700">
+            <tbody>
+                <tr>
+                    <td style="padding-right:10px">Aadhar Card : @Html.DisplayFor(m => m.Employeedetails.aadhar_card)</td>
+                    <td style="padding-right:10px">Pan Card : @Html.DisplayFor(m => m.Employeedetails.pan_card)</td>
+                    <td style="padding-right:10px">Election Card : @Html.DisplayFor(m => m.Employeedetails.election_card)</td>
+                </tr>
+                <tr>
+                    <td style="padding-right:10px; padding-top:10px">Single Bank Account :@Html.DisplayFor(m => m.Employeedetails.single_bank_account)</td>
+                    <td style="padding-right:10px; padding-top:10px">IFSC : @Html.DisplayFor(m => m.Employeedetails.ifs_code)</td>
+                </tr>
+                <tr><td colspan="4" style="text-align:center; padding-top:10px"><button class="btn-primary" align="center" id="hidebutton">PRINT</button></td></tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-sm-3"></div>
+    <div class="col-sm-5"></div>
+
+</body>
+</html>
+<script src="~/JsScript/hidebutton.js"></script>

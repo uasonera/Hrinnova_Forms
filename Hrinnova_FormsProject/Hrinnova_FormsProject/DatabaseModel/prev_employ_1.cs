@@ -20,9 +20,7 @@ namespace Hrinnova_FormsProject.DatabaseModel
         public string employment_ref { get; set; }
         public string employers_name { get; set; }
         public string designation { get; set; }
-        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> periodworked_from { get; set; }
-        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> periodworked_to { get; set; }
         public string reason_of_leaving { get; set; }
         public string reporting_manager { get; set; }

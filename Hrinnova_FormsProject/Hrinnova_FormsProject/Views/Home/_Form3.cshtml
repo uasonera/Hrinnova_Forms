@@ -1,5 +1,5 @@
 ﻿
-@model Hrinnova_FormsProject.Models.Model2
+@model Cygnet.ProjMan.EFData.ViewModels.MainModel
 
 
 @Html.AntiForgeryToken()
@@ -34,7 +34,7 @@
                                         @Html.ValidationMessageFor(model => model.Fatherdetails.fname, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Fatherdetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.Fatherdetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Fatherdetails.fdateofbirth, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -63,14 +63,14 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Mother</td>
-                                    @{Model.Motherdetails.member = "Mother";}
+                                    <td name="mothername">Mother</td>
+                                    
                                     <td>
                                         @Html.EditorFor(model => model.Motherdetails.fname, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.Motherdetails.fname, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Motherdetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.Motherdetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Motherdetails.fdateofbirth, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -100,14 +100,14 @@
 
                                 </tr>
                                 <tr>
-                                    <td>Brother</td>
-                                    @{Model.Brotherdetails.member = "Brother";}
+                                    <td name="brothername">Brother</td>
+                                    
                                     <td>
                                         @Html.EditorFor(model => model.Brotherdetails.fname, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.Brotherdetails.fname, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Brotherdetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.Brotherdetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Brotherdetails.fdateofbirth, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -137,14 +137,14 @@
 
                                 </tr>
                                 <tr>
-                                    <td>Sister</td>
-                                    @{Model.Sisterdetails.member = "Sister";}
+                                    <td name="sistername">Sister</td>
+                                    
                                     <td>
                                         @Html.EditorFor(model => model.Sisterdetails.fname, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.Sisterdetails.fname, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Sisterdetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.Sisterdetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Sisterdetails.fdateofbirth, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -174,14 +174,14 @@
 
                                 </tr>
                                 <tr>
-                                    <td>Spouse (if married)</td>
-                                    @{Model.Spousedetails.member = "Spouse";}
+                                    <td name="spousename">Spouse</td>
+                                    
                                     <td>
                                         @Html.EditorFor(model => model.Spousedetails.fname, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.Spousedetails.fname, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Spousedetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.Spousedetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Spousedetails.fdateofbirth, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -211,14 +211,14 @@
 
                                 </tr>
                                 <tr>
-                                    <td>Children (Specify gender)</td>
-                                    @{Model.Childrendetails.member = "Children";}
+                                    <td name="Childrenname">Children</td>
+                                    
                                     <td>
                                         @Html.EditorFor(model => model.Childrendetails.fname, new { htmlAttributes = new { @class = "form-control" } })
                                         @Html.ValidationMessageFor(model => model.Childrendetails.fname, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Childrendetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.Childrendetails.fdateofbirth, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Childrendetails.fdateofbirth, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -370,7 +370,7 @@
                                         @Html.ValidationMessageFor(model => model.Educationalqualifications.tenth_board, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Educationalqualifications.tenth_yearofpassing, new { htmlAttributes = new { @class = "form-control datepicker onlyyeardisplay" } })
+                                        @Html.EditorFor(model => model.Educationalqualifications.tenth_yearofpassing, new { htmlAttributes = new { @class = "form-control datepicker onlyyeardisplay", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Educationalqualifications.tenth_yearofpassing, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -389,7 +389,7 @@
                                         @Html.ValidationMessageFor(model => model.Educationalqualifications.twelfth_board, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Educationalqualifications.twelfth_yearofpassing, new { htmlAttributes = new { @class = "form-control datepicker onlyyeardisplay" } })
+                                        @Html.EditorFor(model => model.Educationalqualifications.twelfth_yearofpassing, new { htmlAttributes = new { @class = "form-control datepicker onlyyeardisplay", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Educationalqualifications.twelfth_yearofpassing, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -408,7 +408,7 @@
                                         @Html.ValidationMessageFor(model => model.Educationalqualifications.bachelors_university, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Educationalqualifications.bachelors_yearofpassing, new { htmlAttributes = new { @class = "form-control datepicker onlyyeardisplay" } })
+                                        @Html.EditorFor(model => model.Educationalqualifications.bachelors_yearofpassing, new { htmlAttributes = new { @class = "form-control datepicker onlyyeardisplay", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Educationalqualifications.bachelors_yearofpassing, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -427,7 +427,7 @@
                                         @Html.ValidationMessageFor(model => model.Educationalqualifications.masters_university, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Educationalqualifications.masters_yearofpassing, new { htmlAttributes = new { @class = "form-control datepicker onlyyeardisplay" } })
+                                        @Html.EditorFor(model => model.Educationalqualifications.masters_yearofpassing, new { htmlAttributes = new { @class = "form-control datepicker onlyyeardisplay", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Educationalqualifications.masters_yearofpassing, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -446,7 +446,7 @@
                                         @Html.ValidationMessageFor(model => model.Educationalqualifications.other_board, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Educationalqualifications.other_yearofpassing, new { htmlAttributes = new { @class = "form-control datepicker onlyyeardisplay" } })
+                                        @Html.EditorFor(model => model.Educationalqualifications.other_yearofpassing, new { htmlAttributes = new { @class = "form-control datepicker onlyyeardisplay", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Educationalqualifications.other_yearofpassing, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -619,11 +619,11 @@
                                         @Html.ValidationMessageFor(model => model.Prevemploy1.designation, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Prevemploy1.periodworked_from, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.Prevemploy1.periodworked_from, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Prevemploy1.periodworked_from, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Prevemploy1.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.Prevemploy1.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Prevemploy1.periodworked_to, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -669,11 +669,11 @@
                                         @Html.ValidationMessageFor(model => model.Prevemploy2.designation, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Prevemploy2.periodworked_from, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.Prevemploy2.periodworked_from, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Prevemploy2.periodworked_from, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Prevemploy2.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.Prevemploy2.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Prevemploy2.periodworked_to, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -719,11 +719,11 @@
                                         @Html.ValidationMessageFor(model => model.Prevemploy3.designation, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Prevemploy3.periodworked_from, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.Prevemploy3.periodworked_from, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Prevemploy3.periodworked_from, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Prevemploy3.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.Prevemploy3.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Prevemploy3.periodworked_to, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -769,11 +769,11 @@
                                         @Html.ValidationMessageFor(model => model.Prevemploy4.designation, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Prevemploy4.periodworked_from, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.Prevemploy4.periodworked_from, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Prevemploy4.periodworked_from, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Prevemploy4.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.Prevemploy4.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Prevemploy4.periodworked_to, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -819,11 +819,11 @@
                                         @Html.ValidationMessageFor(model => model.Prevemploy5.designation, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Prevemploy5.periodworked_from, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.Prevemploy5.periodworked_from, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Prevemploy5.periodworked_from, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
-                                        @Html.EditorFor(model => model.Prevemploy5.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.EditorFor(model => model.Prevemploy5.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                         @Html.ValidationMessageFor(model => model.Prevemploy5.periodworked_to, "", new { @class = "text-danger" })
                                     </td>
                                     <td>
@@ -921,12 +921,12 @@
                                     <table>
                                         <tr>
                                             <td>
-                                                @Html.EditorFor(model => model.Additionalinformation.periodworked_from, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                                @Html.EditorFor(model => model.Additionalinformation.periodworked_from, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                                 @Html.ValidationMessageFor(model => model.Prevemploy5.periodworked_from, "", new { @class = "text-danger" })
                                             </td>
                                             <td>-</td>
                                             <td>
-                                                @Html.EditorFor(model => model.Additionalinformation.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                                @Html.EditorFor(model => model.Additionalinformation.periodworked_to, new { htmlAttributes = new { @class = "form-control datepicker", @onkeydown = "return false" } })
                                                 @Html.ValidationMessageFor(model => model.Prevemploy5.periodworked_to, "", new { @class = "text-danger" })
                                             </td>
                                         </tr>

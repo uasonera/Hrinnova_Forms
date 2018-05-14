@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Hrinnova_FormsProject.DatabaseModel;
+using Cygnet.ProjMan.EFData.DataSource;
 
 namespace Hrinnova_FormsProject.Models
 {
     public class EditIndexModel
     {
-        public IEnumerable<employee_details> Employeedetails { get; set; }
+        public List<employee_details> Employeedetails { get; set; }
     }
 }

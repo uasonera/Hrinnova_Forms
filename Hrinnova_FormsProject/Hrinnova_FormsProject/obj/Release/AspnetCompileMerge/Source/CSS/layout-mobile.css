@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*  767px < mobile styles======================================= */
+@media all and (max-width:767px){
+	.main-content { margin-left:0px; padding:0px;}
+	header .logo a { margin:0px; text-align:center;}
+	.middel-content { margin:0px; padding:0 15px;}
+	.logged-user.col-sm-6.text-right { float:none; margin:0 auto; text-align:center;}
+	header .user-profile-dropdown { margin-right:0px;}
+	header {padding:20px 0 10px;}
+	.task-detail { border-bottom:1px solid #c7c7c7; margin:0 0 20px; padding:0 0 20px;}
+	footer {text-align:center;}
+	.footer-logo { float:none; padding:0px;}
+	.btn { font-size:13px;}
+	.progress-box { margin:15px 0 0; width:48%;}
+	.progress { width:42%;}
+	.task-progress { border:none;}
+	.table-responsive { border:none; margin:0px; padding-bottom:20px;}
+	.footer-logo { display:inline-block; float:none; margin:0 auto; text-align:center; width:100%; padding:0px;}
+	.top-heading-right { padding:0 0 20px;}
+    .page-sidebar {width:0;}
+	}
+	
+@media (max-width:480px) {
+	p.no-assign { margin:0 0 15px;}
+	p.no-assign label { display:none;}
+	.task-progress p label { padding-right: 0; text-align: left; width: 100%;}
+	.task-progress p span { width:100%; margin:5px 0; padding:0px; border:none; line-height:26px;}
+	.task-progress p span:hover { border:none;}
+	.task-progress p span i { opacity:1; float: right; background: #ccc; padding: 5px 6px 6px 7px; font-size:14px;}
+	.task-progress p span:hover i {cursor: pointer; color: #454545; font-size: 14px;}
+	.progress-box { margin:20px 0 0; width:100% !important;}
+	.text-right .btn-default { margin: 10px 0 0; width: 100%;}
+	.top-heading-right { padding:0 0 20px;}
+	.top-heading-right.sub-heading > a { padding:15px 0 0; display:inline-block;}
+	.nav-tabs > li { margin-left:1px; width:100%; text-align:center;}
+	.activity-tab .tab-content .tab-discription span { font-size:12px; display:inline-block; padding-top:5px;}
+	}
+	
+
+@media (max-width:320px) {
+	.task-detail p label { font-size:12px; min-width:138px;}
+	.task-detail p span { font-size:12px;}
+	}

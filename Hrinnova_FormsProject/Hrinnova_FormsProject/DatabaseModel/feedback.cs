@@ -17,45 +17,45 @@ namespace Hrinnova_FormsProject.DatabaseModel
     {
         public int feedback_id { get; set; }
         public int employee_id { get; set; }
-        [Required(ErrorMessage ="HR Manual field can not be left empty")]
+        [Required(ErrorMessage ="HR Manual field is required")]
         public string hr_manual { get; set; }
-        [Required(ErrorMessage = "CIMS ID/Password field can not be left empty")]
+        [Required(ErrorMessage = "CIMS ID/Password field is required")]
         public string cims_idpassword { get; set; }
-        [Required(ErrorMessage = "Books field can not be left empty")]
+        [Required(ErrorMessage = "Books field is required")]
         public string books { get; set; }
-        [Required(ErrorMessage = "Library Card field can not be left empty")]
+        [Required(ErrorMessage = "Library Card field is required")]
         public string library_card { get; set; }
-        [Required(ErrorMessage = "HR Any Other field can not be left empty")]
+        [Required(ErrorMessage = "HR Any Other field is required")]
         public string hr_anyother { get; set; }
-        [Required(ErrorMessage = "Identity Card field can not be left empty")]
+        [Required(ErrorMessage = "Identity Card field is required")]
         public string identitycard { get; set; }
-        [Required(ErrorMessage = "Bank Account field can not be left empty")]
+        [Required(ErrorMessage = "Bank Account field is required")]
         public string bank_account { get; set; }
-        [Required(ErrorMessage = "Notepad field can not be left empty")]
+        [Required(ErrorMessage = "Notepad field is required")]
         public string notepad { get; set; }
-        [Required(ErrorMessage = "Pen field can not be left empty")]
+        [Required(ErrorMessage = "Pen field is required")]
         public string pen { get; set; }
-        [Required(ErrorMessage = "Employee Card field can not be left empty")]
+        [Required(ErrorMessage = "Employee Card field is required")]
         public string employee_card { get; set; }
-        [Required(ErrorMessage = "Admin any other field can not be left empty")]
+        [Required(ErrorMessage = "Admin any other field is required")]
         public string admin_anyother { get; set; }
-        [Required(ErrorMessage = "Computer System field can not be left empty")]
+        [Required(ErrorMessage = "Computer System field is required")]
         public string computer_system { get; set; }
-        [Required(ErrorMessage = "Headphones field can not be left empty")]
+        [Required(ErrorMessage = "Headphones field is required")]
         public string headphones { get; set; }
-        [Required(ErrorMessage = "EmailId/Password field can not be left empty")]
+        [Required(ErrorMessage = "EmailId/Password field is required")]
         public string emailid_password { get; set; }
-        [Required(ErrorMessage = "Network IP field can not be left empty")]
+        [Required(ErrorMessage = "Network IP field is required")]
         public string network_ip { get; set; }
-        [Required(ErrorMessage = "Firewall ID field can not be left empty")]
+        [Required(ErrorMessage = "Firewall ID field is required")]
         public string firewall_id { get; set; }
-        [Required(ErrorMessage = "Domain Username/Password field can not be left empty")]
+        [Required(ErrorMessage = "Domain Username/Password field is required")]
         public string domain_usernamepassword { get; set; }
-        [Required(ErrorMessage = "Messenger Access field can not be left empty")]
+        [Required(ErrorMessage = "Messenger Access field is required")]
         public string messengers_access { get; set; }
-        [Required(ErrorMessage = "System Admin any other field can not be left empty")]
+        [Required(ErrorMessage = "System Admin any other field is required")]
         public string systemadmin_anyother { get; set; }
-        [Required(ErrorMessage = "HR Manual and ISMS Responsibilities field can not be left empty")]
+        [Required(ErrorMessage = "HR Manual and ISMS Responsibilities field is required")]
         public string hrmanual_and_responsibilities { get; set; }
         
 

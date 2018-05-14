@@ -1,0 +1,161 @@
+﻿
+@model Hrinnova_FormsProject.Models.Model2
+@Html.AntiForgeryToken()
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/pagetypes.css" rel="stylesheet" />
+<link href="~/CSS/cssfortableformat.css" rel="stylesheet" />
+<script src="~/JsScript/jquery-1.11.3.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <style>
+        .boldit {
+            border: solid;
+            border-width: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    @*Page Header*@
+    <table width="700" align="center">
+        <tbody>
+            <tr>
+                <td><img src="~/Images/qisms2.png" /></td>
+                <td><h6>Human Resource Process</h6></td>
+            </tr>
+    @*Page Content*@
+            <tr >
+                <td colspan="2" style="text-align:center; padding-top:30px">
+                    <u style="font-weight:bold; font-size:large">
+                        DETAILS REQUIRED FOR PF TRANSFER
+                    </u>
+                </td>
+            </tr>
+            <tr >
+                <td width="40%" style="padding-top:20px">
+                    Name of Employee 
+                </td>
+                <td style="padding-top:20px">
+                    : @Html.DisplayFor(m=>m.Employeedetails.firstname) @Html.DisplayFor(m => m.Employeedetails.surname)
+                </td>
+            </tr>
+            <tr>
+                <td width="40%" style="padding-top:20px">
+                    Present Company's Name
+                </td>
+                <td style="padding-top:20px">
+                    : @System.Configuration.ConfigurationManager.AppSettings["employernameaddress"];
+                </td>
+            </tr>
+            <tr>
+                <td width="40%" style="padding-top:20px">
+                    Date of Joining
+                </td>
+                <td style="padding-top:20px">
+                    : @Html.DisplayFor(m => m.Employeedetails.date_of_joining)
+                </td>
+            </tr>
+            <tr>
+                <td width="40%" style="padding-top:20px">
+                    Date of Birth
+                </td>
+                <td style="padding-top:20px">
+                    : @Html.DisplayFor(m => m.Employeedetails.date_of_birth)
+                </td>
+            </tr>
+            <tr>
+                <td width="40%" style="padding-top:20px">
+                    Present Company's PF Number
+                </td>
+                <td style="padding-top:20px">
+                    : @Html.DisplayFor(m => m.Epfodetails.presentcompany_pfnumber)
+                </td>
+            </tr>
+            <tr>
+                <td width="40%" style="padding-top:20px">
+                    Previous Company's Name
+                </td>
+                <td style="padding-top:20px">
+                    : @Html.DisplayFor(m => m.Prevemploy1.employers_name)
+                </td>
+            </tr>
+            <tr>
+                <td width="40%" style="padding-top:20px">
+                    Previous Company's PF Number
+                </td>
+                <td style="padding-top:20px">
+                    : @Html.DisplayFor(m => m.Epfodetails.prev_pf_acc_number)
+                </td>
+            </tr>
+            <tr>
+                <td width="40%" style="padding-top:20px">
+                    Previous Company's Pension Number
+                </td>
+                <td style="padding-top:20px">
+                    : sadsaddsa
+                </td>
+            </tr>
+            <tr>
+                <td width="40%" style="padding-top:20px">
+                    Previous Company's Date of Leaving 
+                </td>
+                <td style="padding-top:20px">
+                    : @Html.DisplayFor(m => m.Prevemploy1.periodworked_to)
+                </td>
+            </tr>
+            <tr>
+                <td width="40%" style="padding-top:20px">
+                    Previous Company's Date of Joining 
+                </td>
+                <td style="padding-top:20px">
+                    : @Html.DisplayFor(m => m.Prevemploy1.periodworked_from)
+                </td>
+            </tr>
+            <tr>
+                <td width="40%" style="padding-top:20px">
+                    UAN Number(if any)
+                </td>
+                <td style="padding-top:20px">
+                    : @Html.DisplayFor(m => m.Epfodetails.universal_account_number)
+                </td>
+            </tr>
+            <tr>
+                <td width="40%" style="padding-top:20px">
+                    Single Bank AC Number
+                </td>
+                <td style="padding-top:20px">
+                    : @Html.DisplayFor(m => m.Employeedetails.single_bank_account)
+                </td>
+            </tr>
+            <tr>
+                <td width="40%" style="padding-top:20px">
+                    IFS Code of Bank Branch
+                </td>
+                <td style="padding-top:20px">
+                    : @Html.DisplayFor(m => m.Employeedetails.ifs_code)
+                </td>
+            </tr>
+            <tr>
+                <td width="40%" style="padding-top:20px">
+                    Email-id of Employee 
+                </td>
+                <td style="padding-top:20px">
+                    : @Html.DisplayFor(m => m.Employeedetails.email_id)
+                </td>
+            </tr>
+            <tr>
+                <td width="40%" style="padding-top:20px">
+                    Mobile Number of Employee
+                </td>
+                <td style="padding-top:20px">
+                    : @Html.DisplayFor(m => m.Employeedetails.mobile_number)
+                </td>
+            </tr>
+            <tr><td colspan="4" style="text-align:center; padding-top:10px"><button class="btn-primary" align="center" id="hidebutton">PRINT</button></td></tr>
+        </tbody>
+    </table>
+</body>
+</html>
+<script src="~/JsScript/hidebutton.js"></script>

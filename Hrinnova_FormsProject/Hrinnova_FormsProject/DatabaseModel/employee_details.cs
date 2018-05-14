@@ -33,61 +33,64 @@ namespace Hrinnova_FormsProject.DatabaseModel
         }
     
         public int employee_id { get; set; }
-        [Required(ErrorMessage ="Employee Code cannot be empty")]
+        [Required(ErrorMessage ="Employee Code is required")]
         public string employee_code { get; set; }
         public string designation { get; set; }
+        [Required(ErrorMessage = "Designation is required")]
         public Nullable<int> roleID { get; set; }
         public string department { get; set; }
+        [Required(ErrorMessage ="Department is required")]
         public Nullable<int> DeptID { get; set; }
-        [Required(ErrorMessage ="Firstname cannot be kept empty")]
-        [RegularExpression("^[a-zA-Z/s]+$", ErrorMessage ="Firstname cannot contain numbers or special characters")]
+        [Required(ErrorMessage ="Firstname is required")]
+        [RegularExpression("^[a-zA-Z/s]+$", ErrorMessage ="Firstname should not contain numbers or special characters")]
         public string firstname { get; set; }
-        [Required(ErrorMessage = "Middlename cannot be kept empty")]
-        [RegularExpression("^[a-zA-Z/s]+$", ErrorMessage = "Middlename cannot contain numbers or special characters")]
+        [Required(ErrorMessage = "Middlename is required")]
+        [RegularExpression("^[a-zA-Z/s]+$", ErrorMessage = "Middlename should not contain numbers or special characters")]
         public string middlename { get; set; }
-        [Required(ErrorMessage = "Lastname cannot be kept empty")]
-        [RegularExpression("^[a-zA-Z/s]+$", ErrorMessage = "Lastname cannot contain numbers or special characters")]
+        [Required(ErrorMessage = "Lastname is required")]
+        [RegularExpression("^[a-zA-Z/s]+$", ErrorMessage = "Lastname should not contain numbers or special characters")]
         public string surname { get; set; }
+        [Required(ErrorMessage ="Gender is required")]
         public string gender { get; set; }
         [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> date_of_birth { get; set; }
+        [Required(ErrorMessage ="Date of Joining is required")]
         [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> date_of_joining { get; set; }
+        [Required(ErrorMessage ="Marital Status is required")]
         public Nullable<int> marital_status { get; set; }
         [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> marriage_anniversary { get; set; }
         public string blood_group { get; set; }
-        [Required(ErrorMessage = "Contact Number cannot be kept empty")]
+        [Required(ErrorMessage = "Contact Number is required")]
         [RegularExpression("^([+][9][1]|[9][1]|[0]){0,1}([7-9]{1})([0-9]{9})$", ErrorMessage = "Please enter a valid 10 digit Mobile Number")]
         public string mobile_number { get; set; }
 
         
         [RegularExpression("^([+][9][1]|[9][1]|[0]){0,1}([0-9]{1})([0-9]{9})$", ErrorMessage = "Please enter a valid Phone Number")]
         public string home_number { get; set; }
-
-        [Required(ErrorMessage = "Alternate Number cannot be kept empty")]
+        
         [RegularExpression("^([+][9][1]|[9][1]|[0]){0,1}([0-9]{1})([0-9]{9})$", ErrorMessage = "Please enter a valid Phone Number")]
         public string alternate_number { get; set; }
 
-        [Required(ErrorMessage = "Emergency Number cannot be kept empty")]
+        [Required(ErrorMessage = "Emergency Number is required")]
         [RegularExpression("^([+][9][1]|[9][1]|[0]){0,1}([0-9]{1})([0-9]{9})$", ErrorMessage = "Please enter a valid Phone Number")]
         public string emergency_number { get; set; }
 
-        [Required(ErrorMessage = "Email-ID cannot be kept empty")]
         [DataType(DataType.EmailAddress, ErrorMessage ="Please provide a valid Email-ID")]
         public string email_id { get; set; }
 
-        [Required(ErrorMessage = "Permanent Address cannot be kept empty")]
+        [Required(ErrorMessage = "Permanent Address is required")]
         public string permanent_address { get; set; }
 
-        [Required(ErrorMessage = "Temporary Address Address cannot be kept empty")]
+        [Required(ErrorMessage = "Temporary Address is required")]
         public string temporary_address { get; set; }
 
-        [Required(ErrorMessage = "Aadhar Card cannot be kept empty")]
-        [RegularExpression("^([0-9]{12})$", ErrorMessage = "Please enter a valid Aadhar Number (Contains 12 digits without special characters)")]
+        [Required(ErrorMessage = "Aadhar Card is required")]
+        [RegularExpression("^([0-9]{12})$", ErrorMessage = "Please enter a valid Aadhar Number (Contains 12 digits without alphabets and special characters)")]
         public string aadhar_card { get; set; }
 
-        [RegularExpression("^([A-Za-z]{5})([0-9]{4})([A-Za-z]{1})$", ErrorMessage = "Please enter a valid Aadhar Number (Contains 12 digits without special characters and alphabets)")]
+        [RegularExpression("^([A-Za-z]{5})([0-9]{4})([A-Za-z]{1})$", ErrorMessage = "Please enter a valid PAN Number (Eg. ABCDE1234A)")]
         public string pan_card { get; set; }
         
         [RegularExpression("^([A-Za-z]{1})([0-9]{7})$", ErrorMessage = "Please enter a valid Passport Number (Eg. A1234567)")]
@@ -97,7 +100,7 @@ namespace Hrinnova_FormsProject.DatabaseModel
         [RegularExpression("^([A-Za-z]{3})([0-9]{7})$", ErrorMessage = "Please enter a valid Election Card Number (Eg. AAA1234567)")]
         public string election_card { get; set; }
 
-        [RegularExpression("^([A-Za-z]{2})([0-9]{1,2})([A-Za-z]{1,2})([0-9]{4})$", ErrorMessage = "Please enter a Vehicle Number (Eg. GJ01AA1234)")]
+        [RegularExpression("^([A-Za-z]{2})([0-9]{1,2})([A-Za-z]{1,2})([0-9]{4})$", ErrorMessage = "Please enter a valid Vehicle Number (Eg. GJ01AA1234)")]
         public string vehicle_number { get; set; }
         public string single_bank_account { get; set; }
         public string ifs_code { get; set; }

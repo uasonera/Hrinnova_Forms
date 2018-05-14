@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="061bde80b7af4d2aa54c9492d279516e" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="DBEntity.additional_information" Width="1.5" PointX="3" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEntity.certifications" Width="1.5" PointX="8.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEntity.department" Width="1.5" PointX="0.75" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEntity.educational_qualifications" Width="1.5" PointX="8.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEntity.employee_details" Width="1.5" PointX="6" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEntity.employee_refcheck" Width="1.5" PointX="8.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEntity.epfo_details" Width="1.5" PointX="8.25" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEntity.esic_details" Width="1.5" PointX="8.25" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEntity.family_details" Width="1.5" PointX="8.25" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEntity.feedback" Width="1.5" PointX="8.25" PointY="31.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEntity.other_details" Width="1.5" PointX="8.25" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEntity.prev_employ_1" Width="1.5" PointX="8.25" PointY="42.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEntity.previous_company_details" Width="1.5" PointX="8.25" PointY="47.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEntity.references" Width="1.5" PointX="8.25" PointY="51.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEntity.role" Width="1.5" PointX="3.75" PointY="24.125" IsExpanded="true" />
+        <AssociationConnector Association="DBEntity.FK_additional_information_department" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEntity.FK_additional_information_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEntity.FK_additional_information_role" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEntity.FK_certifications_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEntity.FK_employee_details_department" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEntity.FK_educational_qualifications_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEntity.FK_employee_details_role" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEntity.FK_employee_refcheck_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEntity.FK_employee_references_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEntity.FK_epfo_details_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEntity.FK_esic_details_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEntity.FK_family_details_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEntity.FK_feedback_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEntity.FK_prev_employ_1_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEntity.FK_previous_company_details_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEntity.FK_references_employee_details" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEntity.FK_role_role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

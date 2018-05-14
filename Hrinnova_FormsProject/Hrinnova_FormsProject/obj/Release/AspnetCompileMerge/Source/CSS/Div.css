@@ -1,0 +1,21 @@
+﻿  .editDelFunction
+        {            
+            color: Blue;  
+            font-weight: bold;          
+        }
+  .functiontitle
+        {            
+            font-weight: bold;          
+        }
+        .functiondescription
+        {
+             color: Black;                       
+        }
+        .disableLink
+        {
+            color:Gray;
+        }
+        .divcolor
+        {
+            color:Orange;
+        }

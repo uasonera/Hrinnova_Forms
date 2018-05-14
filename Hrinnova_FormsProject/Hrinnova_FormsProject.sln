@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hrinnova_FormsProject", "Hrinnova_FormsProject\Hrinnova_FormsProject.csproj", "{C7D9F63E-F065-41A9-8B1A-B4A50460C94E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cygnet.ProjMan.EFData", "Cygnet.ProjMan.EFData\Cygnet.ProjMan.EFData.csproj", "{D4FB3D67-E324-4F37-8723-B1BFDF54758F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C7D9F63E-F065-41A9-8B1A-B4A50460C94E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7D9F63E-F065-41A9-8B1A-B4A50460C94E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7D9F63E-F065-41A9-8B1A-B4A50460C94E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4FB3D67-E324-4F37-8723-B1BFDF54758F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4FB3D67-E324-4F37-8723-B1BFDF54758F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4FB3D67-E324-4F37-8723-B1BFDF54758F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4FB3D67-E324-4F37-8723-B1BFDF54758F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

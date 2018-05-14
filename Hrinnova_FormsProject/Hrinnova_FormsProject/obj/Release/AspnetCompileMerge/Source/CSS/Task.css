@@ -1,0 +1,55 @@
+﻿
+.DateField
+{
+      width: 100%;
+  float: left;
+}
+    .ui-datepicker-trigger
+    {
+        cursor: pointer;
+          margin-left: 10px;
+  padding-top: 4px;
+    float: right;
+    position: absolute; right: 20px; top: 33px;
+    }
+   
+    .ui-widget-header
+    {
+        background: #1578CE;
+    }
+
+    .upload-drop-zone
+    {
+          text-align: center;
+  height: 200px;
+  border: 2px dashed #c3c3c3;
+  line-height: 200px;
+  margin-top: 5px;
+    }
+
+    /* skin.css Style*/
+   
+
+        
+          .CommentBox
+    {
+        margin-top:10px;
+    }
+    .CommentHeader
+    {
+        background: #D8D8D8;
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: normal;
+        padding: 7px 15px;
+        margin: 0 0 5px 0;
+        border: 1px solid #A5A5A5;
+    }
+      .modal-footer
+    {
+        text-align: inherit !important;
+    }
+    .CommentDesc
+    {
+        padding: 10px;
+    }

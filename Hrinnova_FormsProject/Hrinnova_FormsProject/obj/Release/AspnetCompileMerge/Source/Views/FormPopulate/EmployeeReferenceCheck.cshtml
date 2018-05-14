@@ -1,0 +1,242 @@
+﻿@model Hrinnova_FormsProject.Models.Model2
+@Html.AntiForgeryToken()
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/pagetypes.css" rel="stylesheet" />
+<link href="~/CSS/cssfortableformat.css" rel="stylesheet" />
+<script src="~/JsScript/jquery-1.11.3.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <style>
+        .boldit {
+            border: solid;
+            border-width: 1px;
+            padding-top:10px;
+            padding-bottom:10px;
+            padding-left:3px;
+            padding-right:3px;
+
+        }
+        .padit {
+            padding-top:10px;
+            
+            
+        }
+    </style>
+</head>
+
+<body>
+    <table width="700" align="center">
+        <tbody>
+
+            <tr>
+                
+                <td colspan="4">
+                    <table width="800">
+                        <tr>
+                            <td><img src="~/Images/qisms2.png" /></td>
+                            <td colspan="3" style="text-align:center"><h3>Employee Reference Check</h3></td>            
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" class="padit">
+                    <b>Employee Information and details that are to be verified :</b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="padit">
+                    <b>Name of Employee : @Html.DisplayFor(m=>m.Employeedetails.firstname) @Html.DisplayFor(m => m.Employeedetails.surname)</b>
+                    </td>
+                <td colspan="1" class="padit" style="text-align:right">
+                    <b >Employee Code : @Html.DisplayFor(m => m.Employeedetails.employee_code)</b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" class="padit">
+                    <b>Previous Company's Name: @Html.DisplayFor(m => m.Prevemploy1.employers_name)</b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" class="padit">
+                    <b>Details Furnished By :</b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" class="padit">The following are the Employee Details before joining Cygnet :</td>
+            </tr>
+            <tr>
+                <td style="text-align:center" class="boldit" width="5%">
+                    <b>Sr. No.</b>
+                </td>
+                <td class="boldit" width="20%"style="text-align:center">
+                    <b> Details Required</b>
+                </td>
+                <td class="boldit" width="40%"style="text-align:center">
+                    <b>Information Given</b>
+                </td>
+                <td class="boldit" width="20%"style="text-align:center">
+                    <b>Verified by previous Company's Executive</b>
+                </td>
+            </tr>
+            <tr>
+                <td class="boldit" >
+                    1.
+                </td>
+                <td class="boldit" >
+                    Designation
+                </td>
+                <td class="boldit" style="text-align:center">
+                    @Html.DisplayFor(m => m.Prevemploy1.designation)
+                </td>
+                <td class="boldit" >
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="boldit" >
+                    2.
+                </td>
+                <td class="boldit" >
+                    Department
+                </td>
+                <td class="boldit" >
+                    
+                </td>
+                <td class="boldit" >
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="boldit" >
+                    3.
+                </td>
+                <td class="boldit" >
+                    Reporting to
+                </td>
+                <td class="boldit" style="text-align:center">
+                    @Html.DisplayFor(m => m.Prevemploy1.reporting_manager)
+                </td>
+                <td class="boldit" ></td>
+            </tr>
+            <tr>
+                <td class="boldit" >
+                    4.
+                </td>
+                <td class="boldit" >
+                    Designation of person to whom reporting 
+                </td>
+                <td class="boldit" style="text-align:center">
+                    @Html.DisplayFor(m => m.Prevemploy1.rm_designation)
+                </td>
+                <td class="boldit" ></td>
+            </tr>
+            <tr>
+                <td class="boldit" >
+                    5.
+                </td>
+                <td class="boldit" >
+                    Date of Joining
+                </td>
+                <td class="boldit" style="text-align:center">
+                    @Html.DisplayFor(m => m.Prevemploy1.periodworked_from)
+                </td>
+                <td class="boldit" ></td>
+            </tr>
+            <tr>
+                <td class="boldit" >
+                    6.
+                </td>
+                <td class="boldit" >
+                    Date of Leaving
+                </td>
+                <td class="boldit" style="text-align:center">
+                    @Html.DisplayFor(m => m.Prevemploy1.periodworked_to)
+                </td>
+                <td class="boldit" ></td>
+            </tr>
+            <tr>
+                <td class="boldit" >
+                    7.
+                </td>
+                <td class="boldit" >
+                    Monthly Gross Salary
+                </td>
+                <td class="boldit" style="text-align:center">
+                    @Html.DisplayFor(m => m.Prevemploy1.monthly_gross_salary)
+                </td>
+                <td class="boldit" ></td>
+            </tr>
+            <tr>
+                <td class="boldit" >
+                    8.
+                </td>
+                <td class="boldit" >
+                    Reason of Leaving
+                </td>
+                <td class="boldit" style="text-align:center">
+                    @Html.DisplayFor(m => m.Prevemploy1.reason_of_leaving)
+                </td>
+                <td class="boldit" ></td>
+            </tr>
+            <tr>
+                <td class="boldit" >
+                    9.
+                </td>
+                <td class="boldit" >
+                    Attendence
+                </td>
+                <td class="boldit" style="text-align:center">
+                    @Html.DisplayFor(m => m.Prevemploy1.attendence)
+                </td>
+                <td class="boldit" ></td>
+            </tr>
+            <tr>
+                <td class="boldit" >
+                    10.
+                </td>
+                <td class="boldit" >
+                    Re-Hire Status
+                </td>
+                <td class="boldit" style="text-align:center">
+                    @Html.DisplayFor(m => m.Prevemploy1.re_hire_status)
+                </td>
+                <td class="boldit" ></td>
+            </tr>
+            <tr>
+                <td style="padding-top:10px" colspan="4">
+                    <b>Additional Comments regarding the Employee from previous Company :</b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="padding-top:20px">
+                    <b style="color:red !important">To be filled by Cygnet</b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    The above mentioned information has been verified from Cygnet by :
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="padding-top:10px">
+                    <b>Name : ____________________</b>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top:20px" colspan="2">
+                    <b>Date : @System.DateTime.Now.ToString("dd-MMM-yyyy")</b>
+                </td>
+                <td style="padding-top:20px; text-align:right" colspan="2">
+                    <b>Signature of Executive :__________________</b>
+                </td>
+            </tr>
+            <tr><td colspan="4" style="text-align:center; padding-top:10px"><button class="btn-primary" align="center" id="hidebutton">PRINT</button></td></tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
+<script src="~/JsScript/hidebutton.js"></script> 

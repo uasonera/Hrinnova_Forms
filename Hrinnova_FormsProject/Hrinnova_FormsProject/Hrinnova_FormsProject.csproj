@@ -185,16 +185,39 @@
     <Content Include="CSS\theme.css" />
     <Content Include="CSS\typography.css" />
     <Content Include="CSS\vallenato.css" />
-    <Content Include="DatabaseModel\EmployeeDetails1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EmployeeDetails1.edmx</DependentUpon>
-      <LastGenOutput>EmployeeDetails1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DatabaseModel\EmployeeDetails1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EmployeeDetails1.edmx</DependentUpon>
-      <LastGenOutput>EmployeeDetails1.cs</LastGenOutput>
-    </Content>
+    <Content Include="DataTables\DataTables-1.10.16\css\dataTables.bootstrap.css" />
+    <Content Include="DataTables\DataTables-1.10.16\css\dataTables.bootstrap.min.css" />
+    <Content Include="DataTables\DataTables-1.10.16\css\dataTables.bootstrap4.css" />
+    <Content Include="DataTables\DataTables-1.10.16\css\dataTables.bootstrap4.min.css" />
+    <Content Include="DataTables\DataTables-1.10.16\css\dataTables.foundation.css" />
+    <Content Include="DataTables\DataTables-1.10.16\css\dataTables.foundation.min.css" />
+    <Content Include="DataTables\DataTables-1.10.16\css\dataTables.jqueryui.css" />
+    <Content Include="DataTables\DataTables-1.10.16\css\dataTables.jqueryui.min.css" />
+    <Content Include="DataTables\DataTables-1.10.16\css\dataTables.semanticui.css" />
+    <Content Include="DataTables\DataTables-1.10.16\css\dataTables.semanticui.min.css" />
+    <Content Include="DataTables\DataTables-1.10.16\css\jquery.dataTables.css" />
+    <Content Include="DataTables\DataTables-1.10.16\css\jquery.dataTables.min.css" />
+    <Content Include="DataTables\DataTables-1.10.16\images\sort_asc.png" />
+    <Content Include="DataTables\DataTables-1.10.16\images\sort_asc_disabled.png" />
+    <Content Include="DataTables\DataTables-1.10.16\images\sort_both.png" />
+    <Content Include="DataTables\DataTables-1.10.16\images\sort_desc.png" />
+    <Content Include="DataTables\DataTables-1.10.16\images\sort_desc_disabled.png" />
+    <Content Include="DataTables\DataTables-1.10.16\js\dataTables.bootstrap.js" />
+    <Content Include="DataTables\DataTables-1.10.16\js\dataTables.bootstrap.min.js" />
+    <Content Include="DataTables\DataTables-1.10.16\js\dataTables.bootstrap4.js" />
+    <Content Include="DataTables\DataTables-1.10.16\js\dataTables.bootstrap4.min.js" />
+    <Content Include="DataTables\DataTables-1.10.16\js\dataTables.foundation.js" />
+    <Content Include="DataTables\DataTables-1.10.16\js\dataTables.foundation.min.js" />
+    <Content Include="DataTables\DataTables-1.10.16\js\dataTables.jqueryui.js" />
+    <Content Include="DataTables\DataTables-1.10.16\js\dataTables.jqueryui.min.js" />
+    <Content Include="DataTables\DataTables-1.10.16\js\dataTables.semanticui.js" />
+    <Content Include="DataTables\DataTables-1.10.16\js\dataTables.semanticui.min.js" />
+    <Content Include="DataTables\DataTables-1.10.16\js\jquery.dataTables.js" />
+    <Content Include="DataTables\DataTables-1.10.16\js\jquery.dataTables.min.js" />
+    <Content Include="DataTables\datatables.css" />
+    <Content Include="DataTables\datatables.js" />
+    <Content Include="DataTables\datatables.min.css" />
+    <Content Include="DataTables\datatables.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\1.jpg" />
@@ -532,6 +555,7 @@
     <Content Include="JsScript\d3.tip.v0.6.3.js" />
     <Content Include="JsScript\d3.v3.min.js" />
     <Content Include="JsScript\d3pie.min.js" />
+    <Content Include="JsScript\datatablecall.js" />
     <Content Include="JsScript\dataTables.jqueryui.js" />
     <Content Include="JsScript\DatevalidationForJQueryPicker.js" />
     <Content Include="JsScript\DP\bootstrap-datepicker.js" />
@@ -551,13 +575,6 @@
     <Content Include="JsScript\jquery-1.11.0.min.js" />
     <Content Include="JsScript\jquery-1.11.2.min.js" />
     <Content Include="JsScript\jquery-1.11.3.js" />
-    <EntityDeploy Include="DatabaseModel\EmployeeDetails1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EmployeeDetails1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="DatabaseModel\EmployeeDetails1.edmx.diagram">
-      <DependentUpon>EmployeeDetails1.edmx</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap-select.css.map" />
     <None Include="JsScript\jquery-1.7.1-vsdoc.js" />
     <Content Include="JsScript\jquery-1.7.1.min.js" />
@@ -602,11 +619,43 @@
     <Content Include="JsScript\moment.min.js" />
     <Content Include="JsScript\new-icon-font.js" />
     <Content Include="JsScript\ObjectivesAndKRAsScript.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\bootstrap-daterangepicker.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\bootstrap-multiselect.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\bootstrap-slider.css" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\bootstrap-slider.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\bootstrap-switch.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\bootstrap-switch.min.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\bootstrap-timepicker.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\bootstrap.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\bootstrap.min.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\canvg.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\canvg.min.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\Chart.HorizontalBar.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\Chart.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\Chart.min.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\chartData.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\chosen.jquery.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\chosen.jquery.min.js" />
     <Content Include="JsScript\PageScripts\HRIMS_Secure\datatable\dataTables.bootstrap.min.js" />
     <Content Include="JsScript\PageScripts\HRIMS_Secure\datatable\dataTables.responsive.min.js" />
     <Content Include="JsScript\PageScripts\HRIMS_Secure\datatable\jquery.dataTables.min.js" />
     <Content Include="JsScript\PageScripts\HRIMS_Secure\datepicker-jquery-1.10.2.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\datepicker-jquery-ui.js" />
     <Content Include="JsScript\PageScripts\HRIMS_Secure\general-designer.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\jquery-2.2.1.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\jquery-2.2.1.min.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\jquery.mCustomScrollbar.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\jquery.mCustomScrollbar.min.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\jquery.mousewheel.min.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\jquery.multiselect.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\less-min.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\loader.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\modernizr.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\rgbcolor.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\ValidationConfig.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\validator.min.js" />
+    <Content Include="JsScript\PageScripts\HRIMS_Secure\view-board.js" />
     <Content Include="JsScript\partialviewbuttons.js" />
     <Content Include="JsScript\ProjectKRA.js" />
     <Content Include="JsScript\ProjectList_New.js" />
@@ -684,6 +733,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\Hrinnova_Forms.pubxml" />
     <Content Include="Scripts\bootstrap-select.js.map" />
+    <None Include="Properties\PublishProfiles\Hrinnova_FormsProject.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\defaults-ar_AR.js" />
     <Content Include="Scripts\i18n\defaults-ar_AR.min.js" />
@@ -782,71 +832,10 @@
     <Compile Include="Controllers\EditController.cs" />
     <Compile Include="Controllers\FormPopulateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="DatabaseModel\additional_information.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\certifications.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\department.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\educational_qualifications.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\EmployeeDetails1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EmployeeDetails1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\EmployeeDetails1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\EmployeeDetails1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EmployeeDetails1.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\employee_details.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\employee_refcheck.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\epfo_details.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\esic_details.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\family_details.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\feedback.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\other_details.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\previous_company_details.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\prev_employ_1.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\references.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\role.cs">
-      <DependentUpon>EmployeeDetails1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\EditIndexModel.cs" />
-    <Compile Include="Models\Model2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -956,6 +945,7 @@
     <Content Include="Views\FormPopulate\PFTransferForm.cshtml" />
     <Content Include="Views\FormPopulate\FeedbackForm.cshtml" />
     <Content Include="Views\FormPopulate\EmployeeReferenceCheck.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -978,6 +968,7 @@
     <Folder Include="CSS\Scheduler\" />
     <Folder Include="CSS\SlimScroll\" />
     <Folder Include="CSS\TaskImport\" />
+    <Folder Include="DatabaseModel\" />
     <Folder Include="Images\BackGroundImages\" />
     <Folder Include="Images\Banner-image\" />
     <Folder Include="Images\bootstrap-chosen\" />
@@ -1004,10 +995,15 @@
     <Folder Include="JsScript\Task\" />
     <Folder Include="JsScript\ThirdPartyPlugins\" />
     <Folder Include="JsScript\TinyMCE\" />
-    <Folder Include="Views\EmployeeDetails\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cygnet.ProjMan.EFData\Cygnet.ProjMan.EFData.csproj">
+      <Project>{d4fb3d67-e324-4f37-8723-b1bfdf54758f}</Project>
+      <Name>Cygnet.ProjMan.EFData</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

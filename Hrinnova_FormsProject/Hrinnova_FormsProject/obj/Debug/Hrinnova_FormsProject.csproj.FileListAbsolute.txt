@@ -95,6 +95,8 @@ D:\Hrinnova_FormsProject\Hrinnova_FormsProject\bin\System.Web.Webpages.Deploymen
 D:\Hrinnova_FormsProject\Hrinnova_FormsProject\bin\System.Web.Webpages.Razor.xml
 D:\Hrinnova_FormsProject\Hrinnova_FormsProject\bin\System.Web.Helpers.xml
 D:\Hrinnova_FormsProject\Hrinnova_FormsProject\bin\System.Web.Mvc.xml
-D:\Hrinnova_FormsProject\Hrinnova_FormsProject\obj\Debug\Hrinnova_FormsProject.csprojResolveAssemblyReference.cache
 D:\Hrinnova_FormsProject\Hrinnova_FormsProject\obj\Debug\Hrinnova_FormsProject.dll
 D:\Hrinnova_FormsProject\Hrinnova_FormsProject\obj\Debug\Hrinnova_FormsProject.pdb
+D:\Hrinnova_FormsProject\Hrinnova_FormsProject\obj\Debug\Hrinnova_FormsProject.csprojResolveAssemblyReference.cache
+D:\Hrinnova_FormsProject\Hrinnova_FormsProject\bin\Cygnet.ProjMan.EFData.dll
+D:\Hrinnova_FormsProject\Hrinnova_FormsProject\bin\Cygnet.ProjMan.EFData.pdb

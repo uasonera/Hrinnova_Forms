@@ -5,8 +5,11 @@
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
 
-<link href="~/CSS/HRIMS_Secure/style/datatable/dataTables.bootstrap.css" rel="stylesheet" />
-<script src="~/JsScript/PageScripts/HRIMS_Secure/datatable/dataTables.responsive.min.js"></script>
+
+@*<link href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />*@
+
+@*<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>*@
+
 <h2 align="center">Edit Employee Details Index</h2>
 
 <div class="container-fluid">
@@ -33,7 +36,7 @@
                             </tr>
                         </thead>
 
-                        @foreach (var item in Model.employeedetails)
+                        @foreach (var item in Model.Employeedetails)
                         {
                             <tr>
                                 <td>
@@ -50,9 +53,28 @@
                                 </td>
 
                                 <td>
-                                    @Html.ActionLink("Edit", "Edit", new { id = item.employee_id }) |
-                                    @Html.ActionLink("Details", "Details", new { id = item.employee_id }) |
-                                    @Html.ActionLink("Delete", "Delete", new { id = item.employee_id })
+                                    @*@Html.ActionLink("Edit", "Edit", new { id = item.employee_id }) |
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.employee_id }) |
+                                        @Html.ActionLink("ESIC", "Esicform","FormPopulate", new { id = item.employee_id }, null) |
+                                            @Html.ActionLink("PF", "Epfoform", "FormPopulate", new { id = item.employee_id },null)*@
+                                    @Html.DropDownList(
+    "url",
+    new SelectList(new[]
+    {
+        new SelectListItem { Text = "Edit User Details", Value = Url.Action("Edit", "Edit", new {id=item.employee_id }) },
+        new SelectListItem { Text = "Employee Details Form", Value = Url.Action("EmployeeDetails", "FormPopulate", new {id=item.employee_id }) },
+        new SelectListItem { Text = "Employee Reference Check", Value = Url.Action("EmployeeReferenceCheck", "FormPopulate", new {id=item.employee_id }) },
+        new SelectListItem { Text = "Employment Form", Value = Url.Action("EmploymentForm", "FormPopulate", new {id=item.employee_id }) },
+        new SelectListItem { Text = "EPFO Form", Value = Url.Action("Epfoform", "FormPopulate", new {id=item.employee_id }) },
+        new SelectListItem { Text = "Esicform", Value = Url.Action("Esicform", "FormPopulate", new {id=item.employee_id }) },
+        new SelectListItem { Text = "PF Transfer Form", Value = Url.Action("PFTransferForm", "FormPopulate", new {id=item.employee_id }) },
+        new SelectListItem { Text = "SUMS Employee Verification", Value = Url.Action("SUMSEmployeeVerification", "FormPopulate", new {id=item.employee_id }) },
+        new SelectListItem { Text = "Feedback", Value = Url.Action("FeedbackForm", "FormPopulate", new {id=item.employee_id }) },
+
+    }, "Value" , "Text"),
+    "---Action---",
+    new { @class = "form-control urlddl" }
+)
                                 </td>
                             </tr>
                         }
@@ -63,9 +85,21 @@
         </div>
     </div>
 </div>
+<script src="~/JsScript/datatablecall.js"></script>
 
-<script>
-$(document).ready( function () {
-    $('#myTable').DataTable();
-} );
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('.urlddl').change(function (e) {
+            debugger;
+            var url = $(this).val();
+            if (url != null && url != '') {
+                window.location.href = url;
+            };
+            $(this).text("---Action---");
+        });
+        //$('#myTable').DataTable({
+        //    "lengthMenu": [[50, 100, -1], [50, 100, "All"]]
+        //});
+    });
 </script>

@@ -181,6 +181,7 @@
     <Content Include="CSS\style.css" />
     <Content Include="CSS\styles-new.css" />
     <Content Include="CSS\styles.css" />
+    <Content Include="CSS\Tabbuttonss.css" />
     <Content Include="CSS\Task.css" />
     <Content Include="CSS\theme.css" />
     <Content Include="CSS\typography.css" />
@@ -946,6 +947,8 @@
     <Content Include="Views\FormPopulate\FeedbackForm.cshtml" />
     <Content Include="Views\FormPopulate\EmployeeReferenceCheck.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Home\_ErrorView.cshtml" />
+    <Content Include="Views\Edit\_ErrorView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

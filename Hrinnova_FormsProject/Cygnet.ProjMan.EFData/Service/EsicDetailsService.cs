@@ -8,25 +8,30 @@ using System.Threading.Tasks;
 
 namespace Cygnet.ProjMan.EFData.Service
 {
+    /// <summary>
+    /// Class EsicDetailsService.
+    /// </summary>
     public class EsicDetailsService
     {
+        /// <summary>
+        /// The hrinnova database entities
+        /// </summary>
         hrinnova_dbEntities _hrinnova_dbEntities;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EsicDetailsService"/> class.
+        /// </summary>
         public EsicDetailsService()
         {
             _hrinnova_dbEntities = new hrinnova_dbEntities();
         }
-        #region Create Method
-        public void EsicDetails(MainModel mainModel)
-        {
-            var esicdetails = Mapper.ConvertTo(mainModel.Esicdetails);
-
-            _hrinnova_dbEntities.esic_details.Add(esicdetails);
-            _hrinnova_dbEntities.SaveChanges();
-
-        }
-        #endregion
+        
 
         #region Edit Get Method
+        /// <summary>
+        /// Edits the esic details.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>esic_detailsModel.</returns>
         public esic_detailsModel EditEsicDetails(int id)
         {
             var esicdetails = _hrinnova_dbEntities.esic_details.Where(x => x.employee_id == id).FirstOrDefault();
@@ -37,6 +42,11 @@ namespace Cygnet.ProjMan.EFData.Service
         #endregion
 
         #region Edit Post Method
+        /// <summary>
+        /// Edits the post.
+        /// </summary>
+        /// <param name="Esic_detailsModel">The esic details model.</param>
+        /// <param name="entity">The entity.</param>
         public void EditPost(esic_detailsModel Esic_detailsModel, esic_details entity)
         {
             entity.insurance_number = Esic_detailsModel.insurance_number;

@@ -8,25 +8,29 @@ using System.Threading.Tasks;
 
 namespace Cygnet.ProjMan.EFData.Service
 {
+    /// <summary>
+    /// Class ReferencesService.
+    /// </summary>
     public class ReferencesService
     {
+        /// <summary>
+        /// The hrinnova database entities
+        /// </summary>
         hrinnova_dbEntities _hrinnova_dbEntities;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ReferencesService"/> class.
+        /// </summary>
         public ReferencesService()
         {
             _hrinnova_dbEntities = new hrinnova_dbEntities();
         }
-        
-        public void References(MainModel mainModel)
-        {
-            var references = Mapper.ConvertTo(mainModel.Reference1);
-            var references2 = Mapper.ConvertTo(mainModel.Reference2);
 
-
-            _hrinnova_dbEntities.references.Add(references);
-            _hrinnova_dbEntities.references.Add(references2);
-            _hrinnova_dbEntities.SaveChanges();
-
-        }
+      
+        /// <summary>
+        /// Edits the get.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>MainModel.</returns>
         public MainModel EditGet(int id)
         {
             //var family_details = _hrinnova_dbEntities.employee_details.Find(id);
@@ -57,6 +61,11 @@ namespace Cygnet.ProjMan.EFData.Service
 
             return mainmodel;
         }
+        /// <summary>
+        /// Edits the post.
+        /// </summary>
+        /// <param name="ReferencesModel">The references model.</param>
+        /// <param name="entity">The entity.</param>
         public void EditPost(referencesModel ReferencesModel, references entity)
         {
             entity.name = ReferencesModel.name;

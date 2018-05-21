@@ -8,25 +8,30 @@ using System.Threading.Tasks;
 
 namespace Cygnet.ProjMan.EFData.Service
 {
+    /// <summary>
+    /// Class EducationalQualificationsService.
+    /// </summary>
     public class EducationalQualificationsService
     {
+        /// <summary>
+        /// The hrinnova database entities
+        /// </summary>
         hrinnova_dbEntities _hrinnova_dbEntities;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EducationalQualificationsService"/> class.
+        /// </summary>
         public EducationalQualificationsService()
         {
             _hrinnova_dbEntities = new hrinnova_dbEntities();
         }
-        #region Create Method
-        public void EducationalQualifications(MainModel mainModel)
-        {
-            var EQualifications = Mapper.ConvertTo(mainModel.Educationalqualifications);
-
-            _hrinnova_dbEntities.educational_qualifications.Add(EQualifications);
-            _hrinnova_dbEntities.SaveChanges();
-
-        }
-        #endregion
+        
 
         #region Edit Get Method
+        /// <summary>
+        /// Edits the get.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>educational_qualificationsModel.</returns>
         public educational_qualificationsModel EditGet(int id)
         {
             var educationalqualifications = _hrinnova_dbEntities.educational_qualifications.Where(x => x.employee_id == id).FirstOrDefault();
@@ -37,6 +42,11 @@ namespace Cygnet.ProjMan.EFData.Service
         #endregion
 
         #region Edit Post Method
+        /// <summary>
+        /// Edits the post.
+        /// </summary>
+        /// <param name="Educational_qualificationsModel">The educational qualifications model.</param>
+        /// <param name="entity">The entity.</param>
         public void EditPost(educational_qualificationsModel Educational_qualificationsModel, educational_qualifications entity)
         {
             entity.tenth_school = Educational_qualificationsModel.tenth_school;

@@ -1,0 +1,50 @@
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 2%;
+        right: 2%;
+        z-index: 99;
+        font-size: 14px;
+        border: none;
+        outline: none;
+        background-color: royalblue;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+        padding: 6px 12px;
+    }
+
+    .tab {
+    overflow: auto;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+        .tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}

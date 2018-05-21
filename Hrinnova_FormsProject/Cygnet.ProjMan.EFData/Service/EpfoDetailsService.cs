@@ -8,25 +8,30 @@ using System.Threading.Tasks;
 
 namespace Cygnet.ProjMan.EFData.Service
 {
+    /// <summary>
+    /// Class EpfoDetailsService.
+    /// </summary>
     public class EpfoDetailsService
     {
+        /// <summary>
+        /// The hrinnova database entities
+        /// </summary>
         hrinnova_dbEntities _hrinnova_dbEntities;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EpfoDetailsService"/> class.
+        /// </summary>
         public EpfoDetailsService()
         {
             _hrinnova_dbEntities = new hrinnova_dbEntities();
         }
-        #region Create Method
-        public void EpfoDetails(MainModel mainModel)
-        {
-            var epfodetails = Mapper.ConvertTo(mainModel.Epfodetails);
-
-            _hrinnova_dbEntities.epfo_details.Add(epfodetails);
-            _hrinnova_dbEntities.SaveChanges();
-
-        }
-        #endregion
+        
 
         #region Edit Get Method
+        /// <summary>
+        /// Edits the get.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>epfo_detailsModel.</returns>
         public epfo_detailsModel EditGet(int id)
         {
             var epfodetails = _hrinnova_dbEntities.epfo_details.Where(x => x.employee_id == id).FirstOrDefault();
@@ -37,6 +42,11 @@ namespace Cygnet.ProjMan.EFData.Service
         #endregion
 
         #region Edit Post Method
+        /// <summary>
+        /// Edits the post.
+        /// </summary>
+        /// <param name="Epfo_detailsModel">The epfo details model.</param>
+        /// <param name="entity">The entity.</param>
         public void EditPost(epfo_detailsModel Epfo_detailsModel, epfo_details entity)
         {
             entity.presentcompany_pfnumber = Epfo_detailsModel.presentcompany_pfnumber;

@@ -8,36 +8,33 @@ using System.Threading.Tasks;
 
 namespace Cygnet.ProjMan.EFData.Service
 {
+    /// <summary>
+    /// Class PreviousEmploymentService.
+    /// </summary>
     public class PreviousEmploymentService
     {
+        /// <summary>
+        /// The hrinnova database entities
+        /// </summary>
         hrinnova_dbEntities _hrinnova_dbEntities;
         #region Constructors
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PreviousEmploymentService"/> class.
+        /// </summary>
         public PreviousEmploymentService()
         {
             _hrinnova_dbEntities = new hrinnova_dbEntities();
         }
         #endregion
 
-        #region Create Method
-        public void Create(MainModel mainModel)
-        {
-            var prevemployment = Mapper.ConvertTo(mainModel.Prevemploy1);
-            var prevemployment2 = Mapper.ConvertTo(mainModel.Prevemploy2);
-            var prevemployment3 = Mapper.ConvertTo(mainModel.Prevemploy3);
-            var prevemployment4 = Mapper.ConvertTo(mainModel.Prevemploy4);
-            var prevemployment5 = Mapper.ConvertTo(mainModel.Prevemploy5);
-
-            _hrinnova_dbEntities.prev_employ_1.Add(prevemployment);
-            _hrinnova_dbEntities.prev_employ_1.Add(prevemployment2);
-            _hrinnova_dbEntities.prev_employ_1.Add(prevemployment3);
-            _hrinnova_dbEntities.prev_employ_1.Add(prevemployment4);
-            _hrinnova_dbEntities.prev_employ_1.Add(prevemployment5);
-            _hrinnova_dbEntities.SaveChanges();
-
-        }
-        #endregion
+        
 
         #region Edit Get Method
+        /// <summary>
+        /// Edits the get.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>MainModel.</returns>
         public MainModel EditGet(int id)
         {
             //var family_details = _hrinnova_dbEntities.employee_details.Find(id);
@@ -76,6 +73,11 @@ namespace Cygnet.ProjMan.EFData.Service
         #endregion
 
         #region Edit Post Method
+        /// <summary>
+        /// Edits the post.
+        /// </summary>
+        /// <param name="Prev_employ_1Model">The previous employ 1 model.</param>
+        /// <param name="entity">The entity.</param>
         public void EditPost(prev_employ_1Model Prev_employ_1Model, prev_employ_1 entity)
         {
             entity.employers_name = Prev_employ_1Model.employers_name;

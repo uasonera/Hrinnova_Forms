@@ -176,11 +176,11 @@
     </Key>
     <Property Name="feedback_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="employee_id" Type="int" Nullable="false" />
-    <Property Name="hr_manual" Type="varchar" MaxLength="3" />
-    <Property Name="cims_idpassword" Type="varchar" MaxLength="3" />
-    <Property Name="books" Type="varchar" MaxLength="3" />
-    <Property Name="library_card" Type="varchar" MaxLength="3" />
-    <Property Name="hr_anyother" Type="varchar" MaxLength="3" />
+    <Property Name="hr_manual" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="cims_idpassword" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="books" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="library_card" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="hr_anyother" Type="varchar" MaxLength="3" Nullable="false" />
     <Property Name="identitycard" Type="varchar" MaxLength="3" />
     <Property Name="bank_account" Type="varchar" MaxLength="3" />
     <Property Name="notepad" Type="varchar" MaxLength="3" />
@@ -236,6 +236,54 @@
     <Property Name="pr_employee_id" Type="varchar" MaxLength="10" />
     <Property Name="attendence" Type="varchar" MaxLength="50" />
     <Property Name="re_hire_status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="prev_employ_2">
+    <Key>
+      <PropertyRef Name="prevemploy_id" />
+    </Key>
+    <Property Name="prevemploy_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="employee_id" Type="int" Nullable="false" />
+    <Property Name="employers_name" Type="varchar" MaxLength="50" />
+    <Property Name="designation" Type="varchar" MaxLength="50" />
+    <Property Name="periodworked_from" Type="date" />
+    <Property Name="periodworked_to" Type="date" />
+    <Property Name="reason_of_leaving" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="prev_employ_3">
+    <Key>
+      <PropertyRef Name="prevemploy_id" />
+    </Key>
+    <Property Name="prevemploy_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="employee_id" Type="int" Nullable="false" />
+    <Property Name="employers_name" Type="varchar" MaxLength="50" />
+    <Property Name="designation" Type="varchar" MaxLength="50" />
+    <Property Name="periodworked_from" Type="date" />
+    <Property Name="periodworked_to" Type="date" />
+    <Property Name="reason_of_leaving" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="prev_employ_4">
+    <Key>
+      <PropertyRef Name="prevemploy_id" />
+    </Key>
+    <Property Name="prevemploy_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="employee_id" Type="int" Nullable="false" />
+    <Property Name="employers_name" Type="varchar" MaxLength="50" />
+    <Property Name="designation" Type="varchar" MaxLength="50" />
+    <Property Name="periodworked_from" Type="date" />
+    <Property Name="periodworked_to" Type="date" />
+    <Property Name="reason_of_leaving" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="prev_employ_5">
+    <Key>
+      <PropertyRef Name="prevemploy_id" />
+    </Key>
+    <Property Name="prevemploy_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="employee_id" Type="int" Nullable="false" />
+    <Property Name="employers_name" Type="varchar" MaxLength="50" />
+    <Property Name="designation" Type="varchar" MaxLength="50" />
+    <Property Name="periodworked_from" Type="date" />
+    <Property Name="periodworked_to" Type="date" />
+    <Property Name="reason_of_leaving" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="previous_company_details">
     <Key>
@@ -441,6 +489,54 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_prev_employ_2_employee_details">
+    <End Role="employee_details" Type="Self.employee_details" Multiplicity="1" />
+    <End Role="prev_employ_2" Type="Self.prev_employ_2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee_details">
+        <PropertyRef Name="employee_id" />
+      </Principal>
+      <Dependent Role="prev_employ_2">
+        <PropertyRef Name="employee_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_prev_employ_3_employee_details">
+    <End Role="employee_details" Type="Self.employee_details" Multiplicity="1" />
+    <End Role="prev_employ_3" Type="Self.prev_employ_3" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee_details">
+        <PropertyRef Name="employee_id" />
+      </Principal>
+      <Dependent Role="prev_employ_3">
+        <PropertyRef Name="employee_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_prev_employ_4_employee_details">
+    <End Role="employee_details" Type="Self.employee_details" Multiplicity="1" />
+    <End Role="prev_employ_4" Type="Self.prev_employ_4" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee_details">
+        <PropertyRef Name="employee_id" />
+      </Principal>
+      <Dependent Role="prev_employ_4">
+        <PropertyRef Name="employee_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_prev_employ_5_employee_details">
+    <End Role="employee_details" Type="Self.employee_details" Multiplicity="1" />
+    <End Role="prev_employ_5" Type="Self.prev_employ_5" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee_details">
+        <PropertyRef Name="employee_id" />
+      </Principal>
+      <Dependent Role="prev_employ_5">
+        <PropertyRef Name="employee_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_previous_company_details_employee_details">
     <End Role="employee_details" Type="Self.employee_details" Multiplicity="1" />
     <End Role="previous_company_details" Type="Self.previous_company_details" Multiplicity="*" />
@@ -490,6 +586,10 @@
     <EntitySet Name="feedback" EntityType="Self.feedback" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="other_details" EntityType="Self.other_details" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="prev_employ_1" EntityType="Self.prev_employ_1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="prev_employ_2" EntityType="Self.prev_employ_2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="prev_employ_3" EntityType="Self.prev_employ_3" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="prev_employ_4" EntityType="Self.prev_employ_4" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="prev_employ_5" EntityType="Self.prev_employ_5" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="previous_company_details" EntityType="Self.previous_company_details" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="references" EntityType="Self.references" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="role" EntityType="Self.role" Schema="dbo" store:Type="Tables" />
@@ -548,6 +648,22 @@
     <AssociationSet Name="FK_prev_employ_1_employee_details" Association="Self.FK_prev_employ_1_employee_details">
       <End Role="employee_details" EntitySet="employee_details" />
       <End Role="prev_employ_1" EntitySet="prev_employ_1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_prev_employ_2_employee_details" Association="Self.FK_prev_employ_2_employee_details">
+      <End Role="employee_details" EntitySet="employee_details" />
+      <End Role="prev_employ_2" EntitySet="prev_employ_2" />
+    </AssociationSet>
+    <AssociationSet Name="FK_prev_employ_3_employee_details" Association="Self.FK_prev_employ_3_employee_details">
+      <End Role="employee_details" EntitySet="employee_details" />
+      <End Role="prev_employ_3" EntitySet="prev_employ_3" />
+    </AssociationSet>
+    <AssociationSet Name="FK_prev_employ_4_employee_details" Association="Self.FK_prev_employ_4_employee_details">
+      <End Role="employee_details" EntitySet="employee_details" />
+      <End Role="prev_employ_4" EntitySet="prev_employ_4" />
+    </AssociationSet>
+    <AssociationSet Name="FK_prev_employ_5_employee_details" Association="Self.FK_prev_employ_5_employee_details">
+      <End Role="employee_details" EntitySet="employee_details" />
+      <End Role="prev_employ_5" EntitySet="prev_employ_5" />
     </AssociationSet>
     <AssociationSet Name="FK_previous_company_details_employee_details" Association="Self.FK_previous_company_details_employee_details">
       <End Role="employee_details" EntitySet="employee_details" />

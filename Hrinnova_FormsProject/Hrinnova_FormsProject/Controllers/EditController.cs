@@ -12,28 +12,79 @@ using Cygnet.ProjMan.EFData.Service;
 
 namespace Hrinnova_FormsProject.Controllers
 {
+    /// <summary>
+    /// Class EditController.
+    /// </summary>
+    /// <seealso cref="System.Web.Mvc.Controller" />
     public class EditController : Controller
     {
+        /// <summary>
+        /// The entity
+        /// </summary>
         hrinnova_dbEntities entity = new hrinnova_dbEntities();
         // GET: Edit
 
 
+        /// <summary>
+        /// The eim
+        /// </summary>
         EditIndexModel eim = new EditIndexModel();
+        /// <summary>
+        /// The employee details service
+        /// </summary>
         EmployeeDetailsService _employeeDetailsService = new EmployeeDetailsService();
+        /// <summary>
+        /// The additional information service
+        /// </summary>
         AdditionalInformationService _additionalInformationService = new AdditionalInformationService();
+        /// <summary>
+        /// The educational qualifications service
+        /// </summary>
         EducationalQualificationsService _educationalQualificationsService = new EducationalQualificationsService();
+        /// <summary>
+        /// The epfo details service
+        /// </summary>
         EpfoDetailsService _epfoDetailsService = new EpfoDetailsService();
+        /// <summary>
+        /// The esic details service
+        /// </summary>
         EsicDetailsService _esicDetailsService = new EsicDetailsService();
+        /// <summary>
+        /// The family details service
+        /// </summary>
         FamilyDetailsService _familyDetailsService = new FamilyDetailsService();
+        /// <summary>
+        /// The feedback service
+        /// </summary>
         FeedbackService _feedbackService = new FeedbackService();
+        /// <summary>
+        /// The other details service
+        /// </summary>
         OtherDetailsService _otherDetailsService = new OtherDetailsService();
+        /// <summary>
+        /// The previous employment service
+        /// </summary>
         PreviousEmploymentService _previousEmploymentService = new PreviousEmploymentService();
+        /// <summary>
+        /// The previous company details service
+        /// </summary>
         PreviousCompanyDetailsService _previousCompanyDetailsService = new PreviousCompanyDetailsService();
+        /// <summary>
+        /// The references service
+        /// </summary>
         ReferencesService _referencesService = new ReferencesService();
-        CertificationsService _certificationsService= new CertificationsService();
+        /// <summary>
+        /// The certifications service
+        /// </summary>
+        CertificationsService _certificationsService = new CertificationsService();
 
         //Get method to show index of employees
 
+        /// <summary>
+        /// Edits the index2.
+        /// </summary>
+        /// <param name="searchstring">The searchstring.</param>
+        /// <returns>ActionResult.</returns>
         public ActionResult EditIndex2(string searchstring)
 
         {
@@ -45,6 +96,11 @@ namespace Hrinnova_FormsProject.Controllers
 
 
         // GET: Edit/Details/5
+        /// <summary>
+        /// Detailses the specified identifier.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>ActionResult.</returns>
         public ActionResult Details(int id)
         {
             return View();
@@ -56,6 +112,11 @@ namespace Hrinnova_FormsProject.Controllers
 
 
         // GET: Edit/Edit/5  
+        /// <summary>
+        /// Edits the specified identifier.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>ActionResult.</returns>
         public ActionResult Edit(int id)
         {
             Session["id"] = id;
@@ -103,8 +164,8 @@ namespace Hrinnova_FormsProject.Controllers
             model.Otherdetails = _otherDetailsService.EditGet(id);
             model.Feedback = _feedbackService.EditGet(id);
             model.Previouscompanydetails = _previousCompanyDetailsService.EditGet(id);
-            model.Certification1 = CertificationsData.Certifications.SingleOrDefault(x=>x.cert_type=="1");
             model.Certification2 = CertificationsData.Certifications.SingleOrDefault(x => x.cert_type == "2");
+            model.Certification1 = CertificationsData.Certifications.SingleOrDefault(x=>x.cert_type=="1");
             model.Certification3 = CertificationsData.Certifications.SingleOrDefault(x => x.cert_type == "3");
             model.Certification4 = CertificationsData.Certifications.SingleOrDefault(x => x.cert_type == "4");
             model.Reference1 = Referencesdata.References.SingleOrDefault(refr => refr.ref_type == "1" );
@@ -119,16 +180,30 @@ namespace Hrinnova_FormsProject.Controllers
         }
 
         // POST: Edit/Edit/5
+        /// <summary>
+        /// Editdatas the specified model.
+        /// </summary>
+        /// <param name="model">The model.</param>
+        /// <returns>ActionResult.</returns>
+        /// <exception cref="System.Data.Entity.Validation.DbEntityValidationException"></exception>
         [HttpPost]
         public ActionResult Editdata(MainModel model)
         {
 
             try
             {
-                if (ModelState.IsValid)
+                if (!ModelState.IsValid)
                 {
+                    var errors = ModelState.Select(x => x.Value.Errors).Where(y => y.Count > 0).ToList();
+                    model.Errors = new List<string>();
+                    foreach (var item in errors)
+                    {
+                        model.Errors.Add(item.FirstOrDefault().ErrorMessage);
+                    }
+                    return PartialView("_ErrorView", model);
+                }
 
-                    int updateid = Convert.ToInt32(Session["id"].ToString());
+                int updateid = Convert.ToInt32(Session["id"].ToString());
                     var EmployeeDetails = entity.employee_details.SingleOrDefault(x => x.employee_id == updateid);
                     var AdditionalInformation = entity.additional_information.SingleOrDefault(AIid => AIid.employee_id == updateid);
                     var cf1 = entity.certifications.SingleOrDefault(ct => ct.employee_id == updateid && ct.cert_type == "1");
@@ -181,7 +256,7 @@ namespace Hrinnova_FormsProject.Controllers
                     _referencesService.EditPost(model.Reference1, ref1);
                     _referencesService.EditPost(model.Reference2, ref2);
                     entity.SaveChanges();
-                }
+                
 
             }
             catch (DbEntityValidationException ex)
@@ -203,12 +278,23 @@ namespace Hrinnova_FormsProject.Controllers
         }
 
         // GET: Edit/Delete/5
+        /// <summary>
+        /// Deletes the specified identifier.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>ActionResult.</returns>
         public ActionResult Delete(int id)
         {
             return View();
         }
 
         // POST: Edit/Delete/5
+        /// <summary>
+        /// Deletes the specified identifier.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <param name="collection">The collection.</param>
+        /// <returns>ActionResult.</returns>
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

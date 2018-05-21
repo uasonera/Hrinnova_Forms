@@ -8,30 +8,29 @@ using System.Threading.Tasks;
 
 namespace Cygnet.ProjMan.EFData.Service
 {
+    /// <summary>
+    /// Class CertificationsService.
+    /// </summary>
     public class CertificationsService
     {
+        /// <summary>
+        /// The hrinnova database entities
+        /// </summary>
         hrinnova_dbEntities _hrinnova_dbEntities;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CertificationsService"/> class.
+        /// </summary>
         public CertificationsService()
         {
             _hrinnova_dbEntities = new hrinnova_dbEntities();
         }
-        #region Create Method 
-        public void Create(MainModel mainModel)
-        {
-            var certifications = Mapper.ConvertTo(mainModel.Certification1);
-            var certifications2 = Mapper.ConvertTo(mainModel.Certification2);
-            var certifications3 = Mapper.ConvertTo(mainModel.Certification3);
-            var certifications4 = Mapper.ConvertTo(mainModel.Certification4);
-
-            _hrinnova_dbEntities.certifications.Add(certifications);
-            _hrinnova_dbEntities.certifications.Add(certifications2);
-            _hrinnova_dbEntities.certifications.Add(certifications3);
-            _hrinnova_dbEntities.certifications.Add(certifications4);
-            _hrinnova_dbEntities.SaveChanges();
-
-        }
-        #endregion
+       
         #region Edit Get Method
+        /// <summary>
+        /// Edits the get.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>MainModel.</returns>
         public MainModel EditGet(int id)
         {
             //var family_details = _hrinnova_dbEntities.employee_details.Find(id);
@@ -68,8 +67,14 @@ namespace Cygnet.ProjMan.EFData.Service
         #endregion
 
         #region Edit Post Method
+        /// <summary>
+        /// Edits the post.
+        /// </summary>
+        /// <param name="CertificationsModel">The certifications model.</param>
+        /// <param name="entity">The entity.</param>
         public void EditPost(certificationsModel CertificationsModel, certifications entity)
         {
+            
             entity.certification_name = CertificationsModel.certification_name;
         }
         #endregion

@@ -8,22 +8,29 @@ using System.Threading.Tasks;
 
 namespace Cygnet.ProjMan.EFData.Service
 {
+    /// <summary>
+    /// Class PreviousCompanyDetailsService.
+    /// </summary>
     public class PreviousCompanyDetailsService
     {
+        /// <summary>
+        /// The hrinnova database entities
+        /// </summary>
         hrinnova_dbEntities _hrinnova_dbEntities;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PreviousCompanyDetailsService"/> class.
+        /// </summary>
         public PreviousCompanyDetailsService()
         {
             _hrinnova_dbEntities = new hrinnova_dbEntities();
         }
 
-        public void PreviousCompanyDetails(MainModel mainModel)
-        {
-            var previouscompanydetails = Mapper.ConvertTo(mainModel.Previouscompanydetails);
-
-            _hrinnova_dbEntities.previous_company_details.Add(previouscompanydetails);
-            _hrinnova_dbEntities.SaveChanges();
-
-        }
+      
+        /// <summary>
+        /// Edits the get.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>previous_company_detailsModel.</returns>
         public previous_company_detailsModel EditGet(int id)
         {
             var previouscompanydetails = _hrinnova_dbEntities.previous_company_details.Where(x => x.employee_id == id).FirstOrDefault();
@@ -31,6 +38,11 @@ namespace Cygnet.ProjMan.EFData.Service
 
             return Previous_company_detailsModel;
         }
+        /// <summary>
+        /// Edits the post.
+        /// </summary>
+        /// <param name="Previous_company_detailsModel">The previous company details model.</param>
+        /// <param name="entity">The entity.</param>
         public void EditPost(previous_company_detailsModel Previous_company_detailsModel, previous_company_details entity)
         {
             entity.pf_account_number = Previous_company_detailsModel.pf_account_number;

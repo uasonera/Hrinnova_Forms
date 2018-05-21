@@ -11,20 +11,67 @@ using Cygnet.ProjMan.EFData.DataSource;
 
 namespace Hrinnova_FormsProject.Controllers
 {
+    /// <summary>
+    /// Class HomeController.
+    /// </summary>
+    /// <seealso cref="System.Web.Mvc.Controller" />
     public class HomeController : Controller
     {
-        EmployeeDetailsService _employeeDetailsService= new EmployeeDetailsService(); 
-        AdditionalInformationService _additionalInformationService= new AdditionalInformationService();
-        EducationalQualificationsService _educationalQualificationsService= new EducationalQualificationsService();
-        EpfoDetailsService _epfoDetailsService= new EpfoDetailsService();
-        EsicDetailsService _esicDetailsService= new EsicDetailsService();
-        FamilyDetailsService _familyDetailsService= new FamilyDetailsService();
+        /// <summary>
+        /// The employee details service
+        /// </summary>
+        EmployeeDetailsService _employeeDetailsService = new EmployeeDetailsService();
+        /// <summary>
+        /// The additional information service
+        /// </summary>
+        AdditionalInformationService _additionalInformationService = new AdditionalInformationService();
+        /// <summary>
+        /// The educational qualifications service
+        /// </summary>
+        EducationalQualificationsService _educationalQualificationsService = new EducationalQualificationsService();
+        /// <summary>
+        /// The epfo details service
+        /// </summary>
+        EpfoDetailsService _epfoDetailsService = new EpfoDetailsService();
+        /// <summary>
+        /// The esic details service
+        /// </summary>
+        EsicDetailsService _esicDetailsService = new EsicDetailsService();
+        /// <summary>
+        /// The family details service
+        /// </summary>
+        FamilyDetailsService _familyDetailsService = new FamilyDetailsService();
+        /// <summary>
+        /// The feedback service
+        /// </summary>
         FeedbackService _feedbackService = new FeedbackService();
+        /// <summary>
+        /// The other details service
+        /// </summary>
         OtherDetailsService _otherDetailsService = new OtherDetailsService();
+        /// <summary>
+        /// The previous employment service
+        /// </summary>
         PreviousEmploymentService _previousEmploymentService = new PreviousEmploymentService();
+        /// <summary>
+        /// The previous company details service
+        /// </summary>
         PreviousCompanyDetailsService _previousCompanyDetailsService = new PreviousCompanyDetailsService();
+        /// <summary>
+        /// The references service
+        /// </summary>
         ReferencesService _referencesService = new ReferencesService();
+        /// <summary>
+        /// The certifications service
+        /// </summary>
         CertificationsService _certificationsService = new CertificationsService();
+        /// <summary>
+        /// Indexes this instance.
+        /// </summary>
+        /// <returns>ActionResult.</returns>
+
+
+
         [HandleError]
         public ActionResult Index()
         {
@@ -54,54 +101,77 @@ namespace Hrinnova_FormsProject.Controllers
             };
             return View(MainModel);
         }
+        /// <summary>
+        /// Form1s this instance.
+        /// </summary>
+        /// <returns>PartialViewResult.</returns>
         public PartialViewResult Form1()
         {
             return PartialView("_Form1");
         }
+        /// <summary>
+        /// Form2s this instance.
+        /// </summary>
+        /// <returns>PartialViewResult.</returns>
         public PartialViewResult Form2()
         {
             return PartialView("_Form2");
         }
+        /// <summary>
+        /// Form3s this instance.
+        /// </summary>
+        /// <returns>PartialViewResult.</returns>
         public PartialViewResult Form3()
         {
             return PartialView("_Form3");
         }
+        /// <summary>
+        /// Form4s this instance.
+        /// </summary>
+        /// <returns>PartialViewResult.</returns>
         public PartialViewResult Form4()
         {
             return PartialView("_Form4");
         }
+        /// <summary>
+        /// Form5s this instance.
+        /// </summary>
+        /// <returns>PartialViewResult.</returns>
         public PartialViewResult Form5()
         {
             return PartialView("_Form5");
         }
-        
+
+        /// <summary>
+        /// Creates the post.
+        /// </summary>
+        /// <param name="mainmodel">The mainmodel.</param>
+        /// <returns>ActionResult.</returns>
         [HttpPost]
         [HandleError]
-        public ActionResult CreatePost(MainModel form1)
+        public ActionResult CreatePost(MainModel mainmodel)
         {
-
+            
             try
+            //Try code for exception handling of Database Errors
             {
+                
                 if (!ModelState.IsValid)
-                    return RedirectToAction(nameof(Index));
-
-                //Your code...
+                {
+                    var errors = ModelState.Select(x => x.Value.Errors).Where(y => y.Count > 0).ToList();
+                    mainmodel.Errors = new List<string>();
+                    foreach (var item in errors)
+                    {
+                        mainmodel.Errors.Add(item.FirstOrDefault().ErrorMessage);
+                    }
+                    return PartialView("_ErrorView", mainmodel);
+                }
                 //Could also be before try if you know the exception occurs in SaveChanges
-                _employeeDetailsService.Create(form1);
-                _additionalInformationService.Create(form1);
-                _educationalQualificationsService.EducationalQualifications(form1);
-                _certificationsService.Create(form1);
-                _epfoDetailsService.EpfoDetails(form1);
-                _esicDetailsService.EsicDetails(form1);
-                _feedbackService.Feedback(form1);
-                _otherDetailsService.OtherDetails(form1);
-                _previousCompanyDetailsService.PreviousCompanyDetails(form1);
-                _previousEmploymentService.Create(form1);
-                _referencesService.References(form1);
-                _familyDetailsService.Create(form1);
+                _employeeDetailsService.Create(mainmodel);
            
             }
 
+            //Catch code for exception handling of Database Errors
             catch (DbEntityValidationException ex)
             {
                 // Retrieve the error messages as a list of strings.
@@ -113,25 +183,23 @@ namespace Hrinnova_FormsProject.Controllers
                 var fullErrorMessage = string.Join("; ", errorMessages);
 
                 // Combine the original exception message with the new one.
-                var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
-                return View(exceptionMessage);
-            }
+                var exceptionMessage = string.Concat(" The validation errors are: ", fullErrorMessage);
+                mainmodel.Errors = new List<string>();
+                
+                    mainmodel.Errors.Add(exceptionMessage);
 
-            //return RedirectToAction("Index");
+                //return View(exceptionMessage);
+                return PartialView("_ErrorView", mainmodel);
+            }
+            
+
+            //returns to Index page after saving data;
             return Content("<script type=text/javascript>alert('Employee Details Added');window.location.href='/Home/Index'</script>");
         }
-        [HandleError]
-        public ActionResult sss()
-        {
-            return View();
-        }
-
-
-        public void  con(employee_detailsModel employee_detailsModel)
-        {
-           var c =  Mapper.ConvertTo(employee_detailsModel);
-        }
-
+        //public PartialViewResult ErrorPage() {
+        //    return PartialView("Error");
+        //}
+        
     }
 }
 //}

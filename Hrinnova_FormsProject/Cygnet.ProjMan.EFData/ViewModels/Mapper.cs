@@ -8,8 +8,18 @@ using Cygnet.ProjMan.EFData.DataSource;
 
 namespace Cygnet.ProjMan.EFData.ViewModels
 {
+    /// <summary>
+    /// Class Mapper.
+    /// </summary>
     public class Mapper
     {
+        /// <summary>
+        /// Converts to.
+        /// </summary>
+        /// <param name="employee_detailsModel">The employee details model.</param>
+        /// <returns>employee_details.</returns>
+        /// 
+
         public static  employee_details ConvertTo(employee_detailsModel employee_detailsModel)
         {
 
@@ -47,6 +57,11 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 known_ailments=employee_detailsModel.known_ailments
             };
         }
+        /// <summary>
+        /// Converts from.
+        /// </summary>
+        /// <param name="employee_details">The employee details.</param>
+        /// <returns>employee_detailsModel.</returns>
         public static employee_detailsModel ConvertFrom(employee_details employee_details)
         {
 
@@ -83,10 +98,17 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 known_ailments = employee_details.known_ailments
             };
         }
+        /// <summary>
+        /// Converts to.
+        /// </summary>
+        /// <param name="additional_informationModel">The additional information model.</param>
+        /// <returns>additional_information.</returns>
         public static additional_information ConvertTo(additional_informationModel additional_informationModel)
         {
+            
             return new additional_information()
             {
+                
                 known_to_presentemployee = additional_informationModel.known_to_presentemployee,
                 name_of_knownemployee = additional_informationModel.name_of_knownemployee,
                 relationship_with_knownemployee = additional_informationModel.relationship_with_knownemployee,
@@ -96,8 +118,17 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 DeptID = additional_informationModel.DeptID
             };
         }
+        /// <summary>
+        /// Converts from.
+        /// </summary>
+        /// <param name="additional_information">The additional information.</param>
+        /// <returns>additional_informationModel.</returns>
         public static additional_informationModel ConvertFrom(additional_information additional_information)
         {
+            if (additional_information == null)
+            {
+                additional_information = new additional_information();
+            }
             return new additional_informationModel()
             {
                 known_to_presentemployee = additional_information.known_to_presentemployee,
@@ -109,6 +140,11 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 DeptID = additional_information.DeptID
             };
         }
+        /// <summary>
+        /// Converts to.
+        /// </summary>
+        /// <param name="certificationsModel">The certifications model.</param>
+        /// <returns>certifications.</returns>
         public static certifications ConvertTo(certificationsModel certificationsModel)
         {
             return new certifications()
@@ -117,8 +153,17 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 certification_name = certificationsModel.certification_name
             };
         }
+        /// <summary>
+        /// Converts from.
+        /// </summary>
+        /// <param name="certifications">The certifications.</param>
+        /// <returns>certificationsModel.</returns>
         public static certificationsModel ConvertFrom(certifications certifications)
         {
+            if (certifications == null) {
+                certifications = new certifications();
+            }
+
             return new certificationsModel()
             {
                 cert_type = certifications.cert_type,
@@ -126,6 +171,11 @@ namespace Cygnet.ProjMan.EFData.ViewModels
             };
         }
 
+        /// <summary>
+        /// Converts to.
+        /// </summary>
+        /// <param name="educational_qualificationsModel">The educational qualifications model.</param>
+        /// <returns>educational_qualifications.</returns>
         public static educational_qualifications ConvertTo(educational_qualificationsModel educational_qualificationsModel)
         {
             return new educational_qualifications()
@@ -149,8 +199,17 @@ namespace Cygnet.ProjMan.EFData.ViewModels
 
             };
         }
+        /// <summary>
+        /// Converts from.
+        /// </summary>
+        /// <param name="educational_qualifications">The educational qualifications.</param>
+        /// <returns>educational_qualificationsModel.</returns>
         public static educational_qualificationsModel ConvertFrom(educational_qualifications educational_qualifications)
         {
+            if (educational_qualifications == null)
+            {
+                educational_qualifications = new educational_qualifications();
+            }
             return new educational_qualificationsModel()
             {
                 tenth_school = educational_qualifications.tenth_school,
@@ -172,6 +231,11 @@ namespace Cygnet.ProjMan.EFData.ViewModels
 
             };
         }
+        /// <summary>
+        /// Converts to.
+        /// </summary>
+        /// <param name="employee_refcheckModel">The employee refcheck model.</param>
+        /// <returns>employee_refcheck.</returns>
         public static employee_refcheck ConvertTo(employee_refcheckModel employee_refcheckModel)
         {
             return new employee_refcheck()
@@ -190,8 +254,17 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 verified_by_name = employee_refcheckModel.verified_by_name
             };
         }
+        /// <summary>
+        /// Converts from.
+        /// </summary>
+        /// <param name="employee_refcheck">The employee refcheck.</param>
+        /// <returns>employee_refcheckModel.</returns>
         public static employee_refcheckModel ConvertFrom(employee_refcheck employee_refcheck)
         {
+            if (employee_refcheck == null)
+            {
+                employee_refcheck = new employee_refcheck();
+            }
             return new employee_refcheckModel()
             {
                 attendence = employee_refcheck.attendence,
@@ -208,6 +281,11 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 verified_by_name = employee_refcheck.verified_by_name
             };
         }
+        /// <summary>
+        /// Converts to.
+        /// </summary>
+        /// <param name="epfo_detailsModel">The epfo details model.</param>
+        /// <returns>epfo_details.</returns>
         public static epfo_details ConvertTo(epfo_detailsModel epfo_detailsModel)
         {
             return new epfo_details()
@@ -223,8 +301,17 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 country_of_origin = epfo_detailsModel.country_of_origin
             };
         }
+        /// <summary>
+        /// Converts from.
+        /// </summary>
+        /// <param name="epfo_details">The epfo details.</param>
+        /// <returns>epfo_detailsModel.</returns>
         public static epfo_detailsModel ConvertFrom(epfo_details epfo_details)
         {
+            if (epfo_details == null)
+            {
+                epfo_details = new epfo_details();
+            }
             return new epfo_detailsModel()
             {
                 universal_account_number = epfo_details.universal_account_number,
@@ -238,6 +325,11 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 country_of_origin = epfo_details.country_of_origin
             };
         }
+        /// <summary>
+        /// Converts to.
+        /// </summary>
+        /// <param name="esic_detailsModel">The esic details model.</param>
+        /// <returns>esic_details.</returns>
         public static esic_details ConvertTo(esic_detailsModel esic_detailsModel)
         {
             return new esic_details()
@@ -254,8 +346,17 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 previous_insurance_number = esic_detailsModel.previous_insurance_number,
             };
         }
+        /// <summary>
+        /// Converts from.
+        /// </summary>
+        /// <param name="esic_details">The esic details.</param>
+        /// <returns>esic_detailsModel.</returns>
         public static esic_detailsModel ConvertFrom(esic_details esic_details)
         {
+            if (esic_details == null)
+            {
+                esic_details = new esic_details();
+            }
             return new esic_detailsModel()
             {
                 insurance_number = esic_details.insurance_number,
@@ -271,6 +372,11 @@ namespace Cygnet.ProjMan.EFData.ViewModels
             };
         }
 
+        /// <summary>
+        /// Converts to.
+        /// </summary>
+        /// <param name="family_detailsModel">The family details model.</param>
+        /// <returns>family_details.</returns>
         public static family_details ConvertTo(family_detailsModel family_detailsModel)
         {
             return new family_details()
@@ -287,8 +393,17 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 freside = family_detailsModel.freside,
             };
         }
+        /// <summary>
+        /// Converts from.
+        /// </summary>
+        /// <param name="family_details">The family details.</param>
+        /// <returns>family_detailsModel.</returns>
         public static family_detailsModel ConvertFrom(family_details family_details)
         {
+            if (family_details == null)
+            {
+                family_details = new family_details();
+            }
             return new family_detailsModel()
             {
                 familydet_id = family_details.familydet_id,
@@ -304,34 +419,50 @@ namespace Cygnet.ProjMan.EFData.ViewModels
             };
         }
 
+        /// <summary>
+        /// Converts to.
+        /// </summary>
+        /// <param name="feedbackModel">The feedback model.</param>
+        /// <returns>feedback.</returns>
         public static feedback ConvertTo(feedbackModel feedbackModel)
         {
-            return new feedback()
-            {
-                hr_manual = feedbackModel.hr_manual,
-                cims_idpassword = feedbackModel.cims_idpassword,
-                books = feedbackModel.books,
-                identitycard = feedbackModel.identitycard,
-                library_card = feedbackModel.library_card,
-                hr_anyother = feedbackModel.hr_anyother,
-                bank_account = feedbackModel.bank_account,
-                notepad = feedbackModel.notepad,
-                pen = feedbackModel.pen,
-                employee_card = feedbackModel.employee_card,
-                admin_anyother = feedbackModel.admin_anyother,
-                computer_system = feedbackModel.computer_system,
-                headphones = feedbackModel.headphones,
-                emailid_password = feedbackModel.emailid_password,
-                network_ip = feedbackModel.network_ip,
-                firewall_id = feedbackModel.firewall_id,
-                domain_usernamepassword = feedbackModel.domain_usernamepassword,
-                messengers_access = feedbackModel.messengers_access,
-                systemadmin_anyother = feedbackModel.systemadmin_anyother,
-                hrmanual_and_responsibilities = feedbackModel.hrmanual_and_responsibilities
-            };
+            feedbackModel = new feedbackModel();
+                return new feedback()
+                {
+                    hr_manual = feedbackModel.hr_manual,
+                    cims_idpassword = feedbackModel.cims_idpassword,
+                    books = feedbackModel.books,
+                    identitycard = feedbackModel.identitycard,
+                    library_card = feedbackModel.library_card,
+                    hr_anyother = feedbackModel.hr_anyother,
+                    bank_account = feedbackModel.bank_account,
+                    notepad = feedbackModel.notepad,
+                    pen = feedbackModel.pen,
+                    employee_card = feedbackModel.employee_card,
+                    admin_anyother = feedbackModel.admin_anyother,
+                    computer_system = feedbackModel.computer_system,
+                    headphones = feedbackModel.headphones,
+                    emailid_password = feedbackModel.emailid_password,
+                    network_ip = feedbackModel.network_ip,
+                    firewall_id = feedbackModel.firewall_id,
+                    domain_usernamepassword = feedbackModel.domain_usernamepassword,
+                    messengers_access = feedbackModel.messengers_access,
+                    systemadmin_anyother = feedbackModel.systemadmin_anyother,
+                    hrmanual_and_responsibilities = feedbackModel.hrmanual_and_responsibilities
+                };
+            
         }
+        /// <summary>
+        /// Converts from.
+        /// </summary>
+        /// <param name="feedback">The feedback.</param>
+        /// <returns>feedbackModel.</returns>
         public static feedbackModel ConvertFrom(feedback feedback)
         {
+            if (feedback == null)
+            {
+                feedback = new feedback();
+            }
             return new feedbackModel()
             {
                 hr_manual = feedback.hr_manual,
@@ -356,6 +487,11 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 hrmanual_and_responsibilities = feedback.hrmanual_and_responsibilities
             };
         }
+        /// <summary>
+        /// Converts to.
+        /// </summary>
+        /// <param name="other_detailsModel">The other details model.</param>
+        /// <returns>other_details.</returns>
         public static other_details ConvertTo(other_detailsModel other_detailsModel)
         {
             return new other_details()
@@ -374,8 +510,17 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 neighbour2_occupation = other_detailsModel.neighbour2_occupation,
             };
         }
+        /// <summary>
+        /// Converts from.
+        /// </summary>
+        /// <param name="other_details">The other details.</param>
+        /// <returns>other_detailsModel.</returns>
         public static other_detailsModel ConvertFrom(other_details other_details)
         {
+            if (other_details == null)
+            {
+                other_details = new other_details();
+            }
             return new other_detailsModel()
             {
                 propertyowner_name = other_details.propertyowner_name,
@@ -392,6 +537,11 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 neighbour2_occupation = other_details.neighbour2_occupation,
             };
         }
+        /// <summary>
+        /// Converts to.
+        /// </summary>
+        /// <param name="prev_employ_1Model">The previous employ 1 model.</param>
+        /// <returns>prev_employ_1.</returns>
         public static prev_employ_1 ConvertTo(prev_employ_1Model prev_employ_1Model)
         {
             return new prev_employ_1()
@@ -413,8 +563,17 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 
             };
         }
+        /// <summary>
+        /// Converts from.
+        /// </summary>
+        /// <param name="prev_employ_1">The previous employ 1.</param>
+        /// <returns>prev_employ_1Model.</returns>
         public static prev_employ_1Model ConvertFrom(prev_employ_1 prev_employ_1)
         {
+            if (prev_employ_1 == null)
+            {
+                prev_employ_1 = new prev_employ_1();
+            }
             return new prev_employ_1Model()
             {
                 employers_name = prev_employ_1.employers_name,
@@ -434,6 +593,11 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 
             };
         }
+        /// <summary>
+        /// Converts to.
+        /// </summary>
+        /// <param name="previous_company_detailsModel">The previous company details model.</param>
+        /// <returns>previous_company_details.</returns>
         public static previous_company_details ConvertTo(previous_company_detailsModel previous_company_detailsModel)
         {
             return new previous_company_details()
@@ -447,8 +611,17 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 esi_employers_code_number = previous_company_detailsModel.esi_employers_code_number
             };
         }
+        /// <summary>
+        /// Converts from.
+        /// </summary>
+        /// <param name="previous_company_details">The previous company details.</param>
+        /// <returns>previous_company_detailsModel.</returns>
         public static previous_company_detailsModel ConvertFrom(previous_company_details previous_company_details)
         {
+            if (previous_company_details == null)
+            {
+                previous_company_details = new previous_company_details();
+            }
             return new previous_company_detailsModel()
             {
                 pf_account_number = previous_company_details.pf_account_number,
@@ -460,6 +633,11 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 esi_employers_code_number = previous_company_details.esi_employers_code_number
             };
         }
+        /// <summary>
+        /// Converts to.
+        /// </summary>
+        /// <param name="referencesModel">The references model.</param>
+        /// <returns>references.</returns>
         public static references ConvertTo(referencesModel referencesModel)
         {
             return new references()
@@ -470,8 +648,17 @@ namespace Cygnet.ProjMan.EFData.ViewModels
                 ref_type = referencesModel.ref_type
             };
         }
+        /// <summary>
+        /// Converts from.
+        /// </summary>
+        /// <param name="references">The references.</param>
+        /// <returns>referencesModel.</returns>
         public static referencesModel ConvertFrom(references references)
         {
+            if (references == null)
+            {
+                references = new references();
+            }
             return new referencesModel()
             {
                 name = references.name,
@@ -482,4 +669,4 @@ namespace Cygnet.ProjMan.EFData.ViewModels
         }
     }
          
-    }   
+    } 

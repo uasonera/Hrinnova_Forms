@@ -37,6 +37,10 @@ namespace Cygnet.ProjMan.EFData.DataSource
         public virtual DbSet<feedback> feedback { get; set; }
         public virtual DbSet<other_details> other_details { get; set; }
         public virtual DbSet<prev_employ_1> prev_employ_1 { get; set; }
+        public virtual DbSet<prev_employ_2> prev_employ_2 { get; set; }
+        public virtual DbSet<prev_employ_3> prev_employ_3 { get; set; }
+        public virtual DbSet<prev_employ_4> prev_employ_4 { get; set; }
+        public virtual DbSet<prev_employ_5> prev_employ_5 { get; set; }
         public virtual DbSet<previous_company_details> previous_company_details { get; set; }
         public virtual DbSet<references> references { get; set; }
         public virtual DbSet<role> role { get; set; }

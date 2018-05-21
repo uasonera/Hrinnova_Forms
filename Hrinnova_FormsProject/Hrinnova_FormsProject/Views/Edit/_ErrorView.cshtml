@@ -1,0 +1,38 @@
+﻿@model Cygnet.ProjMan.EFData.ViewModels.MainModel
+@{
+    ViewBag.Title = "Validation Errors";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<div style="background-color: #A52A2A; color: White; height: 10px;">
+</div>
+
+    <div style="padding:20px;">
+        <h3>
+            Application Error:
+        </h3>
+        <h4>
+            Sorry, validation errors occurred while processing your request.
+        </h4>
+        <table>
+            @foreach (var item in Model.Errors)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item)
+                    </td>
+                </tr>
+            }
+        </table>
+        
+        <h6><button onclick="goBack()">Go Back</button></h6>
+        <br />
+        <br />
+    </div>
+
+<div style="background-color: #A52A2A; color: White; height: 20px;">
+</div> 
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>

@@ -12,27 +12,78 @@ using Cygnet.ProjMan.EFData.Service;
 
 namespace Hrinnova_FormsProject.Controllers
 {
-    
+
+    /// <summary>
+    /// Class FormPopulateController.
+    /// </summary>
+    /// <seealso cref="System.Web.Mvc.Controller" />
     public class FormPopulateController : Controller
     {
         #region Declarations
+        /// <summary>
+        /// The entity
+        /// </summary>
         hrinnova_dbEntities entity = new hrinnova_dbEntities();
+        /// <summary>
+        /// The modelobject
+        /// </summary>
         MainModel modelobject = new MainModel();
+        /// <summary>
+        /// The employee details service
+        /// </summary>
         EmployeeDetailsService _employeeDetailsService = new EmployeeDetailsService();
+        /// <summary>
+        /// The additional information service
+        /// </summary>
         AdditionalInformationService _additionalInformationService = new AdditionalInformationService();
+        /// <summary>
+        /// The educational qualifications service
+        /// </summary>
         EducationalQualificationsService _educationalQualificationsService = new EducationalQualificationsService();
+        /// <summary>
+        /// The epfo details service
+        /// </summary>
         EpfoDetailsService _epfoDetailsService = new EpfoDetailsService();
+        /// <summary>
+        /// The esic details service
+        /// </summary>
         EsicDetailsService _esicDetailsService = new EsicDetailsService();
+        /// <summary>
+        /// The family details service
+        /// </summary>
         FamilyDetailsService _familyDetailsService = new FamilyDetailsService();
+        /// <summary>
+        /// The feedback service
+        /// </summary>
         FeedbackService _feedbackService = new FeedbackService();
+        /// <summary>
+        /// The other details service
+        /// </summary>
         OtherDetailsService _otherDetailsService = new OtherDetailsService();
+        /// <summary>
+        /// The previous employment service
+        /// </summary>
         PreviousEmploymentService _previousEmploymentService = new PreviousEmploymentService();
+        /// <summary>
+        /// The previous company details service
+        /// </summary>
         PreviousCompanyDetailsService _previousCompanyDetailsService = new PreviousCompanyDetailsService();
+        /// <summary>
+        /// The references service
+        /// </summary>
         ReferencesService _referencesService = new ReferencesService();
+        /// <summary>
+        /// The certifications service
+        /// </summary>
         CertificationsService _certificationsService = new CertificationsService();
         #endregion
-        
+
         #region EmployeeDetails
+        /// <summary>
+        /// Employees the details.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>ActionResult.</returns>
         public ActionResult EmployeeDetails(int id)
         {
             modelobject.Maritalstatus = new List<Maritalstatus>()
@@ -86,6 +137,11 @@ namespace Hrinnova_FormsProject.Controllers
         #endregion
 
         #region EmploymentForm
+        /// <summary>
+        /// Employments the form.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>ActionResult.</returns>
         public ActionResult EmploymentForm(int id)
         {
             var queryforrole = (from employeedetails in entity.employee_details
@@ -147,6 +203,11 @@ namespace Hrinnova_FormsProject.Controllers
         #endregion
 
         #region EsicForm
+        /// <summary>
+        /// Esicforms the specified identifier.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>ActionResult.</returns>
         public ActionResult Esicform(int id)
         {
             modelobject.Maritalstatus = new List<Maritalstatus>()
@@ -178,6 +239,11 @@ namespace Hrinnova_FormsProject.Controllers
         #endregion
 
         #region EpfoForm
+        /// <summary>
+        /// Epfoforms the specified identifier.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>ActionResult.</returns>
         public ActionResult Epfoform(int id)
         {
             modelobject.Maritalstatus = new List<Maritalstatus>()
@@ -203,6 +269,11 @@ namespace Hrinnova_FormsProject.Controllers
         #endregion
 
         #region SUMS EmployeeVerification
+        /// <summary>
+        /// Sumses the employee verification.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>ActionResult.</returns>
         public ActionResult SUMSEmployeeVerification(int id)
         {
             Session["id"] = id;
@@ -216,6 +287,11 @@ namespace Hrinnova_FormsProject.Controllers
         #endregion
 
         #region PF TransferForm
+        /// <summary>
+        /// Pfs the transfer form.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>ActionResult.</returns>
         public ActionResult PFTransferForm(int id)
         {
 
@@ -229,6 +305,11 @@ namespace Hrinnova_FormsProject.Controllers
         #endregion
 
         #region EmployeeReferenceCheck
+        /// <summary>
+        /// Employees the reference check.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>ActionResult.</returns>
         public ActionResult EmployeeReferenceCheck(int id)
         {
             Session["id"] = id;
@@ -240,6 +321,11 @@ namespace Hrinnova_FormsProject.Controllers
         #endregion
 
         #region FeedbackForm
+        /// <summary>
+        /// Feedbacks the form.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>ActionResult.</returns>
         public ActionResult FeedbackForm(int id)
         {
 

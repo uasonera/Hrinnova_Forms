@@ -19,12 +19,19 @@ namespace Hrinnova_FormsProject.Controllers
     /// <seealso cref="System.Web.Mvc.Controller" />
     public class EditController : Controller
     {
+        #region Service and Entity objects
         /// <summary>
         /// The entity
         /// </summary>
         hrinnova_dbEntities entity = new hrinnova_dbEntities();
         // GET: Edit
+        /// <summary>
+        /// The edit get service
+        /// </summary>
         EditGetService _editGetService = new EditGetService();
+        /// <summary>
+        /// The edit post service
+        /// </summary>
         EditPostService _editPostService = new EditPostService();
         /// <summary>
         /// The eim
@@ -34,15 +41,16 @@ namespace Hrinnova_FormsProject.Controllers
         /// The employee details service
         /// </summary>
         CreateService _employeeDetailsService = new CreateService();
-        
+        #endregion
 
         //Get method to show index of employees
-
+        #region MEthod for Edit Index View
         /// <summary>
         /// Edits the index2.
         /// </summary>
         /// <param name="searchstring">The searchstring.</param>
         /// <returns>ActionResult.</returns>
+
         public ActionResult EditIndex2(string searchstring)
 
         {
@@ -50,30 +58,17 @@ namespace Hrinnova_FormsProject.Controllers
             return View(eim);
         }
 
-
-
-        // GET: Edit/Details/5
-        /// <summary>
-        /// Detailses the specified identifier.
-        /// </summary>
-        /// <param name="id">The identifier.</param>
-        /// <returns>ActionResult.</returns>
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: Edit/Create
-
-        // POST: Edit/Create
+        #endregion
 
 
         // GET: Edit/Edit/5  
+        #region Method to Get Details for Editing 
         /// <summary>
         /// Edits the specified identifier.
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns>ActionResult.</returns>
+
         public ActionResult Edit(int id)
         {
             Session["id"] = id;
@@ -129,14 +124,18 @@ namespace Hrinnova_FormsProject.Controllers
 
             return View(model);
         }
+        #endregion
+
 
         // POST: Edit/Edit/5
+        #region Method to Post Details after Editing 
         /// <summary>
         /// Editdatas the specified model.
         /// </summary>
         /// <param name="model">The model.</param>
         /// <returns>ActionResult.</returns>
-        /// <exception cref="System.Data.Entity.Validation.DbEntityValidationException"></exception>
+        /// <exception cref="DbEntityValidationException"></exception>
+
         [HttpPost]
         public ActionResult Editdata(MainModel model)
         {
@@ -229,38 +228,7 @@ namespace Hrinnova_FormsProject.Controllers
             }
             return Content("<script type=text/javascript>alert('Employee Details Updated');window.location.href='/Edit/EditIndex2'</script>");
         }
-
-        // GET: Edit/Delete/5
-        /// <summary>
-        /// Deletes the specified identifier.
-        /// </summary>
-        /// <param name="id">The identifier.</param>
-        /// <returns>ActionResult.</returns>
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Edit/Delete/5
-        /// <summary>
-        /// Deletes the specified identifier.
-        /// </summary>
-        /// <param name="id">The identifier.</param>
-        /// <param name="collection">The collection.</param>
-        /// <returns>ActionResult.</returns>
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        #endregion
+       
     }
 }

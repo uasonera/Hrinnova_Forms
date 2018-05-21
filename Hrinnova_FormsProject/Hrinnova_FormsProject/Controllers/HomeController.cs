@@ -21,7 +21,11 @@ namespace Hrinnova_FormsProject.Controllers
         /// The employee details service
         /// </summary>
         CreateService _employeeDetailsService = new CreateService();
-       
+
+        /// <summary>
+        /// Indexes this instance.
+        /// </summary>
+        /// <returns>ActionResult.</returns>
         [HandleError]
         public ActionResult Index()
         {

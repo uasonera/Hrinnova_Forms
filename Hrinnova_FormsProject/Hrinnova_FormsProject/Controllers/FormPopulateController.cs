@@ -19,7 +19,7 @@ namespace Hrinnova_FormsProject.Controllers
     /// <seealso cref="System.Web.Mvc.Controller" />
     public class FormPopulateController : Controller
     {
-        #region Declarations
+        #region Service and Entity Objects
         /// <summary>
         /// The entity
         /// </summary>
@@ -36,6 +36,8 @@ namespace Hrinnova_FormsProject.Controllers
         /// The employee details service
         /// </summary>
         CreateService _employeeDetailsService = new CreateService();
+        #endregion
+
         /// <summary>
         /// Employees the details.
         /// </summary>

@@ -7,58 +7,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href="~/CSS/bootstrap/bootstrap-datepicker.min (2).css" rel="stylesheet" />
 <script src="~/JsScript/DP/bootstrap-datepicker.js"></script>
-<style>
-    #myBtn {
-        display: none;
-        position: fixed;
-        bottom: 2%;
-        right: 2%;
-        z-index: 99;
-        font-size: 14px;
-        border: none;
-        outline: none;
-        background-color: royalblue;
-        color: white;
-        cursor: pointer;
-        padding: 10px;
-        border-radius: 4px;
-        padding: 6px 12px;
-    }
+<link href="~/CSS/Tabbuttonss.css" rel="stylesheet" />
 
-    .tab {
-    overflow: auto;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
-
-/* Style the buttons inside the tab */
-        .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 14px;
-        }
-        .tab button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-}
-</style>
 @using (Html.BeginForm("CreatePost", "Home", FormMethod.Post))
 {
     
@@ -70,7 +20,7 @@
                     <div class="middel-content">
                         <div class="panel panel-default">
                             <div class="panel-body">
-                                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                                @*@Html.ValidationSummary(false, "", new { @class = "text-danger" })*@
                                 <div id="tabs" class="tab">
                                     <button id="form1" type="button" class="btn tablinks active" value="Employee Details">Employee Details</button>
                                     <button id="form2" type="button" class="btn tablinks" value="ESIC and EPFO">ESIC and EPFO</button>
@@ -79,6 +29,7 @@
                                 </div> 
                                 <div id="form1content" class="tab-content"data-currenttab="1">
                                     @{
+                                        
                                         Html.RenderPartial("_Form1", Model);
                                     }
                                 </div>
@@ -86,7 +37,7 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             @{
-
+                                                
                                                 Html.RenderPartial("_Form2", Model);
 
                                             }
@@ -115,11 +66,11 @@
                                     }
                                 </div>
 
-                                <div id="form5content" data-currenttab="1" style="display:none">
+                                @*<div id="form5content" data-currenttab="1" style="display:none">
                                     @{
                                         Html.RenderPartial("_Form5", Model);
                                     }
-                                </div>
+                                </div>*@
 
                             </div>
                         </div>
@@ -139,7 +90,7 @@
                         <br>
 
                         <div>
-                            <input type="submit" class="btn btn-success tabButtons" value="Save">
+                            <input type="submit" id="submitbutton" class="btn btn-success tabButtons" value="Save">
 
                         </div>
                     </div>
@@ -161,4 +112,9 @@
         document.documentElement.scrollTop = 0;
         }
     )
+    //$('#submitbutton').click(function () {
+
+    //    var $form = $('form');
+    //    $form.validate();
+    //    if (!$form.valid()){ return false; }})
 </script>

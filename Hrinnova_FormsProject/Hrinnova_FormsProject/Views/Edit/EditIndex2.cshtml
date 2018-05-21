@@ -53,13 +53,7 @@
                                 </td>
 
                                 <td>
-                                    @*@Html.ActionLink("Edit", "Edit", new { id = item.employee_id }) |
-                                        @Html.ActionLink("Delete", "Delete", new { id = item.employee_id }) |
-                                        @Html.ActionLink("ESIC", "Esicform","FormPopulate", new { id = item.employee_id }, null) |
-                                            @Html.ActionLink("PF", "Epfoform", "FormPopulate", new { id = item.employee_id },null)*@
-                                    @Html.DropDownList(
-    "url",
-    new SelectList(new[]
+                                    @Html.DropDownList("url",new SelectList(new[]
     {
         new SelectListItem { Text = "Edit User Details", Value = Url.Action("Edit", "Edit", new {id=item.employee_id }) },
         new SelectListItem { Text = "Employee Details Form", Value = Url.Action("EmployeeDetails", "FormPopulate", new {id=item.employee_id }) },
@@ -85,7 +79,7 @@
         </div>
     </div>
 </div>
-<script src="~/JsScript/datatablecall.js"></script>
+@*<script src="~/JsScript/datatablecall.js"></script>*@
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -98,8 +92,8 @@
             };
             $(this).text("---Action---");
         });
-        //$('#myTable').DataTable({
-        //    "lengthMenu": [[50, 100, -1], [50, 100, "All"]]
-        //});
+        $('#myTable').DataTable({
+            "lengthMenu": [[50, 100, -1], [50, 100, "All"]]
+        });
     });
 </script>

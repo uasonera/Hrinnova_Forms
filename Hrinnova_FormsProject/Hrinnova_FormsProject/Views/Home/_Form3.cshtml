@@ -886,7 +886,7 @@
 
                                         @Html.RadioButtonFor(m=>m.Additionalinformation.known_to_presentemployee,"Yes", new { @style = "width:20px;height:20px;" })&nbsp;Yes
                                         @Html.RadioButtonFor(m => m.Additionalinformation.known_to_presentemployee, "No", new { @style = "width:20px;height:20px;" })&nbsp;No
-
+                                        @Html.ValidationMessageFor(model => model.Additionalinformation.known_to_presentemployee, "", new { @class = "text-danger" })
 
 
                                     </th>

@@ -7,3 +7,13 @@ D:\Hrinnova_FormsProject\Cygnet.ProjMan.EFData\bin\Debug\EntityFramework.xml
 D:\Hrinnova_FormsProject\Cygnet.ProjMan.EFData\bin\Debug\EntityFramework.SqlServer.xml
 D:\Hrinnova_FormsProject\Cygnet.ProjMan.EFData\obj\Debug\Cygnet.ProjMan.EFData.dll
 D:\Hrinnova_FormsProject\Cygnet.ProjMan.EFData\obj\Debug\Cygnet.ProjMan.EFData.pdb
+C:\Users\uasonera\Documents\GitHub\Hrinnova_Forms\Hrinnova_FormsProject\Cygnet.ProjMan.EFData\bin\Debug\Cygnet.ProjMan.EFData.dll.config
+C:\Users\uasonera\Documents\GitHub\Hrinnova_Forms\Hrinnova_FormsProject\Cygnet.ProjMan.EFData\bin\Debug\Cygnet.ProjMan.EFData.dll
+C:\Users\uasonera\Documents\GitHub\Hrinnova_Forms\Hrinnova_FormsProject\Cygnet.ProjMan.EFData\bin\Debug\Cygnet.ProjMan.EFData.pdb
+C:\Users\uasonera\Documents\GitHub\Hrinnova_Forms\Hrinnova_FormsProject\Cygnet.ProjMan.EFData\bin\Debug\EntityFramework.dll
+C:\Users\uasonera\Documents\GitHub\Hrinnova_Forms\Hrinnova_FormsProject\Cygnet.ProjMan.EFData\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\uasonera\Documents\GitHub\Hrinnova_Forms\Hrinnova_FormsProject\Cygnet.ProjMan.EFData\bin\Debug\EntityFramework.xml
+C:\Users\uasonera\Documents\GitHub\Hrinnova_Forms\Hrinnova_FormsProject\Cygnet.ProjMan.EFData\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\uasonera\Documents\GitHub\Hrinnova_Forms\Hrinnova_FormsProject\Cygnet.ProjMan.EFData\obj\Debug\Cygnet.ProjMan.EFData.csprojResolveAssemblyReference.cache
+C:\Users\uasonera\Documents\GitHub\Hrinnova_Forms\Hrinnova_FormsProject\Cygnet.ProjMan.EFData\obj\Debug\Cygnet.ProjMan.EFData.dll
+C:\Users\uasonera\Documents\GitHub\Hrinnova_Forms\Hrinnova_FormsProject\Cygnet.ProjMan.EFData\obj\Debug\Cygnet.ProjMan.EFData.pdb

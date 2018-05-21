@@ -20,58 +20,8 @@ namespace Hrinnova_FormsProject.Controllers
         /// <summary>
         /// The employee details service
         /// </summary>
-        EmployeeDetailsService _employeeDetailsService = new EmployeeDetailsService();
-        /// <summary>
-        /// The additional information service
-        /// </summary>
-        AdditionalInformationService _additionalInformationService = new AdditionalInformationService();
-        /// <summary>
-        /// The educational qualifications service
-        /// </summary>
-        EducationalQualificationsService _educationalQualificationsService = new EducationalQualificationsService();
-        /// <summary>
-        /// The epfo details service
-        /// </summary>
-        EpfoDetailsService _epfoDetailsService = new EpfoDetailsService();
-        /// <summary>
-        /// The esic details service
-        /// </summary>
-        EsicDetailsService _esicDetailsService = new EsicDetailsService();
-        /// <summary>
-        /// The family details service
-        /// </summary>
-        FamilyDetailsService _familyDetailsService = new FamilyDetailsService();
-        /// <summary>
-        /// The feedback service
-        /// </summary>
-        FeedbackService _feedbackService = new FeedbackService();
-        /// <summary>
-        /// The other details service
-        /// </summary>
-        OtherDetailsService _otherDetailsService = new OtherDetailsService();
-        /// <summary>
-        /// The previous employment service
-        /// </summary>
-        PreviousEmploymentService _previousEmploymentService = new PreviousEmploymentService();
-        /// <summary>
-        /// The previous company details service
-        /// </summary>
-        PreviousCompanyDetailsService _previousCompanyDetailsService = new PreviousCompanyDetailsService();
-        /// <summary>
-        /// The references service
-        /// </summary>
-        ReferencesService _referencesService = new ReferencesService();
-        /// <summary>
-        /// The certifications service
-        /// </summary>
-        CertificationsService _certificationsService = new CertificationsService();
-        /// <summary>
-        /// Indexes this instance.
-        /// </summary>
-        /// <returns>ActionResult.</returns>
-
-
-
+        CreateService _employeeDetailsService = new CreateService();
+       
         [HandleError]
         public ActionResult Index()
         {

@@ -32,35 +32,24 @@ namespace Cygnet.ProjMan.EFData.Service
         /// <returns>MainModel.</returns>
         public MainModel EditGet(int id)
         {
-            //var family_details = _hrinnova_dbEntities.employee_details.Find(id);
-            var family = _hrinnova_dbEntities.employee_details.Find(id);
-
-            var father = family.family_details.Where(x => x.member == "Father");
-            var mother = family.family_details.Where(x => x.member == "Mother");
-            var brother = family.family_details.Where(x => x.member == "Brother");
-            var sister = family.family_details.Where(x => x.member == "Sister");
-            var spouse = family.family_details.Where(x => x.member == "Spouse");
-            var children = family.family_details.Where(x => x.member == "Children");
-
-            List<family_details> family_details = new List<family_details>();
-            family_details.AddRange(children);
-            family_details.AddRange(spouse);
-            family_details.AddRange(sister);
-            family_details.AddRange(brother);
-            family_details.AddRange(mother);
-            family_details.AddRange(father);
+          
+            List<family_details> family_details = _hrinnova_dbEntities.employee_details.Find(id).family_details.ToList();
+            
             var listofFamiliyDetailsModel = new List<family_detailsModel>();
             foreach (var item in family_details)
             {
 
                 listofFamiliyDetailsModel.Add(Mapper.ConvertFrom(item));
             }
-
-            //var familydetailsmodel = Mapper.ConvertFrom(family);
-
+            
             var mainmodel = new MainModel()
             {
-                FamilyDetails = listofFamiliyDetailsModel
+                Fatherdetails = listofFamiliyDetailsModel.SingleOrDefault(x=>x.member=="Father"),
+                Motherdetails = listofFamiliyDetailsModel.SingleOrDefault(x => x.member == "Mother"),
+                Brotherdetails = listofFamiliyDetailsModel.SingleOrDefault(x => x.member == "Brother"),
+                Sisterdetails = listofFamiliyDetailsModel.SingleOrDefault(x => x.member == "Sister"),
+                Spousedetails = listofFamiliyDetailsModel.SingleOrDefault(x => x.member == "Spouse"),
+                Childrendetails = listofFamiliyDetailsModel.SingleOrDefault(x => x.member == "Children")
             };
             
             return mainmodel;

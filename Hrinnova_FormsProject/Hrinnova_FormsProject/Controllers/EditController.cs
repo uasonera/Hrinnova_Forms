@@ -9,6 +9,7 @@ using Cygnet.ProjMan.EFData.ViewModels;
 using Cygnet.ProjMan.EFData.DataSource;
 using Hrinnova_FormsProject.Models;
 using Cygnet.ProjMan.EFData.Service;
+using System.Data.Entity;
 
 namespace Hrinnova_FormsProject.Controllers
 {
@@ -23,8 +24,8 @@ namespace Hrinnova_FormsProject.Controllers
         /// </summary>
         hrinnova_dbEntities entity = new hrinnova_dbEntities();
         // GET: Edit
-
-
+        EditGetService _editGetService = new EditGetService();
+        EditPostService _editPostService = new EditPostService();
         /// <summary>
         /// The eim
         /// </summary>
@@ -32,51 +33,8 @@ namespace Hrinnova_FormsProject.Controllers
         /// <summary>
         /// The employee details service
         /// </summary>
-        EmployeeDetailsService _employeeDetailsService = new EmployeeDetailsService();
-        /// <summary>
-        /// The additional information service
-        /// </summary>
-        AdditionalInformationService _additionalInformationService = new AdditionalInformationService();
-        /// <summary>
-        /// The educational qualifications service
-        /// </summary>
-        EducationalQualificationsService _educationalQualificationsService = new EducationalQualificationsService();
-        /// <summary>
-        /// The epfo details service
-        /// </summary>
-        EpfoDetailsService _epfoDetailsService = new EpfoDetailsService();
-        /// <summary>
-        /// The esic details service
-        /// </summary>
-        EsicDetailsService _esicDetailsService = new EsicDetailsService();
-        /// <summary>
-        /// The family details service
-        /// </summary>
-        FamilyDetailsService _familyDetailsService = new FamilyDetailsService();
-        /// <summary>
-        /// The feedback service
-        /// </summary>
-        FeedbackService _feedbackService = new FeedbackService();
-        /// <summary>
-        /// The other details service
-        /// </summary>
-        OtherDetailsService _otherDetailsService = new OtherDetailsService();
-        /// <summary>
-        /// The previous employment service
-        /// </summary>
-        PreviousEmploymentService _previousEmploymentService = new PreviousEmploymentService();
-        /// <summary>
-        /// The previous company details service
-        /// </summary>
-        PreviousCompanyDetailsService _previousCompanyDetailsService = new PreviousCompanyDetailsService();
-        /// <summary>
-        /// The references service
-        /// </summary>
-        ReferencesService _referencesService = new ReferencesService();
-        /// <summary>
-        /// The certifications service
-        /// </summary>
-        CertificationsService _certificationsService = new CertificationsService();
+        CreateService _employeeDetailsService = new CreateService();
+        
 
         //Get method to show index of employees
 
@@ -88,7 +46,6 @@ namespace Hrinnova_FormsProject.Controllers
         public ActionResult EditIndex2(string searchstring)
 
         {
-            //eim.Employeedetails = from employee_details in entity.employee_details.Take(10000) select employee_details;
             eim.Employeedetails = entity.employee_details.Take(10000).ToList();
             return View(eim);
         }
@@ -143,38 +100,32 @@ namespace Hrinnova_FormsProject.Controllers
                 new Bloodgroups { Id = 7,Bloodgroup = "O+"},
                 new Bloodgroups { Id = 8,Bloodgroup = "O-"}
             };
-
-            var FamilyDetailsData = _familyDetailsService.EditGet(id);
-            var CertificationsData = _certificationsService.EditGet(id);
-            var AdditionalInformationData = _additionalInformationService.EditGet(id);
-            var EducationalQualificationsData = _educationalQualificationsService.EditGet(id);
-            var Referencesdata = _referencesService.EditGet(id);
-            var PreviousEmploymentsData = _previousEmploymentService.EditGet(id);
-            model.Employeedetails = _employeeDetailsService.EditGet(id);
-            model.Fatherdetails= FamilyDetailsData.FamilyDetails.SingleOrDefault(x=>x.member=="Father");
-            model.Motherdetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Mother");
-            model.Brotherdetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Brother");
-            model.Sisterdetails= FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Sister");
-            model.Spousedetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Spouse");
-            model.Childrendetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Children");
-            model.Additionalinformation = AdditionalInformationData;
-            model.Educationalqualifications = EducationalQualificationsData;
-            model.Epfodetails = _epfoDetailsService.EditGet(id);
-            model.Esicdetails = _esicDetailsService.EditEsicDetails(id);
-            model.Otherdetails = _otherDetailsService.EditGet(id);
-            model.Feedback = _feedbackService.EditGet(id);
-            model.Previouscompanydetails = _previousCompanyDetailsService.EditGet(id);
-            model.Certification2 = CertificationsData.Certifications.SingleOrDefault(x => x.cert_type == "2");
-            model.Certification1 = CertificationsData.Certifications.SingleOrDefault(x=>x.cert_type=="1");
-            model.Certification3 = CertificationsData.Certifications.SingleOrDefault(x => x.cert_type == "3");
-            model.Certification4 = CertificationsData.Certifications.SingleOrDefault(x => x.cert_type == "4");
-            model.Reference1 = Referencesdata.References.SingleOrDefault(refr => refr.ref_type == "1" );
-            model.Reference2 = Referencesdata.References.SingleOrDefault(refr => refr.ref_type == "2");
-            model.Prevemploy1 = PreviousEmploymentsData.PreviousEmployments.SingleOrDefault(pe1 => pe1.employment_ref == "1");
-            model.Prevemploy2 = PreviousEmploymentsData.PreviousEmployments.SingleOrDefault(pe2 => pe2.employment_ref == "2");
-            model.Prevemploy3 = PreviousEmploymentsData.PreviousEmployments.SingleOrDefault(pe3 => pe3.employment_ref == "3");
-            model.Prevemploy4 = PreviousEmploymentsData.PreviousEmployments.SingleOrDefault(pe4 => pe4.employment_ref == "4");
-            model.Prevemploy5 = PreviousEmploymentsData.PreviousEmployments.SingleOrDefault(pe5 => pe5.employment_ref == "5");
+            
+            model.Employeedetails = _editGetService.EditGetforEmployeeDetails(id);
+            model.Fatherdetails = _editGetService.EditGetforFamilyDetails(id).Fatherdetails;
+            model.Motherdetails = _editGetService.EditGetforFamilyDetails(id).Motherdetails;
+            model.Brotherdetails = _editGetService.EditGetforFamilyDetails(id).Brotherdetails;
+            model.Sisterdetails= _editGetService.EditGetforFamilyDetails(id).Sisterdetails;
+            model.Spousedetails = _editGetService.EditGetforFamilyDetails(id).Spousedetails;
+            model.Childrendetails = _editGetService.EditGetforFamilyDetails(id).Childrendetails;
+            model.Additionalinformation = _editGetService.EditGetforAdditionalInformation(id);
+            model.Educationalqualifications = _editGetService.EditGetforEducationalQualifications(id);
+            model.Epfodetails = _editGetService.EditGetforEpfoDetails(id);
+            model.Esicdetails = _editGetService.EditGetforEsicDetails(id);
+            model.Otherdetails = _editGetService.EditGetforOtherDetails(id);
+            model.Feedback = _editGetService.EditGetforFeedback(id);
+            model.Previouscompanydetails = _editGetService.EditGetforPreviousCompanyDetails(id);
+            model.Certification2 = _editGetService.EditGetforCertifications(id).Certification1;
+            model.Certification1 = _editGetService.EditGetforCertifications(id).Certification2;
+            model.Certification3 = _editGetService.EditGetforCertifications(id).Certification3;
+            model.Certification4 = _editGetService.EditGetforCertifications(id).Certification4;
+            model.Reference1 = _editGetService.EditGetforReferences(id).Reference1;
+            model.Reference2 = _editGetService.EditGetforReferences(id).Reference2;
+            model.Prevemploy1 = _editGetService.EditGetforPreviousEmployment(id).Prevemploy1;
+            model.Prevemploy2 = _editGetService.EditGetforPreviousEmployment(id).Prevemploy2;
+            model.Prevemploy3 = _editGetService.EditGetforPreviousEmployment(id).Prevemploy3;
+            model.Prevemploy4 = _editGetService.EditGetforPreviousEmployment(id).Prevemploy4;
+            model.Prevemploy5 = _editGetService.EditGetforPreviousEmployment(id).Prevemploy5;
 
             return View(model);
         }
@@ -230,31 +181,33 @@ namespace Hrinnova_FormsProject.Controllers
                     var ref1 = entity.references.SingleOrDefault(rf1 => rf1.employee_id == updateid && rf1.ref_type == "1");
                     var ref2 = entity.references.SingleOrDefault(rf2 => rf2.employee_id == updateid && rf2.ref_type == "2");
 
-                    _employeeDetailsService.EditPost(model.Employeedetails, EmployeeDetails);
-                    _additionalInformationService.EditPost(model.Additionalinformation, AdditionalInformation);
-                    _certificationsService.EditPost(model.Certification1, cf1);
-                    _certificationsService.EditPost(model.Certification2, cf2);
-                    _certificationsService.EditPost(model.Certification3, cf3);
-                    _certificationsService.EditPost(model.Certification4, cf4);
-                    _educationalQualificationsService.EditPost(model.Educationalqualifications, eq);
-                    _epfoDetailsService.EditPost(model.Epfodetails, epfod);
-                    _esicDetailsService.EditPost(model.Esicdetails, esicd);
-                    _familyDetailsService.EditPost(model.Fatherdetails, fmd1);
-                    _familyDetailsService.EditPost(model.Motherdetails, fmd2);
-                    _familyDetailsService.EditPost(model.Brotherdetails, fmd3);
-                    _familyDetailsService.EditPost(model.Sisterdetails, fmd4);
-                    _familyDetailsService.EditPost(model.Spousedetails, fmd5);
-                    _familyDetailsService.EditPost(model.Childrendetails, fmd6);
-                    _feedbackService.EditPost(model.Feedback, fb);
-                    _otherDetailsService.EditPost(model.Otherdetails, otd);
-                    _previousCompanyDetailsService.EditPost(model.Previouscompanydetails, pd);
-                    _previousEmploymentService.EditPost(model.Prevemploy1, preempd1);
-                    _previousEmploymentService.EditPost(model.Prevemploy2, preempd2);
-                    _previousEmploymentService.EditPost(model.Prevemploy3, preempd3);
-                    _previousEmploymentService.EditPost(model.Prevemploy4, preempd4);
-                    _previousEmploymentService.EditPost(model.Prevemploy5, preempd5);
-                    _referencesService.EditPost(model.Reference1, ref1);
-                    _referencesService.EditPost(model.Reference2, ref2);
+                    _editPostService.EditPostforEmployeeDetails(model.Employeedetails, EmployeeDetails);
+                    _editPostService.EditPostforAdditionalInformation(model.Additionalinformation, AdditionalInformation);
+                    _editPostService.EditPostforCertifications(model.Certification1, cf1);
+                    _editPostService.EditPostforCertifications(model.Certification2, cf2);
+                    _editPostService.EditPostforCertifications(model.Certification3, cf3);
+                    _editPostService.EditPostforCertifications(model.Certification4, cf4);
+                    _editPostService.EditPostforEducationalQualifications(model.Educationalqualifications, eq);
+                    _editPostService.EditPostforEpfoDetails(model.Epfodetails, epfod);
+                    _editPostService.EditPostforEsicDetails(model.Esicdetails, esicd);
+                    _editPostService.EditPostforFamilyDetails(model.Fatherdetails, fmd1);
+                    _editPostService.EditPostforFamilyDetails(model.Motherdetails, fmd2);
+                    _editPostService.EditPostforFamilyDetails(model.Brotherdetails, fmd3);
+                    _editPostService.EditPostforFamilyDetails(model.Sisterdetails, fmd4);
+                    _editPostService.EditPostforFamilyDetails(model.Spousedetails, fmd5);
+                    _editPostService.EditPostforFamilyDetails(model.Childrendetails, fmd6);
+                    _editPostService.EditPostforFeedback(model.Feedback, fb);
+                    _editPostService.EditPostforOtherDetails(model.Otherdetails, otd);
+                    _editPostService.EditPostforPreviousCompanyDetails(model.Previouscompanydetails, pd);
+                    _editPostService.EditPostforPreviousEmployment(model.Prevemploy1, preempd1);
+                    _editPostService.EditPostforPreviousEmployment(model.Prevemploy2, preempd2);
+                    _editPostService.EditPostforPreviousEmployment(model.Prevemploy3, preempd3);
+                    _editPostService.EditPostforPreviousEmployment(model.Prevemploy4, preempd4);
+                    _editPostService.EditPostforPreviousEmployment(model.Prevemploy5, preempd5);
+                    _editPostService.EditPostforReferences(model.Reference1, ref1);
+                    _editPostService.EditPostforReferences(model.Reference2, ref2);
+
+
                     entity.SaveChanges();
                 
 

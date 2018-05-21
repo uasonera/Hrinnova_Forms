@@ -29,56 +29,13 @@ namespace Hrinnova_FormsProject.Controllers
         /// </summary>
         MainModel modelobject = new MainModel();
         /// <summary>
+        /// The edit get service
+        /// </summary>
+        EditGetService _editGetService = new EditGetService();
+        /// <summary>
         /// The employee details service
         /// </summary>
-        EmployeeDetailsService _employeeDetailsService = new EmployeeDetailsService();
-        /// <summary>
-        /// The additional information service
-        /// </summary>
-        AdditionalInformationService _additionalInformationService = new AdditionalInformationService();
-        /// <summary>
-        /// The educational qualifications service
-        /// </summary>
-        EducationalQualificationsService _educationalQualificationsService = new EducationalQualificationsService();
-        /// <summary>
-        /// The epfo details service
-        /// </summary>
-        EpfoDetailsService _epfoDetailsService = new EpfoDetailsService();
-        /// <summary>
-        /// The esic details service
-        /// </summary>
-        EsicDetailsService _esicDetailsService = new EsicDetailsService();
-        /// <summary>
-        /// The family details service
-        /// </summary>
-        FamilyDetailsService _familyDetailsService = new FamilyDetailsService();
-        /// <summary>
-        /// The feedback service
-        /// </summary>
-        FeedbackService _feedbackService = new FeedbackService();
-        /// <summary>
-        /// The other details service
-        /// </summary>
-        OtherDetailsService _otherDetailsService = new OtherDetailsService();
-        /// <summary>
-        /// The previous employment service
-        /// </summary>
-        PreviousEmploymentService _previousEmploymentService = new PreviousEmploymentService();
-        /// <summary>
-        /// The previous company details service
-        /// </summary>
-        PreviousCompanyDetailsService _previousCompanyDetailsService = new PreviousCompanyDetailsService();
-        /// <summary>
-        /// The references service
-        /// </summary>
-        ReferencesService _referencesService = new ReferencesService();
-        /// <summary>
-        /// The certifications service
-        /// </summary>
-        CertificationsService _certificationsService = new CertificationsService();
-        #endregion
-
-        #region EmployeeDetails
+        CreateService _employeeDetailsService = new CreateService();
         /// <summary>
         /// Employees the details.
         /// </summary>
@@ -120,18 +77,17 @@ namespace Hrinnova_FormsProject.Controllers
                 DeptID = queryforrole.FirstOrDefault().DeptID,
             };
 
-            modelobject.Employeedetails = _employeeDetailsService.EditGet(id);
-            var FamilyDetailsData = _familyDetailsService.EditGet(id);
+            modelobject.Employeedetails = _editGetService.EditGetforEmployeeDetails(id);
            
             modelobject.Employeedetails.role = rolesData;
             modelobject.Employeedetails.department1 = deptdata;
-            modelobject.Fatherdetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Father");
-            modelobject.Motherdetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Mother");
-            modelobject.Brotherdetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Brother");
-            modelobject.Sisterdetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Sister");
-            modelobject.Spousedetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Spouse");
-            modelobject.Childrendetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Children");
-            
+            modelobject.Fatherdetails = _editGetService.EditGetforFamilyDetails(id).Fatherdetails;
+            modelobject.Motherdetails = _editGetService.EditGetforFamilyDetails(id).Motherdetails;
+            modelobject.Brotherdetails = _editGetService.EditGetforFamilyDetails(id).Brotherdetails;
+            modelobject.Sisterdetails = _editGetService.EditGetforFamilyDetails(id).Sisterdetails;
+            modelobject.Spousedetails = _editGetService.EditGetforFamilyDetails(id).Spousedetails;
+            modelobject.Childrendetails = _editGetService.EditGetforFamilyDetails(id).Childrendetails;
+
             return View(modelobject);
         }
         #endregion
@@ -162,41 +118,36 @@ namespace Hrinnova_FormsProject.Controllers
                 DeptID = queryforrole.FirstOrDefault().DeptID,
             };
             Session["id"] = id;
-            
-            modelobject.Employeedetails = _employeeDetailsService.EditGet(id);
-            
+
+            modelobject.Employeedetails = _editGetService.EditGetforEmployeeDetails(id);
+
             modelobject.Employeedetails.role = rolesData;
             modelobject.Employeedetails.department1 = deptdata;
-            var FamilyDetailsData = _familyDetailsService.EditGet(id);
-            var CertificationsData = _certificationsService.EditGet(id);
-            var AdditionalInformationData = _additionalInformationService.EditGet(id);
-            var EducationalQualificationsData = _educationalQualificationsService.EditGet(id);
-            var Referencesdata = _referencesService.EditGet(id);
-            var PreviousEmploymentsData = _previousEmploymentService.EditGet(id);
-            modelobject.Fatherdetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Father");
-            modelobject.Motherdetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Mother");
-            modelobject.Brotherdetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Brother");
-            modelobject.Sisterdetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Sister");
-            modelobject.Spousedetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Spouse");
-            modelobject.Childrendetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Children");
-            modelobject.Additionalinformation = AdditionalInformationData;
-            modelobject.Educationalqualifications = EducationalQualificationsData;
-            modelobject.Epfodetails = _epfoDetailsService.EditGet(id);
-            modelobject.Esicdetails = _esicDetailsService.EditEsicDetails(id);
-            modelobject.Otherdetails = _otherDetailsService.EditGet(id);
-            modelobject.Feedback = _feedbackService.EditGet(id);
-            modelobject.Previouscompanydetails = _previousCompanyDetailsService.EditGet(id);
-            modelobject.Certification1 = CertificationsData.Certifications.SingleOrDefault(x => x.cert_type == "1");
-            modelobject.Certification2 = CertificationsData.Certifications.SingleOrDefault(x => x.cert_type == "2");
-            modelobject.Certification3 = CertificationsData.Certifications.SingleOrDefault(x => x.cert_type == "3");
-            modelobject.Certification4 = CertificationsData.Certifications.SingleOrDefault(x => x.cert_type == "4");
-            modelobject.Reference1 = Referencesdata.References.SingleOrDefault(refr => refr.ref_type == "1");
-            modelobject.Reference2 = Referencesdata.References.SingleOrDefault(refr => refr.ref_type == "2");
-            modelobject.Prevemploy1 = PreviousEmploymentsData.PreviousEmployments.SingleOrDefault(pe1 => pe1.employment_ref == "1");
-            modelobject.Prevemploy2 = PreviousEmploymentsData.PreviousEmployments.SingleOrDefault(pe2 => pe2.employment_ref == "2");
-            modelobject.Prevemploy3 = PreviousEmploymentsData.PreviousEmployments.SingleOrDefault(pe3 => pe3.employment_ref == "3");
-            modelobject.Prevemploy4 = PreviousEmploymentsData.PreviousEmployments.SingleOrDefault(pe4 => pe4.employment_ref == "4");
-            modelobject.Prevemploy5 = PreviousEmploymentsData.PreviousEmployments.SingleOrDefault(pe5 => pe5.employment_ref == "5");
+            modelobject.Fatherdetails = _editGetService.EditGetforFamilyDetails(id).Fatherdetails;
+            modelobject.Motherdetails = _editGetService.EditGetforFamilyDetails(id).Motherdetails;
+            modelobject.Brotherdetails = _editGetService.EditGetforFamilyDetails(id).Brotherdetails;
+            modelobject.Sisterdetails = _editGetService.EditGetforFamilyDetails(id).Sisterdetails;
+            modelobject.Spousedetails = _editGetService.EditGetforFamilyDetails(id).Spousedetails;
+            modelobject.Childrendetails = _editGetService.EditGetforFamilyDetails(id).Childrendetails;
+
+            modelobject.Additionalinformation = _editGetService.EditGetforAdditionalInformation(id);
+            modelobject.Educationalqualifications = _editGetService.EditGetforEducationalQualifications(id);
+            modelobject.Epfodetails = _editGetService.EditGetforEpfoDetails(id);
+            modelobject.Esicdetails = _editGetService.EditGetforEsicDetails(id);
+            modelobject.Otherdetails = _editGetService.EditGetforOtherDetails(id);
+            modelobject.Feedback = _editGetService.EditGetforFeedback(id);
+            modelobject.Previouscompanydetails = _editGetService.EditGetforPreviousCompanyDetails(id);
+            modelobject.Certification2 = _editGetService.EditGetforCertifications(id).Certification1;
+            modelobject.Certification1 = _editGetService.EditGetforCertifications(id).Certification2;
+            modelobject.Certification3 = _editGetService.EditGetforCertifications(id).Certification3;
+            modelobject.Certification4 = _editGetService.EditGetforCertifications(id).Certification4;
+            modelobject.Reference1 = _editGetService.EditGetforReferences(id).Reference1;
+            modelobject.Reference2 = _editGetService.EditGetforReferences(id).Reference2;
+            modelobject.Prevemploy1 = _editGetService.EditGetforPreviousEmployment(id).Prevemploy1;
+            modelobject.Prevemploy2 = _editGetService.EditGetforPreviousEmployment(id).Prevemploy2;
+            modelobject.Prevemploy3 = _editGetService.EditGetforPreviousEmployment(id).Prevemploy3;
+            modelobject.Prevemploy4 = _editGetService.EditGetforPreviousEmployment(id).Prevemploy4;
+            modelobject.Prevemploy5 = _editGetService.EditGetforPreviousEmployment(id).Prevemploy5;
 
             return View(modelobject);
         }
@@ -224,15 +175,15 @@ namespace Hrinnova_FormsProject.Controllers
                 Status = modelobject.Maritalstatus.FirstOrDefault().Status,
             };
             Session["id"] = id;
-            modelobject.Employeedetails = _employeeDetailsService.EditGet(id);
-            modelobject.Esicdetails = _esicDetailsService.EditEsicDetails(id);
-            var FamilyDetailsData = _familyDetailsService.EditGet(id);
-            modelobject.Fatherdetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Father");
-            modelobject.Motherdetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Mother");
-            modelobject.Brotherdetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Brother");
-            modelobject.Sisterdetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Sister");
-            modelobject.Spousedetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Spouse");
-            modelobject.Childrendetails = FamilyDetailsData.FamilyDetails.SingleOrDefault(x => x.member == "Children");
+            modelobject.Employeedetails = _editGetService.EditGetforEmployeeDetails(id);
+            modelobject.Esicdetails = _editGetService.EditGetforEsicDetails(id);
+
+            modelobject.Fatherdetails = _editGetService.EditGetforFamilyDetails(id).Fatherdetails;
+            modelobject.Motherdetails = _editGetService.EditGetforFamilyDetails(id).Motherdetails;
+            modelobject.Brotherdetails = _editGetService.EditGetforFamilyDetails(id).Brotherdetails;
+            modelobject.Sisterdetails = _editGetService.EditGetforFamilyDetails(id).Sisterdetails;
+            modelobject.Spousedetails = _editGetService.EditGetforFamilyDetails(id).Spousedetails;
+            modelobject.Childrendetails = _editGetService.EditGetforFamilyDetails(id).Childrendetails;
             var employernameaddress = System.Configuration.ConfigurationManager.AppSettings["employernameaddress"].ToString();
             return View(modelobject);
         }
@@ -260,10 +211,10 @@ namespace Hrinnova_FormsProject.Controllers
                 Status = modelobject.Maritalstatus.FirstOrDefault().Status,
             };
             Session["id"] = id;
-            modelobject.Employeedetails = _employeeDetailsService.EditGet(id);
-            modelobject.Epfodetails = _epfoDetailsService.EditGet(id);
-            var PreviousEmploymentDetails = _previousEmploymentService.EditGet(id);
-            modelobject.Prevemploy1 = PreviousEmploymentDetails.PreviousEmployments.SingleOrDefault(pe1 => pe1.employment_ref == "1");
+            modelobject.Employeedetails = _editGetService.EditGetforEmployeeDetails(id);
+            modelobject.Epfodetails = _editGetService.EditGetforEpfoDetails(id);
+
+            modelobject.Prevemploy1 = _editGetService.EditGetforPreviousEmployment(id).Prevemploy1;
             return View(modelobject);
         }
         #endregion
@@ -277,11 +228,10 @@ namespace Hrinnova_FormsProject.Controllers
         public ActionResult SUMSEmployeeVerification(int id)
         {
             Session["id"] = id;
-            modelobject.Employeedetails = _employeeDetailsService.EditGet(id);
-            var PreviousEmploymentDetails = _previousEmploymentService.EditGet(id);
-            modelobject.Prevemploy1 = PreviousEmploymentDetails.PreviousEmployments.SingleOrDefault(pe1 => pe1.employment_ref == "1");
-            modelobject.Prevemploy2 = PreviousEmploymentDetails.PreviousEmployments.SingleOrDefault(pe1 => pe1.employment_ref == "2");
-            modelobject.Prevemploy3 = PreviousEmploymentDetails.PreviousEmployments.SingleOrDefault(pe1 => pe1.employment_ref == "3");
+            modelobject.Employeedetails = _editGetService.EditGetforEmployeeDetails(id);
+            modelobject.Prevemploy1 = _editGetService.EditGetforPreviousEmployment(id).Prevemploy1;
+            modelobject.Prevemploy2 = _editGetService.EditGetforPreviousEmployment(id).Prevemploy2;
+            modelobject.Prevemploy3 = _editGetService.EditGetforPreviousEmployment(id).Prevemploy3;
             return View(modelobject);
         }
         #endregion
@@ -296,10 +246,9 @@ namespace Hrinnova_FormsProject.Controllers
         {
 
             Session["id"] = id;
-            modelobject.Employeedetails = _employeeDetailsService.EditGet(id);
-            var PreviousEmploymentDetails = _previousEmploymentService.EditGet(id);
-            modelobject.Epfodetails = _epfoDetailsService.EditGet(id);
-            modelobject.Prevemploy1 = PreviousEmploymentDetails.PreviousEmployments.SingleOrDefault(pe1 => pe1.employment_ref == "1");
+            modelobject.Employeedetails = _editGetService.EditGetforEmployeeDetails(id);
+            modelobject.Epfodetails = _editGetService.EditGetforEpfoDetails(id);
+            modelobject.Prevemploy1 = _editGetService.EditGetforPreviousEmployment(id).Prevemploy1;
             return View(modelobject);
         }
         #endregion
@@ -313,9 +262,9 @@ namespace Hrinnova_FormsProject.Controllers
         public ActionResult EmployeeReferenceCheck(int id)
         {
             Session["id"] = id;
-            var PreviousEmploymentDetails = _previousEmploymentService.EditGet(id);
-            modelobject.Employeedetails = _employeeDetailsService.EditGet(id);
-            modelobject.Prevemploy1 = PreviousEmploymentDetails.PreviousEmployments.SingleOrDefault(pe1 => pe1.employment_ref == "1");
+            modelobject.Employeedetails = _editGetService.EditGetforEmployeeDetails(id);
+            modelobject.Epfodetails = _editGetService.EditGetforEpfoDetails(id);
+            modelobject.Prevemploy1 = _editGetService.EditGetforPreviousEmployment(id).Prevemploy1;
             return View(modelobject);
         }
         #endregion
@@ -342,9 +291,9 @@ namespace Hrinnova_FormsProject.Controllers
 
             };
 
-            modelobject.Employeedetails = _employeeDetailsService.EditGet(id);
+            modelobject.Employeedetails = _editGetService.EditGetforEmployeeDetails(id);
             modelobject.Employeedetails.role = rolesData;
-            modelobject.Feedback = _feedbackService.EditGet(id);
+            modelobject.Feedback = _editGetService.EditGetforFeedback(id);
             return View(modelobject);
         }
         #endregion

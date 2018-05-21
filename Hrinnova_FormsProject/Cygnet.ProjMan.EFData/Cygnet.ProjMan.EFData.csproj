@@ -124,18 +124,9 @@
       <DependentUpon>DBEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\AdditionalInformationService.cs" />
-    <Compile Include="Service\CertificationsService.cs" />
-    <Compile Include="Service\EducationalQualifications.cs" />
-    <Compile Include="Service\EmployeeDetailsService.cs" />
-    <Compile Include="Service\EpfoDetailsService.cs" />
-    <Compile Include="Service\EsicDetailsService.cs" />
-    <Compile Include="Service\FamilyDetailsService.cs" />
-    <Compile Include="Service\FeedbackService.cs" />
-    <Compile Include="Service\OtherDetailsService.cs" />
-    <Compile Include="Service\PreviousCompanyDetailsService.cs" />
-    <Compile Include="Service\PreviousEmploymentService.cs" />
-    <Compile Include="Service\ReferencesService.cs" />
+    <Compile Include="Service\EditGetService.cs" />
+    <Compile Include="Service\EditPostService.cs" />
+    <Compile Include="Service\CreateService.cs" />
     <Compile Include="ViewModels\additional_informationModel.cs" />
     <Compile Include="ViewModels\certificationsModel.cs" />
     <Compile Include="ViewModels\departmentModel.cs" />

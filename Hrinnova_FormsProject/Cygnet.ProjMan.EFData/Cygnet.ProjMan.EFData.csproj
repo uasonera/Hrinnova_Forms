@@ -133,6 +133,7 @@
     <Compile Include="ViewModels\educational_qualificationsModel.cs" />
     <Compile Include="ViewModels\employee_detailsModel.cs" />
     <Compile Include="ViewModels\employee_refcheckModel.cs" />
+    <Compile Include="ViewModels\Enums.cs" />
     <Compile Include="ViewModels\epfo_detailsModel.cs" />
     <Compile Include="ViewModels\esic_detailsModel.cs" />
     <Compile Include="ViewModels\family_detailsModel.cs" />

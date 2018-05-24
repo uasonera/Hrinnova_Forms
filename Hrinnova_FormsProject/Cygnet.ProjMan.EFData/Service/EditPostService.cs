@@ -192,4 +192,65 @@ namespace Cygnet.ProjMan.EFData.Service
             entity.designation = ReferencesModel.designation;
         }
     }
+
+    public class EditPostAll
+    {
+        hrinnova_dbEntities entity = new hrinnova_dbEntities();
+        EditPostService _editPostService = new EditPostService();
+        public void SetToEntity(int updateid, MainModel model)
+        {
+            var EmployeeDetails = entity.employee_details.SingleOrDefault(x => x.employee_id == updateid);
+            var AdditionalInformation = entity.additional_information.SingleOrDefault(AIid => AIid.employee_id == updateid);
+            var cf1 = entity.certifications.SingleOrDefault(ct => ct.employee_id == updateid && ct.cert_type == "1");
+            var cf2 = entity.certifications.SingleOrDefault(ct2 => ct2.employee_id == updateid && ct2.cert_type == "2");
+            var cf3 = entity.certifications.SingleOrDefault(ct3 => ct3.employee_id == updateid && ct3.cert_type == "3");
+            var cf4 = entity.certifications.SingleOrDefault(ct4 => ct4.employee_id == updateid && ct4.cert_type == "4");
+            var eq = entity.educational_qualifications.SingleOrDefault(eqf => eqf.employee_id == updateid);
+            var epfod = entity.epfo_details.SingleOrDefault(epf => epf.employee_id == updateid);
+            var esicd = entity.esic_details.SingleOrDefault(esi => esi.employee_id == updateid);
+            var fmd1 = entity.family_details.SingleOrDefault(fmd => fmd.employee_id == updateid && fmd.member == "father");
+            var fmd2 = entity.family_details.SingleOrDefault(fmd => fmd.employee_id == updateid && fmd.member == "mother");
+            var fmd3 = entity.family_details.SingleOrDefault(fmd => fmd.employee_id == updateid && fmd.member == "brother");
+            var fmd4 = entity.family_details.SingleOrDefault(fmd => fmd.employee_id == updateid && fmd.member == "sister");
+            var fmd5 = entity.family_details.SingleOrDefault(fmd => fmd.employee_id == updateid && fmd.member == "spouse");
+            var fmd6 = entity.family_details.SingleOrDefault(fmd => fmd.employee_id == updateid && fmd.member == "children");
+            var fb = entity.feedback.SingleOrDefault(fdb => fdb.employee_id == updateid);
+            var otd = entity.other_details.SingleOrDefault(od => od.employee_id == updateid);
+            var pd = entity.previous_company_details.SingleOrDefault(pcd => pcd.employee_id == updateid);
+            var preempd1 = entity.prev_employ_1.SingleOrDefault(pmd1 => pmd1.employee_id == updateid && pmd1.employment_ref == "1");
+            var preempd2 = entity.prev_employ_1.SingleOrDefault(pmd2 => pmd2.employee_id == updateid && pmd2.employment_ref == "2");
+            var preempd3 = entity.prev_employ_1.SingleOrDefault(pmd3 => pmd3.employee_id == updateid && pmd3.employment_ref == "3");
+            var preempd4 = entity.prev_employ_1.SingleOrDefault(pmd4 => pmd4.employee_id == updateid && pmd4.employment_ref == "4");
+            var preempd5 = entity.prev_employ_1.SingleOrDefault(pmd5 => pmd5.employee_id == updateid && pmd5.employment_ref == "5");
+            var ref1 = entity.references.SingleOrDefault(rf1 => rf1.employee_id == updateid && rf1.ref_type == "1");
+            var ref2 = entity.references.SingleOrDefault(rf2 => rf2.employee_id == updateid && rf2.ref_type == "2");
+
+            _editPostService.EditPostforEmployeeDetails(model.Employeedetails, EmployeeDetails);
+            _editPostService.EditPostforAdditionalInformation(model.Additionalinformation, AdditionalInformation);
+            _editPostService.EditPostforCertifications(model.Certification1, cf1);
+            _editPostService.EditPostforCertifications(model.Certification2, cf2);
+            _editPostService.EditPostforCertifications(model.Certification3, cf3);
+            _editPostService.EditPostforCertifications(model.Certification4, cf4);
+            _editPostService.EditPostforEducationalQualifications(model.Educationalqualifications, eq);
+            _editPostService.EditPostforEpfoDetails(model.Epfodetails, epfod);
+            _editPostService.EditPostforEsicDetails(model.Esicdetails, esicd);
+            _editPostService.EditPostforFamilyDetails(model.Fatherdetails, fmd1);
+            _editPostService.EditPostforFamilyDetails(model.Motherdetails, fmd2);
+            _editPostService.EditPostforFamilyDetails(model.Brotherdetails, fmd3);
+            _editPostService.EditPostforFamilyDetails(model.Sisterdetails, fmd4);
+            _editPostService.EditPostforFamilyDetails(model.Spousedetails, fmd5);
+            _editPostService.EditPostforFamilyDetails(model.Childrendetails, fmd6);
+            _editPostService.EditPostforFeedback(model.Feedback, fb);
+            _editPostService.EditPostforOtherDetails(model.Otherdetails, otd);
+            _editPostService.EditPostforPreviousCompanyDetails(model.Previouscompanydetails, pd);
+            _editPostService.EditPostforPreviousEmployment(model.Prevemploy1, preempd1);
+            _editPostService.EditPostforPreviousEmployment(model.Prevemploy2, preempd2);
+            _editPostService.EditPostforPreviousEmployment(model.Prevemploy3, preempd3);
+            _editPostService.EditPostforPreviousEmployment(model.Prevemploy4, preempd4);
+            _editPostService.EditPostforPreviousEmployment(model.Prevemploy5, preempd5);
+            _editPostService.EditPostforReferences(model.Reference1, ref1);
+            _editPostService.EditPostforReferences(model.Reference2, ref2);
+            entity.SaveChanges();
+        }
+    }
 }

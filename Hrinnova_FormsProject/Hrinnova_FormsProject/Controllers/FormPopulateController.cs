@@ -23,6 +23,7 @@ namespace Hrinnova_FormsProject.Controllers
         /// <summary>
         /// The entity
         /// </summary>
+        Enums Enums = new Enums();
         hrinnova_dbEntities entity = new hrinnova_dbEntities();
         /// <summary>
         /// The modelobject
@@ -38,6 +39,7 @@ namespace Hrinnova_FormsProject.Controllers
         CreateService _employeeDetailsService = new CreateService();
         #endregion
 
+        #region Employee Details Form
         /// <summary>
         /// Employees the details.
         /// </summary>
@@ -45,14 +47,7 @@ namespace Hrinnova_FormsProject.Controllers
         /// <returns>ActionResult.</returns>
         public ActionResult EmployeeDetails(int id)
         {
-            modelobject.Maritalstatus = new List<Maritalstatus>()
-            {
-                new Maritalstatus { Id=1,Status="Married"},
-                new Maritalstatus { Id=2,Status="Unmarried"},
-                new Maritalstatus { Id=3,Status="Widow"},
-                new Maritalstatus { Id=4,Status="Widower"},
-                new Maritalstatus { Id=5,Status="Divorcee"}
-            };
+            modelobject.Maritalstatus = Enums.MaritalStatuses().ToList();
 
             Session["id"] = id;
 
@@ -163,14 +158,7 @@ namespace Hrinnova_FormsProject.Controllers
         /// <returns>ActionResult.</returns>
         public ActionResult Esicform(int id)
         {
-            modelobject.Maritalstatus = new List<Maritalstatus>()
-            {
-                new Maritalstatus { Id=1,Status="Married"},
-                new Maritalstatus { Id=2,Status="Unmarried"},
-                new Maritalstatus { Id=3,Status="Widow"},
-                new Maritalstatus { Id=4,Status="Widower"},
-                new Maritalstatus { Id=5,Status="Divorcee"}
-            };
+            modelobject.Maritalstatus = Enums.MaritalStatuses().ToList();
             var ms = new Maritalstatus()
             {
                 Id = entity.employee_details.FirstOrDefault().marital_status ?? 0,
@@ -199,14 +187,7 @@ namespace Hrinnova_FormsProject.Controllers
         /// <returns>ActionResult.</returns>
         public ActionResult Epfoform(int id)
         {
-            modelobject.Maritalstatus = new List<Maritalstatus>()
-            {
-                new Maritalstatus { Id=1,Status="Married"},
-                new Maritalstatus { Id=2,Status="Unmarried"},
-                new Maritalstatus { Id=3,Status="Widow"},
-                new Maritalstatus { Id=4,Status="Widower"},
-                new Maritalstatus { Id=5,Status="Divorcee"}
-            };
+            modelobject.Maritalstatus = Enums.MaritalStatuses().ToList();
             var ms = new Maritalstatus()
             {
                 Id = entity.employee_details.FirstOrDefault().marital_status ?? 0,

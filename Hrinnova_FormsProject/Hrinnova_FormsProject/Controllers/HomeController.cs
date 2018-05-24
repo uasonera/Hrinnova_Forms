@@ -31,28 +31,12 @@ namespace Hrinnova_FormsProject.Controllers
         {
             hrinnova_dbEntities _hrinnova_dbEntities = new hrinnova_dbEntities();
             MainModel MainModel = new MainModel();
-            
+            Enums Enums = new Enums();
+
             MainModel.Designations = _hrinnova_dbEntities.role.ToList();
             MainModel.Departments = _hrinnova_dbEntities.department.ToList();
-            MainModel.Maritalstatus= new List<Maritalstatus>()
-            {
-                new Maritalstatus { Id=1,Status="Married"},
-                new Maritalstatus { Id=2,Status="Unmarried"},
-                new Maritalstatus { Id=3,Status="Widow"},
-                new Maritalstatus { Id=4,Status="Widower"},
-                new Maritalstatus { Id=5,Status="Divorcee"}
-            };
-            MainModel.Bloodgroups = new List<Bloodgroups>()
-            {
-                new Bloodgroups { Id = 1,Bloodgroup = "A+"},
-                new Bloodgroups { Id = 2,Bloodgroup = "A-"},
-                new Bloodgroups { Id = 3,Bloodgroup = "B+"},
-                new Bloodgroups { Id = 4,Bloodgroup = "B-"},
-                new Bloodgroups { Id = 5,Bloodgroup = "AB+"},
-                new Bloodgroups { Id = 6,Bloodgroup = "AB-"},
-                new Bloodgroups { Id = 7,Bloodgroup = "O+"},
-                new Bloodgroups { Id = 8,Bloodgroup = "O-"}
-            };
+            MainModel.Maritalstatus = Enums.MaritalStatuses().ToList();
+            MainModel.Bloodgroups = Enums.BloodGroups().ToList();
             return View(MainModel);
         }
         /// <summary>

@@ -100,6 +100,7 @@ namespace Hrinnova_FormsProject.Controllers
                     mainmodel.Errors = new List<string>();
                     foreach (var item in errors)
                     {
+
                         mainmodel.Errors.Add(item.FirstOrDefault().ErrorMessage);
                     }
                     return PartialView("_ErrorView", mainmodel);
